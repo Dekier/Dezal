@@ -25,10 +25,11 @@
     "eslint-config-standard": "^14.1.0",
     "firebase": "^8.6.3",
     "node-pre-gyp": "^0.14.0",
-    "nuxt": "^2.15.6",
+    "nuxt": "^2.15.7",
     "vue-gtag": "^1.16.1"
   },
   "devDependencies": {
+    "@nuxt/image": "^0.5.0",
     "babel-eslint": "^8.2.1",
     "css-loader": "4.2.0",
     "eslint": "^5.0.1",

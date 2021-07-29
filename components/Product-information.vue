@@ -1,7 +1,13 @@
 <template>
   <div>
     <div class="ProductInformation__title-container">
-      <div class="ProductInformation__image">
+      <div class="ProductInformation__image-box">
+        <nuxt-img
+          src="/image/header2.jpg"
+          class="ProductInformation__image"
+          alt="header-page"
+          sizes="sm:100vw md:100vw lg:100vw"
+        />
         <div class="ProductInformation__background" />
         <h3 class="ProductInformation__title">
           Nasza Oferta
@@ -19,9 +25,11 @@
           'ProductInformation__center-picture--inverted': oddClass(data.id),
         }"
       >
-        <div
-          :style="urlStyle(data.url)"
+        <nuxt-img
+          :src="data.url"
           class="ProductInformation__main-picture"
+          :alt="data.url"
+          sizes="sm:100% md:100% lg:500px"
         />
       </div>
       <div
@@ -49,10 +57,15 @@
         <div
           v-for="(imageData, index) in bottomImages"
           :key="imageData.id"
-          :style="{ 'background-image': `url(${imageData.url})` }"
           @click="showBigGallery(index)"
-          class="ProductInformation__bottom-realizations-image"
+          class="ProductInformation__bottom-realizations-box"
         >
+          <nuxt-img
+            :src="imageData.url"
+            class="ProductInformation__bottom-realizations-image"
+            :alt="imageData.url"
+            sizes="sm:100% md:100% lg:300px"
+          />
           <div class="ProductInformation__hover-background">
             <svg
               class="ProductInformation__hover-icon"
@@ -105,9 +118,6 @@ export default {
   }),
 
   methods: {
-    urlStyle(url) {
-      return `background-image: url(${url})`;
-    },
     oddClass(id) {
       return id % 2 !== 0 ? true : false;
     },
