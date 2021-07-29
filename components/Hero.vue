@@ -1,6 +1,11 @@
 <template>
   <header id="hero" class="Hero__main-container">
-    <div class="Hero__hero-image" />
+    <nuxt-img
+      src="/image/header2.jpg"
+      class="Hero__hero-image"
+      alt="dezal zdjecie tła"
+      sizes="sm:100vw md:100vw lg:100vw"
+    />
     <div class="Hero__hero-background" />
     <div v-if="!!textData" class="Hero__center-container">
       <h1 class="Hero__title">

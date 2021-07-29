@@ -76,11 +76,11 @@
           :key="imageData.id"
           class="Realization__project"
         >
-          <img
-            loading="lazy"
+          <nuxt-img
             :src="imageData.url"
-            :alt="imageAlt(imageData)"
             class="Realization__project-image"
+            :alt="imageAlt(imageData)"
+            sizes="sm:100% md:100% lg:277px"
             @click="showBigGallery(index)"
           />
           <div

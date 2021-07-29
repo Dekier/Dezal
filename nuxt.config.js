@@ -1,5 +1,5 @@
 export default {
-  target: 'server',
+  target: 'static',
 
   htmlAttrs: {
     lang: 'pl',
@@ -75,6 +75,7 @@ export default {
     '@nuxtjs/sitemap',
     '@nuxtjs/firebase',
     '@nuxtjs/robots',
+    '@nuxt/image',
   ],
 
   styleResources: {
