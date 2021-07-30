@@ -1,9 +1,5 @@
 <template>
-  <div
-    v-if="!!aboutCompanyData"
-    id="aboutCompany"
-    class="AboutCompany__main-container"
-  >
+  <div id="aboutCompany" class="AboutCompany__main-container">
     <div class="AboutCompany__center-container">
       <h2 class="AboutCompany__title">
         {{ aboutCompanyData.title }}
