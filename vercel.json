@@ -4,7 +4,7 @@
   "builds": [
     {
       "src": "nuxt.config.js",
-      "use": "@nuxtjs/vercel-builder",
+      "use": "@nuxtjs/now-builder",
       "config": {
         "generateStaticRoutes": false,
         "serverFiles": [
