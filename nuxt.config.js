@@ -75,7 +75,6 @@ export default {
     '@nuxtjs/sitemap',
     '@nuxtjs/firebase',
     '@nuxtjs/robots',
-    '@nuxt/image',
   ],
 
   styleResources: {
@@ -99,7 +98,7 @@ export default {
 
   robots: {
     UserAgent: '*',
-    Allow: '*',
+    Allow: '/',
     Sitemap: "https://dezalroletypoznan.pl/sitemap.xml"
   },
 

@@ -9,12 +9,7 @@
             {{ offerDataBoxes[`box_${index + 1}_title`] }}
           </h3>
           <div class="Offer__box-image-container">
-            <nuxt-img
-              :src="box.url"
-              class="Offer__box-image"
-              :alt="box.link"
-              sizes="sm:100% md:100% lg:340px"
-            />
+            <img :src="box.url" class="Offer__box-image" :alt="box.link" />
           </div>
           <p class="Offer__box-text" style="-webkit-box-orient: vertical;">
             {{ offerDataBoxes[`box_${index + 1}_description`] }}

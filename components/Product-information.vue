@@ -2,11 +2,10 @@
   <div>
     <div class="ProductInformation__title-container">
       <div class="ProductInformation__image-box">
-        <nuxt-img
+        <img
           src="/image/header2.jpg"
           class="ProductInformation__image"
           alt="header-page"
-          sizes="sm:100vw md:100vw lg:100vw"
         />
         <div class="ProductInformation__background" />
         <h3 class="ProductInformation__title">
@@ -25,11 +24,10 @@
           'ProductInformation__center-picture--inverted': oddClass(data.id),
         }"
       >
-        <nuxt-img
+        <img
           :src="data.url"
           class="ProductInformation__main-picture"
           :alt="data.url"
-          sizes="sm:100% md:100% lg:500px"
         />
       </div>
       <div
@@ -60,11 +58,10 @@
           @click="showBigGallery(index)"
           class="ProductInformation__bottom-realizations-box"
         >
-          <nuxt-img
+          <img
             :src="imageData.url"
             class="ProductInformation__bottom-realizations-image"
             :alt="imageData.url"
-            sizes="sm:100% md:100% lg:300px"
           />
           <div class="ProductInformation__hover-background">
             <svg
