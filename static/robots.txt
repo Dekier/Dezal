@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://dezalroletypoznan.pl/sitemap.xml

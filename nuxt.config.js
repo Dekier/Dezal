@@ -74,6 +74,7 @@ export default {
     'nuxt-sass-resources-loader',
     '@nuxtjs/sitemap',
     '@nuxtjs/firebase',
+    '@nuxtjs/robots'
   ],
 
   styleResources: {
@@ -93,6 +94,13 @@ export default {
       '/moskitiery',
       '/realizacje',
     ],
+  },
+
+  robots: {
+    UserAgent: '*',
+    Allow: '/',
+    Disallow: '/error',
+    Sitemap: 'https://dezalroletypoznan.pl/sitemap.xml'
   },
 
   firebase: {
