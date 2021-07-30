@@ -6,16 +6,16 @@
       alt="dezal zdjecie tła"
     />
     <div class="Hero__hero-background" />
-    <div v-if="!!textData" class="Hero__center-container">
+    <div class="Hero__center-container">
       <h1 class="Hero__title">
-        {{ textData.title }}
+        {{ textData.title || '' }}
       </h1>
       <p class="Hero__description">
-        {{ textData.subtitle }}
+        {{ textData.subtitle || '' }}
       </p>
       <div class="Hero__btns-container">
         <div v-scroll-to="'#offer'" class="Hero__button">
-          <span>{{ textData.button }}</span>
+          <span>{{ textData.button || '' }}</span>
         </div>
       </div>
     </div>
