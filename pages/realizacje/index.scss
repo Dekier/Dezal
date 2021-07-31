@@ -26,6 +26,7 @@
     font-size: 50px;
     font-weight: 400;
     text-align: center;
+    padding: 0;
     margin-top: 150px;
     color: $color-yellow;
     z-index: 10;
@@ -65,6 +66,8 @@
     cursor: pointer;
     border-radius: 4px;
     margin: 0 5px;
+    border: unset;
+    background-color: transparent;
   }
 
   &__filter--active {
@@ -130,6 +133,7 @@
     left: calc(50% - 15px);
   }
 
+
   @media (max-width: 1200px) {
     &__projects {
       width: auto;
@@ -167,20 +171,3 @@
     font-size: 14px;
   }
 }
-
-// .projects-enter {
-//   will-change: transform, opacity;
-//   transform: scale(0.5) translateY(-180px);
-//   opacity: 0;
-// }
-
-// .projects-leave-to {
-//   will-change: transform, opacity;
-//   transform: translateY(30px);
-//   opacity: 0;
-// }
-
-// .projects-leave-active {
-//   position: absolute;
-//   z-index: -1;
-// }

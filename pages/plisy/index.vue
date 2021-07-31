@@ -49,7 +49,7 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Plisy w Poznaniu na Piątkowie. Montaż w cene!',
+          content: 'Rolety Plisowane w Poznaniu na Piątkowie. Montaż w cene!',
         },
       ],
     };
