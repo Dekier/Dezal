@@ -14,24 +14,21 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "firebase": "^8.6.3",
+    "nuxt": "^2.15.8"
+  },
+  "devDependencies": {
     "@nuxtjs/firebase": "^7.5.0",
     "@nuxtjs/now-builder": "^0.17.3",
     "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/robots": "^2.5.0",
     "@nuxtjs/sitemap": "^2.4.0",
     "@nuxtjs/style-resources": "^0.1.1",
-    "cross-env": "^5.2.0",
-    "eslint-config-prettier-standard": "^3.0.1",
-    "eslint-config-standard": "^14.1.0",
-    "firebase": "^8.6.3",
-    "node-pre-gyp": "^0.14.0",
-    "nuxt": "^2.15.7",
-    "vue-gtag": "^1.16.1"
-  },
-  "devDependencies": {
     "babel-eslint": "^8.2.1",
     "css-loader": "4.2.0",
     "eslint": "^5.0.1",
+    "eslint-config-prettier-standard": "^3.0.1",
+    "eslint-config-standard": "^14.1.0",
     "eslint-config-prettier": "^6.0.0",
     "eslint-loader": "^4.0.2",
     "eslint-plugin-prettier": "^3.1.0",
@@ -41,7 +38,7 @@
     "prettier": "^1.18.2",
     "prettier-standard": "^9.1.1",
     "sass-loader": "^10.1.1",
-    "sass-resources-loader": "^2.2.1",
+    "sass-resources-loader": "^2.2.4",
     "style-loader": "^0.23.1",
     "vue-loader": "^15.9.7",
     "vue-scrollto": "^2.20.0",

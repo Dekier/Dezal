@@ -1,6 +1,4 @@
 export default {
-  target: 'server',
-
   htmlAttrs: {
     lang: 'pl',
   },
@@ -29,17 +27,16 @@ export default {
         type: 'image/x-icon',
         href: '/favicon.ico',
       },
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Montserrat: 300,400',
-      },
     ],
   },
 
   /*
    ** Global CSS
    */
-  css: ['@/assets/stylesheets/mixins/main-variables.scss'],
+  css: [
+    '@/assets/stylesheets/mixins/main-variables.scss',
+    '~/assets/css/main.scss',
+  ],
 
   /*
    ** Plugins to load before mounting the App
@@ -47,7 +44,6 @@ export default {
   plugins: [
     { src: '~/plugins/vue-scrollto.js', ssr: false },
     { src: '~plugins/ga.js', ssr: false },
-    { src: '~plugins/vue-gtag.js', ssr: false },
   ],
 
   pwa: {
@@ -74,7 +70,7 @@ export default {
     'nuxt-sass-resources-loader',
     '@nuxtjs/sitemap',
     '@nuxtjs/firebase',
-    '@nuxtjs/robots'
+    '@nuxtjs/robots',
   ],
 
   styleResources: {
@@ -82,7 +78,7 @@ export default {
   },
   sitemap: {
     hostname: 'https://dezalroletypoznan.pl',
-    gzip: false,
+    gzip: true,
     routes: [
       '/kontakt',
       '/rolety-dzien-noc',
@@ -100,25 +96,25 @@ export default {
     UserAgent: '*',
     Allow: '/',
     Disallow: '/error',
-    Sitemap: 'https://dezalroletypoznan.pl/sitemap.xml'
+    Sitemap: 'https://dezalroletypoznan.pl/sitemap.xml',
   },
 
   firebase: {
     config: {
-      apiKey: "AIzaSyAzEy6DqrnNLqqjLagqEnxmzYRMrJrYX8A",
-      authDomain: "dezal-e34b9.firebaseapp.com",
-      databaseURL: "https://dezal-e34b9.firebaseio.com",
-      projectId: "dezal-e34b9",
-      storageBucket: "dezal-e34b9.appspot.com",
-      messagingSenderId: "1098134824316",
-      appId: "1:1098134824316:web:03f74fc2d6433efa"
+      apiKey: 'AIzaSyAzEy6DqrnNLqqjLagqEnxmzYRMrJrYX8A',
+      authDomain: 'dezal-e34b9.firebaseapp.com',
+      databaseURL: 'https://dezal-e34b9.firebaseio.com',
+      projectId: 'dezal-e34b9',
+      storageBucket: 'dezal-e34b9.appspot.com',
+      messagingSenderId: '1098134824316',
+      appId: '1:1098134824316:web:03f74fc2d6433efa',
     },
     services: {
-      firestore: { 
+      firestore: {
         enablePersistence: {
-          synchronizeTabs: true
-        }
-      }
+          synchronizeTabs: true,
+        },
+      },
     },
   },
 
@@ -128,8 +124,8 @@ export default {
         config.externals = {
           '@firebase/app': 'commonjs @firebase/app',
           '@firebase/firestore': 'commonjs @firebase/firestore',
-        }
+        };
       }
-    }
+    },
   },
 };

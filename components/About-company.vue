@@ -2,20 +2,21 @@
   <div id="aboutCompany" class="AboutCompany__main-container">
     <div class="AboutCompany__center-container">
       <h2 class="AboutCompany__title">
-        {{ aboutCompanyData.title }}
+        O NAS
       </h2>
       <p class="AboutCompany__description">
-        {{ aboutCompanyData.subtitle }}
+        Jesteśmy lokalną firmą, która na rynku osłon okiennych działa
+        nieprzerwanie od lat 90 XX wieku. W żaluzje i rolety zaopatrujemy Poznań
+        i okolice. Mnogość doświadczeń i realizacji nieszablonowych projektów,
+        pokazały nam, że jedyną stałą jest zmienna. Idziemy więc naprzód,
+        szukając nowoczesnych metod aranżacji i materiałów najwyższej klasy.
+        Pomożemy Ci na każdym etapie projektu. Zapewniamy szczegółowe pomiary,
+        kompleksową obsługę i ceny adekwatne do jakości usług.
       </p>
       <div class="AboutCompany__boxes">
-        <div
-          @mouseover="activeBox = 1"
-          @mouseout="activeBox = 0"
-          class="AboutCompany__box"
-          :class="{ 'AboutCompany__box--active': activeBox === 1 }"
-        >
+        <div class="AboutCompany__box">
           <svg viewBox="0 0 295.238 295.238" width="50">
-            <g :fill="activeSvgOne">
+            <g fill="#323232">
               <path
                 d="M277.462.09l-27.681 20.72-27.838 64.905h-22.386l-8.79-19.048h5.743c10.505 0 19.048-8.452 19.048-18.957V28.571h9.524V0H196.51v28.571h9.524V47.71c0 5.248-4.271 9.433-9.524 9.433h-10.138L174.2 30.81l14.581-7.267-47.743-20.448-11.224 39.281C129.509 19.005 110.428.086 86.985.086c-23.633 0-42.857 19.224-42.857 42.857 0 14.281 7.233 27.676 19.048 35.595v7.176H51.643l-.743 3.905c-2.314 12.005-2.529 24.343-.638 36.648l-32.486 57.905 35.876 8.195v60.014h47.619v42.857h114.286v-66.357c33.333-23.581 52.371-61.495 52.343-101.943l.01-17.371c0-6.548-.605-13.276-1.824-19.905l-.705-3.948h-9.348l21.429-51.338V.09zm-71.429 19.048V9.614h9.524v9.524h-9.524zm-16.966 66.576h-18.062l-8.657-19.048h17.929l8.79 19.048zm-41.848-69.595l18.929 8.11-4.467 2.19 14.2 30.724h-17.862l-11.605-25.471-4.262 2.152 5.067-17.705zm13.324 69.596h-21.176v-9.433c0-5.252 4.271-9.614 9.524-9.614h2.995v-.001l8.657 19.048zm-18.7-41.063l5.776 12.71c-9.905.667-17.776 8.848-17.776 18.919v9.433h-19.048v-7.176c9.529-6.386 15.995-16.352 18.176-27.452l12.872-6.434zm-88.19-1.704c0-18.376 14.957-33.333 33.333-33.333 18.376 0 33.333 14.957 33.333 33.333 0 11.829-6.39 22.881-16.671 28.838l-2.376 1.371v12.557h-9.524V56.352c5.529-1.971 9.524-7.21 9.524-13.41 0-7.876-6.41-14.286-14.286-14.286-7.876 0-14.286 6.411-14.286 14.287 0 6.2 3.995 11.438 9.524 13.41v29.362H72.7V73.157l-2.376-1.376c-10.281-5.957-16.671-17.005-16.671-28.833zm33.333 4.762a4.767 4.767 0 0 1-4.762-4.762 4.763 4.763 0 0 1 4.762-4.762c2.629 0 4.762 2.133 4.762 4.762s-2.133 4.762-4.762 4.762zm170.38 47.529c.691 4.761 1.039 9.59 1.039 14.285l.01 17.405c.029 38.148-18.795 73.871-50.286 95.552l-2.095 1.429v61.805h-95.238v-42.857h-47.62v-58.086l-30.862-7.043 27.876-49.7-.271-1.7c-1.771-10.419-1.871-21.567-.333-31.09h197.78zm-11.652-9.525H232.3l23.738-55.343 10.557 5.257-20.881 50.086zm22.224-60l-5.267-2.633 5.267-3.943v6.576z"
               />
@@ -24,24 +25,18 @@
               />
             </g>
           </svg>
-          <h3
-            class="AboutCompany__box-title"
-            :class="{ 'AboutCompany__box-title--active': activeBox === 1 }"
-          >
-            {{ aboutCompanyData.box_1_title }}
+          <h3 class="AboutCompany__box-title">
+            DOŚWIADCZENIE ZAWODOWE
           </h3>
           <p class="AboutCompany__box-text">
-            {{ aboutCompanyData.box_1_description }}
+            Prowadzimy firmę od ponad 20 lat, dzięki czemu zyskaliśmy bardzo
+            duże doświadczenie w projektowaniu unikatowych dekoracji okiennych,
+            jak i sprawnej realizacji montażu.
           </p>
         </div>
-        <div
-          @mouseover="activeBox = 2"
-          @mouseout="activeBox = 0"
-          class="AboutCompany__box"
-          :class="{ 'AboutCompany__box--active': activeBox === 2 }"
-        >
+        <div class="AboutCompany__box">
           <svg viewBox="0 0 512 512" width="50px">
-            <g :fill="activeSvgTwo">
+            <g fill="#323232">
               <path d="M401.084 381.107h.013c0-.309-.009-.153-.013 0z" />
               <path
                 d="M427.773 453.16a40.704 40.704 0 0 0 13.052-29.819V342.24a7.517 7.517 0 0 0-7.518-7.518 32.002 32.002 0 0 0-17.12 4.947v-60.203a7.517 7.517 0 0 0-7.518-7.518 7.517 7.517 0 0 0-7.518 7.518l-.055 101.641c-.017.299-.017.151-.013 0H110.928V114.702a7.517 7.517 0 0 0-7.518-7.518 7.517 7.517 0 0 0-7.518 7.518V339.72a32.015 32.015 0 0 0-17.2-4.998 7.517 7.517 0 0 0-7.518 7.518v81.101a40.698 40.698 0 0 0 13.052 29.819l6.369 5.881v10.931h-1.492a7.517 7.517 0 0 0-7.518 7.518v26.993a7.517 7.517 0 0 0 7.518 7.518h107.064a7.517 7.517 0 0 0 7.518-7.518V477.49c0-4.098-3.279-7.422-7.355-7.51v-11.567l8.153-10.071a53.577 53.577 0 0 0 11.9-33.611v-18.588h79.237v18.588a53.58 53.58 0 0 0 11.9 33.61l8.153 10.072v11.567a7.512 7.512 0 0 0-7.354 7.51v26.993a7.517 7.517 0 0 0 7.518 7.518h107.062a7.517 7.517 0 0 0 7.518-7.518V477.49a7.517 7.517 0 0 0-7.518-7.518h-1.493v-10.93l6.367-5.882zm-239.124 43.805H96.621v-11.958h92.027v11.958zm12.698-82.234a38.506 38.506 0 0 1-8.551 24.151l-9.828 12.139a7.514 7.514 0 0 0-1.675 4.73v14.221H105.63v-14.221c0-2.098-.876-4.1-2.417-5.523l-8.787-8.115a25.623 25.623 0 0 1-8.217-18.773v-71.85c5.713 2.793 9.658 8.663 9.658 15.44v27.455c0 3.83 2.891 7.049 6.697 7.473.126.014 12.708 1.464 24.913 7.12 14.755 6.834 22.235 16.537 22.235 28.838a7.517 7.517 0 0 0 7.518 7.518 7.517 7.517 0 0 0 7.518-7.518c0-17.899-10.108-32.268-29.263-41.673h65.861v18.588zm214.032 82.234h-92.027v-11.958H415.378v11.958zm2.195-54.852l-8.787 8.114a7.514 7.514 0 0 0-2.418 5.523v14.221h-75.663V455.75a7.514 7.514 0 0 0-1.675-4.73l-9.828-12.139a38.503 38.503 0 0 1-8.55-24.151v-18.588h65.856c-19.153 9.405-29.259 23.776-29.259 41.673a7.517 7.517 0 0 0 7.518 7.518 7.517 7.517 0 0 0 7.518-7.518c0-12.301 7.481-22.003 22.235-28.838 12.207-5.655 24.788-7.106 24.903-7.119a7.518 7.518 0 0 0 6.707-7.474v-4.887c.033-.287.055-.577.055-.874v-23.036c.482-6.203 4.27-11.491 9.603-14.097v71.85a25.622 25.622 0 0 1-8.215 18.773zM408.67 0H103.411a7.517 7.517 0 0 0-7.518 7.518v82.126a7.517 7.517 0 0 0 7.518 7.518 7.517 7.517 0 0 0 7.518-7.518V15.035h290.224v239.372a7.517 7.517 0 0 0 7.518 7.518 7.517 7.517 0 0 0 7.518-7.518V7.518A7.52 7.52 0 0 0 408.67 0z"
@@ -51,24 +46,18 @@
               />
             </g>
           </svg>
-          <h3
-            class="AboutCompany__box-title"
-            :class="{ 'AboutCompany__box-title--active': activeBox === 2 }"
-          >
-            {{ aboutCompanyData.box_2_title }}
+          <h3 class="AboutCompany__box-title">
+            PROFESJONALIZM
           </h3>
           <p class="AboutCompany__box-text">
-            {{ aboutCompanyData.box_2_description }}
+            Zawsze pracujemy rzetelnie i profesjonalnie. Wykonujemy pomiary
+            okien z dokładnością 1mm. Zadowolenie naszych Klientów przekłada się
+            na pozytywne opinie w internecie.
           </p>
         </div>
-        <div
-          @mouseover="activeBox = 3"
-          @mouseout="activeBox = 0"
-          class="AboutCompany__box"
-          :class="{ 'AboutCompany__box--active': activeBox === 3 }"
-        >
+        <div class="AboutCompany__box">
           <svg viewBox="0 -8 480 480" width="50">
-            <g :fill="activeSvgThree">
+            <g fill="#323232">
               <path
                 d="M472 48h-40V24c0-13.254-10.746-24-24-24s-24 10.746-24 24v24h-32V24c0-13.254-10.746-24-24-24s-24 10.746-24 24v24H176V24c0-13.254-10.746-24-24-24s-24 10.746-24 24v24H96V24C96 10.746 85.254 0 72 0S48 10.746 48 24v24H8a8 8 0 0 0-8 8v400a8 8 0 0 0 8 8h464a8 8 0 0 0 8-8V56a8 8 0 0 0-8-8zm-72-24a8 8 0 0 1 16 0v48a8 8 0 0 1-16 0zm-80 0a8 8 0 0 1 16 0v48a8 8 0 0 1-16 0zm-176 0a8 8 0 0 1 16 0v48a8 8 0 0 1-16 0zm-80 0a8 8 0 0 1 16 0v48a8 8 0 0 1-16 0zM16 64h32v8c0 13.254 10.746 24 24 24s24-10.746 24-24v-8h32v8c0 13.254 10.746 24 24 24s24-10.746 24-24v-8h128v8c0 13.254 10.746 24 24 24s24-10.746 24-24v-8h32v8c0 13.254 10.746 24 24 24s24-10.746 24-24v-8h32v64H16zm0 384V144h448v304zm0 0"
               />
@@ -77,14 +66,13 @@
               />
             </g>
           </svg>
-          <h3
-            class="AboutCompany__box-title"
-            :class="{ 'AboutCompany__box-title--active': activeBox === 3 }"
-          >
-            {{ aboutCompanyData.box_3_title }}
+          <h3 class="AboutCompany__box-title">
+            CZAS REALIZACJI
           </h3>
           <p class="AboutCompany__box-text">
-            {{ aboutCompanyData.box_3_description }}
+            Jesteśmy świadomi, że czas to pieniądz, więc działamy sprawnie i
+            realizujemy zamówienia w najkrótszym możliwym terminie. Nieustannie
+            dbamy o Wasz komfort i zadowolenie.
           </p>
         </div>
       </div>
@@ -95,40 +83,8 @@
 <script>
 export default {
   name: 'AboutCompany',
-
-  props: {
-    aboutCompanyData: {
-      type: Object,
-      required: true,
-    },
-  },
-
-  data: () => ({
-    activeBox: 0,
-  }),
-
-  computed: {
-    activeSvgOne() {
-      // if (this.activeBox === 1) {
-      //   return '#ffe100';
-      // }
-      return '#323232';
-    },
-    activeSvgTwo() {
-      // if (this.activeBox === 2) {
-      //   return '#ffe100';
-      // }
-      return '#323232';
-    },
-    activeSvgThree() {
-      // if (this.activeBox === 3) {
-      //   return '#ffe100';
-      // }
-      return '#323232';
-    },
-  },
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 @import 'About-company';
 </style>

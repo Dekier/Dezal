@@ -44,23 +44,15 @@
     color: $color-title;
     transition: all 300ms;
     margin: 0;
-
-    &--active {
-      // color: $color-yellow;
-    }
   }
 
   &__box-text {
     text-align: center;
     color: $color-text;
     line-height: 1.5;
-    letter-spacing: -.2px;
+    letter-spacing: -0.2px;
     margin: auto;
     font-size: 15px;
-  }
-
-  &__box--active &__box-text {
-    // color: #b7b7b7;
   }
 
   &__box {
@@ -71,17 +63,12 @@
     cursor: default;
     border-radius: 8px;
 
-    &--active {
-      // background: $color-gray;
-    }
-
     svg {
       margin: auto;
       display: block;
       padding-bottom: 30px;
     }
   }
-
 
   @media (max-width: 1200px) {
     &__main-container {

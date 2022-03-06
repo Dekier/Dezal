@@ -1,12 +1,12 @@
 <template>
-  <section class="MainPage__main-container">
+  <div class="MainPage__main-container">
     <div class="MainPage__hero">
       <div class="MainPage__hero-background" />
     </div>
-    <hero :text-data="hero" />
-    <about-company :about-company-data="aboutCompany" />
+    <hero />
+    <about-company />
     <offer :offer-data="offerData" :offer-data-boxes="offer" />
-  </section>
+  </div>
 </template>
 
 <script>
