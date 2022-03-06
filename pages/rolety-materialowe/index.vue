@@ -22,10 +22,10 @@ export default {
 
   data: () => ({
     bottomImages: [
-      { id: 1, url: '/image/rolety/dezal-poznan-roleta-materiałowa-1.jpg' },
-      { id: 2, url: '/image/rolety/dezal-poznan-roleta-materiałowa-2.jpg' },
-      { id: 3, url: '/image/rolety/dezal-poznan-roleta-materiałowa-3.jpg' },
-      { id: 4, url: '/image/rolety/dezal-poznan-roleta-materiałowa-4.jpg' },
+      { id: 1, url: '/image/rolety/dezal-poznan-roleta-materiałowa-1.webp' },
+      { id: 2, url: '/image/rolety/dezal-poznan-roleta-materiałowa-2.webp' },
+      { id: 3, url: '/image/rolety/dezal-poznan-roleta-materiałowa-3.webp' },
+      { id: 4, url: '/image/rolety/dezal-poznan-roleta-materiałowa-4.webp' },
     ],
     offerData: {
       title: 'Zobacz również',
@@ -62,7 +62,7 @@ export default {
         {
           id: 0,
           title: this.offer.box_2_title,
-          url: '/image/rolety/dezal-poznan-roleta-materiałowa-3.jpg',
+          url: '/image/rolety/dezal-poznan-roleta-materiałowa-3.webp',
           description: this.offer.box_2_description,
         },
       ];

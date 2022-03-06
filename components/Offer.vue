@@ -51,37 +51,37 @@ export default {
     activeTab: '',
     boxesData: [
       {
-        url: '/image/rolety/dezal-poznan-roleta-dzień-noc-2.jpg',
+        url: '/image/rolety/dezal-poznan-roleta-dzień-noc-2.webp',
         link: '/rolety-dzien-noc',
         type: 'dzien-noc',
       },
       {
-        url: '/image/rolety/dezal-poznan-roleta-materiałowa-3.jpg',
+        url: '/image/rolety/dezal-poznan-roleta-materiałowa-3.webp',
         link: '/rolety-materialowe',
         type: 'materialowe',
       },
       {
-        url: '/image/rolety/dezal-poznan-roleta-rzymska-1.jpg',
+        url: '/image/rolety/dezal-poznan-roleta-rzymska-1.webp',
         link: '/rolety-rzymskie',
         type: 'rzymskie',
       },
       {
-        url: '/image/plisy/deżal-poznań-plisa-1.jpg',
+        url: '/image/plisy/deżal-poznań-plisa-1.webp',
         link: '/plisy',
         type: 'plisy',
       },
       {
-        url: '/image/zaluzje/deżal-poznań-żaluzja-drewniana-1.jpg',
+        url: '/image/zaluzje/deżal-poznań-żaluzja-drewniana-1.webp',
         link: '/zaluzje',
         type: 'zaluzje',
       },
       {
-        url: '/image/verticale/deżal-poznań-roleta-verticale-1.jpg',
+        url: '/image/verticale/deżal-poznań-roleta-verticale-1.webp',
         link: '/verticale',
         type: 'verticale',
       },
       {
-        url: '/image/moskitiery/dezal-poznan-moskitiera-1.jpg',
+        url: '/image/moskitiery/dezal-poznan-moskitiera-1.webp',
         link: '/moskitiery',
         type: 'moskitiery',
       },

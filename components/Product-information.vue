@@ -3,7 +3,7 @@
     <div class="ProductInformation__title-container">
       <div class="ProductInformation__image-box">
         <img
-          src="/image/header2.jpg"
+          src="/image/header2.webp"
           class="ProductInformation__image"
           alt="header-page"
         />

@@ -21,10 +21,10 @@ export default {
 
   data: () => ({
     bottomImages: [
-      { id: 1, url: '/image/rolety/dezal-poznan-roleta-dzień-noc-1.jpg' },
-      { id: 2, url: '/image/rolety/dezal-poznan-roleta-dzień-noc-7.jpg' },
-      { id: 3, url: '/image/rolety/dezal-poznan-roleta-dzień-noc-3.jpg' },
-      { id: 4, url: '/image/rolety/dezal-poznan-roleta-dzień-noc-4.jpg' },
+      { id: 1, url: '/image/rolety/dezal-poznan-roleta-dzień-noc-1.webp' },
+      { id: 2, url: '/image/rolety/dezal-poznan-roleta-dzień-noc-7.webp' },
+      { id: 3, url: '/image/rolety/dezal-poznan-roleta-dzień-noc-3.webp' },
+      { id: 4, url: '/image/rolety/dezal-poznan-roleta-dzień-noc-4.webp' },
     ],
     offerData: {
       title: 'Zobacz również',
@@ -61,7 +61,7 @@ export default {
         {
           id: 0,
           title: this.offer.box_1_title,
-          url: '/image/rolety/dezal-poznan-roleta-dzień-noc-2.jpg',
+          url: '/image/rolety/dezal-poznan-roleta-dzień-noc-2.webp',
           description: this.offer.box_1_description,
         },
       ];
