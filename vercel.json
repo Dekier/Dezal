@@ -1,12 +1,10 @@
-
 {
   "version": 2,
   "builds": [
     {
       "src": "nuxt.config.js",
-      "use": "@nuxtjs/now-builder",
+      "use": "@nuxtjs/vercel-builder",
       "config": {
-        "generateStaticRoutes": false,
         "serverFiles": [
           "middleware/**",
           "plugins/**",
@@ -15,18 +13,6 @@
           "./.nuxt/dist/sitemap-routes.json"
         ]
       }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/_nuxt/.+",
-      "headers": {
-        "cache-control": "s-maxage=31536000"
-      }
-    },
-    {
-      "src": "/(.*)",
-      "dest": "$1"
     }
   ]
 }
