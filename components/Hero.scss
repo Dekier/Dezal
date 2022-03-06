@@ -67,11 +67,10 @@
     color: $color-white;
     cursor: pointer;
     margin: auto 20px;
-    transition: color 300ms background-color 300ms;
     border: 1px solid $color-yellow;
     background-color: transparent;
     color: $color-white;
-    border-radius: 4px;
+    border-radius: 24px;
 
     &:hover {
       color: $color-title;
