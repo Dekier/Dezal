@@ -2,7 +2,7 @@
   "name": "dezal",
   "version": "1.0.0",
   "description": "Project company Deżal",
-  "author": "Marcin  Dekier",
+  "author": "Marcin  Dekier ",
   "private": true,
   "scripts": {
     "dev": "nuxt",
