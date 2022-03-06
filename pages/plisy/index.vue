@@ -22,10 +22,10 @@ export default {
 
   data: () => ({
     bottomImages: [
-      { id: 1, url: '/image/plisy/deżal-poznań-plisa-1.jpg' },
-      { id: 2, url: '/image/plisy/deżal-poznań-plisa-2.jpg' },
-      { id: 3, url: '/image/plisy/deżal-poznań-plisa-3.jpg' },
-      { id: 4, url: '/image/plisy/deżal-poznań-plisa-4.jpg' },
+      { id: 1, url: '/image/plisy/deżal-poznań-plisa-1.webp' },
+      { id: 2, url: '/image/plisy/deżal-poznań-plisa-2.webp' },
+      { id: 3, url: '/image/plisy/deżal-poznań-plisa-3.webp' },
+      { id: 4, url: '/image/plisy/deżal-poznań-plisa-4.webp' },
     ],
     offerData: {
       title: 'Zobacz również',
@@ -62,7 +62,7 @@ export default {
         {
           id: 0,
           title: this.offer.box_4_title,
-          url: '/image/plisy/deżal-poznań-plisa-1.jpg',
+          url: '/image/plisy/deżal-poznań-plisa-1.webp',
           description: this.offer.box_4_description,
         },
       ];

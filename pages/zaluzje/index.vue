@@ -22,9 +22,9 @@ export default {
 
   data: () => ({
     bottomImages: [
-      { id: 1, url: '/image/zaluzje/deżal-poznań-żaluzja-drewniana-2.jpg' },
-      { id: 2, url: '/image/zaluzje/deżal-poznań-żaluzja-drewniana-3.jpg' },
-      { id: 3, url: '/image/zaluzje/deżal-poznań-żaluzja-drewniana-4.jpg' },
+      { id: 1, url: '/image/zaluzje/deżal-poznań-żaluzja-drewniana-2.webp' },
+      { id: 2, url: '/image/zaluzje/deżal-poznań-żaluzja-drewniana-1.webp' },
+      { id: 3, url: '/image/zaluzje/deżal-poznań-żaluzja-drewniana-4.webp' },
     ],
     offerData: {
       title: 'Zobacz również',
@@ -63,13 +63,13 @@ export default {
         {
           id: 0,
           title: this.offer.box_8_title,
-          url: '/image/zaluzje/deżal-poznań-żaluzja-aluminiowa-1.jpg',
+          url: '/image/zaluzje/deżal-poznań-żaluzja-aluminiowa-1.webp',
           description: this.offer.box_8_description,
         },
         {
           id: 1,
           title: this.offer.box_9_title,
-          url: '/image/zaluzje/deżal-poznań-żaluzja-drewniana-1.jpg',
+          url: '/image/zaluzje/deżal-poznań-żaluzja-drewniana-1.webp',
           description: this.offer.box_9_description,
         },
       ];

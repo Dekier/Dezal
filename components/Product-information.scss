@@ -39,7 +39,6 @@
     z-index: 2;
   }
 
-
   &__image {
     display: flex;
     flex-direction: column;
@@ -88,6 +87,7 @@
     height: 100%;
     border-radius: 8px;
     position: relative;
+    object-fit: cover;
   }
 
   &__hover-icon {
@@ -151,7 +151,6 @@
   &__center-picture {
     order: 0;
     display: flex;
-
 
     &--inverted {
       order: 1;
@@ -265,7 +264,6 @@
   }
 
   @media (max-width: 450px) {
-
     &__center-title,
     &__bottom-title {
       font-size: $font-size-title-mobile;

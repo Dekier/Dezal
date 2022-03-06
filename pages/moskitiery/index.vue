@@ -22,7 +22,7 @@ export default {
 
   data: () => ({
     bottomImages: [
-      { id: 1, url: '/image/moskitiery/dezal-poznan-moskitiera-1.jpg' },
+      { id: 1, url: '/image/moskitiery/dezal-poznan-moskitiera-1.webp' },
     ],
     offerData: {
       title: 'Zobacz również',
@@ -59,7 +59,7 @@ export default {
         {
           id: 0,
           title: this.offer.box_7_title,
-          url: '/image/moskitiery/dezal-poznan-moskitiera-1.jpg',
+          url: '/image/moskitiery/dezal-poznan-moskitiera-1.webp',
           description: this.offer.box_7_description,
         },
       ];

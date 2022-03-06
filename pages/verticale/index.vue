@@ -22,7 +22,7 @@ export default {
 
   data: () => ({
     bottomImages: [
-      { id: 1, url: '/image/verticale/deżal-poznań-roleta-verticale-1.jpg' },
+      { id: 1, url: '/image/verticale/deżal-poznań-roleta-verticale-1.webp' },
     ],
     offerData: {
       title: 'Zobacz również',
@@ -59,7 +59,7 @@ export default {
         {
           id: 0,
           title: this.offer.box_6_title,
-          url: '/image/verticale/deżal-poznań-roleta-verticale-1.jpg',
+          url: '/image/verticale/deżal-poznań-roleta-verticale-1.webp',
           description: this.offer.box_6_description,
         },
       ];

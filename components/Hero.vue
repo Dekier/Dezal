@@ -1,7 +1,7 @@
 <template>
   <header id="hero" class="Hero__main-container">
     <img
-      src="/image/header2.jpg"
+      src="/image/header2.webp"
       class="Hero__hero-image"
       alt="dezal zdjecie tła"
     />
