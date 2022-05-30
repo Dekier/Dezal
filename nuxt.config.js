@@ -71,11 +71,13 @@ export default {
     '@nuxtjs/sitemap',
     '@nuxtjs/firebase',
     '@nuxtjs/robots',
-    '@netsells/nuxt-hotjar',
-    {
-      id: '2994470',
-      sv: '6',
-    },
+    [
+      '@netsells/nuxt-hotjar',
+      {
+        id: '2994470',
+        sv: '6',
+      },
+    ],
   ],
 
   styleResources: {
