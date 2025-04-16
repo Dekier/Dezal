@@ -16,7 +16,8 @@
   "dependencies": {
     "firebase": "^8.6.3",
     "node-fetch-native": "^1.6.6",
-    "nuxt": "2.18.1"
+    "nuxt": "2.18.1",
+    "vue-gtag": "1.16.1"
   },
   "devDependencies": {
     "@nuxtjs/firebase": "^7.5.0",
