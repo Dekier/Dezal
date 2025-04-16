@@ -67,15 +67,9 @@ export default {
   modules: [
     '@nuxtjs/style-resources',
     '@nuxtjs/pwa',
-    'nuxt-sass-resources-loader',
     '@nuxtjs/sitemap',
     '@nuxtjs/firebase',
     '@nuxtjs/robots',
-    '@netsells/nuxt-hotjar',
-    {
-      id: '2994470',
-      sv: '6',
-    },
   ],
 
   styleResources: {
