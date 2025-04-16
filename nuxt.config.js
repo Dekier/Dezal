@@ -120,6 +120,9 @@ export default {
   build: {
     extend(config, { isServer }) {
       if (isServer) {
+        config.resolve.alias['node-fetch-native'] = require.resolve(
+          'node-fetch'
+        );
         config.externals = {
           '@firebase/app': 'commonjs @firebase/app',
           '@firebase/firestore': 'commonjs @firebase/firestore',
