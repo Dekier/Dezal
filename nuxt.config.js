@@ -43,7 +43,7 @@ export default {
    */
   plugins: [
     { src: '~/plugins/vue-scrollto.js', ssr: false },
-    { src: '~plugins/ga.js', ssr: false },
+    { src: '~plugins/vue-gtag.js', ssr: false },
   ],
 
   pwa: {
