@@ -52,12 +52,18 @@
         <span class="Footer__open-hours Footer__open-hours-title">
           ADRES
         </span>
-        <span class="Footer__open-hours">
+        <a
+          href="https://maps.app.goo.gl/SWWD7iMgbDCGbCam9"
+          class="Footer__open-hours"
+        >
           ul. Jaroczyńskiego 41
-        </span>
-        <span class="Footer__open-hours">
+        </a>
+        <a
+          href="https://maps.app.goo.gl/SWWD7iMgbDCGbCam9"
+          class="Footer__open-hours"
+        >
           60-692 Poznań Piątkowo
-        </span>
+        </a>
         <span class="Footer__open-hours Footer__open-hours-title">
           GODZINY OTWARCIA
         </span>
@@ -70,9 +76,9 @@
         <span class="Footer__open-hours Footer__open-hours-title">
           TELEFON
         </span>
-        <span class="Footer__open-hours">
+        <a href="tel:+48603630299" class="Footer__open-hours">
           +48 603 630 299
-        </span>
+        </a>
       </div>
       <div class="Footer__recomended-container">
         <div class="Footer__recomended-title">

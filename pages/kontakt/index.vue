@@ -22,10 +22,13 @@
             </svg>
             Adres
           </div>
-          <span class="Contact__information-text">
+          <a
+            href="https://maps.app.goo.gl/SWWD7iMgbDCGbCam9"
+            class="Contact__information-text"
+          >
             ul. Jaroczyńskiego 41 <br />
             60-692 Poznań Piątkowo
-          </span>
+          </a>
           <div class="Contact__information-title">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -40,9 +43,9 @@
             </svg>
             Telefon
           </div>
-          <span class="Contact__information-text">
+          <a href="tel:+48603630299" class="Contact__information-text">
             +48 603 630 299
-          </span>
+          </a>
           <div class="Contact__information-title">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -61,9 +64,12 @@
             </svg>
             Email
           </div>
-          <span class="Contact__information-text">
+          <a
+            href="mailto:dezal.rolety@gmail.com"
+            class="Contact__information-text"
+          >
             dezal.rolety@gmail.com
-          </span>
+          </a>
           <div class="Contact__information-title">
             <svg
               xmlns="http://www.w3.org/2000/svg"
