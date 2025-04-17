@@ -3,11 +3,14 @@ export default {
     lang: 'pl',
   },
 
+  target: 'static',
+  ssr: true,
+
   /*
    ** Headers of the page
    */
   head: {
-    title: 'DEŻAL: nowoczesne żaluzje, plisy i rolety | Poznań i okolice.',
+    title: 'DEŻAL: nowoczesne rolety, plisy i żaluzje | Poznań i okolice.',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
