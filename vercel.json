@@ -5,13 +5,7 @@
       "src": "nuxt.config.js",
       "use": "@nuxtjs/vercel-builder",
       "config": {
-        "serverFiles": [
-          "middleware/**",
-          "plugins/**",
-          "lib/**",
-          "package.json",
-          ".nuxt/dist/sitemap-routes.json"
-        ]
+        "generateCommand": "yarn generate"
       }
     }
   ],
