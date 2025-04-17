@@ -10,9 +10,22 @@
           "plugins/**",
           "lib/**",
           "package.json",
-          "./.nuxt/dist/sitemap-routes.json"
+          ".nuxt/dist/sitemap-routes.json"
         ]
       }
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.dezalroletypoznan.pl"
+        }
+      ],
+      "destination": "https://dezalroletypoznan.pl/:path*",
+      "permanent": true
     }
   ]
 }
