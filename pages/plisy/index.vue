@@ -1,13 +1,14 @@
 <template>
   <div>
-    <product-information :page-data="pageData" :bottom-images="bottomImages" />
-    <offer :offer-data="offerData" :offer-data-boxes="offer" />
+    <ProductInformation :page-data="pageData" :bottom-images="bottomImages" />
+    <Offer :offer-data="offerData" :offer-boxes-json="offerBoxesJson" />
   </div>
 </template>
 
 <script>
 import ProductInformation from '~/components/Product-information.vue';
 import Offer from '~/components/Offer.vue';
+import offers from '~/static/offers.json';
 import { mapGetters } from 'vuex';
 
 export default {
@@ -16,6 +17,12 @@ export default {
   components: {
     ProductInformation,
     Offer,
+  },
+
+  async asyncData() {
+    return {
+      offerBoxesJson: offers.boxes,
+    };
   },
 
   transition: 'bounce',
@@ -32,9 +39,9 @@ export default {
       description:
         'Polecamy również nasze pozostałe produkty. W pełnej ofercie firmy Deżal znajdziesz:',
       showBoxes: [
-        'dzien-noc',
-        'materialowe',
-        'rzymskie',
+        'rolety-dzien-noc',
+        'rolety-materialowe',
+        'rolety-rzymskie',
         'zaluzje',
         'verticale',
         'moskitiery',
@@ -61,9 +68,9 @@ export default {
       return [
         {
           id: 0,
-          title: this.offer.box_4_title,
+          title: this.offerBoxesJson[3].title,
           url: '/image/plisy/deżal-poznań-plisa-1.webp',
-          description: this.offer.box_4_description,
+          description: this.offerBoxesJson[3].description,
         },
       ];
     },

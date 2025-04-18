@@ -1,13 +1,14 @@
 <template>
   <div>
-    <product-information :page-data="pageData" :bottom-images="bottomImages" />
-    <offer :offer-data="offerData" :offer-data-boxes="offer" />
+    <ProductInformation :page-data="pageData" :bottom-images="bottomImages" />
+    <Offer :offer-data="offerData" :offer-boxes-json="offerBoxesJson" />
   </div>
 </template>
 
 <script>
 import ProductInformation from '~/components/Product-information.vue';
 import Offer from '~/components/Offer.vue';
+import offers from '~/static/offers.json';
 import { mapGetters } from 'vuex';
 
 export default {
@@ -18,6 +19,11 @@ export default {
     Offer,
   },
 
+  async asyncData() {
+    return {
+      offerBoxesJson: offers.boxes,
+    };
+  },
   transition: 'bounce',
 
   data: () => ({
@@ -32,9 +38,9 @@ export default {
       description:
         'Polecamy również nasze pozostałe produkty. W pełnej ofercie firmy Deżal znajdziesz:',
       showBoxes: [
-        'dzien-noc',
+        'rolety-dzien-noc',
+        'rolety-rzymskie',
         'plisy',
-        'rzymskie',
         'zaluzje',
         'verticale',
         'moskitiery',
@@ -61,9 +67,9 @@ export default {
       return [
         {
           id: 0,
-          title: this.offer.box_2_title,
+          title: this.offerBoxesJson[1].title,
           url: '/image/rolety/dezal-poznan-roleta-materiałowa-3.webp',
-          description: this.offer.box_2_description,
+          description: this.offerBoxesJson[1].description,
         },
       ];
     },

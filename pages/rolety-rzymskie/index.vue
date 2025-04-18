@@ -1,7 +1,7 @@
 <template>
   <div>
-    <product-information :page-data="pageData" :bottom-images="bottomImages" />
-    <offer :offer-data="offerData" :offer-data-boxes="offer" />
+    <ProductInformation :page-data="pageData" :bottom-images="bottomImages" />
+    <Offer :offer-data="offerData" :offer-boxes-json="offerBoxesJson" />
   </div>
 </template>
 
@@ -9,6 +9,7 @@
 import ProductInformation from '~/components/Product-information.vue';
 import Offer from '~/components/Offer.vue';
 import { mapGetters } from 'vuex';
+import offers from '~/static/offers.json';
 
 export default {
   name: 'RoletyRzymskie',
@@ -16,6 +17,12 @@ export default {
   components: {
     ProductInformation,
     Offer,
+  },
+
+  async asyncData() {
+    return {
+      offerBoxesJson: offers.boxes,
+    };
   },
 
   transition: 'bounce',
@@ -31,8 +38,8 @@ export default {
       description:
         'Polecamy również nasze pozostałe produkty. W pełnej ofercie firmy Deżal znajdziesz:',
       showBoxes: [
-        'dzien-noc',
-        'materialowe',
+        'rolety-dzien-noc',
+        'rolety-materialowe',
         'plisy',
         'zaluzje',
         'verticale',
@@ -60,9 +67,9 @@ export default {
       return [
         {
           id: 0,
-          title: this.offer.box_3_title,
+          title: this.offerBoxesJson[2].title,
           url: '/image/rolety/dezal-poznan-roleta-rzymska-0.webp',
-          description: this.offer.box_3_description,
+          description: this.offerBoxesJson[2].description,
         },
       ];
     },
