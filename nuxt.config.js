@@ -71,7 +71,6 @@ export default {
     '@nuxtjs/style-resources',
     '@nuxtjs/pwa',
     '@nuxtjs/sitemap',
-    '@nuxtjs/firebase',
     '@nuxtjs/robots',
   ],
 
@@ -102,35 +101,12 @@ export default {
     robots: true,
   },
 
-  firebase: {
-    config: {
-      apiKey: 'AIzaSyAzEy6DqrnNLqqjLagqEnxmzYRMrJrYX8A',
-      authDomain: 'dezal-e34b9.firebaseapp.com',
-      databaseURL: 'https://dezal-e34b9.firebaseio.com',
-      projectId: 'dezal-e34b9',
-      storageBucket: 'dezal-e34b9.appspot.com',
-      messagingSenderId: '1098134824316',
-      appId: '1:1098134824316:web:03f74fc2d6433efa',
-    },
-    services: {
-      firestore: {
-        enablePersistence: {
-          synchronizeTabs: true,
-        },
-      },
-    },
-  },
-
   build: {
     extend(config, { isServer }) {
       if (isServer) {
         config.resolve.alias['node-fetch-native'] = require.resolve(
           'node-fetch'
         );
-        config.externals = {
-          '@firebase/app': 'commonjs @firebase/app',
-          '@firebase/firestore': 'commonjs @firebase/firestore',
-        };
       }
     },
   },

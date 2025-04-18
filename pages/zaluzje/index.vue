@@ -1,7 +1,7 @@
 <template>
   <div class="Plisy__main-container">
-    <product-information :pageData="pageData" :bottom-images="bottomImages" />
-    <offer :offer-data="offerData" :offer-data-boxes="offer" />
+    <ProductInformation :page-data="pageData" :bottom-images="bottomImages" />
+    <Offer :offer-data="offerData" :offer-boxes-json="offerBoxesJson" />
   </div>
 </template>
 
@@ -9,6 +9,7 @@
 import ProductInformation from '~/components/Product-information.vue';
 import Offer from '~/components/Offer.vue';
 import { mapGetters } from 'vuex';
+import offers from '~/static/offers.json';
 
 export default {
   name: 'Zaluzje',
@@ -16,6 +17,12 @@ export default {
   components: {
     ProductInformation,
     Offer,
+  },
+
+  async asyncData() {
+    return {
+      offerBoxesJson: offers.boxes,
+    };
   },
 
   transition: 'bounce',
@@ -31,9 +38,9 @@ export default {
       description:
         'Polecamy również nasze pozostałe produkty. W pełnej ofercie firmy Deżal znajdziesz:',
       showBoxes: [
-        'dzien-noc',
-        'materialowe',
-        'rzymskie',
+        'rolety-dzien-noc',
+        'rolety-materialowe',
+        'rolety-rzymskie',
         'plisy',
         'verticale',
         'moskitiery',
@@ -62,15 +69,15 @@ export default {
       return [
         {
           id: 0,
-          title: this.offer.box_8_title,
+          title: this.offerBoxesJson[7].title,
           url: '/image/zaluzje/deżal-poznań-żaluzja-aluminiowa-1.webp',
-          description: this.offer.box_8_description,
+          description: this.offerBoxesJson[7].description,
         },
         {
           id: 1,
-          title: this.offer.box_9_title,
+          title: this.offerBoxesJson[8].title,
           url: '/image/zaluzje/deżal-poznań-żaluzja-drewniana-1.webp',
-          description: this.offer.box_9_description,
+          description: this.offerBoxesJson[8].description,
         },
       ];
     },

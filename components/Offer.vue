@@ -5,16 +5,12 @@
       <p class="Offer__description">{{ offerData.description }}</p>
       <div class="Offer__boxes-container">
         <div v-for="(box, index) in showBoxes" :key="index" class="Offer__box">
-          <h3 class="Offer__box-title">
-            {{ offerDataBoxes[`box_${index + 1}_title`] }}
-          </h3>
+          <h3 class="Offer__box-title">{{ box.title }}</h3>
           <div class="Offer__box-image-container">
-            <img :src="box.url" class="Offer__box-image" :alt="box.link" />
+            <img :src="box.url" class="Offer__box-image" :alt="box.title" />
           </div>
-          <p class="Offer__box-text" style="-webkit-box-orient: vertical;">
-            {{ offerDataBoxes[`box_${index + 1}_description`] }}
-          </p>
-          <nuxt-link :to="box.link" class="Offer__box-btn">
+          <p class="Offer__box-text">{{ box.description }}</p>
+          <nuxt-link :to="`/${box.type}`" class="Offer__box-btn">
             Czytaj więcej
             <svg
               class="Offer__box-arrow"
@@ -41,56 +37,15 @@ export default {
       type: Object,
       required: true,
     },
-    offerDataBoxes: {
-      type: Object,
+    offerBoxesJson: {
+      type: Array,
       required: true,
     },
   },
 
-  data: () => ({
-    activeTab: '',
-    boxesData: [
-      {
-        url: '/image/rolety/dezal-poznan-roleta-dzień-noc-2.webp',
-        link: '/rolety-dzien-noc',
-        type: 'dzien-noc',
-      },
-      {
-        url: '/image/rolety/dezal-poznan-roleta-materiałowa-3.webp',
-        link: '/rolety-materialowe',
-        type: 'materialowe',
-      },
-      {
-        url: '/image/rolety/dezal-poznan-roleta-rzymska-1.webp',
-        link: '/rolety-rzymskie',
-        type: 'rzymskie',
-      },
-      {
-        url: '/image/plisy/deżal-poznań-plisa-1.webp',
-        link: '/plisy',
-        type: 'plisy',
-      },
-      {
-        url: '/image/zaluzje/deżal-poznań-żaluzja-drewniana-1.webp',
-        link: '/zaluzje',
-        type: 'zaluzje',
-      },
-      {
-        url: '/image/verticale/deżal-poznań-roleta-verticale-1.webp',
-        link: '/verticale',
-        type: 'verticale',
-      },
-      {
-        url: '/image/moskitiery/dezal-poznan-moskitiera-1.webp',
-        link: '/moskitiery',
-        type: 'moskitiery',
-      },
-    ],
-  }),
-
   computed: {
     showBoxes() {
-      return this.boxesData.filter(box =>
+      return this.offerBoxesJson.filter(box =>
         this.offerData.showBoxes.includes(box.type)
       );
     },

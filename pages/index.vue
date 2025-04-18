@@ -3,9 +3,9 @@
     <div class="MainPage__hero">
       <div class="MainPage__hero-background" />
     </div>
-    <hero />
-    <about-company />
-    <offer :offer-data="offerData" :offer-data-boxes="offer" />
+    <Hero />
+    <AboutCompany />
+    <Offer :offer-data="offerData" :offer-boxes-json="offerBoxesJson" />
   </div>
 </template>
 
@@ -13,29 +13,25 @@
 import Offer from '~/components/Offer.vue';
 import Hero from '~/components/Hero.vue';
 import AboutCompany from '~/components/About-company.vue';
-import { mapGetters } from 'vuex';
+import offers from '~/static/offers.json';
+
 export default {
-  name: 'MainPage',
+  components: { Offer, Hero, AboutCompany },
 
-  transition: 'bounce',
-
-  components: {
-    Offer,
-    Hero,
-    AboutCompany,
+  async asyncData() {
+    return {
+      offerBoxesJson: offers.boxes,
+    };
   },
 
   data: () => ({
-    writeSuccessful: false,
-    readSuccessful: false,
     offerData: {
       title: 'Oferta',
-      description:
-        'Tworzymy projekty wnętrz łączące w sobie ciekawe formy i funkcjonalność naszych produktów. W naszej ofercie znajdziecie szeroki wybór kolorów i deseni materiałów. Mieszkasz lub pracujesz w Poznaniu bądź okolicy? Potrzebujesz rolet lub żaluzji? Sprawdź koniecznie naszą ofertę! ',
+      description: 'Tworzymy projekty wnętrz...',
       showBoxes: [
-        'dzien-noc',
-        'materialowe',
-        'rzymskie',
+        'rolety-dzien-noc',
+        'rolety-materialowe',
+        'rolety-rzymskie',
         'plisy',
         'zaluzje',
         'verticale',
@@ -43,12 +39,5 @@ export default {
       ],
     },
   }),
-  computed: {
-    ...mapGetters(['hero', 'aboutCompany', 'offer']),
-  },
 };
 </script>
-
-<style lang="scss" scoped>
-@import 'index';
-</style>
