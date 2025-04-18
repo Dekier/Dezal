@@ -26,8 +26,8 @@ export default {
 
   data: () => ({
     offerData: {
-      title: 'Oferta',
-      description: 'Tworzymy projekty wnętrz...',
+      title: 'Oferujemy',
+      description: 'W naszej ofercie znajdziesz:',
       showBoxes: [
         'rolety-dzien-noc',
         'rolety-materialowe',
