@@ -2,7 +2,7 @@
   <div class="Cookies__main-container">
     Ta strona używa ciasteczek (cookies) m.in. do statystyk, dzięki którym nasz
     serwis może działać lepiej.
-    <div @click="hideCookies()" class="Cookies__btn">
+    <div @click="hideCookies" class="Cookies__btn">
       <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
         <path
           fill="#fff"
@@ -13,19 +13,14 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'Cookies',
+<script setup lang="ts">
+const emit = defineEmits(['hideCookies']);
 
-  methods: {
-    hideCookies() {
-      this.$emit('hideCookies')
-    }
-  }
-}
+const hideCookies = () => {
+  emit('hideCookies');
+};
 </script>
 
 <style lang="scss" scoped>
-@import 'Cookies';
+@use './Cookies.scss' as *;
 </style>
-

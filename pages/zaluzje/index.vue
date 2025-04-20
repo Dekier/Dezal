@@ -5,82 +5,75 @@
   </div>
 </template>
 
-<script>
+<script setup lang="ts">
+import { ref, computed } from 'vue';
 import ProductInformation from '~/components/Product-information.vue';
 import Offer from '~/components/Offer.vue';
-import { mapGetters } from 'vuex';
-import offers from '~/static/offers.json';
 
-export default {
-  name: 'Zaluzje',
+// Obrazki na dole strony
+const bottomImages = ref([
+  { id: 1, url: '/images/zaluzje/deżal-poznań-żaluzja-drewniana-2.webp' },
+  { id: 2, url: '/images/zaluzje/deżal-poznań-żaluzja-drewniana-1.webp' },
+  { id: 3, url: '/images/zaluzje/deżal-poznań-żaluzja-drewniana-4.webp' },
+]);
 
-  components: {
-    ProductInformation,
-    Offer,
-  },
+// Dane do boksów "Zobacz również"
+const offerData = ref({
+  title: 'Zobacz również',
+  description:
+    'Polecamy również nasze pozostałe produkty. W pełnej ofercie firmy Deżal znajdziesz:',
+  showBoxes: [
+    'rolety-dzien-noc',
+    'rolety-materialowe',
+    'rolety-rzymskie',
+    'plisy',
+    'verticale',
+    'moskitiery',
+  ],
+});
 
-  async asyncData() {
-    return {
-      offerBoxesJson: offers.boxes,
-    };
-  },
+// Fetch JSON z public/offers.json
+const { data: rawData } = await useFetch('/offers.json');
+const offerBoxesJson = ref([]);
 
-  transition: 'bounce',
+if (rawData.value?.boxes) {
+  offerBoxesJson.value = rawData.value.boxes;
+}
 
-  data: () => ({
-    bottomImages: [
-      { id: 1, url: '/image/zaluzje/deżal-poznań-żaluzja-drewniana-2.webp' },
-      { id: 2, url: '/image/zaluzje/deżal-poznań-żaluzja-drewniana-1.webp' },
-      { id: 3, url: '/image/zaluzje/deżal-poznań-żaluzja-drewniana-4.webp' },
-    ],
-    offerData: {
-      title: 'Zobacz również',
-      description:
-        'Polecamy również nasze pozostałe produkty. W pełnej ofercie firmy Deżal znajdziesz:',
-      showBoxes: [
-        'rolety-dzien-noc',
-        'rolety-materialowe',
-        'rolety-rzymskie',
-        'plisy',
-        'verticale',
-        'moskitiery',
-      ],
+// Dynamiczne dane do ProductInformation
+const pageData = computed(() => {
+  const boxes = offerBoxesJson.value;
+  if (!boxes.length) return [];
+
+  return [
+    {
+      id: 0,
+      title: boxes[7]?.title ?? '',
+      url: '/images/zaluzje/deżal-poznań-żaluzja-aluminiowa-1.webp',
+      description: boxes[7]?.description ?? '',
     },
-    title:
-      'Żaluzje deżal-poznań-żaluzja-drewniana-/aluminiowe w Poznaniu od firmy Deżal.',
-  }),
-  head() {
-    return {
-      title: this.title,
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content:
-            'Żaluzje deżal-poznań-żaluzja-drewniana-/aluminiowe w Poznaniu na Piątkowie. Montaż w cene!',
-        },
-      ],
-    };
-  },
-
-  computed: {
-    ...mapGetters(['offer']),
-    pageData() {
-      return [
-        {
-          id: 0,
-          title: this.offerBoxesJson[7].title,
-          url: '/image/zaluzje/deżal-poznań-żaluzja-aluminiowa-1.webp',
-          description: this.offerBoxesJson[7].description,
-        },
-        {
-          id: 1,
-          title: this.offerBoxesJson[8].title,
-          url: '/image/zaluzje/deżal-poznań-żaluzja-drewniana-1.webp',
-          description: this.offerBoxesJson[8].description,
-        },
-      ];
+    {
+      id: 1,
+      title: boxes[8]?.title ?? '',
+      url: '/images/zaluzje/deżal-poznań-żaluzja-drewniana-1.webp',
+      description: boxes[8]?.description ?? '',
     },
-  },
-};
+  ];
+});
+
+// SEO
+useHead({
+  title: 'Żaluzje drewniane i aluminiowe w Poznaniu od firmy Deżal.',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Żaluzje drewniane i aluminiowe w Poznaniu na Piątkowie. Montaż w cenie!',
+    },
+  ],
+});
 </script>
+
+<style scoped lang="scss">
+/* ewentualne style dodatkowe */
+</style>

@@ -4,19 +4,19 @@
       Przepraszamy. Nie ma takiej strony
     </h1>
     <h1 v-else class="ErrorPage__text">Ups... coś poszło nie tak</h1>
-    <nuxt-link class="ErrorPage__link" to="/"
-      >Przejdź do strony głównej</nuxt-link
+    <NuxtLink class="ErrorPage__link" to="/"
+      >Przejdź do strony głównej</NuxtLink
     >
   </div>
 </template>
 
-<script>
-export default {
-  // eslint-disable-next-line vue/require-prop-types
-  props: ['error'],
-};
+<script setup lang="ts">
+defineProps<{ error: { statusCode: number } }>();
 </script>
 
-<style lang="scss" scoped>
-@import 'error';
+<style scoped lang="scss">
+// @use './error.scss' as *;
+.ErrorPage__main-container {
+  background: red;
+}
 </style>

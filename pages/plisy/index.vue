@@ -5,75 +5,65 @@
   </div>
 </template>
 
-<script>
+<script setup lang="ts">
+import { ref, computed } from 'vue';
 import ProductInformation from '~/components/Product-information.vue';
 import Offer from '~/components/Offer.vue';
-import offers from '~/static/offers.json';
-import { mapGetters } from 'vuex';
 
-export default {
-  name: 'Plisy',
+// Dane do dolnej galerii
+const bottomImages = ref([
+  { id: 1, url: '/images/plisy/deżal-poznań-plisa-1.webp' },
+  { id: 2, url: '/images/plisy/deżal-poznań-plisa-2.webp' },
+  { id: 3, url: '/images/plisy/deżal-poznań-plisa-3.webp' },
+  { id: 4, url: '/images/plisy/deżal-poznań-plisa-4.webp' },
+]);
 
-  components: {
-    ProductInformation,
-    Offer,
-  },
+// Dane do boxów "Zobacz również"
+const offerData = ref({
+  title: 'Zobacz również',
+  description:
+    'Polecamy również nasze pozostałe produkty. W pełnej ofercie firmy Deżal znajdziesz:',
+  showBoxes: [
+    'rolety-dzien-noc',
+    'rolety-materialowe',
+    'rolety-rzymskie',
+    'zaluzje',
+    'verticale',
+    'moskitiery',
+  ],
+});
 
-  async asyncData() {
-    return {
-      offerBoxesJson: offers.boxes,
-    };
-  },
+// Fetch JSON z folderu public
+const { data: rawData } = await useFetch('/offers.json');
+const offerBoxesJson = ref([]);
 
-  transition: 'bounce',
+if (rawData.value?.boxes) {
+  offerBoxesJson.value = rawData.value.boxes;
+}
 
-  data: () => ({
-    bottomImages: [
-      { id: 1, url: '/image/plisy/deżal-poznań-plisa-1.webp' },
-      { id: 2, url: '/image/plisy/deżal-poznań-plisa-2.webp' },
-      { id: 3, url: '/image/plisy/deżal-poznań-plisa-3.webp' },
-      { id: 4, url: '/image/plisy/deżal-poznań-plisa-4.webp' },
-    ],
-    offerData: {
-      title: 'Zobacz również',
-      description:
-        'Polecamy również nasze pozostałe produkty. W pełnej ofercie firmy Deżal znajdziesz:',
-      showBoxes: [
-        'rolety-dzien-noc',
-        'rolety-materialowe',
-        'rolety-rzymskie',
-        'zaluzje',
-        'verticale',
-        'moskitiery',
-      ],
-    },
-    title: 'Plisy w Poznaniu od firmy Deżal.',
-  }),
-  head() {
-    return {
-      title: this.title,
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: 'Rolety Plisowane w Poznaniu na Piątkowie. Montaż w cene!',
-        },
-      ],
-    };
-  },
-
-  computed: {
-    ...mapGetters(['offer']),
-    pageData() {
-      return [
+// Dane do ProductInformation (jedna sekcja)
+const pageData = computed(() => {
+  const box = offerBoxesJson.value[3];
+  return box
+    ? [
         {
           id: 0,
-          title: this.offerBoxesJson[3].title,
-          url: '/image/plisy/deżal-poznań-plisa-1.webp',
-          description: this.offerBoxesJson[3].description,
+          title: box.title,
+          url: '/images/plisy/deżal-poznań-plisa-1.webp',
+          description: box.description,
         },
-      ];
+      ]
+    : [];
+});
+
+// SEO meta
+useHead({
+  title: 'Plisy w Poznaniu od firmy Deżal.',
+  meta: [
+    {
+      name: 'description',
+      content: 'Rolety Plisowane w Poznaniu na Piątkowie. Montaż w cenie!',
     },
-  },
-};
+  ],
+});
 </script>

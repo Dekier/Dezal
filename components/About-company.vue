@@ -1,9 +1,7 @@
 <template>
   <div id="aboutCompany" class="AboutCompany__main-container">
     <div class="AboutCompany__center-container">
-      <h2 class="AboutCompany__title">
-        O NAS
-      </h2>
+      <h2 class="AboutCompany__title">O NAS</h2>
       <p class="AboutCompany__description">
         Jesteśmy lokalną firmą, która na rynku osłon okiennych działa
         nieprzerwanie od lat 90 XX wieku. W żaluzje i rolety zaopatrujemy Poznań
@@ -25,9 +23,7 @@
               />
             </g>
           </svg>
-          <h3 class="AboutCompany__box-title">
-            DOŚWIADCZENIE ZAWODOWE
-          </h3>
+          <h3 class="AboutCompany__box-title">DOŚWIADCZENIE ZAWODOWE</h3>
           <p class="AboutCompany__box-text">
             Prowadzimy firmę od ponad 20 lat, dzięki czemu zyskaliśmy bardzo
             duże doświadczenie w projektowaniu unikatowych dekoracji okiennych,
@@ -46,9 +42,7 @@
               />
             </g>
           </svg>
-          <h3 class="AboutCompany__box-title">
-            PROFESJONALIZM
-          </h3>
+          <h3 class="AboutCompany__box-title">PROFESJONALIZM</h3>
           <p class="AboutCompany__box-text">
             Zawsze pracujemy rzetelnie i profesjonalnie. Wykonujemy pomiary
             okien z dokładnością 1mm. Zadowolenie naszych Klientów przekłada się
@@ -66,9 +60,7 @@
               />
             </g>
           </svg>
-          <h3 class="AboutCompany__box-title">
-            CZAS REALIZACJI
-          </h3>
+          <h3 class="AboutCompany__box-title">CZAS REALIZACJI</h3>
           <p class="AboutCompany__box-text">
             Jesteśmy świadomi, że czas to pieniądz, więc działamy sprawnie i
             realizujemy zamówienia w najkrótszym możliwym terminie. Nieustannie
@@ -80,11 +72,7 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'AboutCompany',
-};
-</script>
+<script setup lang="ts"></script>
 <style lang="scss">
-@import 'About-company';
+@use './About-company.scss' as *;
 </style>

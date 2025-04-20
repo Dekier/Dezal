@@ -1,43 +1,44 @@
 <template>
-  <div class="MainPage__main-container">
-    <div class="MainPage__hero">
-      <div class="MainPage__hero-background" />
-    </div>
+  <div>
     <Hero />
     <AboutCompany />
     <Offer :offer-data="offerData" :offer-boxes-json="offerBoxesJson" />
   </div>
 </template>
 
-<script>
-import Offer from '~/components/Offer.vue';
-import Hero from '~/components/Hero.vue';
-import AboutCompany from '~/components/About-company.vue';
-import offers from '~/static/offers.json';
+<script setup lang="ts">
+import { ref } from 'vue';
+const offerData = ref({
+  title: 'Oferujemy',
+  description: 'W naszej ofercie znajdziesz:',
+  showBoxes: [
+    'rolety-dzien-noc',
+    'rolety-materialowe',
+    'rolety-rzymskie',
+    'plisy',
+    'zaluzje',
+    'verticale',
+    'moskitiery',
+  ],
+});
 
-export default {
-  components: { Offer, Hero, AboutCompany },
+const { data: rawData, error } = await useFetch('/offers.json');
 
-  async asyncData() {
-    return {
-      offerBoxesJson: offers.boxes,
-    };
-  },
+const offerBoxesJson = ref([]);
+if (rawData.value?.boxes) {
+  offerBoxesJson.value = rawData.value.boxes;
+}
 
-  data: () => ({
-    offerData: {
-      title: 'Oferujemy',
-      description: 'W naszej ofercie znajdziesz:',
-      showBoxes: [
-        'rolety-dzien-noc',
-        'rolety-materialowe',
-        'rolety-rzymskie',
-        'plisy',
-        'zaluzje',
-        'verticale',
-        'moskitiery',
-      ],
+console.log(offerBoxesJson.value);
+
+useHead({
+  title: 'DEŻAL: nowoczesne rolety, plisy i żaluzje | Poznań i okolice.',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Oferowane przez firmę DEŻAL Poznań rolety, plisy i żaluzje to najwyższej jakości osłony okienne. Indywidualna oferta, szczegółowy pomiar i szybka realizacja.',
     },
-  }),
-};
+  ],
+});
 </script>

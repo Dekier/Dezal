@@ -5,9 +5,11 @@
     @mouseleave="showDropDown = false"
   >
     <div class="Header__center-container">
-      <nuxt-link @click.native="pageActive = 'home'" to="/" aria-label="Deżal">
+      <NuxtLink @click="pageActive = 'home'" to="/" aria-label="Deżal">
         <div class="Header__logo" />
-      </nuxt-link>
+      </NuxtLink>
+
+      <!-- Hamburger -->
       <div
         @click="showMobileBtn = !showMobileBtn"
         :class="{ 'Header__hamburger-container--active': showMobileBtn }"
@@ -26,19 +28,21 @@
           class="Header__hamburger-line"
         />
       </div>
+
+      <!-- Mobile nav -->
       <transition name="fade">
         <nav v-if="showMobileBtn" class="Header__links-container-mobile">
-          <nuxt-link
-            v-scroll-to="'#hero'"
-            id="Header__home"
-            class="Header__link-mobile"
+          <NuxtLink
             to="/"
-            @mouseover="showDropDown = false"
-            @click.native="
-              (showMobileBtn = false), (showMobileDropDown = false)
+            class="Header__link-mobile"
+            @click="
+              closeMobileMenu();
+              pageActive = 'home';
             "
-            >STRONA GŁÓWNA</nuxt-link
           >
+            STRONA GŁÓWNA
+          </NuxtLink>
+
           <button
             type="button"
             class="Header__link-mobile"
@@ -56,135 +60,92 @@
               />
             </svg>
           </button>
+
           <transition name="fade">
             <div
               v-if="showMobileDropDown"
               class="Header__dropdown-container-mobile"
             >
-              <nuxt-link
-                class="Header__dropdown-link-mobile"
-                to="/rolety-dzien-noc"
-                @click.native="
-                  (showMobileDropDown = false), (showMobileBtn = false)
+              <NuxtLink
+                v-for="link in offerLinks"
+                :key="link.to"
+                :to="link.to"
+                class="Header__dropdowNuxtLink-mobile"
+                @click="
+                  closeMobileMenu();
+                  pageActive = 'offer';
                 "
-                >Rolety Dzień-Noc</nuxt-link
               >
-              <nuxt-link
-                class="Header__dropdown-link-mobile"
-                to="/rolety-materialowe"
-                @click.native="
-                  (showMobileDropDown = false), (showMobileBtn = false)
-                "
-                >Rolety Materiałowe</nuxt-link
-              >
-              <nuxt-link
-                class="Header__dropdown-link-mobile"
-                to="/rolety-rzymskie"
-                @click.native="
-                  (showMobileDropDown = false), (showMobileBtn = false)
-                "
-                >Rolety Rzymskie</nuxt-link
-              >
-              <nuxt-link
-                class="Header__dropdown-link-mobile"
-                to="/plisy"
-                @click.native="
-                  (showMobileDropDown = false), (showMobileBtn = false)
-                "
-                >PLISY</nuxt-link
-              >
-              <nuxt-link
-                class="Header__dropdown-link-mobile"
-                @click.native="
-                  (showMobileDropDown = false), (showMobileBtn = false)
-                "
-                to="/zaluzje"
-                >Żaluzje</nuxt-link
-              >
-              <nuxt-link
-                class="Header__dropdown-link-mobile"
-                @click.native="
-                  (showMobileDropDown = false), (showMobileBtn = false)
-                "
-                to="/verticale"
-                >verticale</nuxt-link
-              >
-              <nuxt-link
-                class="Header__dropdown-link-mobile"
-                @click.native="
-                  (showMobileDropDown = false), (showMobileBtn = false)
-                "
-                to="/moskitiery"
-                >moskitiery</nuxt-link
-              >
+                {{ link.label }}
+              </NuxtLink>
             </div>
           </transition>
-          <nuxt-link
-            class="Header__link-mobile"
+
+          <NuxtLink
             to="/realizacje"
-            @click.native="
-              (showMobileBtn = false), (showMobileDropDown = false)
-            "
-            >REALIZACJE</nuxt-link
-          >
-          <nuxt-link
             class="Header__link-mobile"
-            to="/kontakt"
-            @click.native="
-              (showMobileBtn = false), (showMobileDropDown = false)
+            @click="
+              closeMobileMenu();
+              pageActive = 'real';
             "
-            >KONTAKT</nuxt-link
           >
+            REALIZACJE
+          </NuxtLink>
+          <NuxtLink
+            to="/kontakt"
+            class="Header__link-mobile"
+            @click="
+              closeMobileMenu();
+              pageActive = 'contact';
+            "
+          >
+            KONTAKT
+          </NuxtLink>
         </nav>
       </transition>
+
+      <!-- Desktop nav -->
       <div class="Header__links-container">
-        <nuxt-link
-          v-scroll-to="'#hero'"
-          id="Header__home"
-          class="Header__link"
-          to="/"
-          @click.native="(showMobileBtn = false), (showMobileDropDown = false)"
-          @mouseover.native="showDropDown = false"
-        >
+        <NuxtLink to="/" class="Header__link" @click="pageActive = 'home'">
           STRONA GŁÓWNA
           <svg class="Header__link-border" width="200" height="50">
             <line
-              :class="{ 'svg-bottom-left--active': pageActive === 'home' }"
               class="svg-bottom-left"
+              :class="{ 'svg-bottom-left--active': pageActive === 'home' }"
               x1="-100"
               y1="50"
               x2="100"
               y2="50"
             />
             <line
-              :class="{ 'svg-bottom-right--active': pageActive === 'home' }"
               class="svg-bottom-right"
+              :class="{ 'svg-bottom-right--active': pageActive === 'home' }"
               x1="100"
               y1="50"
               x2="300"
               y2="50"
             />
           </svg>
-        </nuxt-link>
+        </NuxtLink>
+
         <button
           type="button"
-          v-scroll-to="'#offer'"
           class="Header__link"
           @mouseover="showDropDown = true"
         >
           OFERTA
           <svg class="Header__link-border" width="200" height="50">
             <line
-              :class="{ 'svg-bottom-left--active': pageActive === 'offer' }"
               class="svg-bottom-left"
+              :class="{ 'svg-bottom-left--active': pageActive === 'offer' }"
               x1="-100"
               y1="50"
               x2="100"
               y2="50"
             />
             <line
-              :class="{ 'svg-bottom-right--active': pageActive === 'offer' }"
               class="svg-bottom-right"
+              :class="{ 'svg-bottom-right--active': pageActive === 'offer' }"
               x1="100"
               y1="50"
               x2="300"
@@ -202,59 +163,30 @@
             />
           </svg>
         </button>
+
         <div
           v-if="showDropDown"
           class="Header__dropdown"
           @mouseleave="showDropDown = false"
         >
-          <nuxt-link
-            class="Header__dropdown-link"
-            @click.native="(showDropDown = false), (pageActive = 'offer')"
-            to="/rolety-dzien-noc"
-            >Rolety Dzień-Noc</nuxt-link
+          <NuxtLink
+            v-for="link in offerLinks"
+            :key="link.to"
+            :to="link.to"
+            class="Header__dropdowNuxtLink"
+            @click="
+              showDropDown = false;
+              pageActive = 'offer';
+            "
           >
-          <nuxt-link
-            class="Header__dropdown-link"
-            @click.native="(showDropDown = false), (pageActive = 'offer')"
-            to="/rolety-materialowe"
-            >Rolety Materiałowe</nuxt-link
-          >
-          <nuxt-link
-            class="Header__dropdown-link"
-            @click.native="(showDropDown = false), (pageActive = 'offer')"
-            to="/rolety-rzymskie"
-            >Rolety Rzymskie</nuxt-link
-          >
-          <nuxt-link
-            class="Header__dropdown-link"
-            @click.native="(showDropDown = false), (pageActive = 'offer')"
-            to="/plisy"
-            >PLISY</nuxt-link
-          >
-          <nuxt-link
-            class="Header__dropdown-link"
-            @click.native="(showDropDown = false), (pageActive = 'offer')"
-            to="/zaluzje"
-            >Żaluzje</nuxt-link
-          >
-          <nuxt-link
-            class="Header__dropdown-link"
-            @click.native="(showDropDown = false), (pageActive = 'offer')"
-            to="/verticale"
-            >verticale</nuxt-link
-          >
-          <nuxt-link
-            class="Header__dropdown-link"
-            @click.native="(showDropDown = false), (pageActive = 'offer')"
-            to="/moskitiery"
-            >moskitiery</nuxt-link
-          >
+            {{ link.label }}
+          </NuxtLink>
         </div>
-        <nuxt-link
-          @click.native="pageActive = 'real'"
-          @mouseover.native="showDropDown = false"
-          class="Header__link"
+
+        <NuxtLink
           to="/realizacje"
+          class="Header__link"
+          @click="pageActive = 'real'"
         >
           REALIZACJE
           <svg class="Header__link-border" width="200" height="50">
@@ -275,12 +207,12 @@
               y2="50"
             />
           </svg>
-        </nuxt-link>
-        <nuxt-link
-          class="Header__link"
-          @click.native="pageActive = 'contact'"
-          @mouseover.native="showDropDown = false"
+        </NuxtLink>
+
+        <NuxtLink
           to="/kontakt"
+          class="Header__link"
+          @click="pageActive = 'contact'"
         >
           KONTAKT
           <svg class="Header__link-border" width="200" height="50">
@@ -301,56 +233,52 @@
               y2="50"
             />
           </svg>
-        </nuxt-link>
+        </NuxtLink>
       </div>
     </div>
   </div>
 </template>
 
-<script>
-export default {
-  name: 'Header',
+<script setup lang="ts">
+import { ref, onMounted } from 'vue';
+import { useRoute } from 'vue-router';
 
-  data: () => ({
-    mediaName: 'phone',
-    showMobileBtn: false,
-    showDropDown: false,
-    showMobileDropDown: false,
-    pageActive: 'home',
-  }),
+const showMobileBtn = ref(false);
+const showDropDown = ref(false);
+const showMobileDropDown = ref(false);
+const pageActive = ref<'home' | 'offer' | 'real' | 'contact'>('home');
 
-  mounted() {
-    this.pageName();
-  },
+const offerLinks = [
+  { to: '/rolety-dzien-noc', label: 'Rolety Dzień-Noc' },
+  { to: '/rolety-materialowe', label: 'Rolety Materiałowe' },
+  { to: '/rolety-rzymskie', label: 'Rolety Rzymskie' },
+  { to: '/plisy', label: 'PLISY' },
+  { to: '/zaluzje', label: 'Żaluzje' },
+  { to: '/verticale', label: 'verticale' },
+  { to: '/moskitiery', label: 'moskitiery' },
+];
 
-  computed: {
-    circleClass() {
-      return `Header__circle--${this.activeTab}`;
-    },
-  },
-  methods: {
-    pageName() {
-      switch (this.$route.path) {
-        case '/':
-          this.pageActive = 'home';
-          break;
-        case '/realizacje':
-          this.pageActive = 'real';
-          break;
-        case '/kontakt':
-          this.pageActive = 'contact';
-          break;
-        case '/rolety-materialowe':
-          this.pageActive = 'offer';
-          break;
-        default:
-          break;
-      }
-    },
-  },
+const closeMobileMenu = () => {
+  showMobileBtn.value = false;
+  showMobileDropDown.value = false;
 };
+
+const route = useRoute();
+
+onMounted(() => {
+  const map = {
+    '/': 'home',
+    '/realizacje': 'real',
+    '/kontakt': 'contact',
+    '/rolety-materialowe': 'offer',
+  } as const;
+
+  if (route.path in map) {
+    pageActive.value = map[route.path as keyof typeof map];
+  }
+});
 </script>
 
 <style lang="scss" scoped>
-@import 'Header';
+@use './Header.scss' as *;
 </style>

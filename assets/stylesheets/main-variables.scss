@@ -11,12 +11,16 @@ $weight-medium: 400;
 $weight-bold: 600;
 
 // calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
-$font-size-title-rwd: calc(24px + 26 * (100vw - 320px) / 880); //base size is 50px;
-$font-size-medium-rwd: calc(18px + 4 * (100vw - 320px) / 880); // base size is 28px; 
-$font-size-small-rwd: calc(14px + 8 * (100vw - 320px) / 880); // base size is 24px;
-
+$font-size-title-rwd: calc(
+  24px + 26 * (100vw - 320px) / 880
+); //base size is 50px;
+$font-size-medium-rwd: calc(
+  18px + 4 * (100vw - 320px) / 880
+); // base size is 28px;
+$font-size-small-rwd: calc(
+  14px + 8 * (100vw - 320px) / 880
+); // base size is 24px;
 
 $font-size-title: 32px;
 $font-size-title-mobile: 24px;
-$font-main: 'Montserrat',
-sans-serif;
+$font-main: 'Montserrat', sans-serif;

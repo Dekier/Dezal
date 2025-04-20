@@ -1,49 +1,59 @@
 <template>
   <div class="layout">
-    <header-nav />
-    <nuxt />
-    <cookies v-if="visibleCookies" @hideCookies="hideCookies" />
-    <footer-nav />
+    <Header />
+    <NuxtPage />
+    <Cookies v-if="visibleCookies" @hideCookies="hideCookies" />
+    <Footer />
   </div>
 </template>
 
-<script>
-import HeaderNav from '~/components/Header.vue';
-import FooterNav from '~/components/Footer.vue';
-import Cookies from '~/components/Cookies.vue';
+<script setup lang="ts">
+import { ref, onMounted } from 'vue';
 
-export default {
-  components: {
-    HeaderNav,
-    FooterNav,
-    Cookies,
-  },
-
-  data: () => ({
-    visibleCookies: true,
-    isActiveInfo: true,
-  }),
-
-  mounted() {
-    if (Boolean(localStorage.cookies)) {
-      this.visibleCookies = !Boolean(localStorage.cookies);
-    }
-  },
-
-  methods: {
-    hideCookies() {
-      this.visibleCookies = false;
-      localStorage.cookies = false;
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'LocalBusiness',
+        name: 'ZPHU DEŻAL Dariusz Dekier',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'ul. Jaroczyńskiego 41',
+          addressLocality: 'Poznań',
+          postalCode: '60-692',
+          addressCountry: 'PL',
+        },
+        logo: 'https://dezalroletypoznan.pl/images/logo.png',
+        telephone: '+48603630299',
+        openingHours: ['Mo 12:00-18:00', 'Tu-Fr 09:00-17:00'],
+        url: 'https://dezalroletypoznan.pl/',
+      }),
     },
-  },
+  ],
+});
+
+const visibleCookies = ref(true);
+
+onMounted(() => {
+  if (localStorage.cookies) {
+    visibleCookies.value = false;
+  }
+});
+
+const hideCookies = () => {
+  visibleCookies.value = false;
+  localStorage.cookies = 'false';
 };
 </script>
 
-<style style="scss">
+<style lang="scss">
 * {
   box-sizing: border-box;
   letter-spacing: 1px;
 }
+
 html,
 body {
   padding: 0;

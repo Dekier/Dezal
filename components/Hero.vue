@@ -1,7 +1,7 @@
 <template>
   <header id="hero" class="Hero__main-container">
     <img
-      src="/image/header2.webp"
+      src="/images/header2.webp"
       class="Hero__hero-image"
       alt="dezal zdjecie tła"
     />
@@ -15,7 +15,7 @@
         charakteru.
       </p>
       <div class="Hero__btns-container">
-        <button type="button" v-scroll-to="'#offer'" class="Hero__button">
+        <button type="button" class="Hero__button" @click="scrollToOferta()">
           Przejdź do Oferty
         </button>
       </div>
@@ -23,13 +23,15 @@
   </header>
 </template>
 
-<script lang="ts">
-import Vue from 'vue';
-export default Vue.extend({
-  name: 'Hero',
-});
+<script setup lang="ts">
+const scrollToOferta = () => {
+  const element = document.getElementById('offer');
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+};
 </script>
 
 <style lang="scss" scoped>
-@import 'Hero';
+@use './Hero.scss' as *;
 </style>

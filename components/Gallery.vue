@@ -1,6 +1,6 @@
 <template>
   <div class="Gallery__main-container">
-    <div @click="exit" class="Gallery__exit">
+    <div @click="emit('exit')" class="Gallery__exit">
       <svg width="64" xmlns="http://www.w3.org/2000/svg" height="64">
         <path
           fill="#fff"
@@ -8,9 +8,10 @@
         />
       </svg>
     </div>
+
     <div
       v-if="images.length > 1"
-      @click="beforeImage"
+      @click="emit('beforeImage')"
       class="Gallery__back-btn"
     >
       <svg viewBox="0 0 511.949 511.949">
@@ -20,7 +21,12 @@
         />
       </svg>
     </div>
-    <div @click="nextImage" v-if="images.length > 1" class="Gallery__next-btn">
+
+    <div
+      v-if="images.length > 1"
+      @click="emit('nextImage')"
+      class="Gallery__next-btn"
+    >
       <svg viewBox="0 0 511.949 511.949">
         <path
           fill="#fff"
@@ -28,48 +34,29 @@
         />
       </svg>
     </div>
+
     <img
       loading="lazy"
       class="Gallery__image"
-      :src="getImage"
-      alt="Dezal rolery pozan"
+      :src="images[index].url"
+      alt="Dezal rolety poznań"
     />
   </div>
 </template>
 
-<script>
-export default {
-  name: 'Gallery',
+<script setup lang="ts">
+defineProps<{
+  images: { url: string }[];
+  index: number;
+}>();
 
-  props: {
-    images: {
-      type: Array,
-    },
-    index: {
-      type: Number,
-    },
-  },
-
-  computed: {
-    getImage() {
-      return this.images[this.index].url;
-    },
-  },
-
-  methods: {
-    exit() {
-      this.$emit('exit');
-    },
-    beforeImage() {
-      this.$emit('beforeImage');
-    },
-    nextImage() {
-      this.$emit('nextImage');
-    },
-  },
-};
+const emit = defineEmits<{
+  (e: 'exit'): void;
+  (e: 'beforeImage'): void;
+  (e: 'nextImage'): void;
+}>();
 </script>
 
-<style lang="scss" scoped>
-@import 'Gallery';
+<style scoped lang="scss">
+@use './Gallery.scss' as *;
 </style>

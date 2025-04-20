@@ -5,74 +5,62 @@
   </div>
 </template>
 
-<script>
+<script setup lang="ts">
+import { ref, computed } from 'vue';
 import ProductInformation from '~/components/Product-information.vue';
 import Offer from '~/components/Offer.vue';
-import offers from '~/static/offers.json';
-import { mapGetters } from 'vuex';
-export default {
-  name: 'RoletyDzienNoc',
 
-  components: {
-    ProductInformation,
-    Offer,
-  },
+const offerData = ref({
+  title: 'Zobacz również',
+  description:
+    'Polecamy również nasze pozostałe produkty. W pełnej ofercie firmy Deżal znajdziesz:',
+  showBoxes: [
+    'rolety-materialowe',
+    'rolety-rzymskie',
+    'plisy',
+    'zaluzje',
+    'verticale',
+    'moskitiery',
+  ],
+});
 
-  async asyncData() {
-    return {
-      offerBoxesJson: offers.boxes,
-    };
-  },
+const bottomImages = ref([
+  { id: 1, url: '/images/rolety/dezal-poznan-roleta-dzień-noc-1.webp' },
+  { id: 2, url: '/images/rolety/dezal-poznan-roleta-dzień-noc-7.webp' },
+  { id: 3, url: '/images/rolety/dezal-poznan-roleta-dzień-noc-3.webp' },
+  { id: 4, url: '/images/rolety/dezal-poznan-roleta-dzień-noc-4.webp' },
+]);
 
-  transition: 'bounce',
+const { data: rawData } = await useFetch('/offers.json');
 
-  data: () => ({
-    bottomImages: [
-      { id: 1, url: '/image/rolety/dezal-poznan-roleta-dzień-noc-1.webp' },
-      { id: 2, url: '/image/rolety/dezal-poznan-roleta-dzień-noc-7.webp' },
-      { id: 3, url: '/image/rolety/dezal-poznan-roleta-dzień-noc-3.webp' },
-      { id: 4, url: '/image/rolety/dezal-poznan-roleta-dzień-noc-4.webp' },
-    ],
-    offerData: {
-      title: 'Zobacz również',
-      description:
-        'Polecamy również nasze pozostałe produkty. W pełnej ofercie firmy Deżal znajdziesz:',
-      showBoxes: [
-        'rolety-materialowe',
-        'rolety-rzymskie',
-        'plisy',
-        'zaluzje',
-        'verticale',
-        'moskitiery',
-      ],
-    },
-    title: 'Rolety dzień-noc w Poznaniu od firmy Deżal.',
-  }),
-  head() {
-    return {
-      title: this.title,
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: 'Rolety dzień-noc w Poznaniu na Piątkowie. Montaż w cene!',
-        },
-      ],
-    };
-  },
+const offerBoxesJson = ref([]);
+if (rawData.value?.boxes) {
+  offerBoxesJson.value = rawData.value.boxes;
+}
 
-  computed: {
-    ...mapGetters(['offer']),
-    pageData() {
-      return [
+const pageData = computed(() => {
+  const box = offerBoxesJson.value[0];
+  return box
+    ? [
         {
           id: 0,
-          title: this.offerBoxesJson[0].title,
-          url: '/image/rolety/dezal-poznan-roleta-dzień-noc-2.webp',
-          description: this.offerBoxesJson[0].description,
+          title: box.title,
+          url: '/images/rolety/dezal-poznan-roleta-dzień-noc-2.webp',
+          description: box.description,
         },
-      ];
+      ]
+    : [];
+});
+
+useHead({
+  title: 'Rolety dzień-noc w Poznaniu od firmy Deżal.',
+  meta: [
+    {
+      name: 'description',
+      content: 'Rolety dzień-noc w Poznaniu na Piątkowie. Montaż w cenie!',
     },
-  },
-};
+  ],
+});
 </script>
+
+<style scoped lang="scss"></style>
