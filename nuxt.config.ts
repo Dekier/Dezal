@@ -1,6 +1,27 @@
 export default defineNuxtConfig({
   ssr: false,
+  nitro: {
+    preset: 'vercel-static',
+  },
+  output: {
+    standalone: false,
+  },
+
+  generate: {
+    routes: [
+      '/kontakt',
+      '/realizacje',
+      '/rolety-dzien-noc',
+      '/rolety-materialowe',
+      '/rolety-rzymskie',
+      '/plisy',
+      '/zaluzje',
+      '/verticale',
+      '/moskitiery',
+    ],
+  },
   app: {
+    baseURL: '/',
     head: {
       htmlAttrs: {
         lang: 'pl',
