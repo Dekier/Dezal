@@ -7,7 +7,8 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue';
-import { useHead, useFetch } from '#imports';
+import offers from '~/public/offers.json';
+import { useHead } from '#imports';
 
 import ProductInformation from '~/components/Product-information.vue';
 import Offer from '~/components/Offer.vue';
@@ -30,13 +31,7 @@ const offerData = ref({
   ],
 });
 
-// Pobieramy JSON z folderu public
-const { data: rawData } = await useFetch('/offers.json');
-
-const offerBoxesJson = ref([]);
-if (rawData.value?.boxes) {
-  offerBoxesJson.value = rawData.value.boxes;
-}
+const offerBoxesJson = ref(offers.boxes);
 
 // Przekształcamy dane dla komponentu ProductInformation
 const pageData = computed(() => {
