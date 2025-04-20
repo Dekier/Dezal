@@ -9,6 +9,7 @@
 import { ref, computed } from 'vue';
 import ProductInformation from '~/components/Product-information.vue';
 import Offer from '~/components/Offer.vue';
+import offers from '~/public/offers.json';
 
 // Zdjęcia do dolnej galerii
 const bottomImages = ref([
@@ -31,12 +32,7 @@ const offerData = ref({
 });
 
 // Pobieranie danych z public/offers.json
-const { data: rawData } = await useFetch('/offers.json');
-const offerBoxesJson = ref([]);
-
-if (rawData.value?.boxes) {
-  offerBoxesJson.value = rawData.value.boxes;
-}
+const offerBoxesJson = ref(offers.boxes);
 
 // Dane do komponentu ProductInformation
 const pageData = computed(() => {

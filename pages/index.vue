@@ -8,6 +8,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
+import offers from '~/public/offers.json';
 const offerData = ref({
   title: 'Oferujemy',
   description: 'W naszej ofercie znajdziesz:',
@@ -22,14 +23,7 @@ const offerData = ref({
   ],
 });
 
-const { data: rawData, error } = await useFetch('/offers.json');
-
-const offerBoxesJson = ref([]);
-if (rawData.value?.boxes) {
-  offerBoxesJson.value = rawData.value.boxes;
-}
-
-console.log(offerBoxesJson.value);
+const offerBoxesJson = ref(offers.boxes);
 
 useHead({
   title: 'DEŻAL: nowoczesne rolety, plisy i żaluzje | Poznań i okolice.',

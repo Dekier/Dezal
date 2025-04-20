@@ -9,6 +9,7 @@
 import { ref, computed } from 'vue';
 import ProductInformation from '~/components/Product-information.vue';
 import Offer from '~/components/Offer.vue';
+import offers from '~/public/offers.json';
 
 const bottomImages = ref([
   { id: 1, url: '/images/rolety/dezal-poznan-roleta-rzymska-1.webp' },
@@ -30,12 +31,7 @@ const offerData = ref({
   ],
 });
 
-const { data: rawData } = await useFetch('/offers.json');
-
-const offerBoxesJson = ref([]);
-if (rawData.value?.boxes) {
-  offerBoxesJson.value = rawData.value.boxes;
-}
+const offerBoxesJson = ref(offers.boxes);
 
 const pageData = computed(() => {
   const box = offerBoxesJson.value[2]; // index = 2 → rolety rzymskie
