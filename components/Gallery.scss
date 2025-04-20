@@ -1,3 +1,4 @@
+@use '@/assets/stylesheets/main-variables' as *;
 .Gallery {
   &__main-container {
     position: fixed;
@@ -90,11 +91,9 @@
     border-radius: 4px;
   }
 
-
   @media only screen and (max-width: 800px) {
     &__main-container {
       display: none;
     }
-
   }
 }

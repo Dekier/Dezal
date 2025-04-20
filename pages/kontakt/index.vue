@@ -1,6 +1,8 @@
 <template>
   <div class="Contact__main-container">
+    <!-- Górna część z informacjami kontaktowymi -->
     <div class="Contact__top-container">
+      <!-- Lewa kolumna: dane kontaktowe -->
       <div class="Contact__information-container">
         <div class="Contact__information-dark-background" />
         <div class="Contact__information">
@@ -109,7 +111,7 @@
           <a
             href="https://www.facebook.com/rolety.dezal.poznan/"
             target="_blank"
-            class="Contact__information-link"
+            class="Contact__informatioNuxtLink"
           >
             Facebook
           </a>
@@ -138,14 +140,12 @@
           </span>
         </div>
       </div>
+
+      <!-- Prawa kolumna: formularz -->
       <div class="Contact__form-container">
         <form class="Contact__form" method="post" enctype="text/plain">
-          <div class="Contact__form-title">
-            Wyślij wiadomość
-          </div>
-          <label class="Contact__label">
-            IMIĘ I NAZWISKO *
-          </label>
+          <div class="Contact__form-title">Wyślij wiadomość</div>
+          <label class="Contact__label"> IMIĘ I NAZWISKO * </label>
           <div class="Contact__row">
             <input
               class="Contact__input-half"
@@ -160,87 +160,72 @@
               placeholder="Nazwisko"
             />
           </div>
-          <label class="Contact__label">
-            TWÓJ EMAIL *
-          </label>
+          <label class="Contact__label"> TWÓJ EMAIL * </label>
           <input
             class="Contact__input"
             type="email"
             placeholder="Email"
-            name="email"
             v-model="formData.email"
           />
-          <label class="Contact__label">
-            TWÓJ NUMER
-          </label>
+          <label class="Contact__label"> TWÓJ NUMER </label>
           <input
             class="Contact__input"
             type="text"
             v-model="formData.number"
             placeholder="Numer"
           />
-          <label class="Contact__label">
-            TWOJA WIADOMOŚĆ
-          </label>
+          <label class="Contact__label"> TWOJA WIADOMOŚĆ </label>
           <textarea
             class="Contact__textarea"
             v-model="formData.text"
             placeholder="Wiadomość"
           />
-          <a
-            :href="
-              `mailto:dezal.rolety@gmail.com?subject=Zapytanie klienta z strony&body=Nazywam się: ${formData.name} ${formData.surname}%0A%0AMój nr telefonu to: ${formData.number} %0A%0AMoja wiadomość: %0A${formData.text}`
-            "
-            class="Contact__submit"
-          >
-            WYŚLIJ
-          </a>
+          <a :href="mailtoHref" class="Contact__submit"> WYŚLIJ </a>
         </form>
       </div>
     </div>
+
+    <!-- Dolna część: mapa -->
     <div class="Contact__bottom-container">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2431.4076146342704!2d16.903375316488017!3d52.45364497980178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47044341d3556dc5%3A0xaaec6ab99af1a5a1!2sDE%C5%BBAL+Rolety.+Plisy.+%C5%BBaluzje.!5e0!3m2!1spl!2spl!4v1548082800699"
         frameborder="0"
-        style="border:0"
+        style="border: 0"
         allowfullscreen
       />
     </div>
   </div>
 </template>
 
-<script>
-export default {
-  name: 'Contact',
+<script setup lang="ts">
+import { ref, computed } from 'vue';
 
-  transition: 'bounce',
+// Formularz
+const formData = ref({
+  name: '',
+  surname: '',
+  email: '',
+  number: '',
+  text: '',
+});
 
-  data: () => ({
-    formData: {
-      name: '',
-      surname: '',
-      email: '',
-      number: '',
-      text: '',
+// Mailto href
+const mailtoHref = computed(() => {
+  return `mailto:dezal.rolety@gmail.com?subject=Zapytanie klienta z strony&body=Nazywam się: ${formData.value.name} ${formData.value.surname}%0A%0AMój nr telefonu to: ${formData.value.number} %0A%0AMoja wiadomość: %0A${formData.value.text}`;
+});
+
+// Meta tagi
+useHead({
+  title: 'Deżal - Kontakt - Rolety Poznań',
+  meta: [
+    {
+      name: 'description',
+      content: 'Szybki telefon, szybka odpowiedźz.',
     },
-    title: 'Deżal - Kontakt - Rolety Poznań',
-  }),
-
-  head() {
-    return {
-      title: this.title,
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: 'Szybki telefon, szybka odpowiedź.',
-        },
-      ],
-    };
-  },
-};
+  ],
+});
 </script>
 
-<style lang="scss" scoped>
-@import 'index';
+<style scoped lang="scss">
+@use './index.scss' as *;
 </style>

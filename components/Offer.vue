@@ -45,7 +45,7 @@ export default {
 
   computed: {
     showBoxes() {
-      return this.offerBoxesJson.filter(box =>
+      return this.offerBoxesJson.filter((box) =>
         this.offerData.showBoxes.includes(box.type)
       );
     },
@@ -54,5 +54,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import 'Offer';
+@use './Offer.scss' as *;
 </style>

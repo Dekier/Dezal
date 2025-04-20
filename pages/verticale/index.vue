@@ -5,72 +5,62 @@
   </div>
 </template>
 
-<script>
+<script setup lang="ts">
+import { ref, computed } from 'vue';
 import ProductInformation from '~/components/Product-information.vue';
 import Offer from '~/components/Offer.vue';
-import { mapGetters } from 'vuex';
-import offers from '~/static/offers.json';
 
-export default {
-  name: 'Verticale',
+// Zdjęcia do dolnej galerii
+const bottomImages = ref([
+  { id: 1, url: '/images/verticale/deżal-poznań-roleta-verticale-1.webp' },
+]);
 
-  components: {
-    ProductInformation,
-    Offer,
-  },
+// Dane do komponentu Offer
+const offerData = ref({
+  title: 'Zobacz również',
+  description:
+    'Polecamy również nasze pozostałe produkty. W pełnej ofercie firmy Deżal znajdziesz:',
+  showBoxes: [
+    'rolety-dzien-noc',
+    'rolety-materialowe',
+    'rolety-rzymskie',
+    'plisy',
+    'zaluzje',
+    'moskitiery',
+  ],
+});
 
-  async asyncData() {
-    return {
-      offerBoxesJson: offers.boxes,
-    };
-  },
+// Pobieranie danych z public/offers.json
+const { data: rawData } = await useFetch('/offers.json');
+const offerBoxesJson = ref([]);
 
-  transition: 'bounce',
+if (rawData.value?.boxes) {
+  offerBoxesJson.value = rawData.value.boxes;
+}
 
-  data: () => ({
-    bottomImages: [
-      { id: 1, url: '/image/verticale/deżal-poznań-roleta-verticale-1.webp' },
-    ],
-    offerData: {
-      title: 'Zobacz również',
-      description:
-        'Polecamy również nasze pozostałe produkty. W pełnej ofercie firmy Deżal znajdziesz:',
-      showBoxes: [
-        'rolety-dzien-noc',
-        'rolety-materialowe',
-        'rolety-rzymskie',
-        'plisy',
-        'zaluzje',
-        'moskitiery',
-      ],
-    },
-    title: 'Verticale w Poznaniu od firmy Deżal.',
-  }),
-  head() {
-    return {
-      title: this.title,
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: 'Verticale w Poznaniu na Piątkowie. Montaż w cene!',
-        },
-      ],
-    };
-  },
-
-  computed: {
-    ...mapGetters(['offer']),
-    pageData() {
-      return [
+// Dane do komponentu ProductInformation
+const pageData = computed(() => {
+  const box = offerBoxesJson.value[5];
+  return box
+    ? [
         {
           id: 0,
-          title: this.offerBoxesJson[5].title,
-          url: '/image/verticale/deżal-poznań-roleta-verticale-1.webp',
-          description: this.offerBoxesJson[5].description,
+          title: box.title,
+          url: '/images/verticale/deżal-poznań-roleta-verticale-1.webp',
+          description: box.description,
         },
-      ];
+      ]
+    : [];
+});
+
+// Meta
+useHead({
+  title: 'Verticale w Poznaniu od firmy Deżal.',
+  meta: [
+    {
+      name: 'description',
+      content: 'Verticale w Poznaniu na Piątkowie. Montaż w cene!',
     },
-  },
-};
+  ],
+});
 </script>

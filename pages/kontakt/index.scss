@@ -1,3 +1,4 @@
+@use '@/assets/stylesheets/main-variables' as *;
 .Contact {
   &__main-container {
     display: flex;
@@ -19,7 +20,7 @@
   }
 
   &__information-container {
-    background-image: url('/image/zaluzje/deżal-poznań-żaluzja-drewniana-1.webp');
+    background-image: url('/images/zaluzje/deżal-poznań-żaluzja-drewniana-1.webp');
     background-position: 50%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -60,7 +61,7 @@
   }
 
   &__information-text,
-  &__information-link {
+  &__informatioNuxtLink {
     margin-bottom: 30px;
     line-height: 25px;
     padding-left: 40px;
@@ -69,7 +70,7 @@
     text-decoration: none;
   }
 
-  &__information-link {
+  &__informatioNuxtLink {
     text-decoration: none;
     width: max-content;
 

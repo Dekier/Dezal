@@ -5,72 +5,62 @@
   </div>
 </template>
 
-<script>
+<script setup lang="ts">
+import { ref, computed } from 'vue';
+import { useHead, useFetch } from '#imports';
+
 import ProductInformation from '~/components/Product-information.vue';
 import Offer from '~/components/Offer.vue';
-import { mapGetters } from 'vuex';
-import offers from '~/static/offers.json';
 
-export default {
-  name: 'Moskitiery',
+const bottomImages = ref([
+  { id: 1, url: '/images/moskitiery/dezal-poznan-moskitiera-1.webp' },
+]);
 
-  components: {
-    ProductInformation,
-    Offer,
-  },
+const offerData = ref({
+  title: 'Zobacz również',
+  description:
+    'Polecamy również nasze pozostałe produkty. W pełnej ofercie firmy Deżal znajdziesz:',
+  showBoxes: [
+    'rolety-dzien-noc',
+    'rolety-materialowe',
+    'rolety-rzymskie',
+    'plisy',
+    'zaluzje',
+    'verticale',
+  ],
+});
 
-  async asyncData() {
-    return {
-      offerBoxesJson: offers.boxes,
-    };
-  },
+// Pobieramy JSON z folderu public
+const { data: rawData } = await useFetch('/offers.json');
 
-  transition: 'bounce',
+const offerBoxesJson = ref([]);
+if (rawData.value?.boxes) {
+  offerBoxesJson.value = rawData.value.boxes;
+}
 
-  data: () => ({
-    bottomImages: [
-      { id: 1, url: '/image/moskitiery/dezal-poznan-moskitiera-1.webp' },
-    ],
-    offerData: {
-      title: 'Zobacz również',
-      description:
-        'Polecamy również nasze pozostałe produkty. W pełnej ofercie firmy Deżal znajdziesz:',
-      showBoxes: [
-        'rolety-dzien-noc',
-        'rolety-materialowe',
-        'rolety-rzymskie',
-        'plisy',
-        'zaluzje',
-        'verticale',
-      ],
-    },
-    title: 'Moskitiery w Poznaniu od firmy Deżal',
-  }),
-  head() {
-    return {
-      title: this.title,
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: 'Maskitiery na okna w Poznaniu na Piątkowie. Montaż w cene!',
-        },
-      ],
-    };
-  },
-
-  computed: {
-    ...mapGetters(['offer']),
-    pageData() {
-      return [
+// Przekształcamy dane dla komponentu ProductInformation
+const pageData = computed(() => {
+  const box = offerBoxesJson.value[6]; // indeks 6 = moskitiery
+  return box
+    ? [
         {
           id: 0,
-          title: this.offerBoxesJson[6].title,
-          url: '/image/moskitiery/dezal-poznan-moskitiera-1.webp',
-          description: this.offerBoxesJson[6].description,
+          title: box.title,
+          url: '/images/moskitiery/dezal-poznan-moskitiera-1.webp',
+          description: box.description,
         },
-      ];
+      ]
+    : [];
+});
+
+// SEO
+useHead({
+  title: 'Moskitiery w Poznaniu od firmy Deżal',
+  meta: [
+    {
+      name: 'description',
+      content: 'Maskitiery na okna w Poznaniu na Piątkowie. Montaż w cene!',
     },
-  },
-};
+  ],
+});
 </script>

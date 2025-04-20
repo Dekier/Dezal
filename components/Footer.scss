@@ -1,3 +1,4 @@
+@use '@/assets/stylesheets/main-variables' as *;
 .Footer {
   &__main-container {
     width: 100%;
@@ -74,7 +75,7 @@
   }
 
   &__recomended-logo {
-    background-image: url('/image/logo-Magdy.png');
+    background-image: url('/images/logo-Magdy.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50%;

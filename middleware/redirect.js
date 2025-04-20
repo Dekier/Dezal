@@ -1,9 +1,9 @@
-export default function({ req, redirect }) {
-  if (process.server && req && req.headers) {
-    const host = req.headers.host;
+export default defineEventHandler(event => {
+  const req = event.node.req;
+  const host = req.headers.host;
+  const url = req.url || '/';
 
-    if (host === 'www.dezalroletypoznan.pl') {
-      redirect(301, 'https://dezalroletypoznan.pl' + req.url);
-    }
+  if (host === 'www.dezalroletypoznan.pl') {
+    return sendRedirect(event, 'https://dezalroletypoznan.pl' + url, 301);
   }
-}
+});
