@@ -50,11 +50,17 @@ const pageData = computed(() => {
 
 // SEO
 useHead({
-  title: 'Moskitiery w Poznaniu od firmy Deżal',
+  title: 'Moskitiery na wymiar w Poznaniu | Deżal.',
   meta: [
     {
       name: 'description',
-      content: 'Maskitiery na okna w Poznaniu na Piątkowie. Montaż w cene!',
+      content:
+        'Moskitiery na wymiar z montażem w Poznaniu – skuteczna ochrona przed owadami. Ramkowe, rolowane i drzwiowe rozwiązania od firmy Deżal. Pomiar i doradztwo gratis.',
+    },
+    {
+      name: 'keywords',
+      content:
+        'moskitiery, moskitiery poznań, moskitiery na wymiar, moskitiery ramkowe, moskitiery drzwiowe, montaż moskitier, ochrona przed owadami, osłony okienne',
     },
   ],
 });

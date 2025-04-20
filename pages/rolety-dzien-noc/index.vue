@@ -49,11 +49,17 @@ const pageData = computed(() => {
 });
 
 useHead({
-  title: 'Rolety dzień-noc w Poznaniu od firmy Deżal.',
+  title: 'Rolety Dzień i Noc na wymiar w Poznaniu | Deżal.',
   meta: [
     {
       name: 'description',
-      content: 'Rolety dzień-noc w Poznaniu na Piątkowie. Montaż w cenie!',
+      content:
+        'Funkcjonalne rolety dzień i noc na wymiar z montażem w Poznaniu – idealne rozwiązanie do regulacji światła w domu i biurze. Pomiar i wycena gratis!',
+    },
+    {
+      name: 'keywords',
+      content:
+        'rolety dzień i noc, rolety dzień i noc poznań, rolety na wymiar, osłony okienne poznań, montaż rolet poznań, rolety duo',
     },
   ],
 });

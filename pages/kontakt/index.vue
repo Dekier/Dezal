@@ -216,11 +216,17 @@ const mailtoHref = computed(() => {
 
 // Meta tagi
 useHead({
-  title: 'Deżal - Kontakt - Rolety Poznań',
+  title: 'Kontakt | Deżal – Rolety i Żaluzje Poznań',
   meta: [
     {
       name: 'description',
-      content: 'Szybki telefon, szybka odpowiedźz.',
+      content:
+        'Masz pytania? Skontaktuj się z nami – DEŻAL Poznań. Oferujemy rolety, żaluzje, plisy i inne osłony okienne z montażem. Szybka wycena i profesjonalne doradztwo.',
+    },
+    {
+      name: 'keywords',
+      content:
+        'kontakt deżal, rolety poznań kontakt, żaluzje poznań, wycena rolet, pomiar okien poznań, osłony okienne kontakt',
     },
   ],
 });
