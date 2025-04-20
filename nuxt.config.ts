@@ -101,7 +101,7 @@ export default defineNuxtConfig({
   },
 
   sitemap: {
-    hostname: 'https://dezalroletypoznan.pl',
+    hostname: process.env.SITE_URL || 'https://dezalroletypoznan.pl',
     gzip: true,
     routes: [
       '/',
