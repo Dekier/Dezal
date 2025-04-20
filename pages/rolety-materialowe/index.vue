@@ -51,11 +51,17 @@ const pageData = computed(() => {
 });
 
 useHead({
-  title: 'Rolety Materiałowe w Poznaniu od firmy Deżal.',
+  title: 'Rolety Materiałowe na wymiar w Poznaniu | Deżal.',
   meta: [
     {
       name: 'description',
-      content: 'Rolety Materiałowe w Poznaniu na Piątkowie. Montaż w cene!',
+      content:
+        'Klasyczne i nowoczesne rolety materiałowe na wymiar – montaż w Poznaniu i okolicach. Szeroki wybór tkanin, profesjonalny pomiar i doradztwo od firmy Deżal.',
+    },
+    {
+      name: 'keywords',
+      content:
+        'rolety materiałowe, rolety materiałowe poznań, rolety na wymiar, osłony okienne, montaż rolet, tkaniny zaciemniające, rolety wewnętrzne',
     },
   ],
 });

@@ -37,25 +37,35 @@ export default defineNuxtConfig({
         {
           name: 'description',
           content:
-            'Oferowane przez firmę DEŻAL Poznań rolety, plisy i żaluzje to najwyższej jakości osłony okienne. Indywidualna oferta, szczegółowy pomiar i szybka realizacja.',
+            'Rolety, plisy, żaluzje i moskitiery w Poznaniu – DEŻAL oferuje nowoczesne osłony okienne na wymiar. Profesjonalny montaż, precyzyjny pomiar i indywidualna wycena. Obsługujemy Poznań i okolice.',
         },
-        // 🧠 Open Graph i Twitter Card
-        { property: 'og:title', content: 'DEŻAL: Rolety i Żaluzje | Poznań' },
+        {
+          name: 'keywords',
+          content:
+            'rolety, rolety dzień noc, plisy, żaluzje, poznań, osłony okienne, dezal, rolety materialowe, rolety rzymskie, moskitiery, verticale',
+        },
+        {
+          property: 'og:title',
+          content: 'DEŻAL: Rolety, Plisy, Żaluzje | Poznań',
+        },
         {
           property: 'og:description',
           content:
-            'Rolety, plisy i żaluzje od DEŻAL – indywidualny pomiar i profesjonalny montaż w Poznaniu.',
+            'Rolety, plisy, żaluzje, moskitiery, verticale od firmy DEŻAL – indywidualny pomiar i profesjonalny montaż w Poznaniu i okolicy.',
         },
         { property: 'og:type', content: 'website' },
         { property: 'og:url', content: 'https://dezalroletypoznan.pl' },
         { property: 'og:image', content: '/images/logo.png' },
 
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: 'DEŻAL: Rolety i Żaluzje' },
+        {
+          name: 'twitter:title',
+          content: 'DEŻAL: Rolety, Plisy, Żaluzje | Poznań',
+        },
         {
           name: 'twitter:description',
           content:
-            'Indywidualna oferta rolet i żaluzji z montażem w Poznaniu. Poznaj ofertę DEŻAL.',
+            'Rolety, plisy, żaluzje, moskitiery, verticale od firmy DEŻAL – indywidualny pomiar i profesjonalny montaż w Poznaniu i okolicy.',
         },
         { name: 'twitter:image', content: '/images/logo.png' },
 

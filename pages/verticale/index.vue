@@ -51,11 +51,17 @@ const pageData = computed(() => {
 
 // Meta
 useHead({
-  title: 'Verticale w Poznaniu od firmy Deżal.',
+  title: 'Verticale na wymiar w Poznaniu | Deżal.',
   meta: [
     {
       name: 'description',
-      content: 'Verticale w Poznaniu na Piątkowie. Montaż w cene!',
+      content:
+        'Verticale na wymiar z montażem w Poznaniu – idealne do dużych przeszkleń w domu i biurze. Szeroki wybór tkanin i kolorów, profesjonalny pomiar i szybka realizacja.',
+    },
+    {
+      name: 'keywords',
+      content:
+        'verticale, verticale poznań, verticale na wymiar, osłony okienne, montaż verticale, verticale do biura, verticale do salonu',
     },
   ],
 });
