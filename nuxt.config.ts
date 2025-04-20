@@ -128,13 +128,5 @@ export default defineNuxtConfig({
     sitemap: 'https://dezalroletypoznan.pl/sitemap.xml',
   },
 
-  vite: {
-    resolve: {
-      alias: {
-        'node-fetch-native': 'node-fetch',
-      },
-    },
-  },
-
   compatibilityDate: '2025-04-19',
 });
