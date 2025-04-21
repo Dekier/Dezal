@@ -14,6 +14,7 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "@vercel/speed-insights": "^1.2.0",
     "@vite-pwa/nuxt": "^1.0.0",
     "node-fetch-native": "^1.6.6",
     "nuxt": "3.16.2",

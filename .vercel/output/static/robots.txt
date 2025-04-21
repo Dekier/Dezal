@@ -1,7 +1,0 @@
-# START nuxt-robots (indexable)
-User-agent: *
-Disallow: 
-
-Sitemap: https://dezalroletypoznan.pl/sitemap.xml
-Sitemap: http://localhost/sitemap.xml
-# END nuxt-robots

@@ -1,107 +1,138 @@
 @use '@/assets/stylesheets/main-variables' as *;
+@use '@/assets/stylesheets/mixins' as *;
 .Footer {
   &__main-container {
     width: 100%;
-    background: $color-gray;
-    font-size: 16px;
+    background: $yellow-100;
   }
 
   &__center-container {
-    width: 1170px;
-    padding: 45px 15px;
+    max-width: 1440px;
+    padding: 41px 60px 67px;
     margin: auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 43px;
+    flex-wrap: wrap;
+    @include for-phone-only {
+      padding: 41px 24px 67px;
+    }
+    @include for-tablet {
+      justify-content: space-between;
+    }
   }
 
-  &__links-container,
-  &__offer-container,
-  &__open-hours-container {
+  &__title {
+    @include text(20px, left, $black-300, 700);
+    text-decoration: none;
+    margin: 23px 0 27px;
+  }
+
+  &__column {
     display: flex;
     flex-direction: column;
   }
 
-  &__link {
-    cursor: pointer;
-    height: 48px;
+  &__logo {
+    margin-bottom: 9px;
+    width: 132px;
   }
 
-  &__link,
-  &__open-hours,
-  &__recomended-text {
-    line-height: 1.5;
-  }
-
-  &__open-hours {
-    height: 48px;
-  }
-
-  &__link,
-  &__recomended-container,
-  &__open-hours,
-  &__recomended-text,
-  &__recomended-link {
-    text-decoration: none;
-    color: #efefef;
-    font-weight: $weight-medium;
-  }
-
-  &__link:hover {
-    text-decoration: underline;
-  }
-
-  &__link-title:hover {
-    text-decoration: none;
-  }
-
-  &__recomended-title {
-    height: 48px;
-  }
-
-  &__link-title,
-  &__open-hours-title,
-  &__recomended-title {
-    // margin-bottom: 20px;
-    color: $color-yellow;
-  }
-
-  &__down-container {
+  &__text {
+    @include text(16px, left, $black-300, 400);
+    margin-bottom: 15px;
+    margin-top: 0;
+    max-width: 328px;
+    letter-spacing: -3%;
     width: 100%;
-    background-color: $color-yellow;
-    padding: 10px 0;
-    text-align: center;
-    font-size: 12px;
+  }
+  &__down-container {
+    background-color: $grey-200;
+    min-height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include text(14px, center, $black-300, 400);
+    padding: 21px 24px;
+  }
+
+  &__text-bold {
+    @include text(16px, left, $black-300, 700);
+    margin-bottom: 23px;
+    margin-top: 0;
+    max-width: 328px;
+    letter-spacing: -3%;
+    width: 100%;
+  }
+
+  &__facebook-link {
+    display: flex;
+
+    @include text(16px, left, $black-300, 400);
+    text-decoration: none;
+  }
+
+  &__facebook-icon {
+    margin-left: 10px;
+    transition: scale 0.3s ease-in-out;
+  }
+
+  &__facebook-link:hover &__facebook-icon {
+    scale: 1.1;
+  }
+
+  &__dot {
+    width: 14px;
+    height: 14px;
+    margin: auto 16px auto 0;
+  }
+
+  &__link {
+    width: 200px;
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    @include text(16px, left, $black-300, 400);
+    &:hover {
+      @include text(16px, left, $black-300, 700);
+    }
+  }
+
+  &__link-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+  }
+
+  &__link-long {
+    max-width: 355px;
+    width: 100%;
+  }
+
+  &__link-no-click {
+    &:hover {
+      @include text(16px, left, $black-300, 400);
+    }
   }
 
   &__recomended-logo {
-    background-image: url('/images/logo-Magdy.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50%;
-    width: 100px;
-    height: 150px;
+    width: 202px;
   }
 
-  &__recomended-text {
-    margin-bottom: 20px;
-  }
-
-  @media only screen and (max-width: 1200px) {
-    &__center-container {
-      width: 100%;
-      flex-wrap: wrap;
-    }
-
-    &__links-container,
-    &__offer-container,
-    &__recomended-container,
-    &__open-hours-container {
-      margin: 0 20px 20px 0px;
-    }
-
-    &__down-container {
-      padding: 20px 0;
+  &__recomended-link {
+    background-color: $grey-white;
+    width: 230px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px 0px #e5e0bc;
+    transition: box-shadow 0.3s ease-in-out;
+    &:hover {
+      box-shadow: 0px 6px 6px 1px #e5e0bc;
     }
   }
 }

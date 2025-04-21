@@ -1,14 +1,39 @@
 $color-yellow: #ffe100;
-$color-black: #000;
 $color-white: #fff;
 $color-gray: #13141b;
 $color-text: #42444d;
 $color-title: #25282b;
 $color-border: #e6e6e6;
 
+$black-400: #2b2b2b;
+$black-300: #555555;
+$black-200: #808080;
+$black-100: #aaaaaa;
+
+$yellow-500: #ffe003;
+$yellow-400: #ffec68;
+$yellow-300: #fff39a;
+$yellow-200: #fff9cd;
+$yellow-100: #fffce6;
+
+$grey-500: #bfbfbf;
+$grey-400: #d5d5d5;
+$grey-300: #eaeaea;
+$grey-200: #f3f3f3;
+$grey-white: #ffffff;
+
 $weight-light: 300;
 $weight-medium: 400;
 $weight-bold: 600;
+
+$phone: 599px;
+$tablet-portrait: 600px;
+$tablet: 768px;
+$tablet-landscape: 950px;
+$tablet-timeline: 1080px;
+$desktop: 1170px;
+$desktop-timeline: 1300px;
+$big-desktop: 1440px;
 
 // calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
 $font-size-title-rwd: calc(
@@ -23,4 +48,4 @@ $font-size-small-rwd: calc(
 
 $font-size-title: 32px;
 $font-size-title-mobile: 24px;
-$font-main: 'Montserrat', sans-serif;
+$font-main: 'Inter', sans-serif;
