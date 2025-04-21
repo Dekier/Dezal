@@ -1,5 +1,6 @@
 <template>
   <div class="layout">
+    <SpeedInsights />
     <Header />
     <NuxtPage />
     <Cookies v-if="visibleCookies" @hideCookies="hideCookies" />
@@ -9,6 +10,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
+import { SpeedInsights } from '@vercel/speed-insights/nuxt';
 
 useHead({
   script: [
@@ -58,7 +60,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .layout {

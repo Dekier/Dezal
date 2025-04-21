@@ -1,16 +1,18 @@
-@use '@@/assets/stylesheets/main-variables' as *;
-@font-face {
-  font-family: 'Montserrat';
-  font-display: swap;
-  src: url('@/assets/fonts/Montserrat-Light.ttf') format('truetype');
-}
+@use '@/assets/stylesheets/main-variables' as *;
+@use '@/assets/stylesheets/mixins' as *;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+// @font-face {
+//   font-family: 'Montserrat';
+//   font-display: swap;
+//   src: url('@/assets/fonts/Montserrat-Light.ttf') format('truetype');
+// }
 
-@font-face {
-  font-family: 'Montserrat';
-  font-display: swap;
-  src: url('@/assets/fonts/Montserrat-Regular.ttf') format('truetype');
-}
+// @font-face {
+//   font-family: 'Montserrat';
+//   font-display: swap;
+//   src: url('@/assets/fonts/Montserrat-Regular.ttf') format('truetype');
+// }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: $font-main;
 }
