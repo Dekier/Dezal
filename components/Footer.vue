@@ -201,7 +201,7 @@
           class="Footer__recomended-link"
         >
           <img
-            src="/images/pracownia-krawiecka.png"
+            src="/icons/pracownia-krawiecka.svg"
             alt="pracownia krawiecka logo"
             class="Footer__recomended-logo"
           />

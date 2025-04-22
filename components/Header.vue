@@ -9,7 +9,6 @@
         <div class="Header__logo" />
       </NuxtLink>
 
-      <!-- Hamburger -->
       <div
         @click="showMobileBtn = !showMobileBtn"
         :class="{ 'Header__hamburger-container--active': showMobileBtn }"
@@ -29,7 +28,6 @@
         />
       </div>
 
-      <!-- Mobile nav -->
       <transition name="fade">
         <nav v-if="showMobileBtn" class="Header__links-container-mobile">
           <NuxtLink
@@ -104,7 +102,6 @@
         </nav>
       </transition>
 
-      <!-- Desktop nav -->
       <div class="Header__links-container">
         <NuxtLink to="/" class="Header__link" @click="pageActive = 'home'">
           STRONA GŁÓWNA
