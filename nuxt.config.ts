@@ -49,7 +49,7 @@ export default defineNuxtConfig({
   ],
 
   seo: {
-    siteUrl: 'https://dezalroletypoznan.pl',
+    siteUrl: process.env.SITE_URL || 'https://dezalroletypoznan.pl',
     sitemap: {
       exclude: ['/error'],
       defaults: {
@@ -61,7 +61,7 @@ export default defineNuxtConfig({
     },
     robots: {
       indexable: true,
-      sitemap: 'https://dezalroletypoznan.pl/sitemap.xml',
+      sitemap: process.env.SITE_URL + '/sitemap.xml',
       rules: [
         {
           userAgent: '*',
