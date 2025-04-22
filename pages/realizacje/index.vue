@@ -92,7 +92,7 @@
           :key="randomKey(index)"
           class="Realization__project"
         >
-          <img
+          <NuxtImg
             :src="imageData.url"
             class="Realization__project-image"
             :alt="imageAlt(imageData)"

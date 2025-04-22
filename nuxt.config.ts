@@ -85,7 +85,14 @@ export default defineNuxtConfig({
 
   plugins: [],
 
-  modules: ['@vite-pwa/nuxt', '@nuxtjs/sitemap', '@nuxtjs/robots', 'nuxt-gtag'],
+  modules: [
+    '@vite-pwa/nuxt',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots',
+    'nuxt-gtag',
+    '@nuxtjs/critters',
+    '@nuxt/image-edge',
+  ],
 
   serverMiddleware: [{ path: '/', handler: '~/middleware/redirect.js' }],
 
