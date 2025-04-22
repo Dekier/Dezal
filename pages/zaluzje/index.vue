@@ -57,21 +57,19 @@ const pageData = computed(() => {
   ];
 });
 
-// SEO
-useHead({
-  title: 'Żaluzje Drewniane i Aluminiowe na wymiar w Poznaniu | Deżal.',
-  meta: [
-    {
-      name: 'description',
-      content:
-        'Stylowe żaluzje drewniane i aluminiowe na wymiar – montaż w Poznaniu i okolicach. Naturalny wygląd, trwałe materiały i indywidualna wycena od Deżal.',
-    },
-    {
-      name: 'keywords',
-      content:
-        'żaluzje drewniane, żaluzje aluminiowe, żaluzje poznań, żaluzje na wymiar, żaluzje wewnętrzne, osłony okienne poznań, montaż żaluzji, żaluzje drewniane poznań',
-    },
-  ],
+definePageMeta({
+  title: 'Żaluzje drewniane i aluminiowe – Poznań i okolice | DEŻAL',
+  description:
+    'Stylowe żaluzje na wymiar – drewno, aluminium, szeroki wybór kolorów. DEŻAL Poznań – pomiar, montaż i doradztwo w cenie.',
+  ogImage: {
+    url: '/images/offer/dezal-poznan-żaluzja-drewniana-1.webp',
+    alt: 'Żaluzje na wymiar - DEŻAL Poznań',
+  },
+  canonical: 'https://dezalroletypoznan.pl/zaluzje',
+  sitemap: {
+    changefreq: 'monthly',
+    priority: 0.85,
+  },
 });
 </script>
 

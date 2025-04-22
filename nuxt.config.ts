@@ -1,8 +1,10 @@
 export default defineNuxtConfig({
   ssr: true,
+
   nitro: {
     preset: 'vercel-static',
   },
+
   output: {
     standalone: false,
   },
@@ -20,63 +22,16 @@ export default defineNuxtConfig({
       '/moskitiery',
     ],
   },
+
   app: {
     baseURL: '/',
     head: {
       htmlAttrs: {
         lang: 'pl',
       },
-      title: 'DEŻAL: nowoczesne rolety, plisy i żaluzje | Poznań i okolice.',
-      meta: [
-        { charset: 'utf-8' },
-        {
-          name: 'viewport',
-          content: 'width=device-width, initial-scale=1, maximum-scale=5',
-        },
-        { name: 'theme-color', content: '#ffe100' },
-        {
-          name: 'description',
-          content:
-            'Rolety, plisy, żaluzje i moskitiery w Poznaniu – DEŻAL oferuje nowoczesne osłony okienne na wymiar. Profesjonalny montaż, precyzyjny pomiar i indywidualna wycena. Obsługujemy Poznań i okolice.',
-        },
-        {
-          name: 'keywords',
-          content:
-            'rolety, rolety dzień noc, plisy, żaluzje, poznań, osłony okienne, dezal, rolety materialowe, rolety rzymskie, moskitiery, verticale',
-        },
-        {
-          property: 'og:title',
-          content: 'DEŻAL: Rolety, Plisy, Żaluzje | Poznań',
-        },
-        {
-          property: 'og:description',
-          content:
-            'Rolety, plisy, żaluzje, moskitiery, verticale od firmy DEŻAL – indywidualny pomiar i profesjonalny montaż w Poznaniu i okolicy.',
-        },
-        { property: 'og:type', content: 'website' },
-        { property: 'og:url', content: 'https://dezalroletypoznan.pl' },
-        { property: 'og:image', content: '/images/logo.png' },
-
-        { name: 'twitter:card', content: 'summary_large_image' },
-        {
-          name: 'twitter:title',
-          content: 'DEŻAL: Rolety, Plisy, Żaluzje | Poznań',
-        },
-        {
-          name: 'twitter:description',
-          content:
-            'Rolety, plisy, żaluzje, moskitiery, verticale od firmy DEŻAL – indywidualny pomiar i profesjonalny montaż w Poznaniu i okolicy.',
-        },
-        { name: 'twitter:image', content: '/images/logo.png' },
-
-        { 'http-equiv': 'cache-control', content: 'max-age=604800, public' },
-      ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-        {
-          rel: 'canonical',
-          href: 'https://dezalroletypoznan.pl',
-        },
+        { rel: 'canonical', href: 'https://dezalroletypoznan.pl' },
       ],
     },
   },
@@ -87,14 +42,48 @@ export default defineNuxtConfig({
 
   modules: [
     '@vite-pwa/nuxt',
-    '@nuxtjs/sitemap',
-    '@nuxtjs/robots',
+    '@nuxtjs/seo', // 🚀 używamy zamiast sitemap + robots
     'nuxt-gtag',
     '@nuxtjs/critters',
     '@nuxt/image-edge',
   ],
 
-  serverMiddleware: [{ path: '/', handler: '~/middleware/redirect.js' }],
+  seo: {
+    siteUrl: 'https://dezalroletypoznan.pl',
+    sitemap: {
+      exclude: ['/error'],
+      defaults: {
+        changefreq: 'monthly',
+        priority: 0.8,
+        lastmod: true,
+      },
+      trailingSlash: false,
+    },
+    robots: {
+      indexable: true,
+      sitemap: 'https://dezalroletypoznan.pl/sitemap.xml',
+      rules: [
+        {
+          userAgent: '*',
+          allow: '/',
+          disallow: '/error',
+        },
+      ],
+    },
+    meta: {
+      title: 'DEŻAL: nowoczesne rolety, plisy i żaluzje | Poznań i okolice.',
+      description:
+        'Rolety, plisy, żaluzje i moskitiery w Poznaniu – DEŻAL oferuje nowoczesne osłony okienne na wymiar. Profesjonalny montaż, precyzyjny pomiar i indywidualna wycena.',
+      ogSiteName: 'DEŻAL Poznań',
+      ogImage: {
+        url: '/images/logo.png',
+        alt: 'Logo firmy DEŻAL',
+      },
+      twitterCard: 'summary_large_image',
+      themeColor: '#ffe100',
+      language: 'pl',
+    },
+  },
 
   gtag: {
     id: 'G-7TFFQYCBP3',
@@ -117,33 +106,7 @@ export default defineNuxtConfig({
     },
   },
 
-  sitemap: {
-    hostname: process.env.SITE_URL || 'https://dezalroletypoznan.pl',
-    gzip: true,
-    routes: [
-      '/',
-      '/kontakt',
-      '/rolety-dzien-noc',
-      '/rolety-materialowe',
-      '/rolety-rzymskie',
-      '/plisy',
-      '/zaluzje',
-      '/verticale',
-      '/moskitiery',
-      '/realizacje',
-    ],
-  },
+  serverMiddleware: [{ path: '/', handler: '~/middleware/redirect.js' }],
 
-  robots: {
-    rules: [
-      {
-        userAgent: '*',
-        allow: '/',
-        disallow: '/error',
-      },
-    ],
-    sitemap: 'https://dezalroletypoznan.pl/sitemap.xml',
-  },
-
-  compatibilityDate: '2025-04-19',
+  compatibilityDate: '2025-04-22',
 });

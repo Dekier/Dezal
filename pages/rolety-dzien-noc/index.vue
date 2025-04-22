@@ -48,20 +48,20 @@ const pageData = computed(() => {
     : [];
 });
 
-useHead({
-  title: 'Rolety Dzień i Noc na wymiar w Poznaniu | Deżal.',
-  meta: [
-    {
-      name: 'description',
-      content:
-        'Funkcjonalne rolety dzień i noc na wymiar z montażem w Poznaniu – idealne rozwiązanie do regulacji światła w domu i biurze. Pomiar i wycena gratis!',
-    },
-    {
-      name: 'keywords',
-      content:
-        'rolety dzień i noc, rolety dzień i noc poznań, rolety na wymiar, osłony okienne poznań, montaż rolet poznań, rolety duo',
-    },
-  ],
+definePageMeta({
+  title:
+    'Rolety dzień noc Poznań –  na wymiar nowoczesne i funkcjonalne | DEŻAL',
+  description:
+    'Rolety dzień noc na wymiar z montażem w Poznaniu i okolicach. Estetyka i funkcjonalność w jednym. Darmowy pomiar i indywidualna wycena.',
+  ogImage: {
+    url: '/images/offer/dezal-poznan-roleta-dzień-noc-2.webp',
+    alt: 'Rolety dzień noc - DEŻAL Poznań',
+  },
+  canonical: 'https://dezalroletypoznan.pl/rolety-dzien-noc',
+  sitemap: {
+    changefreq: 'monthly',
+    priority: 0.9,
+  },
 });
 </script>
 

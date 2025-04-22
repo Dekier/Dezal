@@ -51,14 +51,18 @@ const pageData = computed(() => {
     : [];
 });
 
-// SEO meta
-useHead({
-  title: 'Plisy w Poznaniu od firmy Deżal.',
-  meta: [
-    {
-      name: 'description',
-      content: 'Rolety Plisowane w Poznaniu na Piątkowie. Montaż w cenie!',
-    },
-  ],
+definePageMeta({
+  title: 'Plisy okienne Poznań – nowoczesne rozwiązania na wymiar | DEŻAL',
+  description:
+    'Plisy okienne do każdego typu okna. Montaż na oknach dachowych, uchylnych i przesuwnych. Sprawdź ofertę DEŻAL w Poznaniu.',
+  ogImage: {
+    url: '/images/offer/dezal-poznan-plisa-1.webp',
+    alt: 'Plisy okienne - DEŻAL Poznań',
+  },
+  canonical: 'https://dezalroletypoznan.pl/plisy',
+  sitemap: {
+    changefreq: 'monthly',
+    priority: 0.85,
+  },
 });
 </script>

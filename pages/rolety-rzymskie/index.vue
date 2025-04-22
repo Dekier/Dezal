@@ -47,21 +47,19 @@ const pageData = computed(() => {
     : [];
 });
 
-// SEO
-useHead({
-  title: 'Rolety Rzymskie na wymiar w Poznaniu | Deżal.',
-  meta: [
-    {
-      name: 'description',
-      content:
-        'Nowoczesne rolety rzymskie na wymiar z montażem w Poznaniu – oferujemy stylowe osłony okienne idealne do salonu, sypialni i biura. Sprawdź ofertę Deżal!',
-    },
-    {
-      name: 'keywords',
-      content:
-        'rolety rzymskie, rolety na wymiar, rolety rzymskie w Poznaniu, rolety rzymskie na wymiar w Poznaniu, rolety rzymskie w Poznaniu na Piątkowie',
-    },
-  ],
+definePageMeta({
+  title: 'Rolety rzymskie Poznań – elegancja i komfort | DEŻAL',
+  description:
+    'Rolety rzymskie z tkanin dekoracyjnych na zamówienie. Poznań i okolice – precyzyjny montaż, profesjonalna obsługa.',
+  ogImage: {
+    url: '/images/offer/dezal-poznan-roleta-rzymska-0.webp',
+    alt: 'Rolety rzymskie - DEŻAL Poznań',
+  },
+  canonical: 'https://dezalroletypoznan.pl/rolety-rzymskie',
+  sitemap: {
+    changefreq: 'monthly',
+    priority: 0.8,
+  },
 });
 </script>
 
