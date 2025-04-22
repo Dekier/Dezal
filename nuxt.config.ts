@@ -75,7 +75,7 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         {
           rel: 'canonical',
-          href: 'https://dezalroletypoznan.pl', // 🔗 dobra praktyka SEO
+          href: 'https://dezalroletypoznan.pl',
         },
       ],
     },
