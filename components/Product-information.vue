@@ -2,7 +2,7 @@
   <div>
     <div class="ProductInformation__title-container">
       <div class="ProductInformation__image-box">
-        <img
+        <NuxtImg
           src="/images/header2.webp"
           class="ProductInformation__image"
           alt="header-page"
@@ -23,7 +23,7 @@
           'ProductInformation__center-picture--inverted': isOdd(data.id),
         }"
       >
-        <img
+        <NuxtImg
           :src="data.url"
           class="ProductInformation__main-picture"
           :alt="data.url"
@@ -56,7 +56,7 @@
           @click="showBigGallery(index)"
           class="ProductInformation__bottom-realizations-box"
         >
-          <img
+          <NuxtImg
             :src="imageData.url"
             class="ProductInformation__bottom-realizations-image"
             :alt="imageData.url"

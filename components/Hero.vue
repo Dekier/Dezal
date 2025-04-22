@@ -1,6 +1,6 @@
 <template>
   <header id="hero" class="Hero__main-container">
-    <img
+    <NuxtImg
       src="/images/header2.webp"
       class="Hero__hero-image"
       alt="dezal zdjecie tła"

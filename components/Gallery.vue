@@ -35,8 +35,7 @@
       </svg>
     </div>
 
-    <img
-      loading="lazy"
+    <NuxtImg
       class="Gallery__image"
       :src="images[index].url"
       alt="Dezal rolety poznań"

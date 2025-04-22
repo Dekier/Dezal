@@ -3,7 +3,7 @@
     <div class="Footer__center-container">
       <div class="Footer__column">
         <!-- <div class="Footer__title">MENU</div> -->
-        <img
+        <NuxtImg
           src="/icons/logo-grey.svg"
           alt="logo-deżal-grey"
           class="Footer__logo"
@@ -22,7 +22,7 @@
           class="Footer__facebook-link"
         >
           Znajdź nas na:
-          <img
+          <NuxtImg
             src="/icons/facebook.svg"
             alt="facebook-icon"
             class="Footer__facebook-icon"
@@ -37,7 +37,7 @@
           @mouseenter="isHoverLink = 'rolety-dzien-noc'"
           @mouseleave="isHoverLink = ''"
         >
-          <img
+          <NuxtImg
             :src="
               isHoverLink === 'rolety-dzien-noc'
                 ? '/icons/dot-yellow.svg'
@@ -54,7 +54,7 @@
           @mouseenter="isHoverLink = 'rolety-materialowe'"
           @mouseleave="isHoverLink = ''"
         >
-          <img
+          <NuxtImg
             :src="
               isHoverLink === 'rolety-materialowe'
                 ? '/icons/dot-yellow.svg'
@@ -71,7 +71,7 @@
           @mouseenter="isHoverLink = 'rolety-rzymskie'"
           @mouseleave="isHoverLink = ''"
         >
-          <img
+          <NuxtImg
             :src="
               isHoverLink === 'rolety-rzymskie'
                 ? '/icons/dot-yellow.svg'
@@ -88,7 +88,7 @@
           @mouseenter="isHoverLink = 'plisy'"
           @mouseleave="isHoverLink = ''"
         >
-          <img
+          <NuxtImg
             :src="
               isHoverLink === 'plisy'
                 ? '/icons/dot-yellow.svg'
@@ -105,7 +105,7 @@
           @mouseenter="isHoverLink = 'zaluzje'"
           @mouseleave="isHoverLink = ''"
         >
-          <img
+          <NuxtImg
             :src="
               isHoverLink === 'zaluzje'
                 ? '/icons/dot-yellow.svg'
@@ -122,7 +122,7 @@
           @mouseenter="isHoverLink = 'verticale'"
           @mouseleave="isHoverLink = ''"
         >
-          <img
+          <NuxtImg
             :src="
               isHoverLink === 'verticale'
                 ? '/icons/dot-yellow.svg'
@@ -139,7 +139,7 @@
           @mouseenter="isHoverLink = 'moskitiery'"
           @mouseleave="isHoverLink = ''"
         >
-          <img
+          <NuxtImg
             :src="
               isHoverLink === 'moskitiery'
                 ? '/icons/dot-yellow.svg'
@@ -154,7 +154,7 @@
       <div class="Footer__column">
         <div class="Footer__title">Kontakt</div>
         <a href="tel:+48603630299" class="Footer__link">
-          <img
+          <NuxtImg
             src="/icons/phone.svg"
             alt="icon phone"
             class="Footer__link-icon"
@@ -162,7 +162,7 @@
           +48 603 630 299
         </a>
         <a href="mailto:dezal.rolety@gmail.com" class="Footer__link">
-          <img
+          <NuxtImg
             src="/icons/mail.svg"
             alt="icon mail"
             class="Footer__link-icon"
@@ -173,7 +173,11 @@
           href="https://maps.app.goo.gl/SWWD7iMgbDCGbCam9"
           class="Footer__link Footer__link-long"
         >
-          <img src="/icons/map.svg" alt="icon map" class="Footer__link-icon" />
+          <NuxtImg
+            src="/icons/map.svg"
+            alt="icon map"
+            class="Footer__link-icon"
+          />
           Z.P.H.U. DEŻAL Dariusz Dekier<br />
           ul. Jaroczyńskiego 41,<br />
           60-692 Poznań
@@ -183,7 +187,7 @@
           href="https://maps.app.goo.gl/SWWD7iMgbDCGbCam9"
           class="Footer__link Footer__link-long Footer__link-no-click"
         >
-          <img
+          <NuxtImg
             src="/icons/bank.svg"
             alt="icon bank"
             class="Footer__link-icon"
@@ -200,7 +204,7 @@
           rel="nofollow"
           class="Footer__recomended-link"
         >
-          <img
+          <NuxtImg
             src="/icons/pracownia-krawiecka.svg"
             alt="pracownia krawiecka logo"
             class="Footer__recomended-logo"
