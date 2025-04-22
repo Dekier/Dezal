@@ -17,6 +17,7 @@
     flex-wrap: wrap;
     @include for-phone-only {
       padding: 41px 24px 67px;
+      gap: 12px;
     }
     @include for-tablet {
       justify-content: space-between;
