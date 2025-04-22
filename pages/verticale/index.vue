@@ -49,20 +49,19 @@ const pageData = computed(() => {
     : [];
 });
 
-// Meta
-useHead({
-  title: 'Verticale na wymiar w Poznaniu | Deżal.',
-  meta: [
-    {
-      name: 'description',
-      content:
-        'Verticale na wymiar z montażem w Poznaniu – idealne do dużych przeszkleń w domu i biurze. Szeroki wybór tkanin i kolorów, profesjonalny pomiar i szybka realizacja.',
-    },
-    {
-      name: 'keywords',
-      content:
-        'verticale, verticale poznań, verticale na wymiar, osłony okienne, montaż verticale, verticale do biura, verticale do salonu',
-    },
-  ],
+definePageMeta({
+  title:
+    'Verticale (żaluzje pionowe) – elegancja i funkcjonalność | DEŻAL Poznań',
+  description:
+    'Żaluzje pionowe do biur i domów. Verticale na wymiar z montażem w Poznaniu. Elegancja, zaciemnienie i kontrola światła.',
+  ogImage: {
+    url: '/images/offer/dezal-poznan-roleta-verticale-1.webp',
+    alt: 'Verticale - żaluzje pionowe DEŻAL',
+  },
+  canonical: 'https://dezalroletypoznan.pl/verticale',
+  sitemap: {
+    changefreq: 'monthly',
+    priority: 0.75,
+  },
 });
 </script>

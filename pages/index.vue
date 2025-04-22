@@ -25,14 +25,18 @@ const offerData = ref({
 
 const offerBoxesJson = ref(offers.boxes);
 
-useHead({
+definePageMeta({
   title: 'Rolety Poznań – DEŻAL: nowoczesne plisy, żaluzje i osłony okienne',
-  meta: [
-    {
-      name: 'description',
-      content:
-        'Rolety, plisy, żaluzje i moskitiery w Poznaniu – DEŻAL oferuje nowoczesne osłony okienne na wymiar. Profesjonalny montaż, precyzyjny pomiar i indywidualna wycena. Obsługujemy Poznań i okolice.',
-    },
-  ],
+  description:
+    'Rolety, plisy, żaluzje i moskitiery w Poznaniu – DEŻAL oferuje nowoczesne osłony okienne na wymiar. Profesjonalny montaż, precyzyjny pomiar i indywidualna wycena.',
+  ogImage: {
+    url: '/images/offer/dezal-poznan-roleta-dzień-noc-2.webp',
+    alt: 'Roleta dzień noc w salonie',
+  },
+  canonical: 'https://dezalroletypoznan.pl',
+  sitemap: {
+    changefreq: 'monthly',
+    priority: 1,
+  },
 });
 </script>

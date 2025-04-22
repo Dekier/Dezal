@@ -214,21 +214,19 @@ const mailtoHref = computed(() => {
   return `mailto:dezal.rolety@gmail.com?subject=Zapytanie klienta z strony&body=Nazywam się: ${formData.value.name} ${formData.value.surname}%0A%0AMój nr telefonu to: ${formData.value.number} %0A%0AMoja wiadomość: %0A${formData.value.text}`;
 });
 
-// Meta tagi
-useHead({
-  title: 'Kontakt | Deżal – Rolety i Żaluzje Poznań',
-  meta: [
-    {
-      name: 'description',
-      content:
-        'Masz pytania? Skontaktuj się z nami – DEŻAL Poznań. Oferujemy rolety, żaluzje, plisy i inne osłony okienne z montażem. Szybka wycena i profesjonalne doradztwo.',
-    },
-    {
-      name: 'keywords',
-      content:
-        'kontakt deżal, rolety poznań kontakt, żaluzje poznań, wycena rolet, pomiar okien poznań, osłony okienne kontakt',
-    },
-  ],
+definePageMeta({
+  title: 'Kontakt z DEŻAL – rolety, plisy, żaluzje | Poznań',
+  description:
+    'Masz pytania? Skontaktuj się z nami – DEŻAL Poznań. Oferujemy rolety, żaluzje, plisy i inne osłony okienne z montażem. Szybka wycena i profesjonalne doradztwo.',
+  ogImage: {
+    url: '/images/offer/dezal-poznan-roleta-dzień-noc-2.webp',
+    alt: 'Kontakt DEŻAL Poznań',
+  },
+  canonical: 'https://dezalroletypoznan.pl/kontakt',
+  sitemap: {
+    changefreq: 'monthly',
+    priority: 0.5,
+  },
 });
 </script>
 
