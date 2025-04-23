@@ -3,6 +3,7 @@
     <Hero />
     <AboutCompany />
     <Offer :offer-data="offerData" :offer-boxes-json="offerBoxesJson" />
+    <Contact />
   </div>
 </template>
 
