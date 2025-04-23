@@ -49,8 +49,7 @@ const pageData = computed(() => {
 });
 
 definePageMeta({
-  title:
-    'Rolety dzień noc Poznań –  na wymiar nowoczesne i funkcjonalne | DEŻAL',
+  title: 'Rolety dzień noc Poznań –  na wymiar nowoczesne i funkcjonalne',
   description:
     'Rolety dzień noc na wymiar z montażem w Poznaniu i okolicach. Estetyka i funkcjonalność w jednym. Darmowy pomiar i indywidualna wycena.',
   ogImage: {

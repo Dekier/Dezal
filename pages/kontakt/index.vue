@@ -185,7 +185,6 @@
       </div>
     </div>
 
-    <!-- Dolna część: mapa -->
     <div class="Contact__bottom-container">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2431.4076146342704!2d16.903375316488017!3d52.45364497980178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47044341d3556dc5%3A0xaaec6ab99af1a5a1!2sDE%C5%BBAL+Rolety.+Plisy.+%C5%BBaluzje.!5e0!3m2!1spl!2spl!4v1548082800699"
@@ -200,7 +199,6 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
 
-// Formularz
 const formData = ref({
   name: '',
   surname: '',
@@ -209,18 +207,17 @@ const formData = ref({
   text: '',
 });
 
-// Mailto href
 const mailtoHref = computed(() => {
   return `mailto:dezal.rolety@gmail.com?subject=Zapytanie klienta z strony&body=Nazywam się: ${formData.value.name} ${formData.value.surname}%0A%0AMój nr telefonu to: ${formData.value.number} %0A%0AMoja wiadomość: %0A${formData.value.text}`;
 });
 
 definePageMeta({
-  title: 'Kontakt z DEŻAL – rolety, plisy, żaluzje | Poznań',
+  title: 'Kontakt – rolety, plisy, żaluzje | Poznań',
   description:
-    'Masz pytania? Skontaktuj się z nami – DEŻAL Poznań. Oferujemy rolety, żaluzje, plisy i inne osłony okienne z montażem. Szybka wycena i profesjonalne doradztwo.',
+    'Masz pytania? Skontaktuj się z nami. Oferujemy rolety, żaluzje, plisy i inne osłony okienne z montażem. Szybka wycena i profesjonalne doradztwo.',
   ogImage: {
     url: '/images/offer/dezal-poznan-roleta-dzień-noc-2.webp',
-    alt: 'Kontakt DEŻAL Poznań',
+    alt: 'Kontakt - Poznań',
   },
   canonical: 'https://dezalroletypoznan.pl/kontakt',
   sitemap: {
