@@ -97,26 +97,60 @@
             class="Contact__form-container-icon"
           />
           <div class="Contact__form-title">Zapytaj nas...</div>
-          <label class="Contact__label"> Twoje imię </label>
+
+          <label class="Contact__label" for="name">Twoje imię</label>
           <input
+            id="name"
             class="Contact__input"
             v-model="formData.name"
             type="text"
             placeholder="Kowalski Marcin"
+            :aria-describedby="errors.name ? 'error-name' : null"
           />
-          <label class="Contact__label"> E-mail </label>
+          <!-- <span
+      v-if="errors.name"
+      id="error-name"
+      class="Contact__error"
+      role="alert"
+    >
+      {{ errors.name }}
+    </span> -->
+
+          <label class="Contact__label" for="email">E-mail</label>
           <input
+            id="email"
             class="Contact__input"
             type="email"
             placeholder="twoj@email.pl"
             v-model="formData.email"
+            :aria-describedby="errors.email ? 'error-email' : null"
           />
-          <label class="Contact__label"> Wiadomość </label>
+          <!-- <span
+      v-if="errors.email"
+      id="error-email"
+      class="Contact__error"
+      role="alert"
+    >
+      {{ errors.email }}
+    </span> -->
+
+          <label class="Contact__label" for="text">Wiadomość</label>
           <textarea
+            id="text"
             class="Contact__textarea"
             v-model="formData.text"
             placeholder="Proszę o szczegółowe informacje dotyczące..."
-          />
+            :aria-describedby="errors.text ? 'error-text' : null"
+          ></textarea>
+          <!-- <span
+      v-if="errors.text"
+      id="error-text"
+      class="Contact__error"
+      role="alert"
+    >
+      {{ errors.text }}
+    </span> -->
+
           <button
             type="button"
             class="Contact__submit"
@@ -125,6 +159,7 @@
           >
             {{ submitText }}
           </button>
+
           <div class="Contact__form-info">
             Wysyłając wiadomość wyrażasz zgodę na <br />
             <a
@@ -144,6 +179,8 @@
         frameborder="0"
         style="border: 0"
         allowfullscreen
+        title="Mapa lokalizacji firmy DEŻAL Rolety, Plisy, Żaluzje"
+        aria-label="Mapa lokalizacji firmy DEŻAL Rolety, Plisy, Żaluzje"
       />
     </div>
   </div>

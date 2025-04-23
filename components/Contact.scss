@@ -38,11 +38,11 @@
     @include text(57px, left, $black-300, 700);
     margin: 0 0 16px 40px;
     padding: 0;
+    position: relative;
     @include for-phone-only {
       @include text(32px, left, $black-300, 700);
       margin: 0 0 16px 16px;
     }
-    position: relative;
   }
 
   &__description {
