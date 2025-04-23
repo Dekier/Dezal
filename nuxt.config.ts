@@ -1,3 +1,5 @@
+const siteUrl =
+  process.env.NUXT_PUBLIC_SITE_URL || 'https://dezalroletypoznan.pl';
 export default defineNuxtConfig({
   ssr: true,
 
@@ -48,8 +50,16 @@ export default defineNuxtConfig({
     '@nuxt/image-edge',
   ],
 
+  runtimeConfig: {
+    public: {
+      siteUrl,
+    },
+  },
+
   seo: {
-    siteUrl: 'https://dezalroletypoznan.pl',
+    site: {
+      url: siteUrl,
+    },
     sitemap: {
       exclude: ['/error'],
       defaults: {
@@ -61,7 +71,7 @@ export default defineNuxtConfig({
     },
     robots: {
       indexable: true,
-      sitemap: 'https://dezalroletypoznan.pl/sitemap.xml',
+      sitemap: siteUrl + '/sitemap.xml',
       rules: [
         {
           userAgent: '*',
