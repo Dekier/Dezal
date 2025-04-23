@@ -51,9 +51,9 @@ const pageData = computed(() => {
 });
 
 definePageMeta({
-  title: 'Rolety materiałowe Poznań – stylowe osłony okienne | DEŻAL',
+  title: 'Rolety materiałowe Poznań – stylowe osłony okienne',
   description:
-    'Rolety materiałowe na wymiar w Poznaniu. Duży wybór tkanin, profesjonalny montaż, szybka realizacja. Zaufaj doświadczeniu DEŻAL.',
+    'Rolety materiałowe na wymiar w Poznaniu. Duży wybór tkanin, profesjonalny montaż, szybka realizacja. Darmowy pomiar i indywidualna wycena.',
   ogImage: {
     url: '/images/offer/dezal-poznan-roleta-materiałowa-3.webp',
     alt: 'Rolety materiałowe - DEŻAL Poznań',
