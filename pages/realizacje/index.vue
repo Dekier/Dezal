@@ -4,11 +4,11 @@
       <div class="Realization__title-container">
         <h1 class="Realization__title">Poznaj nasze realizacje</h1>
         <p class="Realization__description">
-          Nasze realizacje to nie tylko piękne i estetyczne rozwiązania, ale
-          także funkcjonalne i trwałe. Dzięki naszej wiedzy i doświadczeniu,
-          jesteśmy w stanie doradzić w wyborze najlepszego rozwiązania dla
-          Twojego mieszkania czy domu. Stawiamy na jakość, dlatego korzystamy
-          tylko z najlepszych materiałów i urządzeń.
+          Nasze realizacje to nie tylko piękne i estetyczne, ale także
+          funkcjonalne i trwałe rozwiązania. Dzięki naszej wiedzy i
+          doświadczeniu, jesteśmy w stanie doradzić w wyborze najlepszego
+          rozwiązania dla Twojego mieszkania, domu czy firmy. Stawiamy na
+          jakość, dlatego korzystamy tylko z najlepszych materiałów i urządzeń.
         </p>
       </div>
     </div>
@@ -515,9 +515,10 @@ const imageAlt = (img) => {
 };
 
 definePageMeta({
-  title: 'Realizacje – Rolety, plisy, żaluzje i osłony okienne',
+  title:
+    'Realizacje – Rolety, Plisy, Żaluzje i Moskitiery na Wymiar | Deżal Poznań',
   description:
-    'Realizacje naszych usług – Rolety, plisy, żaluzje i moskitiery w Poznaniu.',
+    'Zobacz nasze realizacje rolet, plis, żaluzji i moskitier w Poznaniu. Oferujemy osłony okienne na wymiar – estetyczne, trwałe i funkcjonalne rozwiązania dla domu i firmy.',
   ogImage: {
     url: '/images/offer/dezal-poznan-roleta-dzień-noc-2.webp',
     alt: 'Roleta dzień noc w salonie',
