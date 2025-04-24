@@ -1,4 +1,6 @@
 @use '@/assets/stylesheets/main-variables' as *;
+
+@use '@/assets/stylesheets/mixins' as *;
 .Realization {
   &__main-container {
     min-height: calc(100vh - 350px);
@@ -13,95 +15,104 @@
     height: 100%;
     background: $color-white;
   }
-
+  &__title-container-background {
+    background-color: $yellow-500;
+    width: 100%;
+  }
   &__title-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 300px;
-    overflow: hidden;
+    max-width: 1440px;
     width: 100%;
+    margin: 0 auto;
+    padding: 130px 24px 34px;
+    @include for-tablet {
+      padding: 230px 24px 130px;
+    }
+  }
+
+  &__description {
+    max-width: 870px;
+    line-height: 140%;
+    @include text(16px, left, $black-400, 400);
+
+    @include for-tablet {
+      @include text(18px, left, $black-400, 400);
+    }
   }
 
   &__title {
     font-size: 50px;
     font-weight: 400;
-    text-align: center;
     padding: 0;
-    margin-top: 150px;
-    color: $color-yellow;
-    z-index: 10;
-  }
-
-  &__background {
+    margin-bottom: 25px;
+    @include text(42px, left, $black-400, 700);
     width: 100%;
-    height: 300px;
-    background: rgba(0, 0, 0, 0.7);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-  }
-
-  &__image {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-image: url('/images/header2.webp');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 40%;
-    width: 100%;
-    height: 300px;
-    z-index: -1;
+    margin: 0 auto;
+    @include for-tablet {
+      @include text(56px, left, $black-400, 700);
+    }
   }
 
   &__filters-container {
-    width: 1200px;
+    max-width: 1440px;
+    width: 100%;
     text-align: center;
-    margin: 70px auto 40px;
+    margin: 40px auto 40px;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    @include for-tablet {
+      margin: 90px auto 90px;
+    }
   }
 
   &__filter {
-    padding: 6px 8px 6px 10px;
+    padding: 12px 16px;
     cursor: pointer;
-    border-radius: 4px;
-    margin: 0 5px;
+    border-radius: 8px;
     border: unset;
     background-color: transparent;
+    @include text(16px, center, $black-400, 500);
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+    &:hover {
+      background: $grey-200;
+    }
   }
 
   &__filter--active {
-    background: $color-yellow;
-  }
-
-  &__filter:hover {
-    background-color: hsla(53, 100%, 50%, 0.493);
+    background: $grey-300;
+    &:hover {
+      cursor: default;
+      background: $grey-300;
+    }
   }
 
   &__projects {
     margin-top: 25px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 1200px;
-    margin: auto;
-    will-change: transform, opacity;
+    flex-direction: column;
+    grid-auto-rows: 150px;
+    gap: 20px;
+    max-width: 1640px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 24px;
+    @include for-tablet {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 
   &__project {
-    width: 277px;
-    height: 200px;
     overflow: hidden;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px;
-    box-shadow: 0px 2px 8px lightgrey;
     transition: all 0.35s;
-    border-radius: 3px;
+    border-radius: 8px;
     cursor: pointer;
+    display: flex;
   }
 
   &__project-image {
@@ -109,65 +120,5 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
-  }
-
-  &__hover-background {
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background: rgba(0, 0, 0, 0.7);
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    will-change: opacity;
-  }
-
-  &__project:hover &__hover-background {
-    opacity: 1;
-  }
-
-  &__hover-icon {
-    position: absolute;
-    width: 30px;
-    top: calc(50% - 15px);
-    left: calc(50% - 15px);
-  }
-
-  @media (max-width: 1200px) {
-    &__projects {
-      width: auto;
-    }
-
-    &__project:hover &__hover-background {
-      display: none;
-    }
-
-    &__filters-container {
-      width: auto;
-    }
-
-    &__filter {
-      display: inline-block;
-      margin: 5px;
-    }
-
-    &__title-container,
-    &__image,
-    &__background {
-      height: 200px;
-    }
-
-    &__title {
-      font-size: 30px;
-      margin-top: 110px;
-    }
-  }
-}
-
-@media (max-width: 640px) {
-  .demo-btn {
-    min-width: 0;
-    font-size: 14px;
   }
 }
