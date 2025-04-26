@@ -65,17 +65,18 @@
   }
 
   &__box-image {
-    height: 190px;
+    height: 100%;
     width: 100%;
     transition: all 400ms;
     box-shadow: 0px 2px 10px #ccc;
     border-radius: 2px;
     will-change: transform;
     object-fit: cover;
+    object-position: center;
   }
 
   &__box:hover &__box-image {
-    transform: scale(1.04);
+    transform: scale(1.01);
   }
 
   &__box-text {

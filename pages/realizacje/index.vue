@@ -475,7 +475,17 @@ const imagesData = ref([
   },
 
   {
+    url: '/images/moskitiery/dezal-poznan-moskitiera-2.webp',
+    category: 'MASKITIERY',
+  },
+
+  {
     url: '/images/moskitiery/dezal-poznan-moskitiera-1.webp',
+    category: 'MASKITIERY',
+  },
+
+  {
+    url: '/images/moskitiery/dezal-poznan-moskitiera-3.webp',
     category: 'MASKITIERY',
   },
 ]);
