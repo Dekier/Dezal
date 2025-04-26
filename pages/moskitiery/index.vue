@@ -14,7 +14,9 @@ import ProductInformation from '~/components/Product-information.vue';
 import Offer from '~/components/Offer.vue';
 
 const bottomImages = ref([
-  { id: 1, url: '/images/moskitiery/dezal-poznan-moskitiera-1.webp' },
+  { id: 1, url: '/images/moskitiery/dezal-poznan-moskitiera-2.webp' },
+  { id: 2, url: '/images/moskitiery/dezal-poznan-moskitiera-3.webp' },
+  { id: 3, url: '/images/moskitiery/dezal-poznan-moskitiera-1.webp' },
 ]);
 
 const offerData = ref({
@@ -41,7 +43,7 @@ const pageData = computed(() => {
         {
           id: 0,
           title: box.title,
-          url: '/images/moskitiery/dezal-poznan-moskitiera-1.webp',
+          url: '/images/moskitiery/dezal-poznan-moskitiera-2.webp',
           description: box.description,
         },
       ]
@@ -53,7 +55,7 @@ definePageMeta({
   description:
     'Moskitiery ramkowe – na każdy typ okna. Montaż w Poznaniu i okolicach. Skuteczna ochrona przed owadami.',
   ogImage: {
-    url: '/images/offer/dezal-poznan-moskitiera-1.webp',
+    url: '/images/offer/dezal-poznan-moskitiera-2.webp',
     alt: 'Moskitiery - DEŻAL Poznań',
   },
   canonical: 'https://dezalroletypoznan.pl/moskitiery',
