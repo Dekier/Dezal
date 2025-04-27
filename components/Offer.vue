@@ -7,7 +7,13 @@
         <div v-for="(box, index) in showBoxes" :key="index" class="Offer__box">
           <h3 class="Offer__box-title">{{ box.title }}</h3>
           <div class="Offer__box-image-container">
-            <NuxtImg :src="box.url" class="Offer__box-image" :alt="box.title" />
+            <NuxtImg
+              width="340"
+              height="190"
+              :src="box.url"
+              class="Offer__box-image"
+              :alt="box.title"
+            />
           </div>
           <p class="Offer__box-text">{{ box.description }}</p>
           <nuxt-link :to="`/${box.type}`" class="Offer__box-btn">

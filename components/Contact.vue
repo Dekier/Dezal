@@ -87,6 +87,8 @@
         <NuxtImg
           src="/images/landing/dzien-noc-1.webp"
           alt="roleta dzien noc"
+          width="375"
+          height="660"
           class="Contact__image-middle"
         />
 
@@ -154,7 +156,10 @@
           <button
             type="button"
             class="Contact__submit"
-            :class="{ 'Contact__submit--active': isActiveSubmit }"
+            :class="{
+              'Contact__submit--active':
+                isActiveSubmit || submitText === 'Wysyłanie...',
+            }"
             @click="sendForm"
           >
             {{ submitText }}
@@ -239,7 +244,8 @@ const TEMPLATE_ID = 'template_x5sbr5s';
 const PUBLIC_KEY = 'C6CmW10OJxlDJlnl-';
 
 const sendForm = async () => {
-  if (!validateForm()) return;
+  if (!validateForm() || submitText.value === 'Wysyłanie...') return;
+  submitText.value = 'Wysyłanie...';
 
   try {
     await emailjs.send(

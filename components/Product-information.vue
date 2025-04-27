@@ -6,6 +6,7 @@
           src="/images/header2.webp"
           class="ProductInformation__image"
           alt="header-page"
+          height="300"
         />
         <div class="ProductInformation__background" />
         <h3 class="ProductInformation__title">Nasza Oferta</h3>
@@ -27,6 +28,8 @@
           :src="data.url"
           class="ProductInformation__main-picture"
           :alt="data.url"
+          width="500"
+          height="400"
         />
       </div>
 
@@ -60,6 +63,8 @@
             :src="imageData.url"
             class="ProductInformation__bottom-realizations-image"
             :alt="imageData.url"
+            width="300"
+            height="210"
           />
           <div class="ProductInformation__hover-background">
             <svg

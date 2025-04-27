@@ -3,6 +3,7 @@
     <NuxtImg
       src="/images/header2.webp"
       class="Hero__hero-image"
+      height="750"
       alt="dezal zdjecie tła"
     />
     <div class="Hero__hero-background" />
