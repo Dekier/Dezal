@@ -5,6 +5,7 @@
       class="Hero__hero-image"
       height="750"
       alt="dezal zdjecie tła"
+      preload
     />
     <div class="Hero__hero-background" />
     <div class="Hero__center-container">

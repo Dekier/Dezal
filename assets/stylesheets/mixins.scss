@@ -1,6 +1,7 @@
 @use '@/assets/stylesheets/main-variables' as *;
 @mixin text($size: 16px, $align: left, $color: $black, $weight: 400) {
   font-family: $font-main;
+  font-display: swap;
   font-size: $size;
   font-weight: $weight;
   color: $color;

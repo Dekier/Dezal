@@ -13,6 +13,7 @@
               :src="box.url"
               class="Offer__box-image"
               :alt="box.title"
+              preload
             />
           </div>
           <p class="Offer__box-text">{{ box.description }}</p>
