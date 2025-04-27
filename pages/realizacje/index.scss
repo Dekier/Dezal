@@ -92,9 +92,9 @@
 
   &__projects {
     margin-top: 25px;
-    display: flex;
-    flex-direction: column;
+    display: grid;
     grid-auto-rows: 150px;
+    grid-template-columns: repeat(1, 1fr);
     gap: 20px;
     max-width: 1640px;
     width: 100%;
@@ -104,6 +104,11 @@
     @include for-tablet {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include for-desktop-up {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
     }
   }
 
