@@ -24,6 +24,7 @@ export default defineNuxtConfig({
   },
 
   generate: {
+    fallback: '404.html',
     routes: [
       '/kontakt',
       '/realizacje',
