@@ -12,5 +12,5 @@ defineProps<{ error: { statusCode: number } }>();
 </script>
 
 <style scoped lang="scss">
-@use './404.scss' as *;
+@use './error.scss' as *;
 </style>
