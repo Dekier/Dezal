@@ -37,6 +37,7 @@
               closeMobileMenu();
               pageActive = 'home';
             "
+            prefetch
           >
             STRONA GŁÓWNA
           </NuxtLink>
@@ -73,6 +74,7 @@
                   closeMobileMenu();
                   pageActive = 'offer';
                 "
+                prefetch
               >
                 {{ link.label }}
               </NuxtLink>
@@ -86,6 +88,7 @@
               closeMobileMenu();
               pageActive = 'real';
             "
+            prefetch
           >
             REALIZACJE
           </NuxtLink>
@@ -96,6 +99,7 @@
               closeMobileMenu();
               pageActive = 'contact';
             "
+            prefetch
           >
             KONTAKT
           </NuxtLink>
@@ -175,6 +179,7 @@
               showDropDown = false;
               pageActive = 'offer';
             "
+            prefetch
           >
             {{ link.label }}
           </NuxtLink>
@@ -184,6 +189,7 @@
           to="/realizacje"
           class="Header__link"
           @click="pageActive = 'real'"
+          prefetch
         >
           REALIZACJE
           <svg class="Header__link-border" width="200" height="50">
@@ -210,6 +216,7 @@
           to="/kontakt"
           class="Header__link"
           @click="pageActive = 'contact'"
+          prefetch
         >
           KONTAKT
           <svg class="Header__link-border" width="200" height="50">

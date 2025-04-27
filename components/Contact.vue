@@ -90,6 +90,7 @@
           width="375"
           height="660"
           class="Contact__image-middle"
+          preload
         />
 
         <div class="Contact__form-container">

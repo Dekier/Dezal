@@ -3,6 +3,18 @@ const siteUrl =
 export default defineNuxtConfig({
   ssr: true,
 
+  vite: {
+    build: {
+      target: 'esnext',
+      minify: 'esbuild',
+      cssCodeSplit: true,
+    },
+  },
+
+  experimental: {
+    payloadExtraction: true,
+  },
+
   nitro: {
     preset: 'vercel-static',
   },
@@ -33,7 +45,7 @@ export default defineNuxtConfig({
       },
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-        { rel: 'canonical', href: 'https://dezalroletypoznan.pl' },
+        { rel: 'canonical', href: siteUrl },
         { rel: 'apple-touch-icon', href: '/images/logo-rect.png' },
       ],
     },
@@ -50,6 +62,12 @@ export default defineNuxtConfig({
     '@nuxtjs/critters',
     '@nuxt/image-edge',
   ],
+
+  critters: {
+    preload: 'swap',
+    pruneSource: true,
+    inlineFonts: true,
+  },
 
   runtimeConfig: {
     public: {
