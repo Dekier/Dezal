@@ -39,6 +39,7 @@
             :src="imageData.url"
             class="Realization__project-image"
             :alt="imageAlt(imageData)"
+            :title="imageAlt(imageData)"
             @click="showBigGallery(index)"
           />
         </div>
@@ -56,8 +57,8 @@
   </div>
 </template>
 
-<script setup>
-import { ref, computed } from 'vue';
+<script setup lang="ts">
+import { ref, computed, onMounted, onUnmounted } from 'vue';
 import Gallery from '~/components/Gallery.vue';
 
 const filters = [
@@ -71,20 +72,51 @@ const filters = [
   { label: 'MOSKITIERY', value: 'MASKITIERY' },
 ];
 
-const gridLayout = [
-  { col: 2, row: 4 },
-  { col: 2, row: 2 },
-  { col: 2, row: 2 },
-  { col: 1, row: 2 },
-  { col: 1, row: 2 },
-  { col: 2, row: 6 },
-  { col: 2, row: 2 },
-  { col: 2, row: 2 },
-  { col: 4, row: 3 },
-];
+const layouts = {
+  mobile: [{ col: 1, row: 2 }],
+  tablet: [
+    { col: 2, row: 2 },
+    { col: 2, row: 1 },
+    { col: 1, row: 2 },
+    { col: 1, row: 2 },
+    { col: 1, row: 2 },
+    { col: 1, row: 2 },
+  ],
+  desktop: [
+    { col: 2, row: 2 },
+    { col: 4, row: 2 },
+    { col: 2, row: 2 },
+    { col: 1, row: 2 },
+    { col: 3, row: 2 },
+    { col: 3, row: 2 },
+    { col: 1, row: 2 },
+  ],
+};
 
-const getGridStyle = (index) => {
-  const layout = gridLayout[index % gridLayout.length];
+const currentLayout = ref(layouts.mobile);
+
+const updateLayout = () => {
+  const width = window.innerWidth;
+  if (width > 1170) {
+    currentLayout.value = layouts.desktop;
+  } else if (width > 768) {
+    currentLayout.value = layouts.tablet;
+  } else {
+    currentLayout.value = layouts.mobile;
+  }
+};
+
+onMounted(() => {
+  updateLayout();
+  window.addEventListener('resize', updateLayout);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('resize', updateLayout);
+});
+
+const getGridStyle = (index: number) => {
+  const layout = currentLayout.value[index % currentLayout.value.length];
   return {
     gridColumn: `span ${layout.col}`,
     gridRow: `span ${layout.row}`,
