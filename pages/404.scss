@@ -1,6 +1,8 @@
+@use '@/assets/stylesheets/main-variables' as *;
+@use '@/assets/stylesheets/mixins' as *;
 .ErrorPage {
   &__main-container {
-    min-height: 300px;
+    min-height: 50svh;
     margin: 100px auto;
     display: flex;
     flex-direction: column;
@@ -8,17 +10,20 @@
   }
 
   &__text {
-    font-size: 24px;
+    @include text(32px, center, $black-300, 700);
   }
 
   &__link {
-    text-align: center;
-    margin-top: 50px;
     cursor: pointer;
-    color: #000;
     text-decoration: none;
     &:hover {
       text-decoration: underline;
     }
+    background-color: $yellow-500;
+    border-radius: 8px;
+    padding: 10px 20px;
+    width: max-content;
+    margin: 50px auto;
+    @include text(16px, center, $black-300, 700);
   }
 }

@@ -12,6 +12,8 @@
       "statusCode": 308
     }
   ],
+  "cleanUrls": true,
+  "trailingSlash": false,
   "headers": [
     {
       "source": "/_nuxt/(.*)",
@@ -32,7 +34,10 @@
       ]
     }
   ],
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
 }
