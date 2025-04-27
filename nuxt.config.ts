@@ -24,6 +24,7 @@ export default defineNuxtConfig({
   },
 
   generate: {
+    fallback: '404.html',
     routes: [
       '/kontakt',
       '/realizacje',
@@ -135,7 +136,7 @@ export default defineNuxtConfig({
     },
   },
 
-  serverMiddleware: [{ path: '/', handler: '~/middleware/redirect.js' }],
+  // serverMiddleware: [{ path: '/', handler: '~/middleware/redirect.js' }],
 
   compatibilityDate: '2025-04-22',
 });
