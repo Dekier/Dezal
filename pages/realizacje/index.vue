@@ -565,7 +565,7 @@ definePageMeta({
     url: '/images/offer/dezal-poznan-roleta-dzień-noc-2.webp',
     alt: 'Roleta dzień noc w salonie',
   },
-  canonical: 'https://dezalroletypoznan.pl',
+  canonical: 'https://dezalroletypoznan.pl/realizacje',
   sitemap: {
     changefreq: 'monthly',
     priority: 0.7,
