@@ -52,12 +52,21 @@ const pageData = computed(() => {
 
 definePageMeta({
   title: 'Moskitiery Poznań – ochrona przed owadami',
-  description:
-    'Moskitiery ramkowe – na każdy typ okna. Montaż w Poznaniu i okolicach. Skuteczna ochrona przed owadami.',
-  ogImage: {
-    url: '/images/offer/dezal-poznan-moskitiera-2.webp',
-    alt: 'Moskitiery - DEŻAL Poznań',
-  },
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Moskitiery ramkowe – na każdy typ okna. Montaż w Poznaniu i okolicach. Skuteczna ochrona przed owadami.',
+    },
+    {
+      property: 'og:image',
+      content: '/images/offer/dezal-poznan-moskitiera-2.webp',
+    },
+    {
+      property: 'og:image:alt',
+      content: 'Moskitiery - DEŻAL Poznań',
+    },
+  ],
   canonical: 'https://dezalroletypoznan.pl/moskitiery',
   sitemap: {
     changefreq: 'monthly',

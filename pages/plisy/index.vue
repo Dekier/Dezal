@@ -53,12 +53,30 @@ const pageData = computed(() => {
 
 definePageMeta({
   title: 'Plisy okienne Poznań – nowoczesne rozwiązania na wymiar',
-  description:
-    'Plisy okienne do każdego typu okna. Montaż na oknach dachowych, uchylnych i przesuwnych.',
-  ogImage: {
-    url: '/images/offer/dezal-poznan-plisa-1.webp',
-    alt: 'Plisy okienne - DEŻAL Poznań',
-  },
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Plisy okienne do każdego typu okna. Montaż na oknach dachowych, uchylnych i przesuwnych.',
+    },
+    {
+      property: 'og:title',
+      content: 'Plisy okienne Poznań – nowoczesne rozwiązania na wymiar',
+    },
+    {
+      property: 'og:description',
+      content:
+        'Plisy okienne do każdego typu okna. Montaż na oknach dachowych, uchylnych i przesuwnych.',
+    },
+    {
+      property: 'og:image',
+      content: '/images/offer/dezal-poznan-plisa-1.webp',
+    },
+    {
+      property: 'og:image:alt',
+      content: 'Plisy okienne - DEŻAL Poznań',
+    },
+  ],
   canonical: 'https://dezalroletypoznan.pl/plisy',
   sitemap: {
     changefreq: 'monthly',
