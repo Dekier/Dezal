@@ -51,7 +51,7 @@ const pageData = computed(() => {
     : [];
 });
 
-definePageMeta({
+useHead({
   title: 'Plisy okienne Poznań – nowoczesne rozwiązania na wymiar',
   meta: [
     {
@@ -78,9 +78,5 @@ definePageMeta({
     },
   ],
   canonical: 'https://dezalroletypoznan.pl/plisy',
-  sitemap: {
-    changefreq: 'monthly',
-    priority: 0.85,
-  },
 });
 </script>

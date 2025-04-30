@@ -26,7 +26,7 @@ const offerData = ref({
 
 const offerBoxesJson = ref(offers.boxes);
 
-definePageMeta({
+useHead({
   title: 'Rolety Poznań – nowoczesne plisy, żaluzje i osłony okienne',
   meta: [
     {
@@ -53,9 +53,5 @@ definePageMeta({
     },
   ],
   canonical: 'https://dezalroletypoznan.pl',
-  sitemap: {
-    changefreq: 'monthly',
-    priority: 1,
-  },
 });
 </script>

@@ -50,7 +50,7 @@ const pageData = computed(() => {
     : [];
 });
 
-definePageMeta({
+useHead({
   title: 'Rolety materiałowe Poznań – stylowe osłony okienne',
   meta: [
     {
@@ -77,10 +77,6 @@ definePageMeta({
     },
   ],
   canonical: 'https://dezalroletypoznan.pl/rolety-materialowe',
-  sitemap: {
-    changefreq: 'monthly',
-    priority: 0.8,
-  },
 });
 </script>
 
