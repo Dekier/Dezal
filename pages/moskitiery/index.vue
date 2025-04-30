@@ -50,7 +50,7 @@ const pageData = computed(() => {
     : [];
 });
 
-definePageMeta({
+useHead({
   title: 'Moskitiery Poznań – ochrona przed owadami',
   meta: [
     {
@@ -68,9 +68,5 @@ definePageMeta({
     },
   ],
   canonical: 'https://dezalroletypoznan.pl/moskitiery',
-  sitemap: {
-    changefreq: 'monthly',
-    priority: 0.8,
-  },
 });
 </script>

@@ -47,7 +47,7 @@ const pageData = computed(() => {
     : [];
 });
 
-definePageMeta({
+useHead({
   title: 'Rolety rzymskie Poznań – elegancja i komfort',
   meta: [
     {
@@ -74,10 +74,6 @@ definePageMeta({
     },
   ],
   canonical: 'https://dezalroletypoznan.pl/rolety-rzymskie',
-  sitemap: {
-    changefreq: 'monthly',
-    priority: 0.8,
-  },
 });
 </script>
 

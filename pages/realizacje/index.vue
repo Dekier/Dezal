@@ -556,7 +556,7 @@ const imageAlt = (img) => {
   return `deżal-poznań-${img.category}`;
 };
 
-definePageMeta({
+useHead({
   title:
     'Realizacje – Rolety, Plisy, Żaluzje i Moskitiery na Wymiar | Deżal Poznań',
   meta: [
@@ -585,10 +585,6 @@ definePageMeta({
     },
   ],
   canonical: 'https://dezalroletypoznan.pl/realizacje',
-  sitemap: {
-    changefreq: 'monthly',
-    priority: 0.7,
-  },
 });
 </script>
 

@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-definePageMeta({
+useHead({
   title: 'Kontakt – Rolety Poznań',
   meta: [
     {
@@ -30,10 +30,6 @@ definePageMeta({
     },
   ],
   canonical: 'https://dezalroletypoznan.pl/kontakt',
-  sitemap: {
-    changefreq: 'monthly',
-    priority: 0.8,
-  },
 });
 </script>
 
