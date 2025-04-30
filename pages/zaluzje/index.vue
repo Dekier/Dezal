@@ -58,13 +58,31 @@ const pageData = computed(() => {
 });
 
 definePageMeta({
-  title: 'Żaluzje drewniane i aluminiowe – Poznań i okolice  ',
-  description:
-    'Stylowe żaluzje na wymiar – drewno, aluminium, szeroki wybór kolorów. Darmowy pomiar i indywidualna wycena.',
-  ogImage: {
-    url: '/images/offer/dezal-poznan-żaluzja-drewniana-1.webp',
-    alt: 'Żaluzje na wymiar - Poznań',
-  },
+  title: 'Żaluzje drewniane i aluminiowe – Poznań i okolice',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Stylowe żaluzje na wymiar – drewno, aluminium, szeroki wybór kolorów. Darmowy pomiar i indywidualna wycena.',
+    },
+    {
+      property: 'og:title',
+      content: 'Żaluzje drewniane i aluminiowe – Poznań i okolice',
+    },
+    {
+      property: 'og:description',
+      content:
+        'Stylowe żaluzje na wymiar – drewno, aluminium, szeroki wybór kolorów. Darmowy pomiar i indywidualna wycena.',
+    },
+    {
+      property: 'og:image',
+      content: '/images/offer/dezal-poznan-żaluzja-drewniana-1.webp',
+    },
+    {
+      property: 'og:image:alt',
+      content: 'Żaluzje na wymiar - Poznań',
+    },
+  ],
   canonical: 'https://dezalroletypoznan.pl/zaluzje',
   sitemap: {
     changefreq: 'monthly',
