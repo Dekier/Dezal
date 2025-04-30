@@ -57,7 +57,7 @@ const pageData = computed(() => {
   ];
 });
 
-definePageMeta({
+useHead({
   title: 'Żaluzje drewniane i aluminiowe – Poznań i okolice',
   meta: [
     {
@@ -84,10 +84,6 @@ definePageMeta({
     },
   ],
   canonical: 'https://dezalroletypoznan.pl/zaluzje',
-  sitemap: {
-    changefreq: 'monthly',
-    priority: 0.85,
-  },
 });
 </script>
 

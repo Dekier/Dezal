@@ -49,7 +49,7 @@ const pageData = computed(() => {
     : [];
 });
 
-definePageMeta({
+useHead({
   title: 'Verticale (żaluzje pionowe) – elegancja i funkcjonalność',
   meta: [
     {
@@ -76,9 +76,5 @@ definePageMeta({
     },
   ],
   canonical: 'https://dezalroletypoznan.pl/verticale',
-  sitemap: {
-    changefreq: 'monthly',
-    priority: 0.75,
-  },
 });
 </script>

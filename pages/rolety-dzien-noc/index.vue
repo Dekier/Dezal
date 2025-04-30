@@ -48,7 +48,7 @@ const pageData = computed(() => {
     : [];
 });
 
-definePageMeta({
+useHead({
   title: 'Rolety dzień noc Poznań – na wymiar nowoczesne i funkcjonalne',
   meta: [
     {
@@ -75,10 +75,6 @@ definePageMeta({
     },
   ],
   canonical: 'https://dezalroletypoznan.pl/rolety-dzien-noc',
-  sitemap: {
-    changefreq: 'monthly',
-    priority: 0.9,
-  },
 });
 </script>
 
