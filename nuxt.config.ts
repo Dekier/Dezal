@@ -105,8 +105,6 @@ export default defineNuxtConfig({
     },
     meta: {
       title: 'Nowoczesne rolety, plisy i żaluzje | Poznań i okolice.',
-      description:
-        'Rolety, plisy, żaluzje i moskitiery w Poznaniu – oferujemy nowoczesne osłony okienne na wymiar. Profesjonalny montaż, precyzyjny pomiar i indywidualna wycena.',
       ogSiteName: 'DEŻAL Poznań',
       ogImage: {
         url: '/images/logo-rect.png',
