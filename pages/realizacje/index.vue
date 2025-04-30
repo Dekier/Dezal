@@ -559,12 +559,31 @@ const imageAlt = (img) => {
 definePageMeta({
   title:
     'Realizacje – Rolety, Plisy, Żaluzje i Moskitiery na Wymiar | Deżal Poznań',
-  description:
-    'Zobacz nasze realizacje rolet, plis, żaluzji i moskitier w Poznaniu. Oferujemy osłony okienne na wymiar – estetyczne, trwałe i funkcjonalne rozwiązania dla domu i firmy.',
-  ogImage: {
-    url: '/images/offer/dezal-poznan-roleta-dzień-noc-2.webp',
-    alt: 'Roleta dzień noc w salonie',
-  },
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Zobacz nasze realizacje rolet, plis, żaluzji i moskitier w Poznaniu. Oferujemy osłony okienne na wymiar – estetyczne, trwałe i funkcjonalne rozwiązania dla domu i firmy.',
+    },
+    {
+      property: 'og:title',
+      content:
+        'Realizacje – Rolety, Plisy, Żaluzje i Moskitiery na Wymiar | Deżal Poznań',
+    },
+    {
+      property: 'og:description',
+      content:
+        'Zobacz nasze realizacje rolet, plis, żaluzji i moskitier w Poznaniu. Oferujemy osłony okienne na wymiar – estetyczne, trwałe i funkcjonalne rozwiązania dla domu i firmy.',
+    },
+    {
+      property: 'og:image',
+      content: '/images/offer/dezal-poznan-roleta-dzień-noc-2.webp',
+    },
+    {
+      property: 'og:image:alt',
+      content: 'Roleta dzień noc w salonie',
+    },
+  ],
   canonical: 'https://dezalroletypoznan.pl/realizacje',
   sitemap: {
     changefreq: 'monthly',
