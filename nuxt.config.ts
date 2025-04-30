@@ -11,6 +11,10 @@ export default defineNuxtConfig({
     },
   },
 
+  routeRules: {
+    '/**': { prerender: true },
+  },
+
   experimental: {
     payloadExtraction: true,
   },

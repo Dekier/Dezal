@@ -213,7 +213,7 @@
       </div>
     </div>
     <div class="Footer__down-container">
-      Copyright &copy; 2025 ZPHU DEŻAL Dariusz Dekier Rolety Poznań | Wszelkie
+      Copyright &copy; 2025 Z.H.U DEŻAL Dariusz Dekier Rolety Poznań | Wszelkie
       prawa zastrzeżone
     </div>
   </footer>

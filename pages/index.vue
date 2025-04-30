@@ -2,14 +2,14 @@
   <div>
     <Hero />
     <AboutCompany />
-    <Offer :offer-data="offerData" :offer-boxes-json="offerBoxesJson" />
+    <LandingOffer :offer-data="offerData" :offer-boxes-json="offerBoxesJson" />
     <Contact />
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import offers from '~/public/offers.json';
+import offers from '~/public/offers-landing.json';
 const offerData = ref({
   title: 'Oferujemy',
   description: 'W naszej ofercie znajdziesz:',

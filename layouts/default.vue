@@ -20,7 +20,7 @@ useHead({
       children: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
-        name: 'ZPHU DEŻAL Dariusz Dekier',
+        name: 'Z.H.U DEŻAL Dariusz Dekier',
         address: {
           '@type': 'PostalAddress',
           streetAddress: 'ul. Jaroczyńskiego 41',
