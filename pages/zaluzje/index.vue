@@ -14,7 +14,7 @@ import offers from '~/public/offers.json';
 // Obrazki na dole strony
 const bottomImages = ref([
   { id: 1, url: '/images/zaluzje/deżal-poznań-żaluzja-drewniana-2.webp' },
-  { id: 2, url: '/images/zaluzje/deżal-poznań-żaluzja-drewniana-1.webp' },
+  { id: 2, url: '/images/zaluzje/dezal-poznan-zaluzja-drewniana-1.webp' },
   { id: 3, url: '/images/zaluzje/deżal-poznań-żaluzja-drewniana-4.webp' },
 ]);
 
@@ -51,7 +51,7 @@ const pageData = computed(() => {
     {
       id: 1,
       title: boxes[8]?.title ?? '',
-      url: '/images/zaluzje/deżal-poznań-żaluzja-drewniana-1.webp',
+      url: '/images/zaluzje/dezal-poznan-zaluzja-drewniana-1.webp',
       description: boxes[8]?.description ?? '',
     },
   ];

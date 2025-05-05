@@ -13,7 +13,7 @@ import offers from '~/public/offers.json';
 
 // Zdjęcia do dolnej galerii
 const bottomImages = ref([
-  { id: 1, url: '/images/verticale/deżal-poznań-roleta-verticale-1.webp' },
+  { id: 1, url: '/images/verticale/dezal-poznan-roleta-verticale-1.webp' },
 ]);
 
 // Dane do komponentu Offer
@@ -42,7 +42,7 @@ const pageData = computed(() => {
         {
           id: 0,
           title: box.title,
-          url: '/images/verticale/deżal-poznań-roleta-verticale-1.webp',
+          url: '/images/verticale/dezal-poznan-roleta-verticale-1.webp',
           description: box.description,
         },
       ]

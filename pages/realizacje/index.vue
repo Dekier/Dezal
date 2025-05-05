@@ -134,7 +134,7 @@ const imagesData = ref([
   },
 
   {
-    url: '/images/rolety/dezal-poznan-roleta-dzień-noc-2.webp',
+    url: '/images/rolety/dezal-poznan-roleta-dzien-noc-2.webp',
     category: 'rolety-dzień-noc',
   },
 
@@ -209,7 +209,7 @@ const imagesData = ref([
   },
 
   {
-    url: '/images/plisy/deżal-poznań-plisa-1.webp',
+    url: '/images/plisy/dezal-poznan-plisa-1.webp',
     category: 'PLISY',
   },
 
@@ -456,7 +456,7 @@ const imagesData = ref([
   },
 
   {
-    url: '/images/zaluzje/deżal-poznań-żaluzja-drewniana-1.webp',
+    url: '/images/zaluzje/dezal-poznan-zaluzja-drewniana-1.webp',
     category: 'ZALUZJE',
   },
 
@@ -502,7 +502,7 @@ const imagesData = ref([
   },
 
   {
-    url: '/images/verticale/deżal-poznań-roleta-verticale-1.webp',
+    url: '/images/verticale/dezal-poznan-roleta-verticale-1.webp',
     category: 'VERTICALE',
   },
 
@@ -577,7 +577,7 @@ useHead({
     },
     {
       property: 'og:image',
-      content: '/images/offer/dezal-poznan-roleta-dzień-noc-2.webp',
+      content: '/images/offer/dezal-poznan-roleta-dzien-noc-2.webp',
     },
     {
       property: 'og:image:alt',

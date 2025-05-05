@@ -201,7 +201,7 @@
         <a
           href="https://www.pracownia-krawiecka.pl/"
           target="_blank"
-          rel="nofollow"
+          rel="dofollow"
           class="Footer__recomended-link"
         >
           <NuxtImg

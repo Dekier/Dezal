@@ -41,7 +41,7 @@ const pageData = computed(() => {
         {
           id: 0,
           title: box.title,
-          url: '/images/rolety/dezal-poznan-roleta-dzień-noc-2.webp',
+          url: '/images/rolety/dezal-poznan-roleta-dzien-noc-2.webp',
           description: box.description,
         },
       ]
@@ -67,7 +67,7 @@ useHead({
     },
     {
       property: 'og:image',
-      content: '/images/offer/dezal-poznan-roleta-dzień-noc-2.webp',
+      content: '/images/offer/dezal-poznan-roleta-dzien-noc-2.webp',
     },
     {
       property: 'og:image:alt',

@@ -259,7 +259,7 @@ const sendForm = async () => {
         name: formData.value.name,
         email: formData.value.email,
         message: formData.value.text,
-        title: 'Nowa wiadomość ze strony DEŻAL',
+        title: `${formData.value.name} - Nowa wiadomość ze strony DEŻAL `,
       },
       PUBLIC_KEY
     );

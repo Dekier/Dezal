@@ -13,7 +13,7 @@ import offers from '~/public/offers.json';
 
 // Dane do dolnej galerii
 const bottomImages = ref([
-  { id: 1, url: '/images/plisy/deżal-poznań-plisa-1.webp' },
+  { id: 1, url: '/images/plisy/dezal-poznan-plisa-1.webp' },
   { id: 2, url: '/images/plisy/deżal-poznań-plisa-2.webp' },
   { id: 3, url: '/images/plisy/deżal-poznań-plisa-3.webp' },
   { id: 4, url: '/images/plisy/deżal-poznań-plisa-4.webp' },
@@ -44,7 +44,7 @@ const pageData = computed(() => {
         {
           id: 0,
           title: box.title,
-          url: '/images/plisy/deżal-poznań-plisa-1.webp',
+          url: '/images/plisy/dezal-poznan-plisa-1.webp',
           description: box.description,
         },
       ]
