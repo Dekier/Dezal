@@ -34,8 +34,7 @@ $tablet: 768px;
 $tablet-landscape: 950px;
 $tablet-timeline: 1080px;
 $desktop: 1170px;
-$desktop-timeline: 1300px;
-$big-desktop: 1440px;
+$big-desktop: 1300px;
 
 // calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
 $font-size-title-rwd: calc(

@@ -1,11 +1,10 @@
 <template>
   <header id="hero" class="Hero__main-container">
-    <NuxtImg
+    <img
       src="/images/header2.webp"
       class="Hero__hero-image"
-      height="750"
       alt="dezal zdjecie tła"
-      preload
+      loading="lazy"
     />
     <div class="Hero__hero-background" />
     <div class="Hero__center-container">

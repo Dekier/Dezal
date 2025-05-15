@@ -11,6 +11,10 @@ export default defineNuxtConfig({
     },
   },
 
+  routeRules: {
+    '/**': { prerender: true },
+  },
+
   experimental: {
     payloadExtraction: true,
   },
@@ -32,7 +36,8 @@ export default defineNuxtConfig({
       '/rolety-materialowe',
       '/rolety-rzymskie',
       '/plisy',
-      '/zaluzje',
+      '/zaluzje-drewniane',
+      '/zaluzje-aluminiowe',
       '/verticale',
       '/moskitiery',
     ],

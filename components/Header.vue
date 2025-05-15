@@ -62,7 +62,7 @@
 
           <transition name="fade">
             <div
-              v-if="showMobileDropDown"
+              v-show="showMobileDropDown"
               class="Header__dropdown-container-mobile"
             >
               <NuxtLink
@@ -257,7 +257,8 @@ const offerLinks = [
   { to: '/rolety-materialowe', label: 'Rolety Materiałowe' },
   { to: '/rolety-rzymskie', label: 'Rolety Rzymskie' },
   { to: '/plisy', label: 'PLISY' },
-  { to: '/zaluzje', label: 'Żaluzje' },
+  { to: '/zaluzje-drewniane', label: 'Żaluzje drewniane' },
+  { to: '/zaluzje-aluminiowe', label: 'Żaluzje aluminiowe' },
   { to: '/verticale', label: 'verticale' },
   { to: '/moskitiery', label: 'moskitiery' },
 ];
@@ -275,6 +276,13 @@ onMounted(() => {
     '/realizacje': 'real',
     '/kontakt': 'contact',
     '/rolety-materialowe': 'offer',
+    '/zaluzje-drewniane': 'offer',
+    '/zaluzje-aluminiowe': 'offer',
+    '/verticale': 'offer',
+    '/moskitiery': 'offer',
+    '/plisy': 'offer',
+    '/rolety-dzien-noc': 'offer',
+    '/rolety-rzymskie': 'offer',
   } as const;
 
   if (route.path in map) {

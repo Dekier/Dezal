@@ -1,17 +1,17 @@
 <template>
-  <div>
-    <div class="ProductInformation__title-container">
+  <div class="ProductInformation__main-container">
+    <!-- <div class="ProductInformation__title-container">
       <div class="ProductInformation__image-box">
-        <NuxtImg
+        <img
           src="/images/header2.webp"
           class="ProductInformation__image"
           alt="header-page"
-          height="300"
+          loading="lazy"
         />
         <div class="ProductInformation__background" />
         <h3 class="ProductInformation__title">Nasza Oferta</h3>
       </div>
-    </div>
+    </div> -->
 
     <div
       v-for="data in pageData"
@@ -24,12 +24,11 @@
           'ProductInformation__center-picture--inverted': isOdd(data.id),
         }"
       >
-        <NuxtImg
+        <img
           :src="data.url"
           class="ProductInformation__main-picture"
           :alt="data.url"
-          width="500"
-          height="400"
+          loading="lazy"
         />
       </div>
 
@@ -42,7 +41,7 @@
           {{ data.description }}
         </p>
         <p class="ProductInformation__info">
-          W żaluzje, plisy i rolety zaopatrujemy Poznań i okolice.
+          W {{ data.title }} zaopatrujemy Poznań i okolice.
         </p>
       </div>
     </div>
@@ -59,12 +58,11 @@
           @click="showBigGallery(index)"
           class="ProductInformation__bottom-realizations-box"
         >
-          <NuxtImg
+          <img
             :src="imageData.url"
             class="ProductInformation__bottom-realizations-image"
             :alt="imageData.url"
-            width="300"
-            height="210"
+            loading="lazy"
           />
           <div class="ProductInformation__hover-background">
             <svg

@@ -1,9 +1,11 @@
 @use '@/assets/stylesheets/main-variables' as *;
+@use '@/assets/stylesheets/mixins' as *;
 .Offer {
   &__main-container {
     display: flex;
     width: 100%;
     background: $color-white;
+    margin-bottom: 100px;
   }
 
   &__center-container {
@@ -37,7 +39,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 15px;
+    padding: 16px;
+    gap: 42px;
   }
 
   &__box {
@@ -45,16 +48,14 @@
     flex-direction: column;
     box-sizing: border-box;
     width: 340px;
-    padding: 15px 15px 50px;
   }
 
   &__box-title {
-    font-size: 20px;
-    font-weight: 300;
-    color: $color-title;
     text-transform: uppercase;
-    margin: 10px 0 25px;
+    margin: 20px 0 10px;
     cursor: default;
+
+    @include text(26px, left, $black-999, 400);
   }
 
   &__box-image-container {
@@ -82,48 +83,54 @@
   &__box-text {
     color: $color-text;
     font-size: 15px;
-    margin: 0;
-    margin-top: 25px;
+    margin: 0 0 16px;
     line-height: 1.5;
     letter-spacing: -0.2px;
     cursor: default;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-  }
-
-  &__box-btn {
-    margin-top: 25px;
-    padding: 10px 16px;
-    width: max-content;
-    cursor: pointer;
-    display: flex;
-    flex-direction: row;
-    text-decoration: none;
-    color: $color-title;
-    position: relative;
-    background-color: $color-yellow;
-    transition: scale 300ms;
-    border-radius: 999px;
-
-    &:hover {
-      scale: 1.02;
-    }
-  }
-
-  &__box-arrow {
-    transition: all 400ms;
-    height: 15px;
-    margin-top: 2px;
-    margin-left: 2px;
-    position: relative;
-    right: 0;
-    will-change: right;
+    @include text(16px, left, $black-400, 400);
   }
 
   &__box:hover &__box-arrow {
     animation: arrow 700ms infinite;
+  }
+
+  &__box-btn {
+    width: auto;
+    height: 56px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    text-decoration: none;
+    @include text(16px, left, $black-400, 500);
+    align-items: center;
+    margin-top: 10px;
+    @include for-tablet-portrait-up {
+      margin: 0 0 20px;
+      @include text(18px, left, $black-400, 500);
+    }
+  }
+
+  &__btn-arrow-box {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    border: 2px solid $yellow-500;
+    margin-left: 36px;
+    position: relative;
+  }
+
+  &__btn-arrow-icon {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    transition: transform 400ms;
+  }
+
+  &__box-btn:hover &__btn-arrow-icon {
+    transform: translateY(-50%) translateX(7px);
   }
 
   @media only screen and (max-width: 1200px) {

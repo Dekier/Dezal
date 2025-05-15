@@ -1,0 +1,52 @@
+{
+  "boxes": [
+    {
+      "title": "Plisy",
+      "description": "Nowoczesne i funkcjonalne osłony, które idealnie sprawdzą się przy nietypowych kształtach okien i zapewniają pełną kontrolę światła.",
+      "url": "/images/offer/dezal-poznan-plisa-1.webp",
+      "type": "plisy"
+    },
+    {
+      "title": "Rolety rzymskie",
+      "description": "Stylowa dekoracja okienna, która subtelnie zastępuje firany i dodaje wnętrzom eleganckiego charakteru.",
+      "url": "/images/offer/dezal-poznan-roleta-rzymska-0.jpg",
+      "type": "rolety-rzymskie"
+    },
+    {
+      "title": "Żaluzje drewniane",
+      "description": "Naturalne drewno tworzy wyjątkowy klimat w pomieszczeniu i podkreśla klasyczny wystrój wnętrz.",
+      "url": "/images/offer/dezal-poznan-zaluzja-drewniana-1.webp",
+      "type": "zaluzje-drewniane"
+    },
+    {
+      "title": "Verticale",
+      "description": "Praktyczne żaluzje pionowe polecane do dużych okien, które łączą funkcjonalność z nowoczesnym wyglądem.",
+      "url": "/images/offer/dezal-poznan-roleta-verticale-1.jpg",
+      "type": "verticale"
+    },
+    {
+      "title": "Rolety materiałowe",
+      "description": "Uniwersalne rozwiązanie do każdego wnętrza, które skutecznie chroni przed słońcem i zapewnia prywatność.",
+      "url": "/images/offer/dezal-poznan-roleta-materiałowa-3.webp",
+      "type": "rolety-materialowe"
+    },
+    {
+      "title": "Rolety dzień-noc",
+      "description": "Innowacyjny system regulacji światła, który pozwala dopasować nasłonecznienie do pory dnia i potrzeb domowników.",
+      "url": "/images/offer/dezal-poznan-roleta-dzien-noc-2.webp",
+      "type": "rolety-dzien-noc"
+    },
+    {
+      "title": "Żaluzje aluminiowe",
+      "description": "Ponadczasowy wybór do nowoczesnych wnętrz, który chroni przed słońcem i umożliwia precyzyjne sterowanie światłem.",
+      "url": "/images/offer/dezal-poznan-zaluzja-aluminiowa-1.webp",
+      "type": "zaluzje-aluminiowe"
+    },
+    {
+      "title": "Moskitiery",
+      "description": "Niezawodna ochrona przed owadami, która nie ogranicza widoczności i pozwala cieszyć się świeżym powietrzem.",
+      "url": "/images/offer/dezal-poznan-moskitiera-2.webp",
+      "type": "moskitiery"
+    }
+  ]
+}

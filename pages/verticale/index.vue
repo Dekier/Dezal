@@ -1,7 +1,7 @@
 <template>
   <div>
     <ProductInformation :page-data="pageData" :bottom-images="bottomImages" />
-    <Offer :offer-data="offerData" :offer-boxes-json="offerBoxesJson" />
+    <Offer :offer-data="offerData" :offer-boxes-json="offersJson" />
   </div>
 </template>
 
@@ -9,11 +9,12 @@
 import { ref, computed } from 'vue';
 import ProductInformation from '~/components/Product-information.vue';
 import Offer from '~/components/Offer.vue';
-import offers from '~/public/offers.json';
+import offerPage from '~/public/offers.json';
+import offers from '~/public/offers-landing.json';
 
 // Zdjęcia do dolnej galerii
 const bottomImages = ref([
-  { id: 1, url: '/images/verticale/deżal-poznań-roleta-verticale-1.webp' },
+  { id: 1, url: '/images/verticale/dezal-poznan-roleta-verticale-1.webp' },
 ]);
 
 // Dane do komponentu Offer
@@ -26,23 +27,26 @@ const offerData = ref({
     'rolety-materialowe',
     'rolety-rzymskie',
     'plisy',
-    'zaluzje',
+    'zaluzje-drewniane',
+    'zaluzje-aluminiowe',
     'moskitiery',
   ],
 });
 
 // Pobieranie danych z public/offers.json
-const offerBoxesJson = ref(offers.boxes);
+
+const offerPageJson = ref(offerPage.boxes);
+const offersJson = ref(offers.boxes);
 
 // Dane do komponentu ProductInformation
 const pageData = computed(() => {
-  const box = offerBoxesJson.value[5];
+  const box = offerPageJson.value[5];
   return box
     ? [
         {
           id: 0,
           title: box.title,
-          url: '/images/verticale/deżal-poznań-roleta-verticale-1.webp',
+          url: '/images/verticale/dezal-poznan-roleta-verticale-1.webp',
           description: box.description,
         },
       ]

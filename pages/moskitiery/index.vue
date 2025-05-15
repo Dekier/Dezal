@@ -1,13 +1,14 @@
 <template>
   <div>
     <ProductInformation :page-data="pageData" :bottom-images="bottomImages" />
-    <Offer :offer-data="offerData" :offer-boxes-json="offerBoxesJson" />
+    <Offer :offer-data="offerData" :offer-boxes-json="offersJson" />
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref, computed } from 'vue';
-import offers from '~/public/offers.json';
+import offerPage from '~/public/offers.json';
+import offers from '~/public/offers-landing.json';
 import { useHead } from '#imports';
 
 import ProductInformation from '~/components/Product-information.vue';
@@ -28,16 +29,18 @@ const offerData = ref({
     'rolety-materialowe',
     'rolety-rzymskie',
     'plisy',
-    'zaluzje',
+    'zaluzje-drewniane',
+    'zaluzje-aluminiowe',
     'verticale',
   ],
 });
 
-const offerBoxesJson = ref(offers.boxes);
+const offerPageJson = ref(offerPage.boxes);
+const offersJson = ref(offers.boxes);
 
 // Przekształcamy dane dla komponentu ProductInformation
 const pageData = computed(() => {
-  const box = offerBoxesJson.value[6]; // indeks 6 = moskitiery
+  const box = offerPageJson.value[6]; // indeks 6 = moskitiery
   return box
     ? [
         {
