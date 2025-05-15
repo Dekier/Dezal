@@ -1,7 +1,7 @@
 <template>
   <div class="Plisy__main-container">
     <ProductInformation :page-data="pageData" :bottom-images="bottomImages" />
-    <Offer :offer-data="offerData" :offer-boxes-json="offerBoxesJson" />
+    <Offer :offer-data="offerData" :offer-boxes-json="offersJson" />
   </div>
 </template>
 
@@ -9,12 +9,13 @@
 import { ref, computed } from 'vue';
 import ProductInformation from '~/components/Product-information.vue';
 import Offer from '~/components/Offer.vue';
-import offers from '~/public/offers.json';
+import offerPage from '~/public/offers.json';
+import offers from '~/public/offers-landing.json';
 
 // Obrazki na dole strony
 const bottomImages = ref([
   { id: 1, url: '/images/zaluzje/deżal-poznań-żaluzja-drewniana-2.webp' },
-  { id: 2, url: '/images/zaluzje/dezal-poznan-zaluzja-drewniana-1.webp' },
+  { id: 2, url: '/images/zaluzje/deżal-poznań-żaluzja-drewniana-1.webp' },
   { id: 3, url: '/images/zaluzje/deżal-poznań-żaluzja-drewniana-4.webp' },
 ]);
 
@@ -30,40 +31,36 @@ const offerData = ref({
     'plisy',
     'verticale',
     'moskitiery',
+    'zaluzje-aluminiowe',
   ],
 });
 
 // Fetch JSON z public/offers.json
-const offerBoxesJson = ref(offers.boxes);
+const offerPageJson = ref(offerPage.boxes);
+const offersJson = ref(offers.boxes);
 
 // Dynamiczne dane do ProductInformation
 const pageData = computed(() => {
-  const boxes = offerBoxesJson.value;
+  const boxes = offerPageJson.value;
   if (!boxes.length) return [];
 
   return [
     {
       id: 0,
-      title: boxes[7]?.title ?? '',
-      url: '/images/zaluzje/deżal-poznań-żaluzja-aluminiowa-1.webp',
-      description: boxes[7]?.description ?? '',
-    },
-    {
-      id: 1,
       title: boxes[8]?.title ?? '',
-      url: '/images/zaluzje/dezal-poznan-zaluzja-drewniana-1.webp',
+      url: '/images/zaluzje/deżal-poznań-żaluzja-drewniana-1.webp',
       description: boxes[8]?.description ?? '',
     },
   ];
 });
 
 useHead({
-  title: 'Żaluzje drewniane i aluminiowe – Poznań i okolice',
+  title: 'Stylowe żaluzje drewniane na wymiar – Poznań i okolice',
   meta: [
     {
       name: 'description',
       content:
-        'Stylowe żaluzje na wymiar – drewno, aluminium, szeroki wybór kolorów. Darmowy pomiar i indywidualna wycena.',
+        'Stylowe żaluzje na wymiar –  drewno, szeroki wybór kolorów. Darmowy pomiar i indywidualna wycena.',
     },
     {
       property: 'og:title',
@@ -72,11 +69,11 @@ useHead({
     {
       property: 'og:description',
       content:
-        'Stylowe żaluzje na wymiar – drewno, aluminium, szeroki wybór kolorów. Darmowy pomiar i indywidualna wycena.',
+        'Stylowe żaluzje na wymiar –  drewno, szeroki wybór kolorów. Darmowy pomiar i indywidualna wycena.',
     },
     {
       property: 'og:image',
-      content: '/images/offer/dezal-poznan-żaluzja-drewniana-1.webp',
+      content: '/images/zaluzje/deżal-poznań-żaluzja-drewniana-1.webp',
     },
     {
       property: 'og:image:alt',

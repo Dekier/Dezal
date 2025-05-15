@@ -1,7 +1,7 @@
 <template>
   <div>
     <ProductInformation :page-data="pageData" :bottom-images="bottomImages" />
-    <Offer :offer-data="offerData" :offer-boxes-json="offerBoxesJson" />
+    <Offer :offer-data="offerData" :offer-boxes-json="offersJson" />
   </div>
 </template>
 
@@ -9,7 +9,8 @@
 import { ref, computed } from 'vue';
 import ProductInformation from '~/components/Product-information.vue';
 import Offer from '~/components/Offer.vue';
-import offers from '~/public/offers.json';
+import offerPage from '~/public/offers.json';
+import offers from '~/public/offers-landing.json';
 
 // Dane do galerii zdjęć
 const bottomImages = ref([
@@ -28,16 +29,18 @@ const offerData = ref({
     'rolety-dzien-noc',
     'rolety-rzymskie',
     'plisy',
-    'zaluzje',
+    'zaluzje-drewniane',
+    'zaluzje-aluminiowe',
     'verticale',
     'moskitiery',
   ],
 });
 
-const offerBoxesJson = ref(offers.boxes);
+const offerPageJson = ref(offerPage.boxes);
+const offersJson = ref(offers.boxes);
 
 const pageData = computed(() => {
-  const box = offerBoxesJson.value[1];
+  const box = offerPageJson.value[1];
   return box
     ? [
         {

@@ -35,7 +35,7 @@
           class="Realization__project"
           :style="getGridStyle(index)"
         >
-          <NuxtImg
+          <img
             :src="imageData.url"
             class="Realization__project-image"
             :alt="imageAlt(imageData)"
@@ -134,7 +134,7 @@ const imagesData = ref([
   },
 
   {
-    url: '/images/rolety/dezal-poznan-roleta-dzien-noc-2.webp',
+    url: '/images/rolety/dezal-poznan-roleta-dzień-noc-2.webp',
     category: 'rolety-dzień-noc',
   },
 

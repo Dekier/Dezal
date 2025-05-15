@@ -1,7 +1,7 @@
 <template>
   <div>
     <ProductInformation :page-data="pageData" :bottom-images="bottomImages" />
-    <Offer :offer-data="offerData" :offer-boxes-json="offerBoxesJson" />
+    <Offer :offer-data="offerData" :offer-boxes-json="offersJson" />
   </div>
 </template>
 
@@ -9,7 +9,8 @@
 import { ref, computed } from 'vue';
 import ProductInformation from '~/components/Product-information.vue';
 import Offer from '~/components/Offer.vue';
-import offers from '~/public/offers.json';
+import offerPage from '~/public/offers.json';
+import offers from '~/public/offers-landing.json';
 
 const offerData = ref({
   title: 'Zobacz również',
@@ -19,7 +20,8 @@ const offerData = ref({
     'rolety-materialowe',
     'rolety-rzymskie',
     'plisy',
-    'zaluzje',
+    'zaluzje-drewniane',
+    'zaluzje-aluminiowe',
     'verticale',
     'moskitiery',
   ],
@@ -32,16 +34,17 @@ const bottomImages = ref([
   { id: 4, url: '/images/rolety/dezal-poznan-roleta-dzień-noc-4.webp' },
 ]);
 
-const offerBoxesJson = ref(offers.boxes);
+const offerPageJson = ref(offerPage.boxes);
+const offersJson = ref(offers.boxes);
 
 const pageData = computed(() => {
-  const box = offerBoxesJson.value[0];
+  const box = offerPageJson.value[0];
   return box
     ? [
         {
           id: 0,
           title: box.title,
-          url: '/images/rolety/dezal-poznan-roleta-dzien-noc-2.webp',
+          url: '/images/rolety/dezal-poznan-roleta-dzień-noc-2.webp',
           description: box.description,
         },
       ]

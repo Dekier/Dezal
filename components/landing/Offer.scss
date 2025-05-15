@@ -10,12 +10,16 @@
   &__center-container {
     width: 1440px;
     margin: auto;
-    padding: 100px 16px 0;
+    padding: 100px 16px 100px;
   }
 
   &__title {
-    margin-bottom: 72px;
-    @include text(56px, left, $black-999, 700);
+    margin-bottom: 50px;
+    @include text(42px, left, $black-999, 700);
+    @include for-tablet {
+      @include text(56px, left, $black-999, 700);
+      margin-bottom: 72px;
+    }
   }
 
   &__boxes-container {
@@ -29,7 +33,20 @@
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    width: 340px;
+    width: 100%;
+    max-width: 100%;
+    @include for-tablet {
+      max-width: 320px;
+    }
+    @include for-tablet-landscape-up {
+      max-width: 400px;
+    }
+    @include for-desktop-up {
+      max-width: 500px;
+    }
+    @include for-big-desktop-up {
+      max-width: 555px;
+    }
   }
 
   &__box-title-dot {
@@ -40,17 +57,29 @@
 
   &__box-title {
     cursor: default;
-    @include text(32px, left, $black-400, 400);
+    @include text(26px, left, $black-400, 400);
     margin: 0 0 10px 0;
     display: flex;
+    @include for-tablet-portrait-up {
+      @include text(32px, left, $black-400, 400);
+    }
   }
 
   &__box-image-container {
-    height: 190px;
-    width: 100%;
     overflow: hidden;
     border-radius: 8px;
     margin-bottom: 20px;
+    width: 100%;
+    height: 240px;
+    @include for-tablet {
+      height: 230px;
+    }
+    @include for-tablet {
+      height: 280px;
+    }
+    @include for-desktop-up {
+      height: 340px;
+    }
   }
 
   &__box-image {
@@ -71,9 +100,13 @@
   &__box-text {
     cursor: default;
     overflow: hidden;
-    @include text(18px, left, $black-400, 400);
+    @include text(16px, left, $black-400, 400);
     line-height: 140%;
-    margin-bottom: 20px;
+    margin: 0;
+    @include for-tablet-portrait-up {
+      margin: 0 0 20px;
+      @include text(18px, left, $black-400, 400);
+    }
   }
 
   &__box-btn {
@@ -84,18 +117,26 @@
     flex-direction: row;
     position: relative;
     text-decoration: none;
-    @include text(20px, left, $black-400, 500);
+    @include text(16px, left, $black-400, 500);
     align-items: center;
     margin-top: 10px;
+    @include for-tablet-portrait-up {
+      margin: 0 0 20px;
+      @include text(20px, left, $black-400, 500);
+    }
   }
 
   &__btn-arrow-box {
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
     border-radius: 6px;
     border: 2px solid $yellow-500;
     margin-left: 36px;
     position: relative;
+    @include for-tablet-portrait-up {
+      width: 40px;
+      height: 40px;
+    }
   }
 
   &__btn-arrow-icon {
@@ -103,8 +144,11 @@
     right: 16px;
     top: 50%;
     transform: translateY(-50%);
-    width: 48px;
+    width: 32px;
     transition: transform 400ms;
+    @include for-tablet-portrait-up {
+      width: 48px;
+    }
   }
 
   &__box-btn:hover &__btn-arrow-icon {
@@ -113,11 +157,19 @@
 
   &__boxes-container {
     display: flex;
-    gap: 2rem;
+    gap: 40px;
+    @include for-tablet-portrait-up {
+      gap: 80px;
+    }
+    @include for-desktop-up {
+      gap: 100px;
+    }
+    @include for-big-desktop-up {
+      gap: 134px;
+    }
   }
 
   &__column {
-    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 160px;

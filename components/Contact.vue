@@ -4,7 +4,8 @@
       <div class="Contact__top-container">
         <div class="Contact__information-container">
           <h3 class="Contact__title">
-            <NuxtImg
+            <img
+              loading="lazy"
               src="/icons/subtract.svg"
               alt="icon subtract"
               class="Contact__form-container-icon-left"
@@ -15,18 +16,21 @@
           </p>
 
           <div class="Contact__yellow-container">
-            <NuxtImg
+            <img
+              loading="lazy"
               src="/icons/dot-yellow-border.svg"
               alt="icon dot yellow border"
               class="Contact__information-dot-yellow-border-1"
             />
-            <NuxtImg
+            <img
+              loading="lazy"
               src="/icons/dot-yellow-border.svg"
               alt="icon dot yellow border"
               class="Contact__information-dot-yellow-border-2"
             />
             <a href="tel:+48603630299" class="Contact__information-text">
-              <NuxtImg
+              <img
+                loading="lazy"
                 src="/icons/phone.svg"
                 alt="icon phone"
                 class="Contact__information-icon"
@@ -36,7 +40,8 @@
               href="mailto:dezal.rolety@gmail.com"
               class="Contact__information-text"
             >
-              <NuxtImg
+              <img
+                loading="lazy"
                 src="/icons/mail.svg"
                 alt="icon mail"
                 class="Contact__information-icon"
@@ -48,7 +53,8 @@
               href="https://maps.app.goo.gl/SWWD7iMgbDCGbCam9"
               class="Contact__information-text"
             >
-              <NuxtImg
+              <img
+                loading="lazy"
                 src="/icons/map.svg"
                 alt="icon map"
                 class="Contact__information-icon"
@@ -59,7 +65,8 @@
             <span
               class="Contact__information-text Contact__information-text--no-hover"
             >
-              <NuxtImg
+              <img
+                loading="lazy"
                 src="/icons/alarm.svg"
                 alt="icon alarm"
                 class="Contact__information-icon"
@@ -71,7 +78,8 @@
             <span
               class="Contact__information-text Contact__information-text--no-hover"
             >
-              <NuxtImg
+              <img
+                loading="lazy"
                 src="/icons/bank.svg"
                 alt="icon bank"
                 class="Contact__information-icon"
@@ -84,7 +92,8 @@
           </div>
         </div>
 
-        <NuxtImg
+        <img
+          loading="lazy"
           src="/images/landing/dzien-noc-1.webp"
           alt="roleta dzien noc"
           width="375"
@@ -94,7 +103,8 @@
         />
 
         <div class="Contact__form-container">
-          <NuxtImg
+          <img
+            loading="lazy"
             src="/icons/subtract.svg"
             alt="icon subtract"
             class="Contact__form-container-icon"
