@@ -8,10 +8,16 @@
           :key="index"
           class="Offer__box"
         >
-          <div
-            class="Offer__box-image-container"
-            :class="[`Offer__box-image-container-first-${index}`]"
-          >
+          <div v-if="index === 0" class="Offer__badge">
+            <img
+              src="/icons/dot-white-full.svg"
+              alt="icon white dot"
+              class="Offer__badge-image"
+              loading="lazy"
+            />
+            <p class="Offer__badge-text">najczęściej wybierane</p>
+          </div>
+          <div class="Offer__box-image-container">
             <img
               loading="lazy"
               :src="box.url"
