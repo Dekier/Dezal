@@ -191,7 +191,7 @@
           class="Footer__link Footer__link-long"
         >
           <img src="/icons/map.svg" alt="icon map" class="Footer__link-icon" />
-          Z.P.H.U. DEŻAL Dariusz Dekier<br />
+          Z.H.U. DEŻAL Dariusz Dekier<br />
           ul. Jaroczyńskiego 41,<br />
           60-692 Poznań
         </a>
