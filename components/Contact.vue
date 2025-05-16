@@ -84,7 +84,7 @@
                 alt="icon bank"
                 class="Contact__information-icon"
               />
-              Z.P.H.U. DEŻAL Dariusz Dekier <br />
+              Z.H.U. DEŻAL Dariusz Dekier <br />
               ul. Jaroczyńskiego 41, 60-692 Poznań<br />
               ING BANK ŚLĄSKI S.A. <br />
               83 1050 1520 1000 0090 6935 0826
