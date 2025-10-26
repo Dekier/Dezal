@@ -223,6 +223,18 @@
             class="Footer__recomended-logo"
           />
         </a>
+        <a
+          href="https://www.pracownia-krawiecka.pl/"
+          target="_blank"
+          rel="dofollow"
+          class="Footer__recomended-link-tb"
+        >
+          <img
+            src="/icons/tb.svg"
+            alt="logo firmy techbless.pl"
+            class="Footer__recomended-logo-tb"
+          />
+        </a>
       </div>
     </div>
     <div class="Footer__down-container">
