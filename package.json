@@ -23,7 +23,7 @@
     "@vercel/speed-insights": "^1.2.0",
     "@vite-pwa/nuxt": "^1.0.0",
     "node-fetch-native": "^1.6.6",
-    "nuxt": "3.17.0",
+    "nuxt": "^3.19.3",
     "nuxt-gtag": "^3.0.2"
   },
   "devDependencies": {
