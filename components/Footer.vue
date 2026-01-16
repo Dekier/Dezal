@@ -214,7 +214,7 @@
         <a
           href="https://www.pracownia-krawiecka.pl/"
           target="_blank"
-          rel="dofollow"
+          rel="noopener"
           class="Footer__recomended-link"
         >
           <img
@@ -226,24 +226,24 @@
         <a
           href="https://techbless.pl/"
           target="_blank"
-          rel="dofollow"
+          rel="noopener"
           class="Footer__recomended-link-tb"
         >
           <img
             src="/icons/tb.svg"
-            alt="logo firmy techbless.pl"
+            alt="Firma techbless.pl - 3d w przeglądarce dla firm"
             class="Footer__recomended-logo-tb"
           />
         </a>
         <a
           href="https://pravisto.pl/"
           target="_blank"
-          rel="dofollow"
+          rel="noopener"
           class="Footer__recomended-link-tb"
         >
           <img
             src="/images/pravisto.jpg"
-            alt="logo aplikacji pravisto.pl"
+            alt="Pravisto - Aplikacja dla deweloperów"
             class="Footer__recomended-logo-tb"
           />
         </a>
