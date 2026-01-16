@@ -224,7 +224,7 @@
           />
         </a>
         <a
-          href="https://www.pracownia-krawiecka.pl/"
+          href="https://techbless.pl/"
           target="_blank"
           rel="dofollow"
           class="Footer__recomended-link-tb"
@@ -232,6 +232,18 @@
           <img
             src="/icons/tb.svg"
             alt="logo firmy techbless.pl"
+            class="Footer__recomended-logo-tb"
+          />
+        </a>
+        <a
+          href="https://pravisto.pl/"
+          target="_blank"
+          rel="dofollow"
+          class="Footer__recomended-link-tb"
+        >
+          <img
+            src="/images/pravisto.jpg"
+            alt="logo aplikacji pravisto.pl"
             class="Footer__recomended-logo-tb"
           />
         </a>
