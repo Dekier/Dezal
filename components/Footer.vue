@@ -223,7 +223,7 @@
             class="Footer__recomended-logo"
           />
         </a>
-        <a
+        <!-- <a
           href="https://techbless.pl/"
           target="_blank"
           rel="noopener"
@@ -246,7 +246,7 @@
             alt="Pravisto - Aplikacja dla deweloperów"
             class="Footer__recomended-logo-tb"
           />
-        </a>
+        </a> -->
       </div>
     </div>
     <div class="Footer__down-container">
