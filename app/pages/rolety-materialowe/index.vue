@@ -9,44 +9,44 @@
 import { ref, computed } from 'vue';
 import ProductInformation from '~/components/Product-information.vue';
 import Offer from '~/components/Offer.vue';
-import offerPage from '~/public/offers.json';
-import offers from '~/public/offers-landing.json';
+import offerPage from '~~/public/offers.json';
+import offers from '~~/public/offers-landing.json';
 
-// Zdjęcia do dolnej galerii
+// Dane do galerii zdjęć
 const bottomImages = ref([
-  { id: 1, url: '/images/verticale/dezal-poznan-roleta-verticale-1.webp' },
+  { id: 1, url: '/images/rolety/dezal-poznan-roleta-materiałowa-1.webp' },
+  { id: 2, url: '/images/rolety/dezal-poznan-roleta-materiałowa-2.webp' },
+  { id: 3, url: '/images/rolety/dezal-poznan-roleta-materiałowa-3.webp' },
+  { id: 4, url: '/images/rolety/dezal-poznan-roleta-materiałowa-4.webp' },
 ]);
 
-// Dane do komponentu Offer
+// Dane do boxów
 const offerData = ref({
   title: 'Zobacz również',
   description:
     'Polecamy również nasze pozostałe produkty. W pełnej ofercie firmy Deżal znajdziesz:',
   showBoxes: [
     'rolety-dzien-noc',
-    'rolety-materialowe',
     'rolety-rzymskie',
     'plisy',
     'zaluzje-drewniane',
     'zaluzje-aluminiowe',
+    'verticale',
     'moskitiery',
   ],
 });
 
-// Pobieranie danych z public/offers.json
-
 const offerPageJson = ref(offerPage.boxes);
 const offersJson = ref(offers.boxes);
 
-// Dane do komponentu ProductInformation
 const pageData = computed(() => {
-  const box = offerPageJson.value[5];
+  const box = offerPageJson.value[1];
   return box
     ? [
         {
           id: 0,
           title: box.title,
-          url: '/images/verticale/dezal-poznan-roleta-verticale-1.webp',
+          url: '/images/rolety/dezal-poznan-roleta-materiałowa-3.webp',
           description: box.description,
         },
       ]
@@ -54,31 +54,33 @@ const pageData = computed(() => {
 });
 
 useHead({
-  title: 'Verticale (żaluzje pionowe) – elegancja i funkcjonalność',
+  title: 'Rolety materiałowe Poznań – stylowe osłony okienne',
   meta: [
     {
       name: 'description',
       content:
-        'Żaluzje pionowe do biur i domów. Verticale na wymiar z montażem w Poznaniu. Elegancja, zaciemnienie i kontrola światła. Darmowy pomiar i indywidualna wycena.',
+        'Rolety materiałowe na wymiar w Poznaniu. Duży wybór tkanin, profesjonalny montaż, szybka realizacja. Darmowy pomiar i indywidualna wycena.',
     },
     {
       property: 'og:title',
-      content: 'Verticale (żaluzje pionowe) – elegancja i funkcjonalność',
+      content: 'Rolety materiałowe Poznań – stylowe osłony okienne',
     },
     {
       property: 'og:description',
       content:
-        'Żaluzje pionowe do biur i domów. Verticale na wymiar z montażem w Poznaniu. Elegancja, zaciemnienie i kontrola światła. Darmowy pomiar i indywidualna wycena.',
+        'Rolety materiałowe na wymiar w Poznaniu. Duży wybór tkanin, profesjonalny montaż, szybka realizacja. Darmowy pomiar i indywidualna wycena.',
     },
     {
       property: 'og:image',
-      content: '/images/offer/dezal-poznan-roleta-verticale-1.webp',
+      content: '/images/offer/dezal-poznan-roleta-materiałowa-3.webp',
     },
     {
       property: 'og:image:alt',
-      content: 'Verticale - żaluzje pionowe DEŻAL',
+      content: 'Rolety materiałowe - DEŻAL Poznań',
     },
   ],
-  canonical: 'https://dezalroletypoznan.pl/verticale',
+  canonical: 'https://dezalroletypoznan.pl/rolety-materialowe',
 });
 </script>
+
+<style scoped lang="scss"></style>

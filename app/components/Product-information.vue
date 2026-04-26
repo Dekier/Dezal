@@ -24,11 +24,26 @@
           'ProductInformation__center-picture--inverted': isOdd(data.id),
         }"
       >
-        <img
+        <!-- <img
           :src="data.url"
           class="ProductInformation__main-picture"
           :alt="data.url"
           loading="lazy"
+        /> -->
+        <NuxtImg
+          :src="data.url"
+          class="ProductInformation__main-picture"
+          :alt="`Realizacja: ${data.title || 'Rolety i żaluzje Deżal Poznań'}`"
+          :title="data.title"
+          width="800"
+          height="600"
+          provider="ipx"
+          format="avif,webp"
+          fetchpriority="high"
+          :loading="undefined"
+          preload
+          fit="cover"
+          sizes="sm:100vw md:600px"
         />
       </div>
 
@@ -58,11 +73,25 @@
           @click="showBigGallery(index)"
           class="ProductInformation__bottom-realizations-box"
         >
-          <img
+          <!-- <img
             :src="imageData.url"
             class="ProductInformation__bottom-realizations-image"
             :alt="imageData.url"
             loading="lazy"
+          /> -->
+          <NuxtImg
+            :src="imageData.url"
+            :alt="`Realizacja ${data?.title || 'rolety'} - Deżal Poznań`"
+            class="ProductInformation__bottom-realizations-image"
+            width="450"
+            height="300"
+            quality="92"
+            format="webp"
+            loading="lazy"
+            decoding="async"
+            fit="cover"
+            :modifiers="{ sharp: true }"
+            sizes="sm:100vw md:50vw lg:33vw"
           />
           <div class="ProductInformation__hover-background">
             <svg

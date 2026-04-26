@@ -217,10 +217,18 @@
           rel="noopener"
           class="Footer__recomended-link"
         >
-          <img
+          <!-- <img
             src="/icons/pracownia-krawiecka.svg"
             alt="pracownia krawiecka logo"
             class="Footer__recomended-logo"
+          /> -->
+          <img
+            src="/icons/pracownia-krawiecka.svg"
+            alt="Pracownia Krawiecka - polecany partner Deżal"
+            class="Footer__recomended-logo"
+            loading="lazy"
+            width="150"
+            decoding="async"
           />
         </a>
         <!-- <a
@@ -250,7 +258,7 @@
       </div>
     </div>
     <div class="Footer__down-container">
-      Copyright &copy; 2025 Z.H.U DEŻAL Dariusz Dekier Rolety Poznań | Wszelkie
+      Copyright &copy; 2026 Z.H.U DEŻAL Dariusz Dekier Rolety Poznań | Wszelkie
       prawa zastrzeżone
     </div>
   </footer>

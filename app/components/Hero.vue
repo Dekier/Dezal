@@ -1,10 +1,20 @@
 <template>
   <header id="hero" class="Hero__main-container">
-    <img
+    <!-- <img
       src="/images/header2.webp"
       class="Hero__hero-image"
       alt="dezal zdjecie tła"
       loading="lazy"
+    /> -->
+    <NuxtImg
+      src="/images/header2.webp"
+      class="Hero__hero-image"
+      alt="Nowoczesne rolety i systemy osłonowe - DEŻAL Poznań"
+      width="1920"
+      height="1080"
+      fetchpriority="high"
+      preload
+      :loading="undefined"
     />
     <div class="Hero__hero-background" />
     <div class="Hero__center-container">

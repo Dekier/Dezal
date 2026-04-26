@@ -456,7 +456,7 @@ const imagesData = ref([
   },
 
   {
-    url: '/images/zaluzje/dezal-poznan-zaluzja-drewniana-1.webp',
+    url: '/images/zaluzje/deżal-poznan-zaluzja-drewniana-1.webp',
     category: 'ZALUZJE',
   },
 

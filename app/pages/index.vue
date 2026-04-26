@@ -9,7 +9,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import offers from '~/public/offers-landing.json';
+import offers from '~~/public/offers-landing.json';
 
 const offerBoxesJson = ref(offers.boxes);
 

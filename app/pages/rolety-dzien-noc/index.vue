@@ -9,8 +9,8 @@
 import { ref, computed } from 'vue';
 import ProductInformation from '~/components/Product-information.vue';
 import Offer from '~/components/Offer.vue';
-import offerPage from '~/public/offers.json';
-import offers from '~/public/offers-landing.json';
+import offerPage from '~~/public/offers.json';
+import offers from '~~/public/offers-landing.json';
 
 const offerData = ref({
   title: 'Zobacz również',

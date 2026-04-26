@@ -7,8 +7,8 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue';
-import offerPage from '~/public/offers.json';
-import offers from '~/public/offers-landing.json';
+import offerPage from '~~/public/offers.json';
+import offers from '~~/public/offers-landing.json';
 import { useHead } from '#imports';
 
 import ProductInformation from '~/components/Product-information.vue';

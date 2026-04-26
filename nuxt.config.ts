@@ -60,23 +60,33 @@ export default defineNuxtConfig({
 
   plugins: [],
 
-  modules: [
-    '@vite-pwa/nuxt',
-    '@nuxtjs/seo', // 🚀 używamy zamiast sitemap + robots
-    'nuxt-gtag',
-    '@nuxtjs/critters',
-    '@nuxt/image-edge',
-  ],
+  modules: ['@vite-pwa/nuxt', // 🚀 używamy zamiast sitemap + robots
+  '@nuxtjs/seo', 'nuxt-gtag', '@nuxtjs/critters', '@nuxt/image'],
 
   critters: {
     preload: 'swap',
     pruneSource: true,
-    inlineFonts: true,
+  },
+
+  ogImage: {
+    zeroRuntime: true,
   },
 
   runtimeConfig: {
     public: {
       siteUrl,
+    },
+  },
+
+  image: {
+  format: ['webp'],
+  quality: 90,
+  screens: {
+    xs: 320,
+    sm: 640,
+    md: 768,
+    lg: 1024,
+    xl: 1280,
     },
   },
 

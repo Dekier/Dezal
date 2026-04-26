@@ -18,11 +18,23 @@
             <p class="Offer__badge-text">najczęściej wybierane</p>
           </div>
           <div class="Offer__box-image-container">
-            <img
+            <!-- <img
               loading="lazy"
               :src="box.url"
               class="Offer__box-image"
               :alt="box.title"
+            /> -->
+            <NuxtImg
+              :src="box.url"
+              :alt="`${box.title} - Deżal Poznań`"
+              class="Offer__box-image"
+              loading="lazy"
+              width="400"
+              height="300"
+              format="webp"
+              preload
+              sizes="sm:100vw md:50vw lg:400px"
+              :title="`Oferta: ${box.title}`"
             />
           </div>
           <h2 class="Offer__box-title">
