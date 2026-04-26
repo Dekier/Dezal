@@ -1,5 +1,4 @@
 {
-  "framework": "nuxt",
   "redirects": [
     {
       "source": "/:path*",
@@ -33,12 +32,6 @@
           "value": "public, max-age=2592000, immutable"
         }
       ]
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
     }
   ]
 }
