@@ -11,6 +11,10 @@ export default defineNuxtConfig({
     },
   },
 
+  future: {
+    compatibilityVersion: 4,
+  },
+
   routeRules: {
     '/**': { prerender: true },
   },
@@ -60,8 +64,13 @@ export default defineNuxtConfig({
 
   plugins: [],
 
-  modules: ['@vite-pwa/nuxt', // 🚀 używamy zamiast sitemap + robots
-  '@nuxtjs/seo', 'nuxt-gtag', '@nuxtjs/critters', '@nuxt/image'],
+  modules: [
+    '@vite-pwa/nuxt', // 🚀 używamy zamiast sitemap + robots
+    '@nuxtjs/seo',
+    'nuxt-gtag',
+    '@nuxtjs/critters',
+    '@nuxt/image',
+  ],
 
   critters: {
     preload: 'swap',
@@ -79,14 +88,14 @@ export default defineNuxtConfig({
   },
 
   image: {
-  format: ['webp'],
-  quality: 90,
-  screens: {
-    xs: 320,
-    sm: 640,
-    md: 768,
-    lg: 1024,
-    xl: 1280,
+    format: ['webp'],
+    quality: 90,
+    screens: {
+      xs: 320,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
     },
   },
 
