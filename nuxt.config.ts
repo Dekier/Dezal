@@ -60,7 +60,7 @@ export default defineNuxtConfig({
     },
   },
 
-  css: ['@/assets/stylesheets/main.scss'],
+  css: ['~/assets/stylesheets/main.scss'],
 
   plugins: [],
 
@@ -88,6 +88,7 @@ export default defineNuxtConfig({
   },
 
   image: {
+    dir: 'public',
     format: ['webp'],
     quality: 90,
     screens: {
