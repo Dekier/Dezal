@@ -11,6 +11,10 @@ export default defineNuxtConfig({
     },
   },
 
+  future: {
+    compatibilityVersion: 4,
+  },
+
   routeRules: {
     '/**': { prerender: true },
   },
@@ -21,6 +25,9 @@ export default defineNuxtConfig({
 
   nitro: {
     preset: 'vercel-static',
+    prerender: {
+      failOnError: false, // Pozwoli zobaczyć więcej logów zanim proces się zakończy
+    }
   },
 
   output: {
@@ -56,27 +63,42 @@ export default defineNuxtConfig({
     },
   },
 
-  css: ['@/assets/stylesheets/main.scss'],
+  css: ['~/assets/stylesheets/main.scss'],
 
   plugins: [],
 
   modules: [
-    '@vite-pwa/nuxt',
-    '@nuxtjs/seo', // 🚀 używamy zamiast sitemap + robots
+    '@vite-pwa/nuxt', // 🚀 używamy zamiast sitemap + robots
+    '@nuxtjs/seo',
     'nuxt-gtag',
     '@nuxtjs/critters',
-    '@nuxt/image-edge',
+    '@nuxt/image',
   ],
 
   critters: {
     preload: 'swap',
     pruneSource: true,
-    inlineFonts: true,
+  },
+
+  ogImage: {
+    zeroRuntime: true,
   },
 
   runtimeConfig: {
     public: {
       siteUrl,
+    },
+  },
+
+  image: {
+    format: ['webp'],
+    quality: 90,
+    screens: {
+      xs: 320,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
     },
   },
 
