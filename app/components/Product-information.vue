@@ -37,8 +37,7 @@
           :title="data.title"
           width="800"
           height="600"
-          provider="ipx"
-          format="avif,webp"
+          format="webp"
           fetchpriority="high"
           :loading="undefined"
           preload
