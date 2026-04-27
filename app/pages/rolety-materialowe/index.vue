@@ -14,10 +14,10 @@ import offers from '~~/public/offers-landing.json';
 
 // Dane do galerii zdjęć
 const bottomImages = ref([
-  { id: 1, url: '/images/rolety/dezal-poznan-roleta-materiałowa-1.webp' },
-  { id: 2, url: '/images/rolety/dezal-poznan-roleta-materiałowa-2.webp' },
-  { id: 3, url: '/images/rolety/dezal-poznan-roleta-materiałowa-3.webp' },
-  { id: 4, url: '/images/rolety/dezal-poznan-roleta-materiałowa-4.webp' },
+  { id: 1, url: '/images/rolety/dezal-poznan-roleta-materialowa-1.webp' },
+  { id: 2, url: '/images/rolety/dezal-poznan-roleta-materialowa-2.webp' },
+  { id: 3, url: '/images/rolety/dezal-poznan-roleta-materialowa-3.webp' },
+  { id: 4, url: '/images/rolety/dezal-poznan-roleta-materialowa-4.webp' },
 ]);
 
 // Dane do boxów
@@ -46,7 +46,7 @@ const pageData = computed(() => {
         {
           id: 0,
           title: box.title,
-          url: '/images/rolety/dezal-poznan-roleta-materiałowa-3.webp',
+          url: '/images/rolety/dezal-poznan-roleta-materialowa-3.webp',
           description: box.description,
         },
       ]
@@ -72,7 +72,7 @@ useHead({
     },
     {
       property: 'og:image',
-      content: '/images/offer/dezal-poznan-roleta-materiałowa-3.webp',
+      content: '/images/offer/dezal-poznan-roleta-materialowa-3.webp',
     },
     {
       property: 'og:image:alt',

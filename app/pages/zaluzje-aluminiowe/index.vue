@@ -14,9 +14,9 @@ import offers from '~~/public/offers-landing.json';
 
 // Obrazki na dole strony
 const bottomImages = ref([
-  { id: 1, url: '/images/zaluzje/deżal-poznań-żaluzja-aluminiowa-1.webp' },
-  { id: 2, url: '/images/zaluzje/deżal-poznań-żaluzja-aluminiowa-2.webp' },
-  { id: 3, url: '/images/zaluzje/deżal-poznań-żaluzja-aluminiowa-3.webp' },
+  { id: 1, url: '/images/zaluzje/dezal-poznan-zaluzja-aluminiowa-1.webp' },
+  { id: 2, url: '/images/zaluzje/dezal-poznan-zaluzja-aluminiowa-2.webp' },
+  { id: 3, url: '/images/zaluzje/dezal-poznan-zaluzja-aluminiowa-3.webp' },
 ]);
 
 // Dane do boksów "Zobacz również"
@@ -48,7 +48,7 @@ const pageData = computed(() => {
     {
       id: 0,
       title: boxes[7]?.title ?? '',
-      url: '/images/zaluzje/deżal-poznań-żaluzja-aluminiowa-1.webp',
+      url: '/images/zaluzje/dezal-poznan-zaluzja-aluminiowa-1.webp',
       description: boxes[7]?.description ?? '',
     },
   ];
@@ -73,7 +73,7 @@ useHead({
     },
     {
       property: 'og:image',
-      content: '/images/zaluzje/deżal-poznań-żaluzja-aluminiowa-1.webp',
+      content: '/images/zaluzje/dezal-poznan-zaluzja-aluminiowa-1.webp',
     },
     {
       property: 'og:image:alt',

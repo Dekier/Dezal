@@ -81,7 +81,7 @@
           /> -->
           <NuxtImg
             :src="imageData.url"
-            :alt="`Realizacja ${data?.title || 'rolety'} - Deżal Poznań`"
+            :alt="`Realizacja - Deżal Poznań`"
             class="ProductInformation__bottom-realizations-image"
             width="450"
             height="300"
@@ -94,15 +94,12 @@
             sizes="sm:100vw md:50vw lg:33vw"
           />
           <div class="ProductInformation__hover-background">
-            <svg
+            <img
+              loading="lazy"
+              src="/icons/fullscreen.svg"
+              alt="fullscreen icon"
               class="ProductInformation__hover-icon"
-              viewBox="0 0 215.35 215.35"
-            >
-              <path
-                fill="#fff"
-                d="M7.5 65.088a7.5 7.5 0 0 0 7.5-7.5V25.61l48.305 48.295a7.479 7.479 0 0 0 5.303 2.196c1.92 0 3.84-.732 5.304-2.197a7.498 7.498 0 0 0-.001-10.606L25.604 15.002h31.985a7.5 7.5 0 0 0 0-15H7.5a7.5 7.5 0 0 0-7.5 7.5v50.087a7.5 7.5 0 0 0 7.5 7.499z..."
-              />
-            </svg>
+            />
           </div>
         </div>
       </div>

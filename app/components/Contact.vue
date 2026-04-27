@@ -92,7 +92,7 @@
           </div>
         </div>
 
-        <img
+        <!-- <img
           loading="lazy"
           src="/images/landing/dzien-noc-1.webp"
           alt="roleta dzien noc"
@@ -100,6 +100,16 @@
           height="660"
           class="Contact__image-middle"
           preload
+        /> -->
+        <NuxtImg
+          src="/images/landing/dzien-noc-1.webp"
+          alt="Roleta dzień noc - nowoczesne systemy osłonowe Deżal"
+          width="375"
+          height="660"
+          class="Contact__image-middle"
+          loading="lazy"
+          format="avif,webp"
+          sizes="sm:100vw md:50vw lg:375px"
         />
 
         <div class="Contact__form-container">

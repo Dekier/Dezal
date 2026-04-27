@@ -15,9 +15,9 @@ import offers from '~~/public/offers-landing.json';
 // Dane do dolnej galerii
 const bottomImages = ref([
   { id: 1, url: '/images/plisy/dezal-poznan-plisa-1.webp' },
-  { id: 2, url: '/images/plisy/deżal-poznań-plisa-2.webp' },
-  { id: 3, url: '/images/plisy/deżal-poznań-plisa-3.webp' },
-  { id: 4, url: '/images/plisy/deżal-poznań-plisa-4.webp' },
+  { id: 2, url: '/images/plisy/dezal-poznan-plisa-2.webp' },
+  { id: 3, url: '/images/plisy/dezal-poznan-plisa-3.webp' },
+  { id: 4, url: '/images/plisy/dezal-poznan-plisa-4.webp' },
 ]);
 
 // Dane do boxów "Zobacz również"

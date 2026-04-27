@@ -89,6 +89,7 @@
     padding-left: 39px;
     display: flex;
     transition: font-weight 100ms;
+    line-height: 28px;
     &:hover {
       @include text(18px, left, $black-300, 700);
       transition: font-weight 100ms;
@@ -155,6 +156,7 @@
     width: 24px;
     height: 24px;
     margin-right: 18px;
+    margin-top: 1px;
   }
 
   &__informatioNuxtLink {
