@@ -129,82 +129,82 @@ const activeImageIndex = ref(null);
 
 const imagesData = ref([
   {
-    url: '/images/rolety/dezal-poznan-roleta-dzień-noc-1.webp',
+    url: '/images/rolety/dezal-poznan-roleta-dzien-noc-1.webp',
     category: 'rolety-dzień-noc',
   },
 
   {
-    url: '/images/rolety/dezal-poznan-roleta-dzień-noc-2.webp',
+    url: '/images/rolety/dezal-poznan-roleta-dzien-noc-2.webp',
     category: 'rolety-dzień-noc',
   },
 
   {
-    url: '/images/rolety/dezal-poznan-roleta-dzień-noc-3.webp',
+    url: '/images/rolety/dezal-poznan-roleta-dzien-noc-3.webp',
     category: 'rolety-dzień-noc',
   },
 
   {
-    url: '/images/rolety/dezal-poznan-roleta-dzień-noc-4.webp',
+    url: '/images/rolety/dezal-poznan-roleta-dzien-noc-4.webp',
     category: 'rolety-dzień-noc',
   },
 
   {
-    url: '/images/rolety/dezal-poznan-roleta-dzień-noc-5.webp',
+    url: '/images/rolety/dezal-poznan-roleta-dzien-noc-5.webp',
     category: 'rolety-dzień-noc',
   },
 
   {
-    url: '/images/rolety/dezal-poznan-roleta-dzień-noc-6.webp',
+    url: '/images/rolety/dezal-poznan-roleta-dzien-noc-6.webp',
     category: 'rolety-dzień-noc',
   },
 
   {
-    url: '/images/rolety/dezal-poznan-roleta-dzień-noc-7.webp',
+    url: '/images/rolety/dezal-poznan-roleta-dzien-noc-7.webp',
     category: 'rolety-dzień-noc',
   },
 
   {
-    url: '/images/rolety/dezal-poznan-roleta-dzień-noc-8.webp',
+    url: '/images/rolety/dezal-poznan-roleta-dzien-noc-8.webp',
     category: 'rolety-dzień-noc',
   },
 
   {
-    url: '/images/rolety/dezal-poznan-roleta-dzień-noc-13.webp',
+    url: '/images/rolety/dezal-poznan-roleta-dzien-noc-13.webp',
     category: 'rolety-dzień-noc',
   },
 
   {
-    url: '/images/rolety/dezal-poznan-roleta-dzień-noc-12.webp',
+    url: '/images/rolety/dezal-poznan-roleta-dzien-noc-12.webp',
     category: 'rolety-dzień-noc',
   },
 
   {
-    url: '/images/rolety/dezal-poznan-roleta-dzień-noc-11.webp',
+    url: '/images/rolety/dezal-poznan-roleta-dzien-noc-11.webp',
     category: 'rolety-dzień-noc',
   },
 
   {
-    url: '/images/rolety/dezal-poznan-roleta-dzień-noc-9.webp',
+    url: '/images/rolety/dezal-poznan-roleta-dzien-noc-9.webp',
     category: 'rolety-dzień-noc',
   },
 
   {
-    url: '/images/rolety/dezal-poznan-roleta-dzień-noc-14.webp',
+    url: '/images/rolety/dezal-poznan-roleta-dzien-noc-14.webp',
     category: 'rolety-dzień-noc',
   },
 
   {
-    url: '/images/rolety/dezal-poznan-roleta-dzień-noc-15.webp',
+    url: '/images/rolety/dezal-poznan-roleta-dzien-noc-15.webp',
     category: 'rolety-dzień-noc',
   },
 
   {
-    url: '/images/rolety/dezal-poznan-roleta-dzień-noc-16.webp',
+    url: '/images/rolety/dezal-poznan-roleta-dzien-noc-16.webp',
     category: 'rolety-dzień-noc',
   },
 
   {
-    url: '/images/rolety/dezal-poznan-roleta-dzień-noc-17.webp',
+    url: '/images/rolety/dezal-poznan-roleta-dzien-noc-17.webp',
     category: 'rolety-dzień-noc',
   },
 

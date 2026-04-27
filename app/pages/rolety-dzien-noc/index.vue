@@ -28,10 +28,10 @@ const offerData = ref({
 });
 
 const bottomImages = ref([
-  { id: 1, url: '/images/rolety/dezal-poznan-roleta-dzień-noc-1.webp' },
-  { id: 2, url: '/images/rolety/dezal-poznan-roleta-dzień-noc-7.webp' },
-  { id: 3, url: '/images/rolety/dezal-poznan-roleta-dzień-noc-3.webp' },
-  { id: 4, url: '/images/rolety/dezal-poznan-roleta-dzień-noc-4.webp' },
+  { id: 1, url: '/images/rolety/dezal-poznan-roleta-dzien-noc-1.webp' },
+  { id: 2, url: '/images/rolety/dezal-poznan-roleta-dzien-noc-7.webp' },
+  { id: 3, url: '/images/rolety/dezal-poznan-roleta-dzien-noc-3.webp' },
+  { id: 4, url: '/images/rolety/dezal-poznan-roleta-dzien-noc-4.webp' },
 ]);
 
 const offerPageJson = ref(offerPage.boxes);
@@ -44,7 +44,7 @@ const pageData = computed(() => {
         {
           id: 0,
           title: box.title,
-          url: '/images/rolety/dezal-poznan-roleta-dzień-noc-2.webp',
+          url: '/images/rolety/dezal-poznan-roleta-dzien-noc-2.webp',
           description: box.description,
         },
       ]
