@@ -25,6 +25,9 @@ export default defineNuxtConfig({
 
   nitro: {
     preset: 'vercel-static',
+    prerender: {
+      failOnError: false, // Pozwoli zobaczyć więcej logów zanim proces się zakończy
+    }
   },
 
   output: {
