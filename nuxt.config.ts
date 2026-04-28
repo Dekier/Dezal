@@ -7,7 +7,7 @@ export default defineNuxtConfig({
     build: {
       target: 'esnext',
       minify: 'esbuild',
-      cssCodeSplit: true,
+      cssCodeSplit: false,
     },
   },
 
@@ -31,7 +31,6 @@ export default defineNuxtConfig({
   },
 
   output: {
-    standalone: false,
   },
 
   generate: {
@@ -71,14 +70,14 @@ export default defineNuxtConfig({
     '@vite-pwa/nuxt', // 🚀 używamy zamiast sitemap + robots
     '@nuxtjs/seo',
     'nuxt-gtag',
-    '@nuxtjs/critters',
+    // '@nuxtjs/critters',
     '@nuxt/image',
   ],
 
-  critters: {
-    preload: 'swap',
-    pruneSource: true,
-  },
+  // critters: {
+  //   preload: 'swap',
+  //   pruneSource: true,
+  // },
 
   ogImage: {
     zeroRuntime: true,

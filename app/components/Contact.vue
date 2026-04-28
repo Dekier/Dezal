@@ -50,7 +50,7 @@
           </div>
           <div class="Contact__informations">
             <a
-              href="https://maps.app.goo.gl/SWWD7iMgbDCGbCam9"
+              href="https://www.google.com/maps/dir/?api=1&destination=52.45362985985779,16.905527873339654"
               class="Contact__information-text"
             >
               <img
@@ -200,7 +200,7 @@
     </div>
 
     <div class="Contact__bottom-container">
-      <ClientOnly>
+      <!-- <ClientOnly>
         <iframe
           loading="lazy"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2431.4076146342704!2d16.903375316488017!3d52.45364497980178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47044341d3556dc5%3A0xaaec6ab99af1a5a1!2sDE%C5%BBAL+Rolety.+Plisy.+%C5%BBaluzje.!5e0!3m2!1spl!2spl!4v1548082800699"
@@ -210,14 +210,89 @@
           title="Mapa lokalizacji firmy DEŻAL Rolety, Plisy, Żaluzje"
           aria-label="Mapa lokalizacji firmy DEŻAL Rolety, Plisy, Żaluzje"
         />
+      </ClientOnly> -->
+      <ClientOnly>
+        <div
+          id="map"
+          style="width: 100%; height: 100%; min-height: 450px"
+        ></div>
       </ClientOnly>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue';
+import { ref, computed, onMounted, createApp } from 'vue';
+import CustomMapMarker from '~/components/Custom-map-marker.vue'; // <-- Import naszego komponentu
+import { setOptions, importLibrary } from '@googlemaps/js-api-loader';
 import emailjs from '@emailjs/browser';
+
+const initGoogleMap = async () => {
+  setOptions({
+    key: 'AIzaSyCCzurmr3FtjmHaiBfPzDx3IAdgsTaOogY',
+    version: 'weekly',
+  } as any);
+
+  try {
+    // 1. Dodajemy import 'Polygon' z biblioteki 'maps'
+    const { Map, Polygon } = await importLibrary('maps') as any;
+    const { AdvancedMarkerElement } = await importLibrary('marker') as any;
+
+    const position = { lat: 52.45362985985779, lng: 16.905527873339654 };
+
+    const map = new Map(document.getElementById('map'), {
+      center: position,
+      zoom: 18, // Dałem zoom 18, żeby od razu było widać z bliska ładny obrys
+      mapId: 'a93ae4d0d1b19b722f6d451b',
+      disableDefaultUI: true,
+      zoomControl: true,
+      fullscreenControl: false,
+      streetViewControl: false,
+      gestureHandling: 'cooperative',
+    });
+
+    // --- NOWOŚĆ: RYSOWANIE GEOGRAFICZNEGO OBRYSU BUDYNKU ---
+    // Tutaj podajemy współrzędne rogów dachu (zgodnie ze wskazówkami zegara)
+    const buildingCorners = [
+      { lat: 52.45360, lng: 16.90550 }, // Lewy górny róg
+      { lat: 52.45359, lng: 16.90565 }, // Prawy górny róg
+      { lat: 52.45348, lng: 16.90563 }, // Prawy dolny róg
+      { lat: 52.45349, lng: 16.90548 }, // Lewy dolny róg
+    ];
+
+    // Tworzymy żółty wielokąt
+    const buildingHighlight = new Polygon({
+      paths: buildingCorners,
+      strokeColor: '#ffe003', // Żółta ramka
+      strokeOpacity: 1.0,
+      strokeWeight: 3,        // Grubość ramki
+      fillColor: '#ffe003',   // Żółte wypełnienie
+      fillOpacity: 0.4,       // 40% widoczności
+    });
+
+    // Nakładamy wielokąt na mapę!
+    buildingHighlight.setMap(map);
+    // -------------------------------------------------------
+
+    // --- STRZAŁKA I PRZYCISK (Nasz marker z Vue) ---
+    const markerContainer = document.createElement('div');
+    createApp(CustomMapMarker).mount(markerContainer);
+const centerOfBuilding = { lat: 52.45354, lng: 16.90556 };
+    new AdvancedMarkerElement({
+      map: map,
+      position: centerOfBuilding,
+      content: markerContainer,
+      title: 'DEŻAL Rolety Poznań',
+    });
+
+  } catch (error) {
+    console.error('Błąd ładowania mapy:', error);
+  }
+};
+
+onMounted(() => {
+  initGoogleMap();
+});
 
 // Dane formularza
 const formData = ref({
