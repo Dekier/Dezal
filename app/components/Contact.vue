@@ -239,10 +239,10 @@ const initGoogleMap = async () => {
     const { AdvancedMarkerElement } = await importLibrary('marker') as any;
 
     const position = { lat: 52.45362985985779, lng: 16.905527873339654 };
-
+    const currentZoom = window.innerWidth < 600 ? 16 : 18;
     const map = new Map(document.getElementById('map'), {
       center: position,
-      zoom: 18, // Dałem zoom 18, żeby od razu było widać z bliska ładny obrys
+      zoom: currentZoom, // Dałem zoom 18, żeby od razu było widać z bliska ładny obrys
       mapId: 'a93ae4d0d1b19b722f6d451b',
       disableDefaultUI: true,
       zoomControl: true,
