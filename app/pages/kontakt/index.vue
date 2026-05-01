@@ -5,6 +5,9 @@
 <script setup lang="ts">
 useHead({
   title: 'Kontakt – Rolety Poznań',
+  htmlAttrs: {
+    lang: 'pl-PL',
+  },
   meta: [
     {
       name: 'description',

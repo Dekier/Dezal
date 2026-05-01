@@ -53,6 +53,9 @@ const pageData = computed(() => {
 
 useHead({
   title: 'Rolety dzień noc Poznań – na wymiar nowoczesne i funkcjonalne',
+  htmlAttrs: {
+    lang: 'pl-PL',
+  },
   meta: [
     {
       name: 'description',

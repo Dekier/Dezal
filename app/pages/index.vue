@@ -15,6 +15,9 @@ const offerBoxesJson = ref(offers.boxes);
 
 useHead({
   title: 'Rolety Poznań – nowoczesne plisy, żaluzje i osłony okienne',
+  htmlAttrs: {
+    lang: 'pl-PL',
+  },
   meta: [
     {
       name: 'description',
@@ -41,4 +44,20 @@ useHead({
   ],
   canonical: 'https://dezalroletypoznan.pl',
 });
+
+useSchemaOrg([
+  defineLocalBusiness({
+    name: 'Deżal Rolety Poznań',
+    url: 'https://dezalroletypoznan.pl',
+    telephone: '+48 603 630 299', // Pamiętaj o prefiksie +48
+    address: {
+      addressLocality: 'Poznań',
+      addressRegion: 'wielkopolskie',
+      postalCode: '60-692', // Twój kod pocztowy
+      streetAddress: 'ul. Jaroczyńskiego 41',
+      addressCountry: 'PL' // KRYTYCZNE: Jasny sygnał, że to Polska
+    },
+    image: 'https://dezalroletypoznan.pl/images/logo-rect.png',
+  })
+])
 </script>
