@@ -56,6 +56,9 @@ const pageData = computed(() => {
 
 useHead({
   title: 'Stylowe żaluzje aluminiowe na wymiar – Poznań i okolice',
+  htmlAttrs: {
+    lang: 'pl-PL',
+  },
   meta: [
     {
       name: 'description',

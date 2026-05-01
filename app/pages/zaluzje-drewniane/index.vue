@@ -56,6 +56,9 @@ const pageData = computed(() => {
 
 useHead({
   title: 'Stylowe żaluzje drewniane na wymiar – Poznań i okolice',
+  htmlAttrs: {
+    lang: 'pl-PL',
+  },
   meta: [
     {
       name: 'description',

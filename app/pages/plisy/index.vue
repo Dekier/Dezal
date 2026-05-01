@@ -56,6 +56,9 @@ const pageData = computed(() => {
 
 useHead({
   title: 'Plisy okienne Poznań – nowoczesne rozwiązania na wymiar',
+  htmlAttrs: {
+    lang: 'pl-PL',
+  },
   meta: [
     {
       name: 'description',

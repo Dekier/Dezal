@@ -53,7 +53,7 @@ export default defineNuxtConfig({
     baseURL: '/',
     head: {
       htmlAttrs: {
-        lang: 'pl',
+        lang: 'pl-PL',
       },
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
