@@ -1,8 +1,10 @@
 <template>
   <div>
     <Hero />
-    <AboutCompany />
+    <!-- <AboutCompany /> -->
     <LandingOffer :offer-boxes-json="offerBoxesJson" />
+    <AboutCompanyNew />
+
     <Contact />
   </div>
 </template>
