@@ -27,11 +27,10 @@ export default defineNuxtConfig({
     preset: 'vercel-static',
     prerender: {
       failOnError: false, // Pozwoli zobaczyć więcej logów zanim proces się zakończy
-    }
+    },
   },
 
-  output: {
-  },
+  output: {},
 
   generate: {
     fallback: '404.html',
@@ -91,7 +90,7 @@ export default defineNuxtConfig({
 
   image: {
     format: ['webp'],
-    quality: 90,
+    quality: 95,
     screens: {
       xs: 320,
       sm: 640,
