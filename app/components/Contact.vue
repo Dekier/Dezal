@@ -71,8 +71,11 @@
                 alt="icon alarm"
                 class="Contact__information-icon"
               />
-              pon. : 12:00 - 18:00 <br />
-              wt.-pt. : 09:00 - 17:00
+              pon. 09:00 - 18:00 <br />
+              wt. 08:00 - 17:00 <br />
+              śr. 08:00 - 17:00 <br />
+              czw. 09:00 - 18:00 <br />
+              pt. Zamknięte
             </span>
 
             <span
@@ -235,8 +238,8 @@ const initGoogleMap = async () => {
 
   try {
     // 1. Dodajemy import 'Polygon' z biblioteki 'maps'
-    const { Map, Polygon } = await importLibrary('maps') as any;
-    const { AdvancedMarkerElement } = await importLibrary('marker') as any;
+    const { Map, Polygon } = (await importLibrary('maps')) as any;
+    const { AdvancedMarkerElement } = (await importLibrary('marker')) as any;
 
     const position = { lat: 52.45362985985779, lng: 16.905527873339654 };
     const currentZoom = window.innerWidth < 600 ? 16 : 18;
@@ -254,7 +257,7 @@ const initGoogleMap = async () => {
     // --- NOWOŚĆ: RYSOWANIE GEOGRAFICZNEGO OBRYSU BUDYNKU ---
     // Tutaj podajemy współrzędne rogów dachu (zgodnie ze wskazówkami zegara)
     const buildingCorners = [
-      { lat: 52.45360, lng: 16.90550 }, // Lewy górny róg
+      { lat: 52.4536, lng: 16.9055 }, // Lewy górny róg
       { lat: 52.45359, lng: 16.90565 }, // Prawy górny róg
       { lat: 52.45348, lng: 16.90563 }, // Prawy dolny róg
       { lat: 52.45349, lng: 16.90548 }, // Lewy dolny róg
@@ -265,9 +268,9 @@ const initGoogleMap = async () => {
       paths: buildingCorners,
       strokeColor: '#ffe003', // Żółta ramka
       strokeOpacity: 1.0,
-      strokeWeight: 3,        // Grubość ramki
-      fillColor: '#ffe003',   // Żółte wypełnienie
-      fillOpacity: 0.4,       // 40% widoczności
+      strokeWeight: 3, // Grubość ramki
+      fillColor: '#ffe003', // Żółte wypełnienie
+      fillOpacity: 0.4, // 40% widoczności
     });
 
     // Nakładamy wielokąt na mapę!
@@ -277,14 +280,13 @@ const initGoogleMap = async () => {
     // --- STRZAŁKA I PRZYCISK (Nasz marker z Vue) ---
     const markerContainer = document.createElement('div');
     createApp(CustomMapMarker).mount(markerContainer);
-const centerOfBuilding = { lat: 52.45354, lng: 16.90556 };
+    const centerOfBuilding = { lat: 52.45354, lng: 16.90556 };
     new AdvancedMarkerElement({
       map: map,
       position: centerOfBuilding,
       content: markerContainer,
       title: 'DEŻAL Rolety Poznań',
     });
-
   } catch (error) {
     console.error('Błąd ładowania mapy:', error);
   }
