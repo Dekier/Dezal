@@ -4,6 +4,7 @@
     <!-- <AboutCompany /> -->
     <LandingOffer :offer-boxes-json="offerBoxesJson" />
     <AboutCompanyNew />
+    <Reviews />
 
     <Contact />
   </div>
@@ -57,9 +58,9 @@ useSchemaOrg([
       addressRegion: 'wielkopolskie',
       postalCode: '60-692', // Twój kod pocztowy
       streetAddress: 'ul. Jaroczyńskiego 41',
-      addressCountry: 'PL' // KRYTYCZNE: Jasny sygnał, że to Polska
+      addressCountry: 'PL', // KRYTYCZNE: Jasny sygnał, że to Polska
     },
     image: 'https://dezalroletypoznan.pl/images/logo-rect.png',
-  })
-])
+  }),
+]);
 </script>

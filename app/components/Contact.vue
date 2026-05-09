@@ -4,12 +4,12 @@
       <div class="Contact__top-container">
         <div class="Contact__information-container">
           <h3 class="Contact__title">
-            <!-- <img
+            <img
               loading="lazy"
               src="/icons/subtract.svg"
               alt="icon subtract"
               class="Contact__form-container-icon-left"
-            /> -->
+            />
             Skontaktuj się
           </h3>
           <p class="Contact__description">
