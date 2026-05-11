@@ -104,7 +104,7 @@ export default defineNuxtConfig({
     site: {
       url: siteUrl,
       name: 'DEŻAL Poznań',
-      defaultLocale: 'pl',
+      defaultLocale: 'pl-PL',
     },
     sitemap: {
       exclude: ['/error'],
