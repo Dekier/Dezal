@@ -103,6 +103,8 @@ export default defineNuxtConfig({
   seo: {
     site: {
       url: siteUrl,
+      name: 'DEŻAL Poznań',
+      defaultLocale: 'pl',
     },
     sitemap: {
       exclude: ['/error'],
@@ -133,7 +135,7 @@ export default defineNuxtConfig({
       },
       twitterCard: 'summary_large_image',
       themeColor: '#ffe100',
-      language: 'pl',
+      language: 'pl-PL',
     },
   },
 
@@ -147,7 +149,7 @@ export default defineNuxtConfig({
       name: 'Deżal Rolety Poznań',
       short_name: 'Deżal',
       theme_color: '#ffe100',
-      lang: 'pl',
+      lang: 'pl-PL',
       icons: [
         {
           src: '/logo-pwa.png',

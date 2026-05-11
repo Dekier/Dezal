@@ -10,9 +10,6 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
 useHead({
-  htmlAttrs: {
-    lang: 'pl-PL',
-  },
   script: [
     {
       type: 'application/ld+json',
