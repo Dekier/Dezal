@@ -1,7 +1,7 @@
 <template>
   <div id="offer" class="Offer__main-container">
     <div class="Offer__center-container">
-      <h2 class="Offer__title">Jakich rolet potrzebujesz?</h2>
+      <h2 class="Offer__title">Jakich osłon okiennych potrzebujesz?</h2>
       <div class="Offer__boxes-container">
         <div
           v-for="(box, index) in offerBoxesJson"

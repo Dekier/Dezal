@@ -45,8 +45,9 @@
     margin-bottom: 15px;
     margin-top: 0;
     max-width: 328px;
-    letter-spacing: -3%;
+    letter-spacing: 0%;
     width: 100%;
+    line-height: 120%;
   }
   &__down-container {
     background-color: $grey-200;
@@ -63,8 +64,9 @@
     margin-bottom: 23px;
     margin-top: 0;
     max-width: 328px;
-    letter-spacing: -3%;
+    letter-spacing: 0%;
     width: 100%;
+    line-height: 120%;
   }
 
   &__facebook-link {
@@ -123,7 +125,7 @@
   &__recomended-container {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    // gap: 24px;
   }
 
   &__recomended-logo {

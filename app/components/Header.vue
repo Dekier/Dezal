@@ -5,8 +5,13 @@
     @mouseleave="showDropDown = false"
   >
     <div class="Header__center-container">
-      <NuxtLink @click="pageActive = 'home'" to="/" aria-label="Deżal">
-        <div class="Header__logo" />
+      <NuxtLink
+        @click="pageActive = 'home'"
+        to="/"
+        aria-label="Deżal"
+        class="Header__logo-link"
+      >
+        <img src="/icons/logo.svg" class="Header__logo" />
       </NuxtLink>
 
       <div
@@ -31,6 +36,7 @@
       <transition name="fade">
         <nav v-if="showMobileBtn" class="Header__links-container-mobile">
           <NuxtLink
+            v-if="route.path !== '/'"
             to="/"
             class="Header__link-mobile"
             @click="
@@ -39,7 +45,7 @@
             "
             prefetch
           >
-            STRONA GŁÓWNA
+            strona głowna
           </NuxtLink>
 
           <button
@@ -47,17 +53,12 @@
             class="Header__link-mobile"
             @click="showMobileDropDown = !showMobileDropDown"
           >
-            OFERTA
-            <svg
+            oferta
+            <img
+              src="/icons/arrow-down.svg"
               class="Header__link-arrow"
-              width="10"
-              height="10"
-              viewBox="0 0 129 129"
-            >
-              <path
-                d="M121.3 34.6c-1.6-1.6-4.2-1.6-5.8 0l-51 51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8 0-1.6 1.6-1.6 4.2 0 5.8l53.9 53.9c.8.8 1.8 1.2 2.9 1.2 1 0 2.1-.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2.1-5.8z"
-              />
-            </svg>
+              :class="{ 'Header__link-arrow--active': showMobileDropDown }"
+            />
           </button>
 
           <transition name="fade">
@@ -76,6 +77,15 @@
                 "
                 prefetch
               >
+                <img
+                  :src="
+                    isHoverLink === link.label
+                      ? '/icons/dot-yellow.svg'
+                      : '/icons/dot.svg'
+                  "
+                  alt="icon dot"
+                  class="Header__dot"
+                />
                 {{ link.label }}
               </NuxtLink>
             </div>
@@ -90,43 +100,30 @@
             "
             prefetch
           >
-            REALIZACJE
+            realizacje
           </NuxtLink>
           <NuxtLink
             to="/kontakt"
-            class="Header__link-mobile"
+            class="Header__link-mobile Header__link-contact"
             @click="
               closeMobileMenu();
               pageActive = 'contact';
             "
             prefetch
           >
-            KONTAKT
+            kontakt
           </NuxtLink>
         </nav>
       </transition>
 
       <div class="Header__links-container">
-        <NuxtLink to="/" class="Header__link" @click="pageActive = 'home'">
-          STRONA GŁÓWNA
-          <svg class="Header__link-border" width="200" height="50">
-            <line
-              class="svg-bottom-left"
-              :class="{ 'svg-bottom-left--active': pageActive === 'home' }"
-              x1="-100"
-              y1="50"
-              x2="100"
-              y2="50"
-            />
-            <line
-              class="svg-bottom-right"
-              :class="{ 'svg-bottom-right--active': pageActive === 'home' }"
-              x1="100"
-              y1="50"
-              x2="300"
-              y2="50"
-            />
-          </svg>
+        <NuxtLink
+          v-if="route.path !== '/'"
+          to="/"
+          class="Header__link"
+          @click="pageActive = 'home'"
+        >
+          strona główna
         </NuxtLink>
 
         <button
@@ -134,53 +131,43 @@
           class="Header__link"
           @mouseover="showDropDown = true"
         >
-          OFERTA
-          <svg class="Header__link-border" width="200" height="50">
-            <line
-              class="svg-bottom-left"
-              :class="{ 'svg-bottom-left--active': pageActive === 'offer' }"
-              x1="-100"
-              y1="50"
-              x2="100"
-              y2="50"
-            />
-            <line
-              class="svg-bottom-right"
-              :class="{ 'svg-bottom-right--active': pageActive === 'offer' }"
-              x1="100"
-              y1="50"
-              x2="300"
-              y2="50"
-            />
-          </svg>
-          <svg
+          oferta
+          <img
+            src="/icons/arrow-down.svg"
             class="Header__link-arrow"
-            width="10"
-            height="10"
-            viewBox="0 0 129 129"
-          >
-            <path
-              d="M121.3 34.6c-1.6-1.6-4.2-1.6-5.8 0l-51 51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8 0-1.6 1.6-1.6 4.2 0 5.8l53.9 53.9c.8.8 1.8 1.2 2.9 1.2 1 0 2.1-.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2.1-5.8z"
-            />
-          </svg>
+            :class="{ 'Header__link-arrow--active': showDropDown }"
+          />
         </button>
 
         <div
           v-if="showDropDown"
           class="Header__dropdown"
-          @mouseleave="showDropDown = false"
+          @mouseleave="
+            showDropDown = false;
+            isHoverLink = '';
+          "
         >
           <NuxtLink
             v-for="link in offerLinks"
             :key="link.to"
             :to="link.to"
             class="Header__dropdowNuxtLink"
+            @mouseenter="isHoverLink = link.label"
             @click="
               showDropDown = false;
               pageActive = 'offer';
             "
             prefetch
           >
+            <img
+              :src="
+                isHoverLink === link.label
+                  ? '/icons/dot-yellow.svg'
+                  : '/icons/dot.svg'
+              "
+              alt="icon dot"
+              class="Header__dot"
+            />
             {{ link.label }}
           </NuxtLink>
         </div>
@@ -191,52 +178,16 @@
           @click="pageActive = 'real'"
           prefetch
         >
-          REALIZACJE
-          <svg class="Header__link-border" width="200" height="50">
-            <line
-              class="svg-bottom-left"
-              :class="{ 'svg-bottom-left--active': pageActive === 'real' }"
-              x1="-100"
-              y1="50"
-              x2="100"
-              y2="50"
-            />
-            <line
-              class="svg-bottom-right"
-              :class="{ 'svg-bottom-right--active': pageActive === 'real' }"
-              x1="100"
-              y1="50"
-              x2="300"
-              y2="50"
-            />
-          </svg>
+          realizacje
         </NuxtLink>
 
         <NuxtLink
           to="/kontakt"
-          class="Header__link"
+          class="Header__link Header__link-contact"
           @click="pageActive = 'contact'"
           prefetch
         >
-          KONTAKT
-          <svg class="Header__link-border" width="200" height="50">
-            <line
-              class="svg-bottom-left"
-              :class="{ 'svg-bottom-left--active': pageActive === 'contact' }"
-              x1="-100"
-              y1="50"
-              x2="100"
-              y2="50"
-            />
-            <line
-              class="svg-bottom-right"
-              :class="{ 'svg-bottom-right--active': pageActive === 'contact' }"
-              x1="100"
-              y1="50"
-              x2="300"
-              y2="50"
-            />
-          </svg>
+          kontakt
         </NuxtLink>
       </div>
     </div>
@@ -247,18 +198,19 @@
 import { ref, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
 
+const isHoverLink = ref('');
 const showMobileBtn = ref(false);
 const showDropDown = ref(false);
 const showMobileDropDown = ref(false);
 const pageActive = ref<'home' | 'offer' | 'real' | 'contact'>('home');
 
 const offerLinks = [
-  { to: '/rolety-dzien-noc', label: 'Rolety Dzień-Noc' },
-  { to: '/rolety-materialowe', label: 'Rolety Materiałowe' },
-  { to: '/rolety-rzymskie', label: 'Rolety Rzymskie' },
-  { to: '/plisy', label: 'PLISY' },
-  { to: '/zaluzje-drewniane', label: 'Żaluzje drewniane' },
-  { to: '/zaluzje-aluminiowe', label: 'Żaluzje aluminiowe' },
+  { to: '/rolety-dzien-noc', label: 'rolety dzień-noc' },
+  { to: '/rolety-materialowe', label: 'rolety materiałowe' },
+  { to: '/rolety-rzymskie', label: 'rolety rzymskie' },
+  { to: '/plisy', label: 'plisy' },
+  { to: '/zaluzje-drewniane', label: 'żaluzje drewniane' },
+  { to: '/zaluzje-aluminiowe', label: 'żaluzje aluminiowe' },
   { to: '/verticale', label: 'verticale' },
   { to: '/moskitiery', label: 'moskitiery' },
 ];
