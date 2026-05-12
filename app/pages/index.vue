@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Hero />
+    <HeroNew />
     <!-- <AboutCompany /> -->
     <LandingOffer :offer-boxes-json="offerBoxesJson" />
     <AboutCompanyNew />

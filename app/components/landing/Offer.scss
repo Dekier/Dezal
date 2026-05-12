@@ -11,14 +11,17 @@
     width: 1440px;
     margin: auto;
     padding: 100px 16px 100px;
+    @include for-phone-only {
+      padding: 50px 16px 100px;
+    }
   }
 
   &__title {
-    margin-bottom: 50px;
-    @include text(42px, left, $black-999, 700);
+    margin: 0 0 50px;
+    @include text(32px, left, $black-999, 700);
     @include for-tablet {
       @include text(56px, left, $black-999, 700);
-      margin-bottom: 72px;
+      margin-bottom: 62px;
     }
   }
 
@@ -179,7 +182,7 @@
 
   &__badge {
     position: absolute;
-    top: -32px;
+    top: -16px;
     right: 26px;
     width: 84px;
     height: 108px;
@@ -191,8 +194,8 @@
   }
 
   &__badge-image {
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
     margin: 16px auto 8px;
   }
 

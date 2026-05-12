@@ -87,7 +87,7 @@
           class="Reviews__box-btn"
           target="_black"
           href="https://maps.app.goo.gl/dxwuiYmLvYFf3pUV9"
-          >Zobacz wszystkie opinie
+          >zobacz wszystkie opinie
           <div class="Reviews__btn-arrow-box">
             <img
               src="/icons/arrow.svg"

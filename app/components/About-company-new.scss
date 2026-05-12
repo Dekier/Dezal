@@ -12,18 +12,12 @@
     margin: 0 auto;
     padding: 69px 109px 84px;
     background-color: $yellow-100;
-    border-radius: 60px;
     position: relative;
     display: flex;
     flex-direction: column;
 
     @include for-phone-only {
-      border-radius: 32px;
-
       padding: 32px;
-    }
-    @include for-tablet-landscape-up {
-      border-radius: 48px;
     }
     @include for-big-desktop-up {
       flex-direction: row;
