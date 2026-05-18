@@ -5,9 +5,9 @@ export default defineNuxtConfig({
 
   vite: {
     build: {
+      cssCodeSplit: true,
       target: 'esnext',
       minify: 'esbuild',
-      cssCodeSplit: false,
     },
   },
 
@@ -26,27 +26,14 @@ export default defineNuxtConfig({
   nitro: {
     preset: 'vercel-static',
     prerender: {
-      failOnError: false, // Pozwoli zobaczyć więcej logów zanim proces się zakończy
+      crawlLinks: true, // Nitro samo zmapuje wszystkie dynamiczne i statyczne linki
+      routes: ['/'], // Wystarczy punkt wejścia
+      failOnError: false,
     },
+    compressPublicAssets: { gzip: true, brotli: true },
   },
 
   output: {},
-
-  generate: {
-    fallback: '404.html',
-    routes: [
-      '/kontakt',
-      '/realizacje',
-      '/rolety-dzien-noc',
-      '/rolety-materialowe',
-      '/rolety-rzymskie',
-      '/plisy',
-      '/zaluzje-drewniane',
-      '/zaluzje-aluminiowe',
-      '/verticale',
-      '/moskitiery',
-    ],
-  },
 
   app: {
     baseURL: '/',
@@ -69,8 +56,8 @@ export default defineNuxtConfig({
     '@vite-pwa/nuxt', // 🚀 używamy zamiast sitemap + robots
     '@nuxtjs/seo',
     'nuxt-gtag',
-    // '@nuxtjs/critters',
     '@nuxt/image',
+    '@nuxt/scripts',
   ],
 
   // critters: {
@@ -89,8 +76,8 @@ export default defineNuxtConfig({
   },
 
   image: {
-    format: ['webp'],
-    quality: 95,
+    format: ['avif', 'webp'],
+    quality: 90,
     screens: {
       xs: 320,
       sm: 640,
@@ -107,47 +94,12 @@ export default defineNuxtConfig({
     currentLocale: 'pl',
   },
 
-  seo: {
-    site: {
-      url: siteUrl,
-      name: 'DEŻAL Poznań',
-      defaultLocale: 'pl-PL',
-    },
-    sitemap: {
-      exclude: ['/error'],
-      defaults: {
-        changefreq: 'monthly',
-        priority: 0.8,
-        lastmod: true,
-      },
-      trailingSlash: false,
-    },
-    robots: {
-      indexable: true,
-      sitemap: siteUrl + '/sitemap.xml',
-      rules: [
-        {
-          userAgent: '*',
-          allow: '/',
-          disallow: '/error',
-        },
-      ],
-    },
-    meta: {
-      title: 'Nowoczesne rolety, plisy i żaluzje | Poznań i okolice.',
-      ogSiteName: 'DEŻAL Poznań',
-      ogImage: {
-        url: '/images/logo-rect.png',
-        alt: 'Logo firmy DEŻAL',
-      },
-      twitterCard: 'summary_large_image',
-      themeColor: '#ffe100',
-      language: 'pl',
-    },
-  },
-
   gtag: {
     id: 'G-7TFFQYCBP3',
+  },
+
+  features: {
+    inlineStyles: true,
   },
 
   pwa: {
@@ -169,5 +121,5 @@ export default defineNuxtConfig({
 
   // serverMiddleware: [{ path: '/', handler: '~/middleware/redirect.js' }],
 
-  compatibilityDate: '2025-04-22',
+  compatibilityDate: '2026-05-18',
 });
