@@ -56,7 +56,7 @@ const pageData = computed(() => {
 useHead({
   title: 'Moskitiery Poznań – ochrona przed owadami',
   htmlAttrs: {
-    lang: 'pl-PL',
+    lang: 'pl',
   },
   meta: [
     {

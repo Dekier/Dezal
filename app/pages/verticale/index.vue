@@ -56,7 +56,7 @@ const pageData = computed(() => {
 useHead({
   title: 'Verticale (żaluzje pionowe) – elegancja i funkcjonalność',
   htmlAttrs: {
-    lang: 'pl-PL',
+    lang: 'pl',
   },
   meta: [
     {

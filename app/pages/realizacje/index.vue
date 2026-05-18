@@ -560,7 +560,7 @@ useHead({
   title:
     'Realizacje – Rolety, Plisy, Żaluzje i Moskitiery na Wymiar | Deżal Poznań',
   htmlAttrs: {
-    lang: 'pl-PL',
+    lang: 'pl',
   },
   meta: [
     {

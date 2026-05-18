@@ -1,7 +1,7 @@
 @use '@/assets/stylesheets/main-variables' as *;
 .Cookies {
   &__main-container {
-    background: $color-yellow;
+    background: $yellow-200;
     padding: 10px 15px;
     position: fixed;
     bottom: 0px;
@@ -21,7 +21,8 @@
     position: relative;
     right: 0;
     width: 20px;
-    background: #25282b;
+    background: $color-white;
+    border: 1px solid $yellow-500;
     padding: 5px;
     height: 25px;
     width: 25px;

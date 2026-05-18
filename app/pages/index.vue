@@ -19,7 +19,7 @@ const offerBoxesJson = ref(offers.boxes);
 useHead({
   title: 'Rolety Poznań – nowoczesne plisy, żaluzje i osłony okienne',
   htmlAttrs: {
-    lang: 'pl-PL',
+    lang: 'pl',
   },
   meta: [
     {
