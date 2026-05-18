@@ -5,7 +5,7 @@
         <div class="Contact__info-container">
           <button
             type="button"
-            @click="isActiveInfoBox = false"
+            @click="closeInfoBox"
             class="Contact__info-button-close"
           >
             <img
@@ -25,7 +25,7 @@
           <button
             type="button"
             class="Contact__info-button"
-            @click="isActiveInfoBox = false"
+            @click="closeInfoBox"
           >
             Rozumiem
           </button>
@@ -261,7 +261,7 @@ import { ref, computed, onMounted, createApp } from 'vue';
 import CustomMapMarker from '~/components/Custom-map-marker.vue'; // <-- Import naszego komponentu
 import { setOptions, importLibrary } from '@googlemaps/js-api-loader';
 import emailjs from '@emailjs/browser';
-const isActiveInfoBox = ref(true);
+const isActiveInfoBox = ref(false);
 
 const initGoogleMap = async () => {
   setOptions({
@@ -325,8 +325,20 @@ const initGoogleMap = async () => {
   }
 };
 
+// 2. Funkcja wywoływana przy kliknięciu "Zamknij" lub "Rozumiem"
+const closeInfoBox = () => {
+  isActiveInfoBox.value = false;
+  localStorage.setItem('dezal_info_box_hidden', 'true');
+};
+
 onMounted(() => {
   initGoogleMap();
+
+  // 3. Sprawdzamy localStorage dopiero po zamontowaniu komponentu w przeglądarce
+  const isHidden = localStorage.getItem('dezal_info_box_hidden');
+  if (!isHidden) {
+    isActiveInfoBox.value = true;
+  }
 });
 
 // Dane formularza
