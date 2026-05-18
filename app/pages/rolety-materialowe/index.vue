@@ -56,7 +56,7 @@ const pageData = computed(() => {
 useHead({
   title: 'Rolety materiałowe Poznań – stylowe osłony okienne',
   htmlAttrs: {
-    lang: 'pl-PL',
+    lang: 'pl',
   },
   meta: [
     {

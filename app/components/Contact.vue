@@ -1,6 +1,37 @@
 <template>
   <div class="Contact__main-container">
     <div class="Contact__center-container">
+      <div v-if="isActiveInfoBox" class="Contact__info-container-box">
+        <div class="Contact__info-container">
+          <button
+            type="button"
+            @click="isActiveInfoBox = false"
+            class="Contact__info-button-close"
+          >
+            <img
+              src="/icons/exit.svg"
+              class="Contact__info-button-close-icon"
+              alt="icon exit"
+            />
+          </button>
+          <div class="Contact__info-title">Szanowni klienci</div>
+          <div class="Contact__info-description">
+            Ze względu na mobilny charakter naszej pracy (pomiary i montaże), w
+            godzinach otwarcia biura możemy przebywać poza firmą. Aby
+            zagwarantować, że będziemy na miejscu i w pełni dyspozycyjni,
+            prosimy o wcześniejsze telefoniczne potwierdzenie wizyty lub
+            umówienie się na konkretną godzinę.
+          </div>
+          <button
+            type="button"
+            class="Contact__info-button"
+            @click="isActiveInfoBox = false"
+          >
+            Rozumiem
+          </button>
+        </div>
+      </div>
+
       <div class="Contact__top-container">
         <div class="Contact__information-container">
           <h3 class="Contact__title">
@@ -76,7 +107,7 @@
               wt. 08:00 - 17:00 <br />
               śr. 08:00 - 17:00 <br />
               czw. 09:00 - 18:00 <br />
-              pt. Zamknięte
+              pt. Zamknięte (realizacje u klientów)
             </span>
 
             <span
@@ -230,6 +261,7 @@ import { ref, computed, onMounted, createApp } from 'vue';
 import CustomMapMarker from '~/components/Custom-map-marker.vue'; // <-- Import naszego komponentu
 import { setOptions, importLibrary } from '@googlemaps/js-api-loader';
 import emailjs from '@emailjs/browser';
+const isActiveInfoBox = ref(true);
 
 const initGoogleMap = async () => {
   setOptions({

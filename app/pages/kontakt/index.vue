@@ -6,7 +6,7 @@
 useHead({
   title: 'Kontakt – Rolety Poznań',
   htmlAttrs: {
-    lang: 'pl-PL',
+    lang: 'pl',
   },
   meta: [
     {

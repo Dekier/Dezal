@@ -53,7 +53,7 @@ const pageData = computed(() => {
 useHead({
   title: 'Rolety rzymskie Poznań – elegancja i komfort',
   htmlAttrs: {
-    lang: 'pl-PL',
+    lang: 'pl',
   },
   meta: [
     {
