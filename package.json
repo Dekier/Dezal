@@ -40,7 +40,7 @@
     "vue-scrollto": "^2.20.0"
   },
   "volta": {
-    "node": "22.14.0",
+    "node": "24.15.0",
     "pnpm": "10.33.2"
   },
   "packageManager": "pnpm@11.1.3",
