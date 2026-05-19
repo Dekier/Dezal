@@ -28,11 +28,12 @@
               :src="box.url"
               :alt="`${box.title} - Deżal Poznań`"
               class="Offer__box-image"
-              loading="lazy"
+              :loading="index === 0 ? 'eager' : 'lazy'"
+              :fetchpriority="index === 0 ? 'high' : 'auto'"
               width="400"
               height="300"
               format="webp"
-              preload
+              :preload="index === 0"
               sizes="sm:100vw md:50vw lg:400px"
               :title="`Oferta: ${box.title}`"
             />
