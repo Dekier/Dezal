@@ -11,7 +11,7 @@
         aria-label="Deżal"
         class="Header__logo-link"
       >
-        <img src="/icons/logo.svg" class="Header__logo" />
+        <img src="/icons/logo.svg" class="Header__logo" alt="logo dezal" />
       </NuxtLink>
 
       <div
