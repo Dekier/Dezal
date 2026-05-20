@@ -58,6 +58,7 @@
               src="/icons/arrow-down.svg"
               class="Header__link-arrow"
               :class="{ 'Header__link-arrow--active': showMobileDropDown }"
+              alt="arrow icon"
             />
           </button>
 
@@ -136,6 +137,7 @@
             src="/icons/arrow-down.svg"
             class="Header__link-arrow"
             :class="{ 'Header__link-arrow--active': showDropDown }"
+            alt="arrow icon"
           />
         </button>
 
