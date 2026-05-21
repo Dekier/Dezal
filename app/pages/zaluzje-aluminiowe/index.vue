@@ -1,6 +1,11 @@
 <template>
-  <div class="Plisy__main-container">
-    <ProductInformation :page-data="pageData" :bottom-images="bottomImages" />
+  <div class="Page__main-container">
+    <ProductInformation
+      :page-data="pageData"
+      :bottom-images="bottomImages"
+      :faq-title="faqTitle"
+      :faq-data="faqData"
+    />
     <Offer :offer-data="offerData" :offer-boxes-json="offersJson" />
   </div>
 </template>
@@ -12,6 +17,39 @@ import Offer from '~/components/Offer.vue';
 import offerPage from '~~/public/offers.json';
 import offers from '~~/public/offers-landing.json';
 
+// --- DANE DO FAQ (Żaluzje aluminiowe) ---
+const faqTitle = ref('Najczęściej zadawane pytania');
+
+const faqData = ref([
+  {
+    question:
+      'Dlaczego żaluzje aluminiowe są lepsze od drewnianych w kuchni lub łazience?',
+    answer:
+      'Aluminium jest całkowicie odporne na wilgoć, parę wodną i bezpośredni kontakt z wodą, dzięki czemu lamele nie pęcznieją ani nie odkształcają się. Ponadto, aluminium nie chłonie zapachów kuchennych i jest bardzo łatwe do odtłuszczenia, co czyni je najbardziej higienicznym rozwiązaniem do tych pomieszczeń.',
+  },
+  {
+    question: 'Czy żaluzje aluminiowe mocno nagrzewają pomieszczenie?',
+    answer:
+      'Wręcz przeciwnie. Metalowe lamele bardzo skutecznie odbijają promienie słoneczne, zanim te dotrą do wnętrza pokoju. Szczególnie polecane są żaluzje z powłoką odbijającą światło, które pomagają utrzymać niższą temperaturę w upalne dni. Po całkowitym zamknięciu żaluzji tworzy się bariera termiczna przy szybie.',
+  },
+  {
+    question: 'Jak czyścić żaluzje aluminiowe, żeby nie powyginać lameli?',
+    answer:
+      'Najbezpieczniej jest czyścić je na sucho miotełką do kurzu lub odkurzaczem z miękką końcówką przy najniższej mocy ssania. Jeśli żaluzje wymagają mycia na mokro, zalecamy zamknięcie lameli na płasko i przetarcie ich wilgotną ściereczką z mikrofibry. Należy unikać silnego dociskania, aby nie doprowadzić do trwałego odkształcenia cienkiego aluminium.',
+  },
+  {
+    question: 'Czym są żaluzje aluminiowe perforowane?',
+    answer:
+      'To nowoczesny typ lameli z tysiącami mikrootworów. Działają podobnie jak firanka: nawet gdy żaluzja jest całkowicie zamknięta, do wnętrza wpada rozproszone, miękkie światło, a Ty widzisz, co dzieje się na zewnątrz. Jednocześnie osoby z zewnątrz nie widzą, co dzieje się w środku. To idealne rozwiązanie do biur i salonów.',
+  },
+  {
+    question: 'Czy żaluzje aluminiowe kojarzą się tylko z biurem?',
+    answer:
+      'Ten mit dawno minął. Współczesne żaluzje aluminiowe oferują ogromną gamę kolorów (od matowych czerni po pastele) oraz tekstur, w tym okleiny drewnopodobne, które do złudzenia przypominają naturalne drewno. Dzięki wąskim lamelom (16 mm lub 25 mm) wyglądają bardzo lekko i elegancko w nowoczesnych, minimalistycznych wnętrzach.',
+  },
+]);
+// ----------------------------------------
+
 // Obrazki na dole strony
 const bottomImages = ref([
   { id: 1, url: '/images/zaluzje/dezal-poznan-zaluzja-aluminiowa-1.webp' },
@@ -22,8 +60,7 @@ const bottomImages = ref([
 // Dane do boksów "Zobacz również"
 const offerData = ref({
   title: 'Zobacz również',
-  description:
-    'Polecamy również nasze pozostałe produkty. W pełnej ofercie firmy Deżal znajdziesz:',
+  description: '',
   showBoxes: [
     'rolety-dzien-noc',
     'rolety-materialowe',
@@ -35,11 +72,9 @@ const offerData = ref({
   ],
 });
 
-// Fetch JSON z public/offers.json
 const offerPageJson = ref(offerPage.boxes);
 const offersJson = ref(offers.boxes);
 
-// Dynamiczne dane do ProductInformation
 const pageData = computed(() => {
   const boxes = offerPageJson.value;
   if (!boxes.length) return [];
@@ -63,7 +98,7 @@ useHead({
     {
       name: 'description',
       content:
-        'Stylowe żaluzje na wymiar –  aluminium, szeroki wybór kolorów. Darmowy pomiar i indywidualna wycena.',
+        'Stylowe żaluzje na wymiar – aluminium, szeroki wybór kolorów. Darmowy pomiar i indywidualna wycena.',
     },
     {
       property: 'og:title',
@@ -88,5 +123,10 @@ useHead({
 </script>
 
 <style scoped lang="scss">
-/* ewentualne style dodatkowe */
+.Page {
+  &__main-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
 </style>

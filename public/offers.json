@@ -1,56 +1,83 @@
 {
   "boxes": [
     {
-      "title": "Rolety Dzień-noc",
-      "description": "Rolety tego typu to jedno z najnowocześniejszych i najbardziej popularnych rozwiązań na rynku dekoracji okiennych. Ten innowacyjny system można zamontować bezpośrednio na ramie okiennej, bez wiercenia w niej otworów. Największą zaletą rolet dzień-noc jest możliwość płynnego regulowania światła za pomocą poziomych pasów transparentnych i zaciemniających. Możesz dostosować potrzebną ilość promieni słonecznych w każdym pomieszczeniu. Roleta tworzy niepowtarzalny klimat każdego wnętrza, w którym zostanie założona.",
+      "title": "Rolety dzień - noc",
+      "description": [
+        "Rolety dzień-noc to nowoczesne osłony okienne na wymiar. Unikalny system naprzemiennych pasów pozwala na precyzyjną kontrolę wpadającego światła bez całkowitego podnoszenia materiału.",
+        "Oferujemy bezinwazyjny montaż bezpośrednio na ramie okiennej. To doskonała ochrona przed słońcem i stylowy element dekoracyjny, który nadaje wnętrzom elegancki klimat."
+      ],
       "url": "/images/offer/dezal-poznan-roleta-dzien-noc-2.webp",
       "type": "rolety-dzien-noc"
     },
     {
-      "title": "Rolety Materiałowe",
-      "description": "To najbardziej tradycyjne przesłony okienne, które chronią przed promieniami słońca i ciekawskim wzrokiem sąsiadów. Rolety materiałowe są najczęściej wybieranym systemem wystroju wnętrza wśród Polaków. Nadają się do każdego rodzaju pomieszczenia. Pełnią jednocześnie funkcję ochronną i dekoracyjną. Posiadamy w swojej ofercie materiały najwyższej jakości w szerokiej gamie kolorów i deseni. Dostępne są w kilku systemach montażowych oraz wariantach przepuszczalności światła — od transparentnych do 100% zaciemniających.",
+      "title": "Rolety materiałowe",
+      "description": [
+        "Klasyczne rolety materiałowe to sprawdzone osłony okienne. Skutecznie chronią przed intensywnym nasłonecznieniem oraz zapewniają pełną prywatność w każdym typie pomieszczenia.",
+        "W naszej ofercie znajdziesz szeroki wybór tkanin na wymiar – od rozpraszających światło po w 100% zaciemniające. Bogata paleta kolorów sprawia, że idealnie wkomponują się w każdą nowoczesną i klasyczną aranżację."
+      ],
       "url": "/images/offer/dezal-poznan-roleta-materialowa-3.webp",
       "type": "rolety-materialowe"
     },
     {
-      "title": "Rolety Rzymskie",
-      "description": "Rolety rzymskie coraz częściej stanowią niepowtarzalną dekorację okien w wielu domach, mieszkaniach i lokalach. Wykorzystywane są do aranżacji wnętrz klasycznych, nowoczesnych i bardzo stylowych. Systematycznie zastępują zasłony i firany. Mechanizm łańcuszkowy jest tak zbudowany, aby płynnie podnosił materiał, który układa się w delikatne fale. Użytkowanie go jest bardzo proste i szybkie zarówno przy ściąganiu, jak i podciąganiu rolety. Wszystkie tkaniny nadają się do prania lub czyszczenia chemicznego.",
+      "title": "Rolety rzymskie",
+      "description": [
+        "Rolety rzymskie to niezwykle elegancka dekoracja okienna, która z powodzeniem zastępuje tradycyjne firany. Podczas podciągania materiał układa się w stylowe fałdy, stając się główną ozdobą wnętrza.",
+        "Projektujemy rolety rzymskie na wymiar z najwyższej jakości materiałów. Tkaniny są praktyczne w utrzymaniu – większość z nich można łatwo zdjąć z rzepu i wyprać."
+      ],
       "url": "/images/offer/dezal-poznan-roleta-rzymska-0.jpg",
       "type": "rolety-rzymskie"
     },
     {
       "title": "Plisy",
-      "description": "To jedne z nielicznych osłon, które umożliwiają pełne otwarcie skrzydła okiennego pod kątem 90 stopni. Plisy są często stosowane przy nietypowych kształtach okien. Materiał można przesuwać w górę i w dół, dzięki czemu możliwe jest całkowite lub częściowe osłonięcie pomieszczenia przed słońcem. Spośród 700 wzorów tkanin, każdy na pewno znajdzie idealny dla siebie. Osobom ceniącym komfort cieplny, polecamy plisy typu duette, które wykonane są z tkaniny w kształcie plastra miodu, gwarantującej lepszą izolację termiczną.",
+      "description": [
+        "Plisy okienne to wszechstronne osłony, pozwalające na zasłonięcie dowolnego fragmentu szyby – od góry i od dołu. Płaski profil umożliwia swobodne otwieranie okna na oścież.",
+        "Wykonujemy plisy na wymiar, idealne także do okien o nietypowych kształtach. Dla lepszej izolacji termicznej polecamy plisy zaciemniające typu Duette o strukturze plastra miodu."
+      ],
       "url": "/images/offer/dezal-poznan-plisa-1.webp",
       "type": "plisy"
     },
     {
       "title": "Żaluzje",
-      "description": "Żaluzje drewniane to klasyka w naszym asortymencie, która oczarowała projektantów wnętrz i wielu użytkowników. Drewno, jest bardzo naturalnym materiałem, który nadaje pomieszczeniom wyjątkowego charakteru, a także potrafi stworzyć ciepły i niepowtarzalny klimat. Tego typu zasłony okienne bardzo umiejętnie podkreślają oraz dopełniają mniej i bardziej klasyczne wnętrza. W żaluzjach drewnianych do wyboru są trzy różne szerokości lameli: 25mm, 50mm lub 65mm (nowość). Wszystkie obsługiwane są przy pomocy prostego mechanizmu sznurkowego.",
+      "description": [
+        "Żaluzje to klasyka osłon okiennych, która zachwyca miłośników ponadczasowego designu. Pozwalają na bardzo precyzyjne sterowanie światłem dzięki regulacji kąta nachylenia lameli.",
+        "Oferujemy solidne żaluzje na wymiar w wielu wykończeniach, dopasowane do każdego wnętrza. Precyzyjne mechanizmy gwarantują ich płynną i bezawaryjną pracę przez lata."
+      ],
       "url": "/images/offer/dezal-poznan-zaluzja-drewniana-1.webp",
       "type": "zaluzje"
     },
     {
       "title": "Verticale",
-      "description": "Verticale to mało znane żaluzje pionowe, które są idealnym rozwiązaniem dla dużych powierzchni okiennych. Doskonale sprawdzą się wszędzie tam, gdzie nie można zastosować innych osłon np. w biurach, instytucjach publicznych czy salach szkoleniowych. Dobrze izolują wnętrze przed nadmiernym nagrzewaniem się, a także mają niewątpliwe zalety dekoracyjne. Klasyczne wzory nadadzą pomieszczeniom.",
+      "description": [
+        "Verticale to żaluzje pionowe, idealne do osłonięcia dużych powierzchni okiennych i witryn szklanych. Dziś coraz częściej stanowią nowoczesny element wystroju przestronnych domów prywatnych.",
+        "Nasze verticale na wymiar skutecznie izolują przed nagrzewaniem i pozwalają na płynne sterowanie światłem. Szeroki wybór tkanin dodaje każdej przestrzeni elegancji i prestiżu."
+      ],
       "url": "/images/offer/dezal-poznan-roleta-verticale-1.jpg",
       "type": "verticale"
     },
     {
       "title": "Moskitiery",
-      "description": "Moskitiery stanowią doskonałą blokadę dla insektów, a jednocześnie pozwalają wietrzyć wnętrze podczas upalnego dnia. Nie zmniejszają widoczności i są odporne na czynniki atmosferyczne – deszcz, temperaturę czy promieniowanie UV. Mocowane są za pomocą bezinwazyjnych obrotowych rygli, które dopasowywane są do grubości ramy okna. Moskitiery ramkowe doskonale sprawdzą się w oknach, które otwierane są wyłącznie w celu zapewnienia cyrkulacji powietrza. Profile i rygle są dobierane kolorystycznie do ich koloru.",
+      "description": [
+        "Moskitiery to skuteczna i ekologiczna ochrona domu przed owadami. Dzięki gęstej siatce możesz swobodnie wietrzyć mieszkanie w upalne dni, blokując dostęp insektom.",
+        "Oferujemy moskitiery ramkowe na wymiar z bezinwazyjnym montażem na profilu okna. Ich aluminiowe ramki łatwo dopasować do koloru stolarki, a siatka jest w pełni odporna na warunki atmosferyczne."
+      ],
       "url": "/images/offer/dezal-poznan-moskitiera-2.webp",
       "type": "moskitiery"
     },
     {
-      "title": "Żaluzje Aluminiowe",
-      "description": "Żaluzje aluminiowe to produkt ponadczasowy, który dobrze chroni wnętrze przed promieniami słonecznymi. Klasyka gatunku osłon okiennych, która świetnie wygląda i ogranicza nadmierne nagrzewanie się pomieszczenia. Dużą zaletą tego produktu jest płynna regulacja, która powoduje ustawienie lameli w sposób, który ogranicza przepuszczanie światła. Żaluzje aluminiowe występują w szerokościach 25 mm i 50 mm. Bogata gama kolorów w naszej ofercie pozwoli bez problemu dobrać odpowiedni odcień do wymarzonego wnętrza.",
+      "title": "Żaluzje aluminiowe",
+      "description": [
+        "Żaluzje aluminiowe to praktyczne osłony okienne, znakomicie redukujące letnie nagrzewanie się pomieszczeń. Są całkowicie odporne na wilgoć, co czyni je idealnym wyborem do łazienek czy kuchni.",
+        "Produkujemy żaluzje aluminiowe na wymiar z lamelami o szerokości 25 mm oraz 50 mm. Płynna regulacja i bogata paleta kolorów pozwalają na idealne dopasowanie do każdego wnętrza."
+      ],
       "url": "/images/offer/dezal-poznan-zaluzja-aluminiowa-1.webp",
       "type": "zaluzje-aluminiowe"
     },
     {
-      "title": "Żaluzje Drewniane",
-      "description": "Żaluzje drewniane to klasyka w naszym asortymencie, która oczarowała projektantów wnętrz i wielu użytkowników. Drewno, jest bardzo naturalnym materiałem, który nadaje pomieszczeniom wyjątkowego charakteru, a także potrafi stworzyć ciepły i niepowtarzalny klimat. Tego typu zasłony okienne bardzo umiejętnie podkreślają oraz dopełniają mniej i bardziej klasyczne wnętrza. W żaluzjach drewnianych do wyboru są trzy różne szerokości lameli: 25mm, 50mm lub 65mm (nowość). Wszystkie obsługiwane są przy pomocy prostego mechanizmu sznurkowego.",
+      "title": "Żaluzje drewniane",
+      "description": [
+        "Żaluzje drewniane to synonim elegancji, wprowadzający do wnętrza ciepły, naturalny klimat. Drewniane lamele perfekcyjnie komponują się zarówno z nowoczesnymi, jak i klasycznymi aranżacjami.",
+        "Dostarczamy żaluzje drewniane na wymiar z szerokościami lameli 25, 50 i 65 mm. Precyzyjny mechanizm pozwala wygodnie sterować słońcem, tworząc w pomieszczeniu wyjątkową, intymną atmosferę."
+      ],
       "url": "/images/offer/dezal-poznan-zaluzja-drewniana-1.webp",
       "type": "zaluzje-drewniane"
     }

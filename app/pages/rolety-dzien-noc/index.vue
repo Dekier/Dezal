@@ -1,6 +1,11 @@
 <template>
-  <div>
-    <ProductInformation :page-data="pageData" :bottom-images="bottomImages" />
+  <div class="Page__main-container">
+    <ProductInformation
+      :page-data="pageData"
+      :bottom-images="bottomImages"
+      :faq-title="faqTitle"
+      :faq-data="faqData"
+    />
     <Offer :offer-data="offerData" :offer-boxes-json="offersJson" />
   </div>
 </template>
@@ -12,10 +17,42 @@ import Offer from '~/components/Offer.vue';
 import offerPage from '~~/public/offers.json';
 import offers from '~~/public/offers-landing.json';
 
+// --- DANE DO FAQ (Rolety dzień noc) ---
+const faqTitle = ref('Najczęściej zadawane pytania');
+
+const faqData = ref([
+  {
+    question: 'Jak dokładnie działają rolety dzień noc?',
+    answer:
+      'Rolety dzień noc zbudowane są z naprzemiennych pasów materiału: zaciemniających oraz transparentnych (siateczki). Dwie warstwy tkaniny przesuwają się względem siebie, co pozwala na płynne regulowanie ilości światła wpadającego do wnętrza, bez konieczności całkowitego podnoszenia rolety.',
+  },
+  {
+    question:
+      'Czy rolety dzień noc można zamontować bezinwazyjnie (bez wiercenia)?',
+    answer:
+      'Tak! Oferujemy montaż bezinwazyjny – roleta jest wtedy zawieszana na specjalnych haczykach nakładanych na ramę okna lub przyklejana. Jeśli zależy Ci na stabilności, polecamy systemy w kasetach z prowadnicami, które montujemy w świetle szyby.',
+  },
+  {
+    question: 'Czy rolety dzień noc zapewnią 100% zaciemnienia w sypialni?',
+    answer:
+      'Standardowe tkaniny dzień noc świetnie chronią przed słońcem i wzrokiem sąsiadów, jednak przez strukturę pasów mogą przepuszczać delikatną poświatę. Jeśli zależy Ci na pełnym zaciemnieniu, w naszej ofercie posiadamy specjalne, podgumowane tkaniny dzień noc (tzw. 100% blackout), które w połączeniu z kasetą i prowadnicami dają doskonały efekt.',
+  },
+  {
+    question: 'Jak dbać i czyścić rolety dzień noc?',
+    answer:
+      'Czyszczenie jest bardzo proste. Na co dzień wystarczy regularnie omiatać roletę miotełką do kurzu lub suchą ściereczką z mikrofibry. W przypadku miejscowych zabrudzeń można delikatnie przetrzeć plamę lekko wilgotną gąbką z odrobiną szarego mydła. Tych rolet nie wolno prać w pralce ani prasować.',
+  },
+  {
+    question: 'Czy pasy na rolecie zgrają się z sąsiednim oknem?',
+    answer:
+      'Tak. Wykonując rolety na wymiar do okien znajdujących się obok siebie (np. drzwi balkonowe i okno obok), zawsze dbamy o tzw. pasowanie materiału. Dzięki temu pasy na obu roletach układają się w jednej linii, co wygląda bardzo estetycznie i spójnie.',
+  },
+]);
+// -------------------------------------
+
 const offerData = ref({
   title: 'Zobacz również',
-  description:
-    'Polecamy również nasze pozostałe produkty. W pełnej ofercie firmy Deżal znajdziesz:',
+  description: '',
   showBoxes: [
     'rolety-materialowe',
     'rolety-rzymskie',
@@ -84,4 +121,11 @@ useHead({
 });
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.Page {
+  &__main-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+</style>

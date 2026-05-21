@@ -1,0 +1,114 @@
+@use '@/assets/stylesheets/main-variables' as *;
+@use '@/assets/stylesheets/mixins' as *;
+.Questions {
+  &__main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 50px 0;
+    padding: 0 16px;
+  }
+
+  &__center-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 900px;
+    width: 100%; // Zapewnia pełną szerokość na mniejszych ekranach
+  }
+
+  &__title {
+    @include text(32px, left, $black-400, 500);
+    margin: 0 0 32px 0;
+
+    @include for-big-desktop-up {
+      @include text(48px, left, $black-400, 500);
+    }
+
+    @include for-phone-only {
+      @include text(26px, left, $black-400, 500);
+      margin: 0 0 10px 0;
+    }
+  }
+
+  &__item {
+    padding: 32px 0;
+    border-bottom: 1px solid $yellow-600;
+    padding-right: 72px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.2s ease; // Delikatny hover efekt
+    @include for-phone-only {
+      padding-right: 0;
+    }
+  }
+
+  &__question {
+    @include text(18px, left, $black-300, 500);
+    margin: 0;
+    transition: font-weight 400ms;
+    position: relative;
+    @include for-phone-only {
+      padding-right: 42px;
+    }
+  }
+
+  &__item:hover &__question {
+    font-weight: 600; // Opcjonalny hover na cały item
+    @include for-phone-only {
+      font-weight: 500;
+    }
+  }
+
+  /* Kluczowy element animacji. Wrapper chowa zawartość
+     i animuje swoją wysokość.
+  */
+  &__answer-wrapper {
+    display: grid; // Nowoczesny sposób na animację height: auto
+    grid-template-rows: 0fr; // Startowa wysokość: 0
+    transition:
+      grid-template-rows 0.3s ease-out,
+      opacity 0.3s ease-out,
+      margin 0.3s ease-out;
+    opacity: 0; // Startowa przezroczystość: ukryta
+    overflow: hidden;
+    margin-top: 0; // Margines zerowy, gdy zamknięte
+  }
+
+  &__answer {
+    @include text(16px, left, $black-300, 400);
+    line-height: 140%;
+    margin: 0; // Margines przeniesiony do wrappera
+    min-height: 0; // Wymagane dla poprawnego działania grid-template-rows
+  }
+
+  &__icon {
+    position: absolute;
+    right: -72px;
+    top: -10px; // Wyrównanie do góry paddingu pytania
+    transition:
+      transform 0.3s ease-in-out,
+      top 0.3s ease-in-out;
+
+    @include for-phone-only {
+      right: 0;
+      top: 50%;
+      transform: translate(0, -50%);
+      width: 32px;
+    }
+  }
+
+  // --- Style dla AKTYWNEGO (rozwiniętego) elementu ---
+  &__item--active {
+    .Questions__icon {
+      transform: rotate(180deg);
+      top: -12px; // Wyrównanie do góry paddingu pytania
+    }
+
+    .Questions__answer-wrapper {
+      grid-template-rows: 1fr; // Rozwiń do pełnej wysokości zawartości
+      opacity: 1; // Pokaż tekst
+      margin-top: 24px; // Przywróć margines między pytaniem a odpowiedzią
+    }
+  }
+}

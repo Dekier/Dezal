@@ -50,7 +50,7 @@ const hideCookies = () => {
 <style lang="scss">
 * {
   box-sizing: border-box;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
 }
 
 html,
