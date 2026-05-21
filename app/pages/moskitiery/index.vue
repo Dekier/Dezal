@@ -1,6 +1,11 @@
 <template>
-  <div>
-    <ProductInformation :page-data="pageData" :bottom-images="bottomImages" />
+  <div class="Page__main-container">
+    <ProductInformation
+      :page-data="pageData"
+      :bottom-images="bottomImages"
+      :faq-title="faqTitle"
+      :faq-data="faqData"
+    />
     <Offer :offer-data="offerData" :offer-boxes-json="offersJson" />
   </div>
 </template>
@@ -14,6 +19,44 @@ import { useHead } from '#imports';
 import ProductInformation from '~/components/Product-information.vue';
 import Offer from '~/components/Offer.vue';
 
+// --- DANE DO FAQ (Moskitiery) ---
+const faqTitle = ref('Najczęściej zadawane pytania');
+
+const faqData = ref([
+  {
+    question: 'Czy montaż moskitiery okiennej wymaga wiercenia w oknach?',
+    answer:
+      'Nie! Najpopularniejsze moskitiery ramkowe montuje się całkowicie bezinwazyjnie za pomocą bezinwazyjnych uchwytów (tzw. rygli obrotowych), które zahacza się o uszczelkę ramy okiennej. Dzięki temu montaż jest szybki i nie narusza gwarancji na okna.',
+  },
+  {
+    question: 'Czy muszę zdejmować moskitiery ramkowe na zimę?',
+    answer:
+      'Zalecamy demontaż moskitier na okres zimowy. Niskie temperatury, szron i zalegający śnieg mogą z czasem osłabić strukturę siatki i skrócić jej żywotność. Samo zdjęcie moskitiery ramkowej jest banalnie proste i zajmuje zaledwie kilkanaście sekund.',
+  },
+  {
+    question: 'Czy moskitiera zaciemnia pomieszczenie i ogranicza widoczność?',
+    answer:
+      'Współczesne siatki (najczęściej wykonane z włókna szklanego powlekanego PCV) są bardzo cienkie i wytrzymałe. Siatka w kolorze szarym lub czarnym jest niemal niewidoczna z perspektywy pokoju – nie zabiera światła i w żaden sposób nie blokuje cyrkulacji świeżego powietrza.',
+  },
+  {
+    question: 'Czy ramka moskitiery będzie pasować do koloru moich okien?',
+    answer:
+      'Zdecydowanie tak. Ramki moskitier wykonane są z trwałego aluminium i występują w bogatej palecie kolorów (m.in. biel, antracyt, brąz), a także w okleinach drewnopodobnych (np. złoty dąb, orzech, mahoń, winchester). Dzięki temu profil idealnie wtapia się w ramę okna i staje się niemal niewidocznym elementem elewacji.',
+  },
+  {
+    question:
+      'Czy po założeniu moskitiery ramkowej mogę normalnie zamykać i uchylać okno?',
+    answer:
+      'Tak, w niczym to nie przeszkadza. Moskitiery ramkowe są zaprojektowane w taki sposób, aby ich kołnierz idealnie i płasko przylegał do zewnętrznej uszczelki okna. Możesz swobodnie zamykać, otwierać i uchylać skrzydło okienne przez cały sezon, bez konieczności zdejmowania moskitiery.',
+  },
+  {
+    question: 'Jak prawidłowo czyścić i myć moskitiery z kurzu i pyłków?',
+    answer:
+      'Czyszczenie jest bardzo proste. Po szybkim zdjęciu ramki z okna wystarczy wstawić ją pod prysznic lub do wanny i spłukać letnią wodą z użyciem słuchawki prysznicowej. Przy większych zabrudzeniach można delikatnie przetrzeć siatkę miękką gąbką z odrobiną szarego mydła. Odradzamy używanie silnych środków chemicznych oraz myjek ciśnieniowych, które mogłyby rozerwać włókna.',
+  },
+]);
+// ------------------------------------
+
 const bottomImages = ref([
   { id: 1, url: '/images/moskitiery/dezal-poznan-moskitiera-2.webp' },
   { id: 2, url: '/images/moskitiery/dezal-poznan-moskitiera-3.webp' },
@@ -22,8 +65,7 @@ const bottomImages = ref([
 
 const offerData = ref({
   title: 'Zobacz również',
-  description:
-    'Polecamy również nasze pozostałe produkty. W pełnej ofercie firmy Deżal znajdziesz:',
+  description: '',
   showBoxes: [
     'rolety-dzien-noc',
     'rolety-materialowe',
@@ -76,3 +118,12 @@ useHead({
   canonical: 'https://dezalroletypoznan.pl/moskitiery',
 });
 </script>
+
+<style scoped lang="scss">
+.Page {
+  &__main-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+</style>

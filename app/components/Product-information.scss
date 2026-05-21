@@ -2,51 +2,81 @@
 @use '@/assets/stylesheets/mixins' as *;
 .ProductInformation {
   &__main-container {
-    margin-top: 100px;
-    @include for-tablet-portrait-up {
-      margin-top: 170px;
-    }
+    background-color: $yellow-cos;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 100px;
+    padding: 100px 16px 0;
   }
 
   &__center-container {
-    width: 100%;
-    width: 1200px;
-    display: flex;
-    flex-direction: row;
+    width: 1440px;
     justify-content: space-between;
-    padding: 15px;
-    margin: 100px auto 150px;
-    flex-wrap: wrap;
+    gap: 32px;
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    padding: 0 16px 50px;
+    max-width: 1440px;
+    @include for-desktop-up {
+      padding: 100px 0 150px;
+      flex-direction: row;
+      gap: 69px;
+    }
+    @include for-tablet {
+      padding: 100px 16px 100px;
+      gap: 50px;
+    }
   }
 
   &__main-picture {
-    width: 600px;
-    height: 400px;
-    box-shadow: 0px 2px 10px #ccc;
+    // width: 100%;
+    width: 100%;
+    max-height: 400px;
+    box-shadow: 0px 2px 10px $black-200;
     border-radius: 8px;
     object-fit: cover;
-    align-self: center;
+    flex: 1;
+    @include for-desktop-up {
+      width: 50%;
+      max-height: 577px;
+    }
   }
 
   &__product-description {
-    width: 500px;
-    font-size: 15px;
-    color: #7e7e7e;
-    font-size: 15px;
-    line-height: 24px;
-    margin: 0;
+    @include text(16px, left, $black-300, 400);
+    line-height: 120%;
+    margin: 0 0 12px;
+    @include for-tablet {
+      @include text(24px, left, $black-300, 400);
+      margin: 0 0 12px;
+    }
   }
 
   &__bottom-realizations-box {
-    width: 300px;
-    height: 210px;
-    margin: 10px;
+    min-width: calc(50% - 9px);
+    flex: 1;
+    height: 300px;
     box-shadow: 0px 2px 10px #ccc;
     display: flex;
     flex-direction: column;
     position: relative;
     align-items: center;
     overflow: hidden;
+    @include for-desktop-up {
+      // width: calc(25% - 9px);
+      max-width: 600px;
+      min-width: unset;
+      flex: 1;
+    }
+
+    @include for-phone-only {
+      width: 100%;
+      min-width: unset;
+      flex: unset;
+    }
   }
 
   &__bottom-realizations-image {
@@ -66,9 +96,8 @@
   }
 
   &__info {
-    margin-top: 16px;
+    margin: 0;
     width: 450px;
-    font-size: 15px;
     font-size: 15px;
     line-height: 24px;
   }
@@ -76,53 +105,51 @@
   &__bottom-realizations {
     display: flex;
     flex-direction: row;
-    padding: 5px;
     flex-wrap: wrap;
-    justify-content: center;
+    gap: 12px;
   }
 
   &__center-title {
     display: flex;
     justify-content: left;
-    margin: 0 0 30px 0;
-    font-size: $font-size-title;
-    @include for-tablet-portrait-up {
-      margin: 0 0 40px 0;
+
+    @include text(32px, left, $black-400, 700);
+    line-height: 105%;
+    margin: 0 0 24px;
+    @include for-tablet {
+      @include text(56px, left, $black-400, 700);
+      margin: 0 0 36px;
     }
   }
 
   &__bottom-title {
-    text-align: center;
-    font-size: $font-size-title;
-    margin: auto;
-    margin: 20px 0 40px 0;
+    @include text(32px, left, $black-400, 500);
+    margin: 0 0 42px 0;
+
+    @include for-big-desktop-up {
+      @include text(48px, left, $black-400, 500);
+    }
+
+    @include for-phone-only {
+      @include text(26px, left, $black-400, 500);
+    }
   }
 
   &__bottom-container {
-    max-width: 1200px;
-    margin: auto;
-    margin-bottom: 100px;
-    padding: 0 15px;
+    max-width: 1440px;
+    margin: 0 auto 100px;
+    padding: 0 16px;
     cursor: pointer;
+    width: 100%;
   }
 
   &__center-text {
     display: flex;
-    order: 1;
     flex-direction: column;
     justify-content: center;
-
-    &--inverted {
-      order: 0;
-    }
-  }
-
-  &__center-picture {
-    order: 0;
-    display: flex;
-
-    &--inverted {
-      order: 1;
+    max-width: 100%;
+    @include for-desktop-up {
+      max-width: 40%;
     }
   }
 
@@ -156,29 +183,12 @@
   }
 
   @media only screen and (max-width: 1200px) {
-    &__center-container {
-      width: 100%;
-      display: flex;
-      margin: 20px auto 30px;
-      flex-direction: column;
+    &__main-container {
+      margin-bottom: 50px;
     }
 
     &__bottom-container {
       margin-bottom: 70px;
-    }
-
-    &__center-text {
-      order: 0;
-      margin: auto;
-    }
-
-    &__main-picture {
-      margin: auto;
-    }
-
-    &__center-picture {
-      order: 1;
-      margin: 30px auto;
     }
 
     &__title {
@@ -198,17 +208,7 @@
     }
   }
 
-  @media only screen and (max-width: 550px) {
-    &__main-picture {
-      width: 100%;
-      height: 300px;
-    }
-
-    &__center-picture {
-      width: 100%;
-      margin: 30px 0;
-    }
-
+  @media only screen and (max-width: 600px) {
     &__bottom-realizations {
       margin: auto;
     }
@@ -233,19 +233,7 @@
     }
   }
 
-  @media (max-width: 450px) {
-    &__center-title,
-    &__bottom-title {
-      font-size: $font-size-title-mobile;
-    }
-  }
-
   @media (max-width: 370px) {
-    &__bottom-realizations {
-      padding: 0px;
-      width: 100%;
-    }
-
     &__bottom-realizations-image {
       width: 100%;
     }

@@ -1,6 +1,11 @@
 <template>
-  <div>
-    <ProductInformation :page-data="pageData" :bottom-images="bottomImages" />
+  <div class="Page__main-container">
+    <ProductInformation
+      :page-data="pageData"
+      :bottom-images="bottomImages"
+      :faq-title="faqTitle"
+      :faq-data="faqData"
+    />
     <Offer :offer-data="offerData" :offer-boxes-json="offersJson" />
   </div>
 </template>
@@ -12,6 +17,38 @@ import Offer from '~/components/Offer.vue';
 import offerPage from '~~/public/offers.json';
 import offers from '~~/public/offers-landing.json';
 
+// --- DANE DO FAQ (Rolety rzymskie) ---
+const faqTitle = ref('Najczęściej zadawane pytania (FAQ) – Rolety rzymskie');
+
+const faqData = ref([
+  {
+    question: 'Czy rolety rzymskie można prać?',
+    answer:
+      'Tak, to jedna z ich największych zalet! Materiał jest przypinany do mechanizmu za pomocą rzepu. Wystarczy odpiąć tkaninę, wyciągnąć pręciki usztywniające (fiszbiny) oraz obciążnik dolny, a następnie wyprać materiał zgodnie z zaleceniami producenta (zazwyczaj delikatne pranie w 30°C).',
+  },
+  {
+    question: 'Gdzie montuje się rolety rzymskie?',
+    answer:
+      'Montaż rolet rzymskich jest bardzo uniwersalny. Najczęściej montuje się je do ściany nad wnęką okienną lub bezpośrednio do sufitu. Istnieje również możliwość montażu bezinwazyjnego na ramie skrzydła okiennego za pomocą specjalnych uchwytów.',
+  },
+  {
+    question: 'Czy rolety rzymskie dobrze zaciemniają pomieszczenie?',
+    answer:
+      'Poziom zaciemnienia zależy całkowicie od wybranej tkaniny. Oferujemy materiały transparentne (zastępujące firany), półzaciemniające oraz w 100% zaciemniające (typu blackout). Należy jednak pamiętać, że przy montażu ściennym/sufitowym mogą występować delikatne boczne prześwity światła.',
+  },
+  {
+    question: 'Ile miejsca nad oknem zajmuje zwinięta roleta rzymska?',
+    answer:
+      'Po całkowitym podciągnięciu do góry, materiał rolety rzymskiej układa się w ozdobne fałdy, tworząc tzw. pakiet. W zależności od wysokości rolety i grubości materiału, pakiet ten zajmuje zazwyczaj od 20 do 30 cm. Należy o tym pamiętać planując montaż do ściany lub sufitu, aby zwinięta roleta nie blokowała swobodnego otwierania skrzydeł okiennych.',
+  },
+  {
+    question: 'Czy rolety rzymskie nadają się do kuchni lub łazienki?',
+    answer:
+      'Tak, jednak zalecamy wybór odpowiednich tkanin, głównie poliestrowych, które nie chłoną wilgoci i zapachów tak mocno jak naturalny len czy bawełna. Są one również znacznie łatwiejsze w czyszczeniu i nie kurczą się po praniu.',
+  },
+]);
+// ----------------------------------------
+
 const bottomImages = ref([
   { id: 1, url: '/images/rolety/dezal-poznan-roleta-rzymska-1.webp' },
   { id: 2, url: '/images/rolety/dezal-poznan-roleta-rzymska-2.webp' },
@@ -20,8 +57,7 @@ const bottomImages = ref([
 
 const offerData = ref({
   title: 'Zobacz również',
-  description:
-    'Polecamy również nasze pozostałe produkty. W pełnej ofercie firmy Deżal znajdziesz:',
+  description: '',
   showBoxes: [
     'rolety-dzien-noc',
     'rolety-materialowe',
@@ -85,4 +121,10 @@ useHead({
 
 <style scoped lang="scss">
 /* opcjonalne dodatkowe style */
+.Page {
+  &__main-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
 </style>
