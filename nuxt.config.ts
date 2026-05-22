@@ -1,19 +1,5 @@
-import { fileURLToPath } from 'node:url';
-import { dirname, resolve } from 'node:path';
-import fs from 'node:fs';
-
-const __dirname = dirname(fileURLToPath(import.meta.url));
-
 const siteUrl =
   process.env.NUXT_PUBLIC_SITE_URL || 'https://dezalroletypoznan.pl';
-
-// Teraz możesz bezpiecznie użyć resolve:
-const articlesDir = resolve(__dirname, 'assets/content/articles');
-const articleRoutes = fs.existsSync(articlesDir)
-  ? fs
-      .readdirSync(articlesDir)
-      .map((file) => `/wiedza/${file.replace('.json', '')}`)
-  : [];
 export default defineNuxtConfig({
   ssr: true,
 
@@ -39,10 +25,21 @@ export default defineNuxtConfig({
 
   nitro: {
     preset: 'vercel-static',
+    serverAssets: [
+      {
+        baseName: 'articles', // To będzie nazwa, pod którą odwołasz się w kodzie
+        dir: 'server/content/articles', // Ścieżka relatywna do głównego katalogu projektu
+      },
+    ],
     prerender: {
       crawlLinks: true, // Nitro samo zmapuje wszystkie dynamiczne i statyczne linki
-      routes: ['/', ...articleRoutes], // Wystarczy punkt wejścia
       failOnError: false,
+      routes: [
+        '/',
+        // '/llms.txt',
+        // '/llms-full.txt',
+        '/wiedza/czyszczenie-poradnik',
+      ],
     },
     compressPublicAssets: { gzip: true, brotli: true },
   },
