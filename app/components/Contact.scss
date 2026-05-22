@@ -7,6 +7,9 @@
     margin: 0 auto;
     width: 100%;
     background-color: $grey-white;
+    @include for-phone-only {
+      width: unset;
+    }
   }
 
   &__center-container {
@@ -17,6 +20,9 @@
     padding: 100px 16px 0;
     width: 100%;
     position: relative;
+    @include for-phone-only {
+      width: unset;
+    }
   }
 
   &__info-button-close {
