@@ -201,7 +201,6 @@
 
   &__badge-text {
     margin: 0;
-    letter-spacing: 0.1px;
     @include text(12px, center, $black-400, 600);
   }
 }

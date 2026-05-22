@@ -39,7 +39,6 @@
     width: 100%;
     max-width: 720px;
     @include text(26px, left, $black-400, 500);
-    letter-spacing: 0.5px;
     margin: 24px auto;
 
     @include for-phone-only {
@@ -74,7 +73,6 @@
 
   &__item-title {
     @include text(16px, left, $black-400, 500);
-    letter-spacing: 0.5px;
     margin: 12px auto 0;
     width: 100%;
     @include for-tablet {

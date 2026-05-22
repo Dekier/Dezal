@@ -170,7 +170,6 @@
 
   &__stars {
     color: $yellow-500;
-    letter-spacing: 2px;
     font-size: 18px;
     max-width: max-content;
     @include for-phone-only {
