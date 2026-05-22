@@ -39,6 +39,7 @@ export default defineNuxtConfig({
         // '/llms.txt',
         // '/llms-full.txt',
         '/wiedza/czyszczenie-poradnik',
+        '/wiedza/co-najlepiej-zatrzymuje-swiatlo',
       ],
     },
     compressPublicAssets: { gzip: true, brotli: true },
@@ -117,6 +118,7 @@ export default defineNuxtConfig({
 
   gtag: {
     id: 'G-7TFFQYCBP3',
+    enabled: process.env.NODE_ENV === 'production',
   },
 
   features: {
