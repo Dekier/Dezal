@@ -14,10 +14,10 @@
     width: calc(100% - 32px);
     display: flex;
     flex-direction: column;
-    margin: 120px auto;
+    margin: 120px auto 50px;
 
     @include for-phone-only {
-      margin: 90px auto;
+      margin: 90px auto 50px;
     }
   }
 
@@ -50,14 +50,14 @@
   &__title {
     width: 100%;
     line-height: 125%;
-    @include text(30px, left, $black-400, 500);
+    @include text(32px, left, $black-400, 500);
     margin: 16px auto;
     letter-spacing: 1px;
     @include for-phone-only {
-      @include text(26px, left, $black-400, 500);
+      @include text(28px, left, $black-400, 500);
     }
     @include for-tablet {
-      @include text(32px, left, $black-400, 500);
+      @include text(38px, left, $black-400, 500);
       margin: 32px auto 24px;
     }
 

@@ -4,35 +4,21 @@
   &__main-container {
     display: flex;
     max-width: 720px;
-    margin: 0 auto;
+    margin: 32px auto 0;
   }
   &__link {
-    min-width: 240px;
-    background-color: $yellow-500;
-    padding: 11px 32px;
-    border-radius: 999px;
-    border: 1px solid $yellow-500;
-    box-shadow: 0 4px 0 0 $yellow-500;
-    @include text(16px, center, $color-white, 500);
-    line-height: 24px;
+    width: auto;
+    height: 56px;
     cursor: pointer;
-    text-decoration: unset;
+    display: flex;
+    flex-direction: row;
     position: relative;
-    top: 0;
-    z-index: 1;
-    transition:
-      top 300ms,
-      box-shadow 300ms;
-    @media (hover: hover) {
-      &:hover {
-        top: 4px;
-        box-shadow: 0 0 0 0 $yellow-500;
-      }
-    }
-
-    @include for-phone-only {
-      padding: 8px 10px;
-      @include text(12px, center, $color-white, 500);
+    text-decoration: none;
+    @include text(16px, left, $black-400, 500);
+    align-items: center;
+    @include for-tablet-portrait-up {
+      margin: 0 0 20px;
+      @include text(20px, left, $black-400, 500);
     }
 
     &--center {
@@ -41,5 +27,34 @@
     &--right {
       margin: 0 0 0 auto;
     }
+  }
+
+  &__link-arrow-box {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    border: 2px solid $yellow-500;
+    margin-left: 36px;
+    position: relative;
+    @include for-tablet-portrait-up {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__link-arrow-icon {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    transition: transform 400ms;
+    @include for-tablet-portrait-up {
+      width: 48px;
+    }
+  }
+
+  &__link:hover &__link-arrow-icon {
+    transform: translateY(-50%) translateX(7px);
   }
 }

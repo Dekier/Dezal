@@ -6,6 +6,13 @@
       :class="`Button__link--${item.content.type}`"
     >
       {{ item.content.btn_text }}
+      <div class="Button__link-arrow-box">
+        <img
+          src="/icons/arrow.svg"
+          alt="icon arrow"
+          class="Button__link-arrow-icon"
+        />
+      </div>
     </a>
   </div>
 </template>

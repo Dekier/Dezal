@@ -17,12 +17,13 @@
 
   &__image {
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
     border-radius: 16px;
     margin-bottom: 20px;
     display: flex;
     max-width: 920px;
+    max-height: 520px;
     margin: 0 auto;
     box-shadow: 0 0 1px 0 rgba($color: $black-400, $alpha: 1);
   }
