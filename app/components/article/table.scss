@@ -1,0 +1,87 @@
+@use '@/assets/stylesheets/main-variables' as *;
+@use '@/assets/stylesheets/mixins' as *;
+
+.Table {
+  &__main-container {
+    display: flex;
+    margin: 24px 0;
+    padding-bottom: 12px;
+    overflow-x: auto;
+    @include for-tablet-landscape-up {
+      padding-bottom: 0;
+    }
+  }
+  &__center-container {
+    width: 920px;
+    border-radius: 16px;
+    border: 1px solid $black-400;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  &__rows {
+    display: flex;
+    flex-direction: row;
+    width: 920px;
+    @include for-phone-only {
+      width: 720px;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $black-400;
+    }
+  }
+
+  &__item {
+    padding: 16px;
+
+    &:not(:last-child) {
+      border-right: 1px solid $black-400;
+    }
+
+    span {
+      @include text(14px, left, $black-400, 400);
+      line-height: 140%;
+      display: flex;
+    }
+
+    &--bold {
+      span {
+        @include text(14px, left, $black-400, 500);
+        line-height: 140%;
+        display: flex;
+      }
+      a {
+        @include text(14px, left, $yellow-600, 500);
+        line-height: 140%;
+        display: flex;
+      }
+    }
+
+    a {
+      @include text(14px, left, $yellow-600, 500);
+      color: $yellow-600;
+      text-decoration: unset;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    @include for-phone-only {
+      padding: 12px;
+      span {
+        @include text(12px, left, $black-400, 400);
+      }
+
+      &--bold {
+        span {
+          @include text(12px, left, $black-400, 500);
+        }
+        a {
+          @include text(12px, left, $yellow-600, 500);
+        }
+      }
+    }
+  }
+}

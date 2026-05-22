@@ -1,0 +1,58 @@
+@use '@/assets/stylesheets/main-variables' as *;
+@use '@/assets/stylesheets/mixins' as *;
+
+.List {
+  &__main-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 720px;
+    margin: 0 auto 12px;
+    gap: 16px;
+  }
+
+  &__item {
+    display: flex;
+    line-height: 150%;
+  }
+
+  &__item-text {
+    @include text(18px, left, rgba($black-400, 0.7), 300);
+    @include for-phone-only {
+      @include text(16px, left, rgba($black-400, 0.7), 300);
+    }
+  }
+
+  &__item-text-bold {
+    @include text(18px, left, rgba($black-400, 0.85), 500);
+    @include for-phone-only {
+      @include text(16px, left, rgba($black-400, 0.85), 500);
+    }
+  }
+
+  &__item-link {
+    @include text(18px, left, $yellow-600, 500);
+    text-decoration: unset;
+    &:hover {
+      text-decoration: underline;
+    }
+    @include for-phone-only {
+      @include text(16px, left, $yellow-600, 500);
+    }
+  }
+
+  &__item-dot {
+    margin-right: 8px;
+    @include text(18px, left, $yellow-600, 500);
+    @include for-phone-only {
+      @include text(16px, left, $yellow-600, 500);
+    }
+  }
+
+  &__item-number {
+    margin-right: 8px;
+    @include text(18px, left, $yellow-600, 500);
+    @include for-phone-only {
+      @include text(16px, left, $yellow-600, 500);
+    }
+  }
+}

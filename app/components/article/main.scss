@@ -1,0 +1,261 @@
+@use '@/assets/stylesheets/main-variables' as *;
+@use '@/assets/stylesheets/mixins' as *;
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
+.ArticleMain {
+  &__page-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__center-container {
+    width: calc(100% - 32px);
+    display: flex;
+    flex-direction: column;
+    margin: 120px auto;
+
+    @include for-phone-only {
+      margin: 90px auto;
+    }
+  }
+
+  &__image-header {
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    max-width: 920px;
+    margin: 0 auto;
+
+    @include for-tablet {
+      height: 300px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    display: flex;
+    max-width: 920px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    width: 100%;
+    line-height: 125%;
+    @include text(30px, left, $black-400, 500);
+    margin: 16px auto;
+    letter-spacing: 1px;
+    @include for-phone-only {
+      @include text(26px, left, $black-400, 500);
+    }
+    @include for-tablet {
+      @include text(32px, left, $black-400, 500);
+      margin: 20px auto 42px;
+    }
+
+    max-width: 720px;
+
+    user-select: text !important;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  &__section-title {
+    @include text(24px, left, $black-400, 500);
+    letter-spacing: 0.5px;
+    margin: 24px auto 0;
+    max-width: 720px;
+
+    user-select: text !important;
+
+    @include for-phone-only {
+      @include text(22px, left, $black-400, 500);
+    }
+    @include for-tablet {
+      margin: 16px auto 0;
+      @include text(26px, left, $black-400, 500);
+    }
+  }
+
+  &__subsection-title {
+    @include text(20px, left, $black-400, 500);
+    letter-spacing: 0.5px;
+    margin: 24px auto 0;
+    max-width: 720px;
+
+    user-select: text !important;
+
+    @include for-phone-only {
+      @include text(18px, left, $black-400, 500);
+    }
+    @include for-tablet {
+      margin: 12px auto 0;
+      @include text(22px, left, $black-400, 500);
+    }
+  }
+
+  &__paragraph {
+    line-height: 150%;
+    margin: 0 auto;
+    max-width: 720px;
+
+    user-select: text !important;
+
+    span {
+      letter-spacing: 1px;
+      @include text(18px, left, rgba($black-400, 0.75), 300);
+    }
+    strong {
+      letter-spacing: 1px;
+      @include text(18px, left, rgba($black-400, 0.85), 500);
+    }
+
+    a {
+      letter-spacing: 1px;
+      @include text(18px, left, $yellow-500, 500);
+      text-decoration: unset;
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    @include for-phone-only {
+      span {
+        @include text(16px, left, rgba($black-400, 0.75), 300);
+      }
+      strong {
+        @include text(16px, left, rgba($black-400, 0.85), 500);
+      }
+      a {
+        @include text(16px, left, $yellow-500, 500);
+        text-decoration: unset;
+        cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    @include for-tablet {
+      margin: 0 auto 12px;
+    }
+  }
+
+  &__code {
+    @include text(16px, left, $black-400, 400);
+
+    user-select: text !important;
+  }
+
+  &__categories {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  &__category {
+    @include text(16px, left, $black-400, 500);
+    letter-spacing: 0.3px;
+    padding: 8px 12px;
+    border-radius: 16px;
+    background-color: rgba($black-400, 0.1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    &:hover {
+      background-color: rgba($black-400, 0.15);
+    }
+
+    user-select: text !important;
+  }
+
+  &__category-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    object-position: center;
+    margin: auto 0;
+  }
+
+  &__actor-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 720px;
+    margin: 24px auto 12px;
+    width: 100%;
+  }
+
+  &__actor-img {
+    height: 52px;
+    width: 52px;
+    object-fit: cover;
+    border-radius: 999px;
+    margin-right: 12px;
+  }
+
+  &__actor-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  &__actor-name {
+    @include text(14px, left, $black-400, 500);
+  }
+
+  &__actor-label {
+    @include text(12px, left, $black-400, 400);
+  }
+
+  &__actor-date {
+    margin: 0;
+    @include text(12px, left, $black-400, 400);
+    @include for-tablet {
+      margin: 0 0 0 auto;
+    }
+  }
+
+  &__actor-row {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+  }
+
+  &__actor-column-right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 0;
+    margin: 24px 0 0 0;
+    width: 100%;
+    height: 52px;
+    @include for-tablet {
+      width: auto;
+      margin: 0 0 0 auto;
+    }
+  }
+
+  &__actor-tag {
+    padding: 2px 10px;
+    background-color: rgba($color: $yellow-500, $alpha: 0.05);
+    border: 1px solid $yellow-500;
+    border-radius: 999px;
+    @include text(12px, left, $yellow-500, 400);
+  }
+}

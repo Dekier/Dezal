@@ -1,0 +1,140 @@
+{
+  "title": "Sharp 3D Scenes with Custom PixelRatio in TresJS",
+  "meta_description": "Dowiedz się, jak kontrolować pixelRatio w scenach 3D z TresJS, aby uzyskać ostry obraz bez utraty wydajności. Praktyczny poradnik dla deweloperów Vue.",
+  "img": "/images/minimal.webp",
+  "date": "14 październia 2024",
+  "actor": "Marcin Dekier",
+  "actor_img": "/image/article/marcin_dekier.png",
+  "actor_label": "Założyciel Pravisto",
+  "actor_description": "Założyciel Pravisto",
+  "tags": ["e-commerce", "konfigurator", "kreator"],
+  "content": [
+    {
+      "type": "section_title",
+      "content": "Introduction"
+    },
+    {
+      "type": "subsection_title",
+      "content": "Introduction 2"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "value": "To jest paragraf, w którym chcemy " },
+        { "type": "bold", "value": "pogrubić " },
+        {
+          "type": "link",
+          "value": "trezzba link",
+          "url": "https://www.youtube.com/watch?v=LTK5_OnIwD8"
+        },
+        { "type": "text", "value": " niektóre słowa, aby je wyróżnić." }
+      ]
+    },
+    {
+      "type": "list",
+      "content": {
+        "type": "dot",
+        "list": [
+          [
+            { "type": "text", "value": "Podejście do " },
+            { "type": "bold", "value": "Klienta " },
+            {
+              "type": "link",
+              "value": "trezzba link ",
+              "url": "https://www.youtube.com/watch?v=LTK5_OnIwD8"
+            }
+          ],
+          [
+            { "type": "text", "value": "Partnerskie, " },
+            { "type": "bold", "value": "zwinne" }
+          ]
+        ]
+      }
+    },
+    {
+      "type": "list",
+      "content": {
+        "type": "number",
+        "list": [
+          [
+            { "type": "text", "value": "Podejście do " },
+            { "type": "bold", "value": "Klienta" }
+          ],
+          [
+            { "type": "text", "value": "Partnerskie, " },
+            {
+              "type": "link",
+              "value": "trezzba link ",
+              "url": "https://www.youtube.com/watch?v=LTK5_OnIwD8"
+            },
+            { "type": "bold", "value": "zwinne" },
+            { "type": "text", "value": ", dedykowany zespół" }
+          ]
+        ]
+      }
+    },
+    {
+      "type": "table",
+      "content": {
+        "rows_sizes": [15, 35, 25, 25],
+        "rows": [
+          [
+            { "text": "Główna Siła", "bold": true },
+            {
+              "text": "Elastyczność i Najwyższa Jakość Technologiczna",
+              "bold": true,
+              "url": "https://www.youtube.com/watch?v=LTK5_OnIwD8"
+            },
+            { "text": "Kompleksowość i Prestiż", "bold": false },
+            { "text": "Szeroki Zakres Usług", "bold": false }
+          ],
+          [
+            { "text": "Podejście do Klienta", "bold": true },
+            { "text": "Partnerskie, zwinne, dedykowany zespół", "bold": true },
+            { "text": "Korporacyjne, długi proces wdrożenia", "bold": false },
+            { "text": "Agencyjne, jeden z wielu projektów", "bold": false }
+          ]
+        ]
+      }
+    },
+    {
+      "type": "asset",
+      "content": {
+        "type": "video",
+        "src": "/video/house.mp4"
+      }
+    },
+    {
+      "type": "asset",
+      "content": {
+        "type": "image",
+        "src": "/image/men.webp",
+        "alt": "avatar"
+      }
+    },
+    {
+      "type": "button",
+      "content": {
+        "type": "left",
+        "btn_text": "Zobacz demo",
+        "btn_link": "https://pravisto.pl"
+      }
+    },
+    {
+      "type": "button",
+      "content": {
+        "type": "center",
+        "btn_text": "Zobacz demo",
+        "btn_link": "https://pravisto.pl"
+      }
+    },
+    {
+      "type": "button",
+      "content": {
+        "type": "right",
+        "btn_text": "Zobacz demo",
+        "btn_link": "https://pravisto.pl"
+      }
+    }
+  ]
+}

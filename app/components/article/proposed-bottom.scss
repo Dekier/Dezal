@@ -1,0 +1,84 @@
+@use '@/assets/stylesheets/main-variables' as *;
+@use '@/assets/stylesheets/mixins' as *;
+.ProposedBottom {
+  &__main-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 720px;
+    width: 100%;
+    margin: 0 auto;
+    width: calc(100% - 32px);
+    margin: 0 auto;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    max-width: 720px;
+    gap: 24px;
+
+    @include for-tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item-container {
+    display: flex;
+    flex-direction: column;
+    text-decoration: unset;
+    margin-bottom: 12px;
+    cursor: pointer;
+    max-width: 100%;
+    @include for-tablet {
+      max-width: calc(50% - 12px);
+    }
+  }
+
+  &__main-title {
+    width: 100%;
+    max-width: 720px;
+    @include text(26px, left, $black-400, 500);
+    letter-spacing: 0.5px;
+    margin: 24px auto;
+
+    @include for-phone-only {
+      @include text(22px, left, $black-400, 500);
+    }
+    @include for-tablet {
+      @include text(28px, left, $black-400, 500);
+    }
+  }
+  &__image-container {
+    width: 100%;
+    height: 150px;
+    border-radius: 12px;
+    overflow: hidden;
+    @include for-tablet {
+      height: 115px;
+    }
+  }
+  &__image-header {
+    width: 100%;
+    height: 100%;
+    transition: scale 500ms;
+    object-fit: cover;
+    @include for-tablet {
+      object-fit: contain;
+    }
+  }
+
+  &__item-container:hover &__image-header {
+    scale: 1.1;
+  }
+
+  &__item-title {
+    @include text(16px, left, $black-400, 500);
+    letter-spacing: 0.5px;
+    margin: 12px auto 0;
+    width: 100%;
+    @include for-tablet {
+      @include text(18px, left, $black-400, 500);
+    }
+  }
+}

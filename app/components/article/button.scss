@@ -1,0 +1,45 @@
+@use '@/assets/stylesheets/main-variables' as *;
+@use '@/assets/stylesheets/mixins' as *;
+.Button {
+  &__main-container {
+    display: flex;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  &__link {
+    min-width: 240px;
+    background-color: $yellow-500;
+    padding: 11px 32px;
+    border-radius: 999px;
+    border: 1px solid $yellow-500;
+    box-shadow: 0 4px 0 0 $yellow-500;
+    @include text(16px, center, $color-white, 500);
+    line-height: 24px;
+    cursor: pointer;
+    text-decoration: unset;
+    position: relative;
+    top: 0;
+    z-index: 1;
+    transition:
+      top 300ms,
+      box-shadow 300ms;
+    @media (hover: hover) {
+      &:hover {
+        top: 4px;
+        box-shadow: 0 0 0 0 $yellow-500;
+      }
+    }
+
+    @include for-phone-only {
+      padding: 8px 10px;
+      @include text(12px, center, $color-white, 500);
+    }
+
+    &--center {
+      margin: 0 auto;
+    }
+    &--right {
+      margin: 0 0 0 auto;
+    }
+  }
+}
