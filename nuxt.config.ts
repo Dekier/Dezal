@@ -111,7 +111,7 @@ export default defineNuxtConfig({
 
   site: {
     url: 'https://dezalroletypoznan.pl',
-    name: 'DEŻAL Poznań',
+    name: 'DEŻAL',
     defaultLocale: 'pl', // lub 'pl-PL' - moduł SEO preferuje standard 'pl'
     currentLocale: 'pl',
   },
@@ -128,7 +128,7 @@ export default defineNuxtConfig({
   pwa: {
     registerType: 'autoUpdate',
     manifest: {
-      name: 'Deżal Rolety Poznań',
+      name: 'Deżal Rolety',
       short_name: 'Deżal',
       theme_color: '#ffe100',
       lang: 'pl',

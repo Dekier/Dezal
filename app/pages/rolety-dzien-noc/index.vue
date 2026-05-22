@@ -114,7 +114,7 @@ useHead({
     },
     {
       property: 'og:image:alt',
-      content: 'Rolety dzień noc - DEŻAL Poznań',
+      content: 'Rolety dzień noc - DEŻAL',
     },
   ],
   canonical: 'https://dezalroletypoznan.pl/rolety-dzien-noc',

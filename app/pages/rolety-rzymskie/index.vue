@@ -112,7 +112,7 @@ useHead({
     },
     {
       property: 'og:image:alt',
-      content: 'Rolety rzymskie - DEŻAL Poznań',
+      content: 'Rolety rzymskie - DEŻAL',
     },
   ],
   canonical: 'https://dezalroletypoznan.pl/rolety-rzymskie',

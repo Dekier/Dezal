@@ -116,7 +116,7 @@ useHead({
     },
     {
       property: 'og:image:alt',
-      content: 'Rolety materiałowe - DEŻAL Poznań',
+      content: 'Rolety materiałowe - DEŻAL',
     },
   ],
   canonical: 'https://dezalroletypoznan.pl/rolety-materialowe',

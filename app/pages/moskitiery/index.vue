@@ -112,7 +112,7 @@ useHead({
     },
     {
       property: 'og:image:alt',
-      content: 'Moskitiery - DEŻAL Poznań',
+      content: 'Moskitiery - DEŻAL',
     },
   ],
   canonical: 'https://dezalroletypoznan.pl/moskitiery',

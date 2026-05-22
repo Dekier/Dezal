@@ -116,7 +116,7 @@ useHead({
     },
     {
       property: 'og:image:alt',
-      content: 'Plisy okienne - DEŻAL Poznań',
+      content: 'Plisy okienne - DEŻAL',
     },
   ],
   canonical: 'https://dezalroletypoznan.pl/plisy',

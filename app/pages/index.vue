@@ -112,22 +112,6 @@ useHead({
   ],
   canonical: 'https://dezalroletypoznan.pl',
 });
-
-useSchemaOrg([
-  defineLocalBusiness({
-    name: 'Deżal Rolety Poznań',
-    url: 'https://dezalroletypoznan.pl',
-    telephone: '+48 603 630 299',
-    address: {
-      addressLocality: 'Poznań',
-      addressRegion: 'wielkopolskie',
-      postalCode: '60-692',
-      streetAddress: 'ul. Jaroczyńskiego 41',
-      addressCountry: 'PL',
-    },
-    image: 'https://dezalroletypoznan.pl/images/logo-rect.png',
-  }),
-]);
 </script>
 
 <style scoped lang="scss">

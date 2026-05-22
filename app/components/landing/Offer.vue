@@ -26,7 +26,7 @@
             /> -->
             <NuxtImg
               :src="box.url"
-              :alt="`${box.title} - Deżal Poznań`"
+              :alt="`${box.title} - Deżal`"
               class="Offer__box-image"
               :loading="index === 0 ? 'eager' : 'lazy'"
               :fetchpriority="index === 0 ? 'high' : 'auto'"
