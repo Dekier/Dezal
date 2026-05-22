@@ -58,7 +58,7 @@
     }
     @include for-tablet {
       @include text(32px, left, $black-400, 500);
-      margin: 20px auto 42px;
+      margin: 32px auto 24px;
     }
 
     max-width: 720px;

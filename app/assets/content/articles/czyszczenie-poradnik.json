@@ -528,7 +528,7 @@
       "content": [
         {
           "type": "text",
-          "value": "Siatki przeciw owadom zbierają mnóstwo kurzu, pyłków i zanieczyszczeń z zewnątrz. Ich czyszczenie jest bardzo proste."
+          "value": "Siatki przeciw owadom zbierają mnóstwo kurzu i pyłków z zewnątrz. Ich czyszczenie jest proste, ale metoda zależy od modelu."
         }
       ]
     },
@@ -544,7 +544,7 @@
             },
             {
               "type": "text",
-              "value": "Najszybszą i najskuteczniejszą metodą jest zdjęcie moskitiery i umycie jej pod prysznicem. Użyj miękkiej gąbki z odrobiną szarego mydła."
+              "value": "Sposób czyszczenia zależy od rodzaju moskitiery. Dla moskitier ramkowych najlepszą metodą jest ich zdjęcie i umycie pod prysznicem miękką gąbką z odrobiną szarego mydła. W przypadku moskitier kasetowych lub tarasowych (niezdejmowanych), odkurzaj siatkę odkurzaczem z miękką szczotką, a następnie przetrzyj delikatnie wilgotną (nie mokrą) gąbką."
             }
           ],
           [
@@ -554,7 +554,7 @@
             },
             {
               "type": "text",
-              "value": "Nie używaj ostrych szczotek, szorstkich gąbek ani myjek ciśnieniowych (typu Karcher) – ciśnienie z łatwością rozerwie lub rozciągnie włókno szklane."
+              "value": "Unikaj szorstkich gąbek, ostrych szczotek, silnych detergentów oraz myjek ciśnieniowych (typu Karcher). Ciśnienie z łatwością rozerwie lub rozciągnie włókno szklane."
             }
           ],
           [
@@ -564,17 +564,17 @@
             },
             {
               "type": "text",
-              "value": "Tak, moskitiery ramkowe ściąga się w kilka sekund poprzez przekręcenie rygli obrotowych. Zalecamy robienie tego co najmniej na zakończenie sezonu jesiennego."
+              "value": "Zależy od modelu. Zdejmować można tylko moskitiery ramkowe (np. za pomocą rygli obrotowych). Inne rodzaje, jak moskitiery kasetowe czy tarasowe, czyścimy na oknie, co chroni delikatny mechanizm."
             }
           ],
           [
             {
               "type": "bold",
-              "value": "Temperatura: "
+              "value": "Temperatura i suszenie: "
             },
             {
               "type": "text",
-              "value": "Myj w letniej, kranowej wodzie. Pozostaw do wyschnięcia opartą o ścianę w łazience przed ponownym montażem na okno."
+              "value": "Myj w letniej, kranowej wodzie. Moskitiery ramkowe pozostaw do wyschnięcia oparte o ścianę. Modele kasetowe lub tarasowe po umyciu na oknie pozostaw całkowicie otwarte, aby siatka swobodnie wyschła przed zwinięciem."
             }
           ]
         ]

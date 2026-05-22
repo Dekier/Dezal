@@ -52,7 +52,7 @@ const faqData = ref([
   {
     question: 'Jak prawidłowo czyścić i myć moskitiery z kurzu i pyłków?',
     answer:
-      'Czyszczenie jest bardzo proste. Po szybkim zdjęciu ramki z okna wystarczy wstawić ją pod prysznic lub do wanny i spłukać letnią wodą z użyciem słuchawki prysznicowej. Przy większych zabrudzeniach można delikatnie przetrzeć siatkę miękką gąbką z odrobiną szarego mydła. Odradzamy używanie silnych środków chemicznych oraz myjek ciśnieniowych, które mogłyby rozerwać włókna.',
+      'Sposób zależy od modelu. Ramkowe po zdjęciu spłucz pod prysznicem letnią wodą. Tarasowe i kasetowe odkurz miękką szczotką lub przetrzyj wilgotną ściereczką bezpośrednio na oknie. Unikaj chemii i myjek ciśnieniowych.',
   },
 ]);
 // ------------------------------------
