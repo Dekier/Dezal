@@ -98,7 +98,7 @@ export default defineNuxtConfig({
   },
 
   image: {
-    provider: 'none'
+    provider: 'none',
     format: ['avif', 'webp'],
     quality: 90,
     screens: {
