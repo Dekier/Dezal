@@ -33,6 +33,8 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.5",
     "eslint-plugin-vue": "^10.9.1",
+    "nuxt-og-image": "^6.5.1",
+    "nuxt-schema-org": "^6.0.4",
     "prettier": "^3.8.3",
     "sass": "^1.99.0",
     "sass-loader": "17.0.0",
