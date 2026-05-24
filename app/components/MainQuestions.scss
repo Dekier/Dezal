@@ -1,0 +1,162 @@
+@use '@/assets/stylesheets/main-variables' as *;
+@use '@/assets/stylesheets/mixins' as *;
+.MainQuestions {
+  &__main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 50px 0;
+    padding: 80px 16px;
+    position: relative;
+
+    @include for-tablet-landscape-up {
+      margin: 50px 0 50px;
+    }
+  }
+
+  &__center-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1440px;
+    width: 100%; // Zapewnia pełną szerokość na mniejszych ekranach
+    gap: 137px;
+    z-index: 2;
+
+    @include for-tablet-landscape-up {
+      flex-direction: row;
+    }
+  }
+
+  &__left-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    @include text(32px, left, $black-400, 700);
+    margin: 0 0 72px 0;
+    letter-spacing: -3%;
+
+    @include for-big-desktop-up {
+      @include text(57px, left, $black-400, 700);
+    }
+
+    @include for-phone-only {
+      @include text(26px, left, $black-400, 700);
+      margin: 0 0 32px 0;
+    }
+  }
+
+  &__image {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 8px;
+    display: none;
+    object-fit: cover;
+    @include for-tablet-landscape-up {
+      max-width: 40%;
+      display: block;
+    }
+    @include for-big-desktop-up {
+      max-width: 667px;
+    }
+  }
+
+  &__link {
+    text-decoration: unset;
+    display: flex;
+    flex-direction: row;
+    align-items: center; // Zostawiamy wyrównanie do środka
+    // padding-left: 11px;
+    // margin-left: 74px;
+    gap: 24px;
+    span {
+      @include text(20px, left, $black-400, 700);
+      letter-spacing: -1%;
+
+      // DODAJ TO:
+      flex: 1; // Pozwala spanowi zająć całą wolną przestrzeń
+      min-width: 0; // Kluczowe dla flexboxa, żeby tekst mógł się zawinąć
+      word-wrap: break-word; // Bezpiecznik dla bardzo długich słów
+      @include for-phone-only {
+        @include text(18px, left, $black-400, 700);
+      }
+    }
+
+    @include for-desktop-up {
+      padding-left: 11px;
+      margin-left: 74px;
+    }
+  }
+
+  &__link-dot {
+    width: 24px;
+    height: 24px;
+    margin: auto 0;
+    @include for-phone-only {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &__line {
+    width: calc(100% - 74px);
+    margin: 27px 0;
+    height: 1px;
+    background-color: $grey-500;
+    margin-left: 74px;
+  }
+
+  &__btn-arrow-box {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    border: 2px solid $yellow-500;
+
+    // ZMIEŃ:
+    flex-shrink: 0; // Dodaj to!
+    margin-left: 20px; // Zmniejsz trochę margines, żeby tekst miał więcej miejsca
+    position: relative;
+
+    @include for-phone-only {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &__btn-arrow-icon {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    transition: transform 400ms;
+
+    @include for-phone-only {
+      width: 32px;
+    }
+  }
+
+  &__link:hover &__btn-arrow-icon {
+    transform: translateY(-50%) translateX(7px);
+  }
+
+  &__background {
+    background-color: $yellow-cos;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+    width: 100vw;
+    border-radius: 8px;
+
+    @include for-tablet-landscape-up {
+      border-radius: 0px;
+      right: 200px;
+    }
+    @include for-desktop-up {
+      right: 360px;
+    }
+  }
+}
