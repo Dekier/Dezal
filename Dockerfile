@@ -1,42 +1,39 @@
 # ETAP 1: Budowanie (Builder)
-# Używamy Node 24 (pełna wersja Debian), żeby skompilować wszystkie zależności systemowe
 FROM node:24 AS builder
 
-# Ustawiamy katalog roboczy
 WORKDIR /app
 
-# Włączamy pnpm przez Corepack (jest wbudowany w Node)
+# Włączamy pnpm
 RUN corepack enable && corepack prepare pnpm@latest --activate
 
-# Kopiujemy pliki konfiguracyjne
+# KOPIUJEMY TYLKO PLIKI KONFIGURACYJNE (to kluczowe dla czystej instalacji)
 COPY package.json pnpm-lock.yaml ./
 
-# Instalujemy zależności
-# --no-frozen-lockfile naprawia konflikty między systemami (Windows/Mac vs Linux)
-RUN pnpm install --no-frozen-lockfile --ignore-scripts=false
+# Instalujemy zależności bez rygorystycznego sprawdzania lockfile i z wymuszonym uruchomieniem skryptów
+# (flaga config.ignore-scripts jest jedyną w 100% działającą w pnpm v11 w tym scenariuszu)
+RUN pnpm config set ignore-scripts false && pnpm install --no-frozen-lockfile
 
-# Kopiujemy resztę kodu
+# Kopiujemy resztę kodu (w tym folder 'app' dla Nuxt 4)
 COPY . .
 
 # Budujemy aplikację
 RUN pnpm run build
 
 # ETAP 2: Uruchamianie (Runner)
-# Na produkcję bierzemy lżejszą wersję "slim" Node 24
 FROM node:24-slim
 
 WORKDIR /app
 
-# Zmienne środowiskowe dla hosta
+# Zmienne środowiskowe dla środowiska produkcyjnego
 ENV NODE_ENV=production
 ENV HOST=0.0.0.0
 ENV PORT=3000
 
-# Kopiujemy zbudowaną aplikację z etapu 1
+# Kopiujemy TYLKO skompilowaną aplikację z folderu .output
 COPY --from=builder /app/.output ./.output
 
 # Otwieramy port
 EXPOSE 3000
 
-# Startujemy serwer
+# Startujemy serwer Nitro
 CMD ["node", ".output/server/index.mjs"]
