@@ -46,5 +46,13 @@
   "packageManager": "pnpm@11.2.2",
   "engines": {
     "node": ">=22.14.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "esbuild",
+      "sharp",
+      "vue-demi"
+    ]
   }
 }
