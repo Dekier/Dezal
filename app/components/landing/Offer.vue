@@ -18,13 +18,12 @@
             <p class="Offer__badge-text">najczęściej wybierane</p>
           </div>
           <div class="Offer__box-image-container">
-            <!-- <img
-              loading="lazy"
+            <img
               :src="box.url"
+              :alt="`${box.title} - Deżal`"
               class="Offer__box-image"
-              :alt="box.title"
-            /> -->
-            <NuxtImg
+            />
+            <!-- <NuxtImg
               :src="box.url"
               :alt="`${box.title} - Deżal`"
               class="Offer__box-image"
@@ -36,7 +35,7 @@
               :preload="index === 0"
               sizes="sm:100vw md:50vw lg:400px"
               :title="`Oferta: ${box.title}`"
-            />
+            /> -->
           </div>
           <h2 class="Offer__box-title">
             <img

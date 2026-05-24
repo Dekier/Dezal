@@ -78,7 +78,6 @@ export default defineNuxtConfig({
     '@vite-pwa/nuxt', // 🚀 używamy zamiast sitemap + robots
     '@nuxtjs/seo',
     'nuxt-gtag',
-    '@nuxt/image',
     '@nuxt/scripts',
   ],
 
@@ -94,19 +93,6 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       siteUrl,
-    },
-  },
-
-  image: {
-    provider: 'ipx',
-    format: ['avif', 'webp'],
-    quality: 90,
-    screens: {
-      xs: 320,
-      sm: 640,
-      md: 768,
-      lg: 1024,
-      xl: 1280,
     },
   },
 

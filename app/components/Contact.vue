@@ -136,7 +136,12 @@
           class="Contact__image-middle"
           preload
         /> -->
-        <NuxtImg
+        <img
+          src="/images/landing/dzien-noc-1.webp"
+          alt="Roleta dzień noc - nowoczesne systemy osłonowe Deżal"
+          class="Contact__image-middle"
+        />
+        <!-- <NuxtImg
           src="/images/landing/dzien-noc-1.webp"
           alt="Roleta dzień noc - nowoczesne systemy osłonowe Deżal"
           width="375"
@@ -145,7 +150,7 @@
           loading="lazy"
           format="avif,webp"
           sizes="sm:100vw md:50vw lg:375px"
-        />
+        /> -->
 
         <div class="Contact__form-container">
           <img

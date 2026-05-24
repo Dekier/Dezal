@@ -32,7 +32,12 @@
         </button>
       </div>
       <div class="Hero__right-container">
-        <NuxtImg
+        <img
+          src="/images/hero/1.webp"
+          alt="Nowoczesne rolety i żaluzje na wymiar do salonu - Deżal Poznań"
+          class="Hero__image-1"
+        />
+        <!-- <NuxtImg
           src="/images/hero/1.webp"
           alt="Nowoczesne rolety i żaluzje na wymiar do salonu - Deżal Poznań"
           class="Hero__image-1"
@@ -43,9 +48,18 @@
           format="webp"
           sizes="sm:100vw md:50vw lg:700px"
           title="Osłony okienne na wymiar Poznań"
+        /> -->
+        <img
+          src="/images/hero/2.webp"
+          alt="Eleganckie plisy okienne w domu jednorodzinnym - Deżal Poznań"
+          class="Hero__image-2"
         />
-
-        <NuxtImg
+        <img
+          src="/images/hero/3.webp"
+          alt="Funkcjonalne rolety dzień-noc i moskitiery - Deżal Poznań"
+          class="Hero__image-3"
+        />
+        <!-- <NuxtImg
           src="/images/hero/2.webp"
           alt="Eleganckie plisy okienne w domu jednorodzinnym - Deżal Poznań"
           class="Hero__image-2"
@@ -69,7 +83,7 @@
           format="webp"
           sizes="sm:100vw md:50vw lg:700px"
           title="Rolety i moskitiery Poznań"
-        />
+        /> -->
       </div>
     </div>
   </header>

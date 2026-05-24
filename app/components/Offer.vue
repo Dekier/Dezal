@@ -6,13 +6,13 @@
       <div class="Offer__boxes-container">
         <div v-for="(box, index) in showBoxes" :key="index" class="Offer__box">
           <div class="Offer__box-image-container">
-            <!-- <img
+            <img
               :src="box.url"
+              :alt="`${box.title} - Deżal`"
               class="Offer__box-image"
-              :alt="box.title"
               loading="lazy"
-            /> -->
-            <NuxtImg
+            />
+            <!-- <NuxtImg
               :src="box.url"
               :alt="`${box.title} - Deżal`"
               class="Offer__box-image"
@@ -23,7 +23,7 @@
               loading="lazy"
               sizes="xs:100vw sm:100vw md:340px lg:340px"
               fit="cover"
-            />
+            /> -->
           </div>
           <h3 class="Offer__box-title">{{ box.title }}</h3>
 

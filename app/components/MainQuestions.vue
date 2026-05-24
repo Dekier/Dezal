@@ -43,12 +43,12 @@
           </div>
         </nuxt-link>
       </div>
-      <!-- <img
+      <img
         src="/images/landing/questions.webp"
-        alt="bathroom"
+        alt="Lazienka - nowoczesne systemy osłonowe Deżal"
         class="MainQuestions__image"
-      /> -->
-      <NuxtImg
+      />
+      <!-- <NuxtImg
         src="/images/landing/questions.webp"
         alt="Lazienka - nowoczesne systemy osłonowe Deżal"
         width="667"
@@ -57,7 +57,7 @@
         loading="lazy"
         format="webp"
         sizes="sm:100vw md:50vw lg:667px"
-      />
+      /> -->
     </div>
   </div>
 </template>

@@ -16,8 +16,13 @@
           {{ paragraph }}
         </p>
       </div>
+      <img
+        :src="data.url"
+        class="ProductInformation__main-picture"
+        :alt="`Realizacja: ${data.title || 'Rolety i żaluzje Deżal Poznań'}`"
+      />
 
-      <NuxtImg
+      <!-- <NuxtImg
         :src="data.url"
         class="ProductInformation__main-picture"
         :alt="`Realizacja: ${data.title || 'Rolety i żaluzje Deżal Poznań'}`"
@@ -30,7 +35,7 @@
         preload
         fit="cover"
         sizes="sm:100vw md:5700px"
-      />
+      /> -->
     </div>
   </div>
 
@@ -44,7 +49,12 @@
         @click="showBigGallery(index)"
         class="ProductInformation__bottom-realizations-box"
       >
-        <NuxtImg
+        <img
+          :src="imageData.url"
+          :alt="`Realizacja - Deżal Poznań`"
+          class="ProductInformation__bottom-realizations-image"
+        />
+        <!-- <NuxtImg
           :src="imageData.url"
           :alt="`Realizacja - Deżal Poznań`"
           class="ProductInformation__bottom-realizations-image"
@@ -57,7 +67,7 @@
           fit="cover"
           :modifiers="{ sharp: true }"
           sizes="sm:100vw md:50vw lg:33vw"
-        />
+        /> -->
         <div class="ProductInformation__hover-background">
           <img
             loading="lazy"

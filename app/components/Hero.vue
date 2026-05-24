@@ -6,7 +6,7 @@
       alt="dezal zdjecie tła"
       loading="lazy"
     /> -->
-    <NuxtImg
+    <!-- <NuxtImg
       src="/images/header2.webp"
       class="Hero__hero-image"
       alt="Nowoczesne rolety i systemy osłonowe - DEŻAL Poznań"
@@ -15,7 +15,7 @@
       fetchpriority="high"
       preload
       :loading="undefined"
-    />
+    /> -->
     <div class="Hero__hero-background" />
     <div class="Hero__center-container">
       <h1 class="Hero__title">Witamy na stronie firmy <br />DEŻAL</h1>

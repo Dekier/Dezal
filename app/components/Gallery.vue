@@ -35,11 +35,16 @@
       </svg>
     </div>
 
-    <NuxtImg
+    <img
       class="Gallery__image"
       :src="images[index].url"
       alt="Dezal rolety poznań"
     />
+    <!-- <NuxtImg
+      class="Gallery__image"
+      :src="images[index].url"
+      alt="Dezal rolety poznań"
+    /> -->
   </div>
 </template>
 
