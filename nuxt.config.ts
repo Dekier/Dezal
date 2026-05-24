@@ -24,7 +24,7 @@ export default defineNuxtConfig({
   },
 
   nitro: {
-    preset: 'vercel-static',
+    preset: 'node-server',
     serverAssets: [
       {
         baseName: 'articles', // To będzie nazwa, pod którą odwołasz się w kodzie
