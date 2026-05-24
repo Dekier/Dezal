@@ -24,7 +24,7 @@ export default defineNuxtConfig({
   },
 
   nitro: {
-    preset: 'node-server',
+    preset: 'node-cluster',
     serverAssets: [
       {
         baseName: 'articles', // To będzie nazwa, pod którą odwołasz się w kodzie
