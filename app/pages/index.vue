@@ -4,7 +4,7 @@
     <LandingOffer :offer-boxes-json="offerBoxesJson" />
     <AboutCompanyNew />
     <Reviews />
-
+    <MainQuestions />
     <Questions title="Porady" :faqList="faqPorady" />
     <Questions title="Techniczne" :faqList="faqTechniczne" />
 
