@@ -13,7 +13,7 @@ COPY package.json pnpm-lock.yaml ./
 
 # Instalujemy zależności
 # --no-frozen-lockfile naprawia konflikty między systemami (Windows/Mac vs Linux)
-RUN pnpm install --no-frozen-lockfile
+RUN pnpm install --no-frozen-lockfile --ignore-scripts=false
 
 # Kopiujemy resztę kodu
 COPY . .
