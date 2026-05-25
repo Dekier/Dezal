@@ -11,6 +11,7 @@
               :alt="`${box.title} - Deżal`"
               class="Offer__box-image"
               loading="lazy"
+              fetchpriority="high"
             />
             <!-- <NuxtImg
               :src="box.url"

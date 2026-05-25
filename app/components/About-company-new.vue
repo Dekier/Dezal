@@ -28,7 +28,7 @@
       </div>
       <div class="AboutCompany__right-container">
         <img
-          src="/images/about.png"
+          src="/images/about3.webp"
           class="AboutCompany__image"
           alt="Żaluzje - nowoczesne systemy osłonowe Deżal"
         />
