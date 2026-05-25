@@ -32,58 +32,21 @@
         </button>
       </div>
       <div class="Hero__right-container">
-        <img
-          src="/images/hero/1.webp"
-          alt="Nowoczesne rolety i żaluzje na wymiar do salonu - Deżal Poznań"
-          class="Hero__image-1"
-        />
-        <!-- <NuxtImg
-          src="/images/hero/1.webp"
-          alt="Nowoczesne rolety i żaluzje na wymiar do salonu - Deżal Poznań"
-          class="Hero__image-1"
-          fetchpriority="high"
-          preload
-          width="800"
-          height="645"
-          format="webp"
-          sizes="sm:100vw md:50vw lg:700px"
-          title="Osłony okienne na wymiar Poznań"
-        /> -->
-        <img
-          src="/images/hero/2.webp"
-          alt="Eleganckie plisy okienne w domu jednorodzinnym - Deżal Poznań"
-          class="Hero__image-2"
-        />
-        <img
-          src="/images/hero/3.webp"
-          alt="Funkcjonalne rolety dzień-noc i moskitiery - Deżal Poznań"
-          class="Hero__image-3"
-        />
-        <!-- <NuxtImg
-          src="/images/hero/2.webp"
-          alt="Eleganckie plisy okienne w domu jednorodzinnym - Deżal Poznań"
-          class="Hero__image-2"
-          fetchpriority="high"
-          preload
-          width="800"
-          height="645"
-          format="webp"
-          sizes="sm:100vw md:50vw lg:700px"
-          title="Plisy okienne Poznań"
-        />
+        <picture class="Hero__image-1">
+          <source srcset="/images/hero/1.webp" media="(min-width: 600px)" />
+          <img
+            src="/images/hero/1-mobile.webp"
+            alt="Nowoczesne rolety Poznań"
+          />
+        </picture>
 
-        <NuxtImg
-          src="/images/hero/3.webp"
-          alt="Funkcjonalne rolety dzień-noc i moskitiery - Deżal Poznań"
-          class="Hero__image-3"
-          fetchpriority="high"
-          preload
-          width="800"
-          height="645"
-          format="webp"
-          sizes="sm:100vw md:50vw lg:700px"
-          title="Rolety i moskitiery Poznań"
-        /> -->
+        <picture class="Hero__image-2">
+          <source srcset="/images/hero/2.webp" media="(min-width: 1024px)" />
+        </picture>
+
+        <picture class="Hero__image-3">
+          <source srcset="/images/hero/3.webp" media="(min-width: 1024px)" />
+        </picture>
       </div>
     </div>
   </header>
