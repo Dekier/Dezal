@@ -20,7 +20,10 @@
     max-width: 1440px;
     width: 100%; // Zapewnia pełną szerokość na mniejszych ekranach
     gap: 137px;
-    z-index: 2;
+    z-index: 2; // DODAJEMY TO:
+    picture {
+      display: contents;
+    }
 
     @include for-tablet-landscape-up {
       flex-direction: row;

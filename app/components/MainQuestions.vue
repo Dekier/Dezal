@@ -48,10 +48,16 @@
         alt="Lazienka - nowoczesne systemy osłonowe Deżal"
         class="MainQuestions__image"
       /> -->
-      <picture class="Hero__image-3">
+      <picture>
         <source
           srcset="/images/landing/questions.webp"
           media="(min-width: 950px)"
+          type="image/webp"
+        />
+        <img
+          src="/images/landing/questions.webp"
+          alt="Łazienka - nowoczesne systemy osłonowe Deżal"
+          class="MainQuestions__image"
         />
       </picture>
     </div>

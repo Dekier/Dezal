@@ -130,9 +130,16 @@
     gap: 20px;
     height: 645px;
     max-width: 100%; // Zabezpieczenie, by kontener trzymał się w ryzach
+
+    // DODANA REGUŁA - "ukrywa" tag picture dla Flexboxa
+    picture {
+      display: contents;
+    }
+
     @include for-phone-only {
       display: none;
     }
+
     &:has(.Hero__image-2:hover),
     &:has(.Hero__image-3:hover) {
       .Hero__image-1 {
