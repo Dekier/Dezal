@@ -32,16 +32,6 @@
           class="AboutCompany__image"
           alt="Żaluzje - nowoczesne systemy osłonowe Deżal"
         />
-        <!-- <NuxtImg
-          src="/images/about3.webp"
-          alt="Żaluzje - nowoczesne systemy osłonowe Deżal"
-          width="439"
-          height="660"
-          class="AboutCompany__image"
-          loading="lazy"
-          format="webp"
-          sizes="sm:100vw md:50vw lg:439px"
-        /> -->
         <div class="AboutCompany__white-box">
           <h2 class="AboutCompany__big-text">
             2 lata <br />
