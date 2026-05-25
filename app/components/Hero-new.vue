@@ -39,9 +39,10 @@
             type="image/webp"
           />
           <img
-            src="/images/hero/1.webp"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
             alt="Nowoczesne rolety i żaluzje na wymiar do salonu - Deżal Poznań"
             class="Hero__image-1"
+            fetchpriority="high"
           />
         </picture>
 
@@ -52,7 +53,7 @@
             type="image/webp"
           />
           <img
-            src="/images/hero/2.webp"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
             alt="Eleganckie plisy okienne w domu jednorodzinnym - Deżal Poznań"
             class="Hero__image-2"
           />
@@ -65,7 +66,7 @@
             type="image/webp"
           />
           <img
-            src="/images/hero/3.webp"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
             alt="Funkcjonalne rolety dzień-noc i moskitiery - Deżal Poznań"
             class="Hero__image-3"
           />
