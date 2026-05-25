@@ -35,7 +35,7 @@ export default defineNuxtConfig({
       crawlLinks: true, // Nitro samo zmapuje wszystkie dynamiczne i statyczne linki
       failOnError: false,
       routes: [
-        '/',
+        // '/',
         // '/llms.txt',
         // '/llms-full.txt',
         '/wiedza/czyszczenie-poradnik',
