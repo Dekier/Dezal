@@ -52,7 +52,7 @@
             },
             {
               "type": "text",
-              "value": "Najlepiej na sucho. Używaj miotełki do kurzu, suchej ściereczki z mikrofibry lub odkurzacza z końcówką z miękkim włosiem (ustawionego na najniższą moc). W przypadku plam, delikatnie przetrzyj zabrudzenie lekko wilgotną (dobrze wyciśniętą) szmatką z odrobiną szarego mydła."
+              "value": "Najlepiej na sucho. Używaj miotełki do kurzu, suchej ściereczki z mikrofibry lub odkurzacza z końcówką z miękkim włosiem (ustawionego na najniższą moc). W przypadku plam upewnij się na małym kawałku materiału, czy po czyszczeniu nie zostają plamy, a dopiero po tym przetrzyj zabrudzenie lekko wilgotną (dobrze wyciśniętą) szmatką z odrobiną szarego mydła."
             }
           ],
           [
@@ -194,7 +194,7 @@
             },
             {
               "type": "text",
-              "value": "Tak, wręcz trzeba. Należy odkleić materiał z górnego rzepu wraz z sznurkami (nie odwiązujemy sznureczki), a następnie "
+              "value": "Tak, wręcz trzeba. Należy odkleić materiał z górnego rzepu a sznurek wypiąć z szyny, a następnie "
             },
             {
               "type": "bold",
@@ -212,7 +212,7 @@
             },
             {
               "type": "text",
-              "value": "Prać ręcznie lub w pralce na programie delikatnym w temperaturze 30°C. Suszyć w stanie rozłożonym. Prasować w niskiej temperaturze (zgodnie z metką na tkaninie)."
+              "value": "Prać ręcznie lub w pralce na programie delikatnym w temperaturze 30°C. Suszyć w stanie rozłożonym. Prasować w niskiej temperaturze. Każdy materiał posiada metkę ze wskazaniami prania i prasowania według producenta."
             }
           ]
         ]
@@ -243,7 +243,15 @@
             },
             {
               "type": "text",
-              "value": "Na sucho miotełką do kurzu. Jeśli producent na to pozwala (większość tkanin), plisy można prać ręcznie na mokro."
+              "value": "Na sucho miotełką do kurzu. Co ważne, "
+            },
+            {
+              "type": "bold",
+              "value": "wszystkie nasze materiały na plisy posiadają możliwość prania ręcznego"
+            },
+            {
+              "type": "text",
+              "value": " na mokro. Należy to robić ściśle według wskazań producenta (zgodnie z załączoną instrukcją lub metką)."
             }
           ],
           [

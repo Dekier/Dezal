@@ -1,12 +1,17 @@
 [
   {
-    "title": "Czym jest 3D w e-commerce? Przewodnik po kluczowych pojęciach",
-    "url": "/images/minimal.webp",
-    "slug": "czym-jest-3d-w-ecommerce"
+    "title": "Co na okno w łazience? Plisy, żaluzje czy rolety?",
+    "url": "/images/zaluzje/dezal-poznan-zaluzja-aluminiowa-3.webp",
+    "slug": "co-na-okno-w-lazience"
   },
   {
-    "title": "Czym tak naprawdę jest Konfigurator 3D?",
-    "url": "/images/konfigurator.webp",
-    "slug": "czym-jest-konfigurator-3d"
+    "title": "Co najlepiej zatrzymuje światło?",
+    "url": "/articles/co-najlepiej-zatrzymuje-swiatlo.webp",
+    "slug": "co-najlepiej-zatrzymuje-swiatlo"
+  },
+  {
+    "title": "Jak prawidłowo czyścić rolety, żaluzje i plisy?",
+    "url": "/articles/jak-czyscic-rolety-zaluzje.webp",
+    "slug": "czyszczenie-poradnik"
   }
 ]

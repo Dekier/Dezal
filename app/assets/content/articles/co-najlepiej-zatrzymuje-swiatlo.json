@@ -115,11 +115,11 @@
         },
         {
           "type": "bold",
-          "value": "bardzo wysoką temperaturę w przestrzeni między szybą a materiałem"
+          "value": "bardzo wysoką temperaturę w przestrzeni między szybą a materiałem, co może spowodować wypychanie go z prowadnic, gdyż ciepło nie może przenikać przez materiał gumowy."
         },
         {
           "type": "text",
-          "value": ". Tak wysoki stres termiczny może powodować minimalne odkształcanie się (kurczenie lub wyginanie) gumowej warstwy. Nawet przy zastosowaniu prowadnic, może to po czasie doprowadzić do powstania minimalnej poświaty na krawędziach. Chociaż jest to rozwiązanie bardzo dobre, to pod względem stabilności wymiarowej w wysokich temperaturach ustępuje plisom Duette."
+          "value": " Tak wysoki stres termiczny i nagromadzone gorące powietrze mogą z czasem doprowadzić do powstania poświaty na krawędziach. Chociaż jest to rozwiązanie bardzo dobre do całkowitego zaciemnienia, to pod względem stabilności wymiarowej w wysokich temperaturach ustępuje plisom Duette."
         }
       ]
     },

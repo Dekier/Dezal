@@ -35,6 +35,9 @@ importers:
       nuxt-gtag:
         specifier: ^4.1.0
         version: 4.1.0(magicast@0.5.3)
+      nuxt-llms:
+        specifier: ^0.2.0
+        version: 0.2.0(magicast@0.5.3)
     devDependencies:
       '@nuxt/kit':
         specifier: 4.4.6
@@ -5144,6 +5147,9 @@ packages:
     resolution: {integrity: sha512-QHaFlfJFuqhBanW/B4eRHuQOOavV4LgXvtbRqG0jaLp5qd9MPFZFdc+aZ79HGElebQqdVBCToiB2zbjbWr8aZA==}
     peerDependencies:
       nuxt: ^3.9.0 || ^4.0.0
+
+  nuxt-llms@0.2.0:
+    resolution: {integrity: sha512-GoEW00x8zaZ1wS0R0aOYptt3b54JEaRwlyVtuAiQoH51BwYdjN5/3+00/+4wi39M5cT4j5XcnGwOxJ7v4WVb9A==}
 
   nuxt-og-image@6.5.1:
     resolution: {integrity: sha512-ukkq81txeUpbU0/PnTDyhwnSk5xqE87xhY0d5nUxdYWoyP9R9iBDCE0rUblPRnrpqs6QTU7HiFzQ7xBZsd4Whw==}
@@ -12196,6 +12202,12 @@ snapshots:
       - vite
       - vue
       - zod
+
+  nuxt-llms@0.2.0(magicast@0.5.3):
+    dependencies:
+      '@nuxt/kit': 4.4.6(magicast@0.5.3)
+    transitivePeerDependencies:
+      - magicast
 
   nuxt-og-image@6.5.1(f5c73e12c01d2ca10539570dd7b4c33c):
     dependencies:

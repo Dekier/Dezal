@@ -28,7 +28,7 @@ export default defineNuxtConfig({
     serverAssets: [
       {
         baseName: 'articles', // To będzie nazwa, pod którą odwołasz się w kodzie
-        dir: 'server/content/articles', // Ścieżka relatywna do głównego katalogu projektu
+        dir: 'app/assets/content/articles', // Ścieżka relatywna do głównego katalogu projektu
       },
     ],
     prerender: {
@@ -36,10 +36,11 @@ export default defineNuxtConfig({
       failOnError: false,
       routes: [
         // '/',
-        // '/llms.txt',
-        // '/llms-full.txt',
+        '/llms.txt',
+        '/llms-full.txt',
         '/wiedza/czyszczenie-poradnik',
         '/wiedza/co-najlepiej-zatrzymuje-swiatlo',
+        '/wiedza/co-na-okno-w-lazience',
       ],
     },
     compressPublicAssets: { gzip: true, brotli: true },
@@ -79,6 +80,7 @@ export default defineNuxtConfig({
     '@nuxtjs/seo',
     'nuxt-gtag',
     '@nuxt/scripts',
+    'nuxt-llms',
   ],
 
   // critters: {
