@@ -22,6 +22,8 @@
               :src="box.url"
               :alt="`${box.title} - Deżal`"
               class="Offer__box-image"
+              fetchpriority="high"
+              loading="eager"
             />
             <!-- <NuxtImg
               :src="box.url"

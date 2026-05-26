@@ -2,13 +2,13 @@
   <div class="Page__main-container">
     <HeroNew />
     <LandingOffer :offer-boxes-json="offerBoxesJson" />
-    <AboutCompanyNew />
-    <Reviews />
-    <MainQuestions />
-    <Questions title="Porady" :faqList="faqPorady" />
-    <Questions title="Techniczne" :faqList="faqTechniczne" />
+    <LazyAboutCompanyNew />
+    <LazyReviews />
+    <LazyMainQuestions />
+    <LazyQuestions title="Porady" :faqList="faqPorady" />
+    <LazyQuestions title="Techniczne" :faqList="faqTechniczne" />
 
-    <Contact />
+    <LazyContact />
   </div>
 </template>
 
