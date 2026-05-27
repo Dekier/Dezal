@@ -1,6 +1,5 @@
 @use '@/assets/stylesheets/main-variables' as *;
 @use '@/assets/stylesheets/mixins' as *;
-@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
 .ArticleMain {
   &__page-container {
     width: 100%;
@@ -50,13 +49,13 @@
   &__title {
     width: 100%;
     line-height: 125%;
-    @include text(32px, left, $black-400, 500);
+    @include text(32px, left, $black-400, 700);
     margin: 16px auto;
     @include for-phone-only {
-      @include text(28px, left, $black-400, 500);
+      @include text(28px, left, $black-400, 700);
     }
     @include for-tablet {
-      @include text(38px, left, $black-400, 500);
+      @include text(38px, left, $black-400, 700);
       margin: 32px auto 24px;
     }
 

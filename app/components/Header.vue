@@ -47,6 +47,18 @@
           >
             strona głowna
           </NuxtLink>
+          <NuxtLink
+            v-if="route.path !== '/wiedza'"
+            to="/wiedza"
+            class="Header__link-mobile"
+            prefetch
+            @click="
+              closeMobileMenu();
+              pageActive = 'helper';
+            "
+          >
+            poradniki
+          </NuxtLink>
 
           <button
             type="button"
@@ -126,6 +138,15 @@
         >
           strona główna
         </NuxtLink>
+        <NuxtLink
+          v-if="route.path !== '/wiedza'"
+          to="/wiedza"
+          class="Header__link"
+          @click="pageActive = 'helper'"
+          prefetch
+        >
+          poradniki
+        </NuxtLink>
 
         <button
           type="button"
@@ -204,7 +225,9 @@ const isHoverLink = ref('');
 const showMobileBtn = ref(false);
 const showDropDown = ref(false);
 const showMobileDropDown = ref(false);
-const pageActive = ref<'home' | 'offer' | 'real' | 'contact'>('home');
+const pageActive = ref<'home' | 'offer' | 'helper' | 'real' | 'contact'>(
+  'home'
+);
 
 const offerLinks = [
   { to: '/rolety-dzien-noc', label: 'rolety dzień-noc' },
