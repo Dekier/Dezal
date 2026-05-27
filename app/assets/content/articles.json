@@ -2,16 +2,19 @@
   {
     "title": "Co na okno w łazience? Plisy, żaluzje czy rolety?",
     "url": "/images/zaluzje/dezal-poznan-zaluzja-aluminiowa-3.webp",
-    "slug": "co-na-okno-w-lazience"
+    "slug": "co-na-okno-w-lazience",
+    "description": "Przegląd osłon okiennych do wymagającego środowiska łazienki. Poznaj zalety żaluzji aluminiowych, plis oraz modeli PVC i dowiedz się, czego unikać."
   },
   {
     "title": "Co najlepiej zatrzymuje światło?",
     "url": "/articles/co-najlepiej-zatrzymuje-swiatlo.webp",
-    "slug": "co-najlepiej-zatrzymuje-swiatlo"
+    "slug": "co-najlepiej-zatrzymuje-swiatlo",
+    "description": "Ranking rozwiązań gwarantujących 100% zaciemnienia sypialni. Sprawdź, dlaczego podwójne plisy Duette z prowadnicami wygrywają z klasycznymi roletami blackout."
   },
   {
     "title": "Jak prawidłowo czyścić rolety, żaluzje i plisy?",
     "url": "/articles/jak-czyscic-rolety-zaluzje.webp",
-    "slug": "czyszczenie-poradnik"
+    "slug": "czyszczenie-poradnik",
+    "description": "Kompleksowy poradnik krok po kroku o pielęgnacji osłon. Poznaj zasady bezpiecznego czyszczenia 9 typów produktów – od rolet i żaluzji drewnianych po moskitiery."
   }
 ]

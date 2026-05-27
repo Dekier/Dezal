@@ -69,18 +69,15 @@
     text-decoration: unset;
     display: flex;
     flex-direction: row;
-    align-items: center; // Zostawiamy wyrównanie do środka
-    // padding-left: 11px;
-    // margin-left: 74px;
+    align-items: center;
     gap: 24px;
     span {
       @include text(20px, left, $black-400, 700);
       letter-spacing: -1%;
-
-      // DODAJ TO:
-      flex: 1; // Pozwala spanowi zająć całą wolną przestrzeń
-      min-width: 0; // Kluczowe dla flexboxa, żeby tekst mógł się zawinąć
-      word-wrap: break-word; // Bezpiecznik dla bardzo długich słów
+      line-height: 120%;
+      flex: 1;
+      min-width: 0;
+      word-wrap: break-word;
       @include for-phone-only {
         @include text(18px, left, $black-400, 700);
       }

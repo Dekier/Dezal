@@ -62,6 +62,7 @@
     border: none;
     background-color: transparent;
     @include text(16px, left, $black-300, 400);
+    align-items: center;
   }
 
   &__link-arrow {
