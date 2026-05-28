@@ -9,14 +9,6 @@
     />
     <div class="ArticleMain__column">
       <div class="ArticleMain__center-container">
-        <!-- <img
-          v-if="data.img"
-          :src="data.img"
-          alt=""
-          class="ArticleMain__image-header"
-          fetchpriority="high"
-        /> -->
-
         <h1 class="ArticleMain__title">{{ data.title }}</h1>
         <div class="ArticleMain__content">
           <div v-for="(item, index) in data.content" :key="index">

@@ -9,15 +9,17 @@
     align-items: center;
     height: 100%;
     margin: 90px 0 50px;
+    gap: 40px;
+    padding: 0 16px; // Bezpieczny margines
 
     // Zmiana układu na poziomy na większych ekranach
     @include for-big-desktop-up {
+      width: unset;
       margin: 120px 0 50px;
       // flex-direction: row;
       // align-items: flex-start; // Wymagane, aby sidebar mógł być sticky
       // justify-content: center;
-      gap: 40px; // Odstęp między artykułem a sidebarem
-      padding: 0 16px; // Bezpieczny margines
+      // Odstęp między artykułem a sidebarem
     }
   }
 
@@ -40,7 +42,6 @@
   }
 
   &__center-container {
-    width: calc(100% - 32px);
     display: flex;
     flex-direction: column;
     margin: 0 0 50px; // Usunięto 'auto' dla flexboxa
@@ -264,7 +265,7 @@
 
   // --- NOWE: STYLOWANIE PASKA BOCZNEGO ---
   &__sidebar {
-    width: calc(100% - 32px);
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     margin: 10px 0 50px;
@@ -273,7 +274,7 @@
       position: sticky;
       top: 100px; // Dopasowane do górnego marginesu artykułu
       max-width: 900px;
-      width: 100%;
+      width: calc(100% - 32px);
       padding: 0 16px;
       flex-shrink: 0;
       // margin-top: 462px;
@@ -290,6 +291,9 @@
     h2 {
       @include text(32px, left, $black-400, 500);
       margin: 0 0 32px 0;
+      @include for-phone-only {
+        @include text(26px, + left, $black-400, 500);
+      }
     }
 
     ul {
