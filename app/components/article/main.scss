@@ -1,5 +1,6 @@
 @use '@/assets/stylesheets/main-variables' as *;
 @use '@/assets/stylesheets/mixins' as *;
+
 .ArticleMain {
   &__page-container {
     width: 100%;
@@ -7,16 +8,47 @@
     flex-direction: column;
     align-items: center;
     height: 100%;
+    margin: 90px 0 50px;
+
+    // Zmiana układu na poziomy na większych ekranach
+    @include for-big-desktop-up {
+      margin: 120px 0 50px;
+      // flex-direction: row;
+      // align-items: flex-start; // Wymagane, aby sidebar mógł być sticky
+      // justify-content: center;
+      gap: 40px; // Odstęp między artykułem a sidebarem
+      padding: 0 16px; // Bezpieczny margines
+    }
+  }
+
+  &__column {
+    display: flex;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+
+    // Zmiana układu na poziomy na większych ekranach
+    @include for-big-desktop-up {
+      flex-direction: row;
+      align-items: flex-start; // Wymagane, aby sidebar mógł być sticky
+      justify-content: center;
+      gap: 40px; // Odstęp między artykułem a sidebarem
+      padding: 0 16px; // Bezpieczny margines
+    }
   }
 
   &__center-container {
     width: calc(100% - 32px);
     display: flex;
     flex-direction: column;
-    margin: 120px auto 50px;
+    margin: 0 0 50px; // Usunięto 'auto' dla flexboxa
+    max-width: 920px; // Zabezpieczenie szerokości
 
-    @include for-phone-only {
-      margin: 90px auto 50px;
+    @include for-big-desktop-up {
+      margin: 0 0 50px;
+      flex: 1; // Pozwala zająć dostępną przestrzeń
     }
   }
 
@@ -25,9 +57,9 @@
     width: 100%;
     object-fit: cover;
     object-position: center;
-    border-radius: 16px;
+    border-radius: 12px;
     margin-bottom: 20px;
-    max-width: 920px;
+    max-width: 1310px;
     margin: 0 auto;
 
     @include for-tablet {
@@ -35,33 +67,21 @@
     }
   }
 
-  &__image {
-    width: 100%;
-    object-fit: contain;
-    object-position: center;
-    border-radius: 16px;
-    margin-bottom: 20px;
-    display: flex;
-    max-width: 920px;
-    margin: 0 auto;
-  }
-
   &__title {
     width: 100%;
     line-height: 125%;
     @include text(32px, left, $black-400, 700);
-    margin: 16px auto;
+    margin: 0 auto;
+    max-width: 720px;
+    user-select: text !important;
+
     @include for-phone-only {
       @include text(28px, left, $black-400, 700);
     }
     @include for-tablet {
       @include text(38px, left, $black-400, 700);
-      margin: 32px auto 24px;
+      margin: 0 auto 24px;
     }
-
-    max-width: 720px;
-
-    user-select: text !important;
   }
 
   &__content {
@@ -75,7 +95,6 @@
     @include text(24px, left, $black-400, 500);
     margin: 24px auto 0;
     max-width: 720px;
-
     user-select: text !important;
 
     @include for-phone-only {
@@ -91,7 +110,6 @@
     @include text(20px, left, $black-400, 500);
     margin: 24px auto 0;
     max-width: 720px;
-
     user-select: text !important;
 
     @include for-phone-only {
@@ -104,10 +122,9 @@
   }
 
   &__paragraph {
-    line-height: 150%;
+    line-height: 160%;
     margin: 0 auto;
     max-width: 720px;
-
     user-select: text !important;
 
     span {
@@ -116,7 +133,6 @@
     strong {
       @include text(18px, left, rgba($black-400, 0.85), 500);
     }
-
     a {
       @include text(18px, left, $yellow-500, 500);
       text-decoration: unset;
@@ -125,6 +141,7 @@
         text-decoration: underline;
       }
     }
+
     @include for-phone-only {
       span {
         @include text(16px, left, rgba($black-400, 0.75), 300);
@@ -134,11 +151,6 @@
       }
       a {
         @include text(16px, left, $yellow-500, 500);
-        text-decoration: unset;
-        cursor: pointer;
-        &:hover {
-          text-decoration: underline;
-        }
       }
     }
     @include for-tablet {
@@ -148,7 +160,6 @@
 
   &__code {
     @include text(16px, left, $black-400, 400);
-
     user-select: text !important;
   }
 
@@ -168,11 +179,11 @@
     align-items: center;
     gap: 4px;
     text-decoration: none;
+    user-select: text !important;
+
     &:hover {
       background-color: rgba($black-400, 0.15);
     }
-
-    user-select: text !important;
   }
 
   &__category-icon {
@@ -249,5 +260,116 @@
     border: 1px solid $yellow-500;
     border-radius: 999px;
     @include text(12px, left, $yellow-500, 400);
+  }
+
+  // --- NOWE: STYLOWANIE PASKA BOCZNEGO ---
+  &__sidebar {
+    width: calc(100% - 32px);
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0 50px;
+
+    @include for-tablet {
+      position: sticky;
+      top: 100px; // Dopasowane do górnego marginesu artykułu
+      max-width: 900px;
+      width: 100%;
+      padding: 0 16px;
+      flex-shrink: 0;
+      // margin-top: 462px;
+    }
+
+    @include for-big-desktop-up {
+      width: 360px;
+    }
+
+    @include for-phone-only {
+      flex-direction: column;
+    }
+
+    h2 {
+      @include text(32px, left, $black-400, 500);
+      margin: 0 0 32px 0;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      gap: 42px;
+      display: flex;
+      flex-direction: row;
+      @include for-big-desktop-up {
+        flex-direction: column;
+      }
+
+      @include for-phone-only {
+        flex-direction: column;
+      }
+    }
+
+    li {
+      border: 1px solid $grey-400;
+      border-radius: 8px; // Dajemy pełne zaokrąglenie na całą kartę
+      overflow: hidden;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  &__sidebar-image-wrapper {
+    width: 100%;
+    height: 120px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-bottom: 4px;
+    overflow: hidden;
+  }
+
+  &__sidebar-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: scale 300ms ease;
+  }
+
+  li:hover &__sidebar-image {
+    scale: 1.02;
+  }
+
+  &__sidebar-text-container {
+    @include text(18px, left, $black-300, 600);
+    display: block;
+    line-height: 130%;
+    padding: 8px 70px 12px 8px;
+    position: relative;
+  }
+
+  &__arrow-box {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    border: 2px solid $yellow-500;
+    margin-left: 36px;
+    position: relative;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__arrow-icon {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    transition: transform 400ms;
+  }
+
+  li:hover &__arrow-icon {
+    transform: translateY(-50%) translateX(5px);
   }
 }

@@ -42,19 +42,19 @@
 
     span {
       @include text(14px, left, $black-400, 400);
-      line-height: 140%;
+      line-height: 150%;
       display: flex;
     }
 
     &--bold {
       span {
         @include text(14px, left, $black-400, 500);
-        line-height: 140%;
+        line-height: 150%;
         display: flex;
       }
       a {
         @include text(14px, left, $yellow-600, 500);
-        line-height: 140%;
+        line-height: 150%;
         display: flex;
       }
     }
