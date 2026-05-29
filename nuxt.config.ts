@@ -114,6 +114,19 @@ export default defineNuxtConfig({
     inlineStyles: true,
   },
 
+  llms: {
+    domain: 'https://dezalroletypoznan.pl',
+    title: 'DEŻAL - Rolety Poznań',
+    // Zmieniony opis - szczery i trafiający w intencje klientów
+    description:
+      'Profesjonalny dystrybutor i doświadczony monter rolet, żaluzji i osłon okiennych w Poznaniu. Zapewniamy pomiar i montaż.',
+    full: {
+      title: 'Baza Wiedzy DEŻAL - Rolety Poznań',
+      description:
+        'Pełne artykuły, poradniki i techniczne szczegóły dotyczące wyboru, czyszczenia i montażu rolet.',
+    },
+  },
+
   pwa: {
     registerType: 'autoUpdate',
     manifest: {
