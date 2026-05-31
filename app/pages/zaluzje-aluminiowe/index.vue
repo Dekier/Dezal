@@ -90,35 +90,41 @@ const pageData = computed(() => {
 });
 
 useHead({
-  title: 'Stylowe żaluzje aluminiowe na wymiar – Poznań i okolice',
+  // Razem z " | DEŻAL" wyniesie 53 znaki – idealna długość, bezpieczna dla telefonów.
+  title: 'Żaluzje Aluminiowe na wymiar Poznań i okolice',
   htmlAttrs: {
     lang: 'pl',
   },
   meta: [
     {
       name: 'description',
+      // Skrócony do 149 znaków. Wyróżnia główne zalety aluminium i darmowy pomiar.
       content:
-        'Stylowe żaluzje na wymiar – aluminium, szeroki wybór kolorów. Darmowy pomiar i indywidualna wycena.',
+        'Nowoczesne żaluzje aluminiowe na wymiar w Poznaniu. Idealne do kuchni, łazienki i biura. Odporne na wilgoć! Zamów darmowy pomiar i fachowy montaż.',
     },
     {
       property: 'og:title',
-      content: 'Żaluzje aluminiowe – Poznań i okolice',
+      content: 'Żaluzje Aluminiowe na wymiar Poznań i okolice',
     },
     {
       property: 'og:description',
       content:
-        'Stylowe żaluzje na wymiar – aluminium, szeroki wybór kolorów. Darmowy pomiar i indywidualna wycena.',
+        'Nowoczesne żaluzje aluminiowe na wymiar w Poznaniu. Idealne do kuchni, łazienki i biura. Odporne na wilgoć! Zamów darmowy pomiar i fachowy montaż.',
     },
     {
       property: 'og:image',
-      content: '/images/zaluzje/dezal-poznan-zaluzja-aluminiowa-1.webp',
+      // UWAGA: Pełny adres URL!
+      content:
+        'https://dezalroletypoznan.pl/images/zaluzje/dezal-poznan-zaluzja-aluminiowa-1.webp',
     },
     {
       property: 'og:image:alt',
-      content: 'Żaluzje na wymiar - Poznań',
+      content:
+        'Montaż żaluzji aluminiowych na wymiar w Poznaniu - realizacja DEŻAL',
     },
   ],
-  canonical: 'https://dezalroletypoznan.pl/zaluzje',
+  // UWAGA: Upewnij się, że ten URL odpowiada faktycznemu adresowi w przeglądarce!
+  canonical: 'https://dezalroletypoznan.pl/zaluzje-aluminiowe',
 });
 </script>
 

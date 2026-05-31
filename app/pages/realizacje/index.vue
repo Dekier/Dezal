@@ -555,36 +555,40 @@ const beforeImage = () => {
 const imageAlt = (img) => {
   return `deżal poznań ${img.category}`;
 };
-
 useHead({
-  title: 'Realizacje – Rolety, Plisy, Żaluzje i Moskitiery na Wymiar ',
+  // Tytuł z "Nasze Realizacje". Razem z " | DEŻAL" wyniesie 55 znaków (idealnie).
+  title: 'Nasze Realizacje: Rolety, Plisy, Żaluzje Poznań',
   htmlAttrs: {
     lang: 'pl',
   },
   meta: [
     {
       name: 'description',
+      // Skrócony do 152 znaków. Konkretny i zachęcający do akcji.
       content:
-        'Zobacz nasze realizacje rolet, plis, żaluzji i moskitier w Poznaniu. Oferujemy osłony okienne na wymiar – estetyczne, trwałe i funkcjonalne rozwiązania dla domu i firmy.',
+        'Zobacz galerię naszych realizacji w Poznaniu i okolicach. Montujemy rolety, plisy, żaluzje i moskitiery na wymiar. Zainspiruj się naszymi projektami!',
     },
     {
       property: 'og:title',
-      content: 'Realizacje – Rolety, Plisy, Żaluzje i Moskitiery na Wymiar ',
+      content: 'Nasze Realizacje: Rolety, Plisy, Żaluzje Poznań',
     },
     {
       property: 'og:description',
       content:
-        'Zobacz nasze realizacje rolet, plis, żaluzji i moskitier w Poznaniu. Oferujemy osłony okienne na wymiar – estetyczne, trwałe i funkcjonalne rozwiązania dla domu i firmy.',
+        'Zobacz galerię naszych realizacji w Poznaniu i okolicach. Montujemy rolety, plisy, żaluzje i moskitiery na wymiar. Zainspiruj się naszymi projektami!',
     },
     {
       property: 'og:image',
-      content: '/images/offer/dezal-poznan-roleta-dzien-noc-2.webp',
+      // UWAGA: Bezwzględny adres URL, żeby miniatura działała na Facebooku!
+      content:
+        'https://dezalroletypoznan.pl/images/rolety/dezal-poznan-roleta-dzien-noc-2.webp',
     },
     {
       property: 'og:image:alt',
-      content: 'Roleta dzień noc w salonie',
+      content: 'Nasze realizacje - Rolety dzień noc w Poznaniu',
     },
   ],
+  // Canonical jest IDEALNY - zostawiamy!
   canonical: 'https://dezalroletypoznan.pl/realizacje',
 });
 </script>

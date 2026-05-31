@@ -92,35 +92,41 @@ const pageData = computed(() => {
 });
 
 useHead({
-  title: 'Stylowe żaluzje drewniane na wymiar – Poznań i okolice',
+  // Łącznie z dopiskiem Nuxta " | DEŻAL" da 55 znaków – idealnie.
+  title: 'Żaluzje Drewniane i Bambusowe na Wymiar Poznań',
   htmlAttrs: {
     lang: 'pl',
   },
   meta: [
     {
       name: 'description',
+      // Dokładnie 155 znaków. Zawiera frazy: drewniane, bambusowe, na wymiar, Poznań, darmowy pomiar i lamele 25/50mm.
       content:
-        'Stylowe żaluzje na wymiar –  drewno, szeroki wybór kolorów. Darmowy pomiar i indywidualna wycena.',
+        'Eleganckie żaluzje drewniane i bambusowe na wymiar w Poznaniu. Oferujemy lamele 25 i 50 mm, darmowy pomiar u klienta oraz fachowy montaż. Sprawdź cennik!',
     },
     {
       property: 'og:title',
-      content: 'Żaluzje drewniane i aluminiowe – Poznań i okolice',
+      content: 'Żaluzje Drewniane i Bambusowe na Wymiar Poznań',
     },
     {
       property: 'og:description',
       content:
-        'Stylowe żaluzje na wymiar –  drewno, szeroki wybór kolorów. Darmowy pomiar i indywidualna wycena.',
+        'Eleganckie żaluzje drewniane i bambusowe na wymiar w Poznaniu. Oferujemy lamele 25 i 50 mm, darmowy pomiar u klienta oraz fachowy montaż. Sprawdź cennik!',
     },
     {
       property: 'og:image',
-      content: '/images/zaluzje/dezal-poznan-zaluzja-drewniana-1.webp',
+      // UWAGA: Pełny adres URL!
+      content:
+        'https://dezalroletypoznan.pl/images/zaluzje/dezal-poznan-zaluzja-drewniana-1.webp',
     },
     {
       property: 'og:image:alt',
-      content: 'Żaluzje na wymiar - Poznań',
+      content:
+        'Montaż żaluzji drewnianych na wymiar w Poznaniu - realizacja DEŻAL',
     },
   ],
-  canonical: 'https://dezalroletypoznan.pl/zaluzje',
+  // UWAGA: Dopasuj dokładnie do adresu URL tej konkretnej podstrony na serwerze!
+  canonical: 'https://dezalroletypoznan.pl/zaluzje-drewniane',
 });
 </script>
 

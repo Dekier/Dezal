@@ -87,32 +87,36 @@ const pageData = computed(() => {
 });
 
 useHead({
-  title: 'Rolety rzymskie Poznań – elegancja i komfort',
+  // Razem z " | DEŻAL" da 52 znaki – perfekcyjnie w punkt!
+  title: 'Rolety Rzymskie na wymiar Poznań i okolice',
   htmlAttrs: {
     lang: 'pl',
   },
   meta: [
     {
       name: 'description',
+      // Skrócony do 149 znaków. Podkreśla zalety (pranie, materiały dekoracyjne) i darmowy pomiar.
       content:
-        'Rolety rzymskie z tkanin dekoracyjnych na zamówienie. Poznań i okolice – precyzyjny montaż, profesjonalna obsługa. Darmowy pomiar i indywidualna wycena.',
+        'Eleganckie rolety rzymskie na wymiar w Poznaniu. Ogromny wybór tkanin, możliwość prania materiału. Zamów darmowy pomiar i profesjonalny montaż!',
     },
     {
       property: 'og:title',
-      content: 'Rolety rzymskie Poznań – elegancja i komfort',
+      content: 'Rolety Rzymskie na wymiar Poznań i okolice',
     },
     {
       property: 'og:description',
       content:
-        'Rolety rzymskie z tkanin dekoracyjnych na zamówienie. Poznań i okolice – precyzyjny montaż, profesjonalna obsługa. Darmowy pomiar i indywidualna wycena.',
+        'Eleganckie rolety rzymskie na wymiar w Poznaniu. Ogromny wybór tkanin, możliwość prania materiału. Zamów darmowy pomiar i profesjonalny montaż!',
     },
     {
       property: 'og:image',
-      content: '/images/offer/dezal-poznan-roleta-rzymska-0.webp',
+      // UWAGA: Pełny adres URL. Upewnij się, że ten plik fizycznie istnieje na serwerze!
+      content:
+        'https://dezalroletypoznan.pl/images/offer/dezal-poznan-roleta-rzymska-0.webp',
     },
     {
       property: 'og:image:alt',
-      content: 'Rolety rzymskie - DEŻAL',
+      content: 'Montaż rolet rzymskich na wymiar w Poznaniu - realizacja DEŻAL',
     },
   ],
   canonical: 'https://dezalroletypoznan.pl/rolety-rzymskie',

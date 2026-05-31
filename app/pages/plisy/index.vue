@@ -89,9 +89,8 @@ const pageData = computed(() => {
       ]
     : [];
 });
-
 useHead({
-  title: 'Plisy okienne Poznań – nowoczesne rozwiązania na wymiar',
+  title: 'Plisy Okienne na Wymiar Poznań i okolice',
   htmlAttrs: {
     lang: 'pl',
   },
@@ -99,24 +98,25 @@ useHead({
     {
       name: 'description',
       content:
-        'Plisy okienne do każdego typu okna. Montaż na oknach dachowych, uchylnych i przesuwnych.',
+        'Nowoczesne plisy okienne na wymiar w Poznaniu. Idealne do okien dachowych, uchylnych i przesuwnych. Zamów darmowy pomiar i wycenę u Ciebie w domu!',
     },
     {
       property: 'og:title',
-      content: 'Plisy okienne Poznań – nowoczesne rozwiązania na wymiar',
+      content: 'Plisy Okienne na Wymiar Poznań i okolice',
     },
     {
       property: 'og:description',
       content:
-        'Plisy okienne do każdego typu okna. Montaż na oknach dachowych, uchylnych i przesuwnych.',
+        'Nowoczesne plisy okienne na wymiar w Poznaniu. Idealne do okien dachowych, uchylnych i przesuwnych. Zamów darmowy pomiar i wycenę u Ciebie w domu!',
     },
     {
       property: 'og:image',
-      content: '/images/offer/dezal-poznan-plisa-1.webp',
+      content:
+        'https://dezalroletypoznan.pl/images/plisy/dezal-poznan-plisa-1.webp',
     },
     {
       property: 'og:image:alt',
-      content: 'Plisy okienne - DEŻAL',
+      content: 'Montaż plisy okiennej w Poznaniu - realizacja DEŻAL',
     },
   ],
   canonical: 'https://dezalroletypoznan.pl/plisy',

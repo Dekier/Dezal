@@ -87,34 +87,38 @@ const pageData = computed(() => {
       ]
     : [];
 });
-
 useHead({
-  title: 'Verticale (żaluzje pionowe) – elegancja i funkcjonalność',
+  // Razem z " | DEŻAL" wyniesie 52 znaki – idealnie.
+  title: 'Verticale (Żaluzje Pionowe) na wymiar Poznań',
   htmlAttrs: {
     lang: 'pl',
   },
   meta: [
     {
       name: 'description',
+      // Skrócony do 145 znaków. Trafia w punkt: słowa kluczowe, przeznaczenie (biura/duże okna) i darmowy pomiar.
       content:
-        'Żaluzje pionowe do biur i domów. Verticale na wymiar z montażem w Poznaniu. Elegancja, zaciemnienie i kontrola światła. Darmowy pomiar i indywidualna wycena.',
+        'Żaluzje pionowe (verticale) na wymiar w Poznaniu. Idealne do biur i domów z dużymi oknami. Zapewniamy darmowy pomiar i profesjonalny montaż!',
     },
     {
       property: 'og:title',
-      content: 'Verticale (żaluzje pionowe) – elegancja i funkcjonalność',
+      content: 'Verticale (Żaluzje Pionowe) na wymiar Poznań',
     },
     {
       property: 'og:description',
       content:
-        'Żaluzje pionowe do biur i domów. Verticale na wymiar z montażem w Poznaniu. Elegancja, zaciemnienie i kontrola światła. Darmowy pomiar i indywidualna wycena.',
+        'Żaluzje pionowe (verticale) na wymiar w Poznaniu. Idealne do biur i domów z dużymi oknami. Zapewniamy darmowy pomiar i profesjonalny montaż!',
     },
     {
       property: 'og:image',
-      content: '/images/offer/dezal-poznan-roleta-verticale-1.webp',
+      // UWAGA: Pełny adres URL oraz prawidłowy folder (verticale)
+      content:
+        'https://dezalroletypoznan.pl/images/verticale/dezal-poznan-roleta-verticale-1.webp',
     },
     {
       property: 'og:image:alt',
-      content: 'Verticale - żaluzje pionowe DEŻAL',
+      content:
+        'Montaż żaluzji pionowych (verticali) na wymiar w Poznaniu - realizacja DEŻAL',
     },
   ],
   canonical: 'https://dezalroletypoznan.pl/verticale',

@@ -82,7 +82,7 @@ const faqTechniczne = ref([
 ]);
 
 useHead({
-  title: 'Rolety Poznań – nowoczesne plisy, żaluzje i osłony okienne',
+  title: 'Rolety, plisy, żaluzje na wymiar w Poznaniu i okolicach',
   htmlAttrs: {
     lang: 'pl',
   },
@@ -90,24 +90,25 @@ useHead({
     {
       name: 'description',
       content:
-        'Rolety, plisy, żaluzje i moskitiery w Poznaniu – oferujemy nowoczesne osłony okienne na wymiar. Profesjonalny montaż, precyzyjny pomiar i indywidualna wycena.',
+        'Nowoczesne rolety, plisy, żaluzje i moskitiery na wymiar. Poznań i okolice. Zapewniamy darmowy pomiar u klienta, fachowy montaż i najwyższą jakość.',
     },
     {
       property: 'og:title',
-      content: 'Rolety Poznań – nowoczesne plisy, żaluzje i osłony okienne',
+      content: 'Rolety, plisy, żaluzje na wymiar w Poznaniu i okolicach',
     },
     {
       property: 'og:description',
       content:
-        'Rolety, plisy, żaluzje i moskitiery w Poznaniu – oferujemy nowoczesne osłony okienne na wymiar. Profesjonalny montaż, precyzyjny pomiar i indywidualna wycena.',
+        'Nowoczesne rolety, plisy, żaluzje i moskitiery na wymiar. Poznań i okolice. Zapewniamy darmowy pomiar u klienta, fachowy montaż i najwyższą jakość.',
     },
     {
       property: 'og:image',
-      content: '/images/offer/dezal-poznan-roleta-dzien-noc-2.webp',
+      content:
+        'https://dezalroletypoznan.pl/images/offer/dezal-poznan-roleta-dzien-noc-2.webp',
     },
     {
       property: 'og:image:alt',
-      content: 'Roleta dzień noc w salonie',
+      content: 'Roleta dzień noc w salonie - realizacja w Poznaniu',
     },
   ],
   canonical: 'https://dezalroletypoznan.pl',
