@@ -38,6 +38,9 @@ importers:
       nuxt-llms:
         specifier: ^0.2.0
         version: 0.2.0(magicast@0.5.3)
+      sharp:
+        specifier: ^0.34.5
+        version: 0.34.5
     devDependencies:
       '@nuxt/fonts':
         specifier: ^0.14.0
@@ -8214,8 +8217,7 @@ snapshots:
       '@iconify/types': 2.0.0
       vue: 3.5.34(typescript@6.0.3)
 
-  '@img/colour@1.1.0':
-    optional: true
+  '@img/colour@1.1.0': {}
 
   '@img/sharp-darwin-arm64@0.34.5':
     optionalDependencies:
@@ -13876,7 +13878,6 @@ snapshots:
       '@img/sharp-win32-arm64': 0.34.5
       '@img/sharp-win32-ia32': 0.34.5
       '@img/sharp-win32-x64': 0.34.5
-    optional: true
 
   shebang-command@2.0.0:
     dependencies:

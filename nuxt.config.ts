@@ -119,6 +119,7 @@ export default defineNuxtConfig({
         provider: 'google',
         // Wymuszamy pobranie konkretnych grubości, w tym 700!
         weights: ['400', '500', '600', '700'],
+        display: 'swap',
       },
     ],
   },
