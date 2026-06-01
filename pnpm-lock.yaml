@@ -39,6 +39,9 @@ importers:
         specifier: ^0.2.0
         version: 0.2.0(magicast@0.5.3)
     devDependencies:
+      '@nuxt/fonts':
+        specifier: ^0.14.0
+        version: 0.14.0(db0@0.3.4)(ioredis@5.10.1)(magicast@0.5.3)(vite@7.3.3(@types/node@25.9.1)(jiti@2.7.0)(lightningcss@1.32.0)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@nuxt/kit':
         specifier: 4.4.6
         version: 4.4.6(magicast@0.5.3)

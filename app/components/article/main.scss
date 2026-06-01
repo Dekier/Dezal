@@ -129,7 +129,7 @@
     user-select: text !important;
 
     span {
-      @include text(18px, left, rgba($black-400, 0.75), 300);
+      @include text(18px, left, rgba($black-400, 0.75), 400);
     }
     strong {
       @include text(18px, left, rgba($black-400, 0.85), 500);
@@ -145,7 +145,7 @@
 
     @include for-phone-only {
       span {
-        @include text(16px, left, rgba($black-400, 0.75), 300);
+        @include text(16px, left, rgba($black-400, 0.75), 400);
       }
       strong {
         @include text(16px, left, rgba($black-400, 0.85), 500);

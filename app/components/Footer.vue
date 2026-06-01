@@ -258,7 +258,7 @@
       </div>
     </div>
     <div class="Footer__down-container">
-      Copyright &copy; 2026 Z.H.U DEŻAL Dariusz Dekier Rolety Poznań | Wszelkie
+      Copyright &copy; 2026 DEŻAL Rolety. Plisy. Żaluzje. Poznań | Wszelkie
       prawa zastrzeżone
     </div>
   </footer>

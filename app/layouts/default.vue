@@ -13,7 +13,7 @@ import { ref, onMounted } from 'vue';
 // Używamy modułu schema-org, który masz już zainstalowany w projekcie
 useSchemaOrg([
   defineLocalBusiness({
-    name: 'Z.H.U DEŻAL Dariusz Dekier',
+    name: 'DEŻAL Rolety. Plisy. Żaluzje. Poznań',
     url: 'https://dezalroletypoznan.pl/',
     logo: 'https://dezalroletypoznan.pl/images/logo.png',
     telephone: '+48603630299',

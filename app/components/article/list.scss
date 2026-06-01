@@ -16,9 +16,9 @@
   }
 
   &__item-text {
-    @include text(18px, left, rgba($black-400, 0.7), 300);
+    @include text(18px, left, rgba($black-400, 0.7), 400);
     @include for-phone-only {
-      @include text(16px, left, rgba($black-400, 0.7), 300);
+      @include text(16px, left, rgba($black-400, 0.7), 400);
     }
   }
 

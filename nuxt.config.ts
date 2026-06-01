@@ -27,6 +27,12 @@ export default defineNuxtConfig({
     '/*.png': { headers: { 'cache-control': 'public, max-age=31536000' } },
     '/*.webp': { headers: { 'cache-control': 'public, max-age=31536000' } },
     '/*.jpg': { headers: { 'cache-control': 'public, max-age=31536000' } },
+    '/**/*.woff2': {
+      headers: { 'cache-control': 'public, max-age=31536000, immutable' },
+    },
+    '/**/*.woff': {
+      headers: { 'cache-control': 'public, max-age=31536000, immutable' },
+    },
   },
 
   experimental: {
@@ -66,16 +72,6 @@ export default defineNuxtConfig({
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         { rel: 'apple-touch-icon', href: '/images/logo-rect.png' },
-        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-        {
-          rel: 'preconnect',
-          href: 'https://fonts.gstatic.com',
-          crossorigin: 'anonymous',
-        },
-        {
-          rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..700;1,14..32,300..700&display=swap',
-        },
       ],
     },
   },
@@ -90,6 +86,7 @@ export default defineNuxtConfig({
     'nuxt-gtag',
     '@nuxt/scripts',
     'nuxt-llms',
+    '@nuxt/fonts',
   ],
 
   // critters: {
@@ -105,6 +102,16 @@ export default defineNuxtConfig({
     public: {
       siteUrl,
     },
+  },
+  fonts: {
+    families: [
+      {
+        name: 'Inter',
+        provider: 'google',
+        // Wymuszamy pobranie konkretnych grubości, w tym 700!
+        weights: ['400', '500', '600', '700'],
+      },
+    ],
   },
 
   site: {
