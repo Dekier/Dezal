@@ -83,11 +83,20 @@ export default defineNuxtConfig({
   modules: [
     '@vite-pwa/nuxt',
     '@nuxtjs/seo',
-    'nuxt-gtag',
+    // 'nuxt-gtag',
     '@nuxt/scripts',
     'nuxt-llms',
     '@nuxt/fonts',
   ],
+
+  // DODAJ NOWĄ KONFIGURACJĘ SCRIPTS
+  scripts: {
+    registry: {
+      googleAnalytics: {
+        id: 'G-7TFFQYCBP3',
+      },
+    },
+  },
 
   // critters: {
   //   preload: 'swap',
@@ -121,10 +130,10 @@ export default defineNuxtConfig({
     currentLocale: 'pl',
   },
 
-  gtag: {
-    id: 'G-7TFFQYCBP3',
-    enabled: process.env.NODE_ENV === 'production',
-  },
+  // gtag: {
+  //   id: 'G-7TFFQYCBP3',
+  //   enabled: process.env.NODE_ENV === 'production',
+  // },
 
   features: {
     inlineStyles: true,

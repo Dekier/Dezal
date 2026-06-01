@@ -240,22 +240,25 @@
     </div>
 
     <div class="Contact__bottom-container">
-      <ClientOnly>
-        <div
-          id="map"
-          style="width: 100%; height: 100%; min-height: 450px"
-        ></div>
-      </ClientOnly>
+      <div
+        ref="mapContainer"
+        id="map"
+        style="width: 100%; height: 100%; min-height: 450px"
+      ></div>
     </div>
   </div>
 </template>
-
 <script setup lang="ts">
 import { ref, computed, onMounted, createApp } from 'vue';
-import CustomMapMarker from '~/components/Custom-map-marker.vue'; // <-- Import naszego komponentu
+import CustomMapMarker from '~/components/Custom-map-marker.vue';
 import { setOptions, importLibrary } from '@googlemaps/js-api-loader';
 import emailjs from '@emailjs/browser';
+
+// Obsługa okienka informacyjnego
 const isActiveInfoBox = ref(false);
+
+// Referencja do diva z mapą w sekcji template
+const mapContainer = ref<HTMLElement | null>(null);
 
 const initGoogleMap = async () => {
   setOptions({
@@ -264,15 +267,18 @@ const initGoogleMap = async () => {
   } as any);
 
   try {
-    // 1. Dodajemy import 'Polygon' z biblioteki 'maps'
     const { Map, Polygon } = (await importLibrary('maps')) as any;
     const { AdvancedMarkerElement } = (await importLibrary('marker')) as any;
 
     const position = { lat: 52.45362985985779, lng: 16.905527873339654 };
     const currentZoom = window.innerWidth < 600 ? 16 : 18;
-    const map = new Map(document.getElementById('map'), {
+
+    // Upewniamy się, że element DOM istnieje przed wygenerowaniem mapy
+    if (!mapContainer.value) return;
+
+    const map = new Map(mapContainer.value, {
       center: position,
-      zoom: currentZoom, // Dałem zoom 18, żeby od razu było widać z bliska ładny obrys
+      zoom: currentZoom,
       mapId: 'a93ae4d0d1b19b722f6d451b',
       disableDefaultUI: true,
       zoomControl: true,
@@ -281,30 +287,24 @@ const initGoogleMap = async () => {
       gestureHandling: 'cooperative',
     });
 
-    // --- NOWOŚĆ: RYSOWANIE GEOGRAFICZNEGO OBRYSU BUDYNKU ---
-    // Tutaj podajemy współrzędne rogów dachu (zgodnie ze wskazówkami zegara)
     const buildingCorners = [
-      { lat: 52.4536, lng: 16.9055 }, // Lewy górny róg
-      { lat: 52.45359, lng: 16.90565 }, // Prawy górny róg
-      { lat: 52.45348, lng: 16.90563 }, // Prawy dolny róg
-      { lat: 52.45349, lng: 16.90548 }, // Lewy dolny róg
+      { lat: 52.4536, lng: 16.9055 },
+      { lat: 52.45359, lng: 16.90565 },
+      { lat: 52.45348, lng: 16.90563 },
+      { lat: 52.45349, lng: 16.90548 },
     ];
 
-    // Tworzymy żółty wielokąt
     const buildingHighlight = new Polygon({
       paths: buildingCorners,
-      strokeColor: '#ffe003', // Żółta ramka
+      strokeColor: '#ffe003',
       strokeOpacity: 1.0,
-      strokeWeight: 3, // Grubość ramki
-      fillColor: '#ffe003', // Żółte wypełnienie
-      fillOpacity: 0.4, // 40% widoczności
+      strokeWeight: 3,
+      fillColor: '#ffe003',
+      fillOpacity: 0.4,
     });
 
-    // Nakładamy wielokąt na mapę!
     buildingHighlight.setMap(map);
-    // -------------------------------------------------------
 
-    // --- STRZAŁKA I PRZYCISK (Nasz marker z Vue) ---
     const markerContainer = document.createElement('div');
     createApp(CustomMapMarker).mount(markerContainer);
     const centerOfBuilding = { lat: 52.45354, lng: 16.90556 };
@@ -319,19 +319,34 @@ const initGoogleMap = async () => {
   }
 };
 
-// 2. Funkcja wywoływana przy kliknięciu "Zamknij" lub "Rozumiem"
 const closeInfoBox = () => {
   isActiveInfoBox.value = false;
   localStorage.setItem('dezal_info_box_hidden', 'true');
 };
 
 onMounted(() => {
-  initGoogleMap();
-
-  // 3. Sprawdzamy localStorage dopiero po zamontowaniu komponentu w przeglądarce
+  // 1. Obsługa okienka info
   const isHidden = localStorage.getItem('dezal_info_box_hidden');
   if (!isHidden) {
     isActiveInfoBox.value = true;
+  }
+
+  // 2. OPTYMALIZACJA: Ładowanie mapy dopiero, gdy kontener pojawia się na ekranie
+  if (mapContainer.value) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          // Ładujemy ciężki skrypt Google Maps
+          initGoogleMap();
+          // Przestajemy obserwować
+          observer.disconnect();
+        }
+      },
+      // Zaczynamy ładować 200 pikseli przed wjechaniem elementu w obszar widoczny
+      { rootMargin: '200px' }
+    );
+
+    observer.observe(mapContainer.value);
   }
 });
 
@@ -373,12 +388,10 @@ const validateForm = () => {
   return isValid;
 };
 
-// Przycisk aktywny?
 const isActiveSubmit = computed(() => {
   return validateForm();
 });
 
-// EmailJS config (podmień danymi swoimi)
 const SERVICE_ID = 'service_a0kq1wc';
 const TEMPLATE_ID = 'template_x5sbr5s';
 const PUBLIC_KEY = 'C6CmW10OJxlDJlnl-';
@@ -386,6 +399,8 @@ const PUBLIC_KEY = 'C6CmW10OJxlDJlnl-';
 const sendForm = async () => {
   if (!validateForm() || submitText.value === 'Wysyłanie...') return;
   submitText.value = 'Wysyłanie...';
+
+  // Wyciągamy bezpieczną funkcję gtag z modułu Nuxt Scripts
 
   try {
     await emailjs.send(
