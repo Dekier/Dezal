@@ -16,7 +16,17 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
-    '/**': { prerender: true },
+    // Twoje główne reguły renderowania
+    '/**': { swr: 3600 },
+
+    // Zmuszenie przeglądarki do cachowania obrazków, css, js i czcionek przez rok
+    '/_nuxt/**': {
+      headers: { 'cache-control': 'public, max-age=31536000, immutable' },
+    },
+    '/images/**': { headers: { 'cache-control': 'public, max-age=31536000' } },
+    '/*.png': { headers: { 'cache-control': 'public, max-age=31536000' } },
+    '/*.webp': { headers: { 'cache-control': 'public, max-age=31536000' } },
+    '/*.jpg': { headers: { 'cache-control': 'public, max-age=31536000' } },
   },
 
   experimental: {
@@ -24,7 +34,6 @@ export default defineNuxtConfig({
   },
 
   nitro: {
-    preset: 'node-cluster',
     serverAssets: [
       {
         baseName: 'articles', // To będzie nazwa, pod którą odwołasz się w kodzie
@@ -76,7 +85,7 @@ export default defineNuxtConfig({
   plugins: [],
 
   modules: [
-    '@vite-pwa/nuxt', // 🚀 używamy zamiast sitemap + robots
+    '@vite-pwa/nuxt',
     '@nuxtjs/seo',
     'nuxt-gtag',
     '@nuxt/scripts',
