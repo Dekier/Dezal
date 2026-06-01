@@ -11,12 +11,9 @@
     <LazyContact />
   </div>
 </template>
-
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 import offers from '~~/public/offers-landing.json';
-// Zakładam, że masz komponent Questions zaimportowany globalnie lub lokalnie.
-// Jeśli nie, dodaj: import Questions from '../components/Questions.vue';
 
 const offerBoxesJson = ref(offers.boxes);
 
@@ -81,6 +78,25 @@ const faqTechniczne = ref([
   },
 ]);
 
+// --- GENEROWANIE DANYCH UPORZĄDKOWANYCH DLA GOOGLE (SCHEMA.ORG) ---
+const faqSchema = computed(() => {
+  // Łączymy obie tablice w jedną wspólną listę dla robota Google
+  const allFaqs = [...faqPorady.value, ...faqTechniczne.value];
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: allFaqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  };
+});
+
 useHead({
   title: 'Rolety, plisy, żaluzje na wymiar w Poznaniu i okolicach',
   htmlAttrs: {
@@ -112,6 +128,13 @@ useHead({
     },
   ],
   canonical: 'https://dezalroletypoznan.pl',
+  // DODANY SKRYPT SCHEMA DLA FAQ
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify(faqSchema.value),
+    },
+  ],
 });
 </script>
 
