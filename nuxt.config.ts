@@ -3,14 +3,6 @@ const siteUrl =
 export default defineNuxtConfig({
   ssr: true,
 
-  vite: {
-    build: {
-      cssCodeSplit: true,
-      target: 'esnext',
-      minify: 'esbuild',
-    },
-  },
-
   future: {
     compatibilityVersion: 4,
   },
@@ -117,11 +109,17 @@ export default defineNuxtConfig({
       {
         name: 'Inter',
         provider: 'google',
-        // Wymuszamy pobranie konkretnych grubości, w tym 700!
         weights: ['400', '500', '600', '700'],
         display: 'swap',
       },
     ],
+    experimental: {
+      processCSSVariables: true,
+    },
+    // Wymusza pobieranie czcionki od razu
+    defaults: {
+      preload: true,
+    },
   },
 
   site: {
