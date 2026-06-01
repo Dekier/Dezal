@@ -2,8 +2,8 @@
   <div class="layout">
     <Header />
     <NuxtPage />
-    <Cookies v-if="visibleCookies" @hideCookies="hideCookies" />
-    <Footer />
+    <LazyCookies v-if="visibleCookies" @hideCookies="hideCookies" />
+    <LazyFooter />
   </div>
 </template>
 
