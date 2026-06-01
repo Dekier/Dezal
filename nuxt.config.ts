@@ -137,7 +137,7 @@ export default defineNuxtConfig({
   // },
 
   features: {
-    inlineStyles: true,
+    inlineStyles: false,
   },
 
   llms: {
