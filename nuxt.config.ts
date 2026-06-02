@@ -8,6 +8,7 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
+    '/__og-image__/**': { cache: false },
     // Twoje główne reguły renderowania
     '/**': { swr: 3600 },
 
@@ -24,6 +25,12 @@ export default defineNuxtConfig({
     },
     '/**/*.woff': {
       headers: { 'cache-control': 'public, max-age=31536000, immutable' },
+    },
+    '/opinia': {
+      redirect: {
+        to: 'https://g.page/r/CaGl8Zq5auyqEBM/review',
+        statusCode: 301,
+      },
     },
   },
 
@@ -105,6 +112,7 @@ export default defineNuxtConfig({
     },
   },
   fonts: {
+    provider: 'google',
     families: [
       {
         name: 'Inter',
