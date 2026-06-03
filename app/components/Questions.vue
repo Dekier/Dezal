@@ -21,9 +21,32 @@
           </h4>
 
           <div class="Questions__answer-wrapper">
-            <p class="Questions__answer">
-              {{ item.answer }}
-            </p>
+            <!--
+              KROK 1: Pakujemy wszystko w jeden wspólny div,
+              dzięki czemu animacja Grid 0fr -> 1fr znowu działa idealnie
+            -->
+            <div class="Questions__answer-inner">
+              <p class="Questions__answer">
+                {{ item.answer }}
+              </p>
+
+              <!-- KROK 2: Dodajemy @click.stop, aby kliknięcie w link nie zwijało akordeonu -->
+              <nuxt-link
+                v-if="item.article_url"
+                :to="item.article_url"
+                class="Questions__read-more"
+                @click.stop
+              >
+                <span>przejdź do artykułu</span>
+                <div class="Questions__arrow-box">
+                  <img
+                    src="/icons/arrow.svg"
+                    alt="arrow"
+                    class="Questions__arrow-icon"
+                  />
+                </div>
+              </nuxt-link>
+            </div>
           </div>
         </div>
       </div>
@@ -34,29 +57,28 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
-// Definiujemy interfejs dla pojedynczego pytania i odpowiedzi
 export interface FaqItem {
   question: string;
   answer: string;
+  article_url?: string; // <-- Dodajemy opcjonalny parametr do typu TypeScript
 }
 
-// Rozszerzamy propsy o listę FAQ
 const props = defineProps<{
   title: string;
   faqList: FaqItem[];
 }>();
 
-// Stan przechowujący indeks aktualnie otwartego elementu
 const activeIndex = ref<number | null>(null);
 
 const toggleItem = (index: number) => {
   if (activeIndex.value === index) {
-    activeIndex.value = null; // Zamknij, jeśli kliknięto ponownie
+    activeIndex.value = null;
   } else {
-    activeIndex.value = index; // Otwórz
+    activeIndex.value = index;
   }
 };
 </script>
+
 <style lang="scss">
 @use './Questions.scss' as *;
 </style>

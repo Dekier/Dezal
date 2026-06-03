@@ -40,7 +40,8 @@ const faqData = ref([
   {
     question: 'Jak dbać i czyścić rolety dzień noc?',
     answer:
-      'Czyszczenie jest bardzo proste. Na co dzień wystarczy regularnie omiatać roletę miotełką do kurzu lub suchą ściereczką z mikrofibry. W przypadku miejscowych zabrudzeń można delikatnie przetrzeć plamę lekko wilgotną gąbką z odrobiną szarego mydła. Tych rolet nie wolno prać w pralce ani prasować.',
+      'Tkaniny dzień-noc posiadają specjalną warstwę antystatyczną, dlatego na co dzień czyścimy je wyłącznie na sucho. Uważaj na wodę i mocne detergenty – niepoprawne mycie może bezpowrotnie zniszczyć lub odbarwić materiał! Sprawdź nasz kompletny poradnik, aby dowiedzieć się, jak bezpiecznie usuwać trudniejsze plamy krok po kroku.',
+    article_url: '/wiedza/czyszczenie-poradnik', // Nowy parametr URL
   },
   {
     question: 'Czy pasy na rolecie zgrają się z sąsiednim oknem?',

@@ -1,5 +1,6 @@
 @use '@/assets/stylesheets/main-variables' as *;
 @use '@/assets/stylesheets/mixins' as *;
+
 .Questions {
   &__main-container {
     display: flex;
@@ -54,7 +55,8 @@
   }
 
   &__item:hover &__question {
-    font-weight: 600; // Opcjonalny hover na cały item
+    font-weight: 600; // Hover na cały item
+    color: $black-400;
     @include for-phone-only {
       font-weight: 500;
     }
@@ -75,11 +77,16 @@
     margin-top: 0; // Margines zerowy, gdy zamknięte
   }
 
+  &__answer-inner {
+    min-height: 0; // Wymagane dla poprawnego działania grid-template-rows
+    display: flex;
+    flex-direction: column;
+  }
+
   &__answer {
     @include text(16px, left, $black-300, 400);
-    line-height: 140%;
-    margin: 0; // Margines przeniesiony do wrappera
-    min-height: 0; // Wymagane dla poprawnego działania grid-template-rows
+    line-height: 150%;
+    margin: 0 0 16px 0; // Dodany margines dolny, aby odsunąć link od tekstu
   }
 
   &__icon {
@@ -100,6 +107,17 @@
 
   // --- Style dla AKTYWNEGO (rozwiniętego) elementu ---
   &__item--active {
+    // NOWOŚĆ: Pytanie pozostaje pogrubione po otwarciu akordeonu
+    .Questions__question {
+      font-weight: 600;
+
+      color: $black-400;
+
+      @include for-phone-only {
+        font-weight: 500; // Zachowuje wagę z Twojego efektu hover na telefonach
+      }
+    }
+
     .Questions__icon {
       transform: rotate(180deg);
       top: -12px; // Wyrównanie do góry paddingu pytania
@@ -110,5 +128,49 @@
       opacity: 1; // Pokaż tekst
       margin-top: 24px; // Przywróć margines między pytaniem a odpowiedzią
     }
+  }
+
+  &__read-more {
+    display: flex;
+    align-items: center;
+    text-decoration: unset;
+
+    span {
+      @include text(16px, left, $black-300, 500);
+      align-items: center;
+      @include for-tablet-portrait-up {
+        @include text(18px, left, $black-300, 500);
+      }
+    }
+    &:hover {
+      span {
+        color: $black-400;
+      }
+      .Questions__arrow-icon {
+        transform: translateY(-50%) translateX(5px);
+      }
+
+      .Questions__image {
+        transform: scale(1.02);
+      }
+    }
+  }
+
+  &__arrow-box {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    border: 2px solid $yellow-500;
+    margin-left: 32px;
+    position: relative;
+  }
+
+  &__arrow-icon {
+    position: absolute;
+    right: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    transition: transform 400ms;
   }
 }
