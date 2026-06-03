@@ -91,10 +91,13 @@ export default defineNuxtConfig({
   // DODAJ NOWĄ KONFIGURACJĘ SCRIPTS
   scripts: {
     registry: {
-      googleAnalytics: {
-        id: 'G-7TFFQYCBP3',
-        trigger: 'onNuxtReady',
-      },
+      googleAnalytics:
+        process.env.NODE_ENV === 'production'
+          ? {
+              id: 'G-7TFFQYCBP3',
+              trigger: 'onNuxtReady',
+            }
+          : undefined, // Na localu skrypt w ogóle się nie załaduje
     },
   },
 

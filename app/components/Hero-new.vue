@@ -2,19 +2,20 @@
   <header id="hero" class="Hero__main-container">
     <div class="Hero__center-container">
       <div class="Hero__left-container">
-        <div class="Hero__label">
-          <img
-            src="/icons/dot-yellow-full.svg"
-            alt="icon dot"
-            class="Hero__dot"
-          />Znajdź to czego naprawdę potrzebujesz
+        <h1 class="Hero__label">
           <img
             src="/icons/dot-yellow-full.svg"
             alt="icon dot"
             class="Hero__dot"
           />
-        </div>
-        <h1 class="Hero__title">Nadaj swojemu mieszkaniu nowy charakter</h1>
+          Rolety, Żaluzje, Plisy Poznań | DEŻAL
+          <img
+            src="/icons/dot-yellow-full.svg"
+            alt="icon dot"
+            class="Hero__dot"
+          />
+        </h1>
+        <h2 class="Hero__title">Nadaj swojemu mieszkaniu nowy charakter</h2>
         <p class="Hero__description">
           Dopasujemy idealne rozwiązanie do Twoich okien. Połączenie naturalnych
           materiałów z bogatą paletą barw pozwoli nam stworzyć niepowtarzalny

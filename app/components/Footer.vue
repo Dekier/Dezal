@@ -258,8 +258,9 @@
       </div>
     </div>
     <div class="Footer__down-container">
-      Copyright &copy; 2026 DEŻAL Rolety. Plisy. Żaluzje. Poznań | Wszelkie
-      prawa zastrzeżone
+      Copyright &copy; 2026 DEŻAL rolety wewnętrzne. plisy okienn, żaluzje
+      drewniane, żaluzje aluminiowe, moskitiery Poznań | Wszelkie prawa
+      zastrzeżone
     </div>
   </footer>
 </template>

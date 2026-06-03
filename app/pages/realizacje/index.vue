@@ -66,7 +66,7 @@ const filters = [
   { label: 'DZIEŃ-NOC', value: 'rolety-dzień-noc' },
   { label: 'MATERIAŁOWE', value: 'rolety-materiałowe' },
   { label: 'RZYMSKIE', value: 'żaluzje-rzymskie' },
-  { label: 'PLISY', value: 'PLISY' },
+  { label: 'PLISY OKIENNE', value: 'PLISY' },
   { label: 'ŻALUZJE', value: 'ZALUZJE' },
   { label: 'VERTICALE', value: 'VERTICALE' },
   { label: 'MOSKITIERY', value: 'MASKITIERY' },

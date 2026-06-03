@@ -20,7 +20,7 @@ import ProductInformation from '~/components/Product-information.vue';
 import Offer from '~/components/Offer.vue';
 
 // --- DANE DO FAQ (Moskitiery) ---
-const faqTitle = ref('Najczęściej zadawane pytania');
+const faqTitle = ref('Najczęściej zadawane pytania (FAQ)');
 
 const faqData = ref([
   {

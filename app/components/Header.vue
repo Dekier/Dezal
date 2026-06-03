@@ -233,7 +233,7 @@ const offerLinks = [
   { to: '/rolety-dzien-noc', label: 'rolety dzień-noc' },
   { to: '/rolety-materialowe', label: 'rolety materiałowe' },
   { to: '/rolety-rzymskie', label: 'rolety rzymskie' },
-  { to: '/plisy', label: 'plisy' },
+  { to: '/plisy', label: 'plisy okienne' },
   { to: '/zaluzje-drewniane', label: 'żaluzje drewniane' },
   { to: '/zaluzje-aluminiowe', label: 'żaluzje aluminiowe' },
   { to: '/verticale', label: 'verticale' },

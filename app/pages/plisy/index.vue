@@ -18,7 +18,7 @@ import offerPage from '~~/public/offers.json';
 import offers from '~~/public/offers-landing.json';
 
 // --- NOWE DANE DO FAQ ---
-const faqTitle = ref('Najczęściej zadawane pytania');
+const faqTitle = ref('Najczęściej zadawane pytania (FAQ)');
 
 const faqData = ref([
   {
@@ -90,7 +90,7 @@ const pageData = computed(() => {
     : [];
 });
 useHead({
-  title: 'Plisy Okienne na Wymiar Poznań i okolice',
+  title: 'Plisy okienne na wymiar Poznań i okolice',
   htmlAttrs: {
     lang: 'pl',
   },
@@ -102,7 +102,7 @@ useHead({
     },
     {
       property: 'og:title',
-      content: 'Plisy Okienne na Wymiar Poznań i okolice',
+      content: 'Plisy okienne na wymiar Poznań i okolice',
     },
     {
       property: 'og:description',

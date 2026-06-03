@@ -30,7 +30,8 @@ const faqPorady = ref([
       'Tak, dla klientów z Poznania i okolicznych miejscowości oferujemy całkowicie darmowy i niezobowiązujący pomiar u klienta. Nasz ekspert przyjeżdża z wzornikami, doradza najlepsze rozwiązania i na miejscu dokonuje wyceny.',
   },
   {
-    question: 'Co jest tańszym rozwiązaniem: rolety, plisy czy żaluzje?',
+    question:
+      'Co jest tańszym rozwiązaniem: rolety wewnętrzne, plisy okienne czy żaluzje?',
     answer:
       'Najbardziej budżetowym i klasycznym rozwiązaniem są tradycyjne rolety materiałowe (zwłaszcza te w systemie wolnowiszącym). Plisy i żaluzje aluminiowe to średnia półka cenowa, natomiast najbardziej ekskluzywnym, a co za tym idzie najdroższym produktem, są żaluzje drewniane i bambusowe.',
   },
@@ -106,7 +107,7 @@ useHead({
     {
       name: 'description',
       content:
-        'Nowoczesne rolety, plisy, żaluzje i moskitiery na wymiar. Poznań i okolice. Zapewniamy darmowy pomiar u klienta, fachowy montaż i najwyższą jakość.',
+        'Nowoczesne rolety wewnętrzne, plisy okienne, żaluzje i moskitiery na wymiar. Poznań i okolice. Zapewniamy darmowy pomiar u klienta, fachowy montaż.',
     },
     {
       property: 'og:title',
@@ -115,7 +116,7 @@ useHead({
     {
       property: 'og:description',
       content:
-        'Nowoczesne rolety, plisy, żaluzje i moskitiery na wymiar. Poznań i okolice. Zapewniamy darmowy pomiar u klienta, fachowy montaż i najwyższą jakość.',
+        'Nowoczesne rolety wewnętrzne, plisy okienne, żaluzje i moskitiery na wymiar. Poznań i okolice. Zapewniamy darmowy pomiar u klienta, fachowy montaż.',
     },
     {
       property: 'og:image',

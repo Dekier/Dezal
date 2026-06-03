@@ -3,10 +3,10 @@
     <div class="MainQuestions__background" />
     <div class="MainQuestions__center-container">
       <div class="MainQuestions__left-container">
-        <h3 class="MainQuestions__title">
+        <h2 class="MainQuestions__title">
           Najczęściej <br />
           zadawane pytania
-        </h3>
+        </h2>
         <nuxt-link
           to="/wiedza/czyszczenie-poradnik"
           class="MainQuestions__link"

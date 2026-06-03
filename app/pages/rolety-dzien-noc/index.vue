@@ -18,7 +18,7 @@ import offerPage from '~~/public/offers.json';
 import offers from '~~/public/offers-landing.json';
 
 // --- DANE DO FAQ (Rolety dzień noc) ---
-const faqTitle = ref('Najczęściej zadawane pytania');
+const faqTitle = ref('Najczęściej zadawane pytania (FAQ)');
 
 const faqData = ref([
   {
