@@ -48,6 +48,11 @@ const faqData = ref([
     answer:
       'Tak. W naszej ofercie posiadamy specjalne materiały zaciemniające (tzw. blackout), często pokryte powłoką perłową lub aluminiową od strony szyby. Jeśli zależy Ci na maksymalnym zaciemnieniu, świetnie sprawdzi się system tkanin o strukturze plastra miodu (Duette), w którym ukryte są sznurki.',
   },
+  {
+    question: 'Dlaczego plisa okienna opada i nie chce się zatrzymać?',
+    answer:
+      'Samoczynne opadanie plisy jest najczęściej spowodowane zbyt słabym napięciem sznurków prowadzących, które odpowiadają za utrzymanie osłony w wybranej pozycji. Z biegiem czasu, pod wpływem intensywnego użytkowania, sznurki mogą się minimalnie poluzować. Rozwiązaniem jest zazwyczaj ponowne wyregulowanie, mocniejsze naciągnięcie i zawiązanie sznurków na węzłach w kostkach montażowych (zatrzaskach). Jeśli plisa opada od razu po instalacji, oznacza to, że sznurki zostały zbyt słabo napięte podczas montażu.',
+  },
 ]);
 // ------------------------
 
