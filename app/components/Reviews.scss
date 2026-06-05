@@ -20,13 +20,13 @@
     text-decoration: none;
     @include text(16px, left, $black-400, 500);
     align-items: center;
-    margin-top: 10px;
+    margin: 10px 0 0 auto;
     @include for-tablet-portrait-up {
-      margin: 24px 0 0;
+      margin: 24px 0 0 auto;
       @include text(20px, left, $black-400, 500);
     }
     @include for-phone-only {
-      margin: 32px 0 0;
+      margin: 32px 0 0 auto;
     }
   }
 

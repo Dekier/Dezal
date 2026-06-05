@@ -39,7 +39,7 @@
         </nuxt-link>
       </div>
       <nuxt-link to="/wiedza" class="ListOfArticles__box-btn"
-        >zobacz wszystkie poradni
+        >zobacz wszystkie poradniki
         <div class="ListOfArticles__btn-arrow-box">
           <img
             src="/icons/arrow.svg"
