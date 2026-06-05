@@ -22,9 +22,11 @@ const faqTitle = ref('Najczęściej zadawane pytania (FAQ)');
 
 const faqData = ref([
   {
-    question: 'Czy rolety rzymskie można prać?',
+    // AKTUALIZACJA: Zmiana pytania, skrócona odpowiedź z "hakiem" i dodany url
+    question: 'Czy rolety rzymskie można prać i jak je czyścić?',
     answer:
-      'Tak, to jedna z ich największych zalet! Materiał jest przypinany do mechanizmu za pomocą rzepu. Wystarczy odpiąć tkaninę, wyciągnąć pręciki usztywniające (fiszbiny) oraz obciążnik dolny, a następnie wyprać materiał zgodnie z zaleceniami producenta. Dokładną instrukcję, jak to zrobić, znajdziesz na wszywce z symbolami prania, dokładnie takiej samej, jak na ubraniach (zazwyczaj jest to delikatne pranie w 30°C).',
+      'Tak, możliwość prania to jedna z największych zalet rolet rzymskich! Tkaninę można łatwo odpiąć od rzepu i odświeżyć. Trzeba jednak bardzo uważać przy demontażu – wrzucenie rolety do pralki bez wcześniejszego wyciągnięcia poziomych pręcików (fiszbin) całkowicie ją zniszczy. Przejdź do naszego artykułu, aby zobaczyć instrukcję bezpiecznego ściągania, prania i suszenia krok po kroku.',
+    article_url: '/wiedza/czyszczenie-poradnik',
   },
   {
     question: 'Gdzie montuje się rolety rzymskie?',

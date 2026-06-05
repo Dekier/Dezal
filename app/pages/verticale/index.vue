@@ -37,9 +37,11 @@ const faqData = ref([
       'Tak, verticale to jeden z niewielu systemów osłonowych, który doskonale radzi sobie z nietypowymi kształtami architektonicznymi. Dzięki specjalnej konstrukcji szyny, żaluzje pionowe można bez problemu zamontować w pomieszczeniach ze skosami, na przykład na poddaszach, dopasowując długość poszczególnych lameli do kąta nachylenia sufitu.',
   },
   {
-    question: 'Jak dbać o czystość verticali i czy lamele można prać?',
+    // AKTUALIZACJA: Skrócona odpowiedź z ostrzeżeniem przed pralką i parametrem URL
+    question: 'Jak dbać i czyścić żaluzje pionowe (verticale)?',
     answer:
-      'Większość tkanin stosowanych w verticalach posiada atesty antystatyczne, co oznacza, że nie przyciągają one kurzu. Na co dzień wystarczy odkurzyć je suchą szmatką lub odkurzaczem z miękką szczotką na niskiej mocy. W przypadku większych zabrudzeń poszczególne pasy materiału można odpiąć z szyny, wyciągnąć dolne obciążniki i wyczyścić je wilgotną gąbką. Lamel nie wolno prać w pralce ani prasować.',
+      'Pasy verticali zbierają mniej kurzu dzięki powłoce antystatycznej, ale z czasem wymagają odświeżenia. Kategorycznie nie wolno wrzucać ich luzem do pralki ani silnie wykręcać – trwałe połamane zagniecenia całkowicie zniszczą materiał! Przejdź do naszego artykułu, aby dowiedzieć się, jak prawidłowo zwinąć lamele w luźne rulony, bezpiecznie umyć je w wannie i wysuszyć pod własnym ciężarem.',
+    article_url: '/wiedza/czyszczenie-poradnik',
   },
   {
     question: 'Z jakich materiałów wykonane są pasy żaluzji pionowych?',

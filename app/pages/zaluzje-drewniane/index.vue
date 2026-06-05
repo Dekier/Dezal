@@ -38,9 +38,10 @@ const faqData = ref([
       'Lamele z drewna są grubsze od aluminiowych, dlatego po całkowitym podciągnięciu zajmują więcej miejsca (zwykle pakiet stanowi około 10-15% całkowitej wysokości rozłożonej żaluzji). Przy planowaniu montażu do ściany nad wnęką, musimy zawiesić ją odpowiednio wysoko, aby zwinięty pakiet nie blokował swobodnego otwierania skrzydeł okiennych.',
   },
   {
-    question: 'Jak prawidłowo czyścić żaluzje z drewna?',
+    question: 'Jak dbać i czyścić żaluzje drewniane?',
     answer:
-      'Najlepszym i najbezpieczniejszym sposobem jest regularne omiatanie ich z kurzu na sucho – za pomocą ściereczki z mikrofibry lub specjalnej szczotki/miotełki do żaluzji. Należy zdecydowanie unikać moczenia ich wodą oraz stosowania agresywnych detergentów, które mogłyby odbarwić lakier lub wypaczyć drewno.',
+      'Naturalne drewno jest wyjątkowo wrażliwe na wilgoć, dlatego żaluzje czyścimy wyłącznie na sucho. Użycie mokrej szmatki lub płynów chemicznych to najprostsza droga do zmatowienia lakieru, spęcznienia i trwałego wygięcia lameli! Przejdź do naszego artykułu, aby dowiedzieć się, jak bezpiecznie usuwać kurz i trudniejsze zabrudzenia bez ryzyka uszkodzenia drewna.',
+    article_url: '/wiedza/czyszczenie-poradnik',
   },
   {
     question: 'Czy mogę zamontować żaluzje drewniane w łazience?',

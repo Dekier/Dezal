@@ -37,9 +37,11 @@ const faqData = ref([
       'Zdecydowanie tak. Plisy to jedno z najlepszych rozwiązań do okien dachowych. Wyposażone są w specjalne prowadnice lub linki, które zapobiegają "zwisaniu" materiału pod kątem.',
   },
   {
+    // AKTUALIZACJA: Nowe brzmienie odpowiedzi, dodany parametr article_url
     question: 'Jak czyścić i prać plisy okienne?',
     answer:
-      'Większość tkanin plisowanych można odświeżać na mokro. Zalecamy delikatne pranie ręczne w wannie w letniej wodzie (ok. 30°C) z łagodnym detergentem. Bardzo ważne jest, aby po wypłukaniu suszyć plisy w pozycji złożonej – dzięki temu zachowają swoje fabryczne zakładki.',
+      'Większość naszych materiałów plisowanych można prać ręcznie na mokro, jednak największym błędem jest ich nieprawidłowe suszenie. Rozwieszenie mokrej plisy w stanie rozłożonym sprawi, że bezpowrotnie straci ona swoje charakterystyczne, fabryczne zagięcia! Przejdź do pełnego artykułu, aby dowiedzieć się, jak prawidłowo złożyć i wysuszyć plisę bezpośrednio na oknie, by służyła latami.',
+    article_url: '/wiedza/czyszczenie-poradnik',
   },
   {
     question: 'Czy plisy mogą całkowicie zaciemnić pomieszczenie?',

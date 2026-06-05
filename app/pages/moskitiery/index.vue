@@ -50,9 +50,11 @@ const faqData = ref([
       'Tak, w niczym to nie przeszkadza. Moskitiery ramkowe są zaprojektowane w taki sposób, aby ich kołnierz idealnie i płasko przylegał do zewnętrznej uszczelki okna. Możesz swobodnie zamykać, otwierać i uchylać skrzydło okienne przez cały sezon, bez konieczności zdejmowania moskitiery.',
   },
   {
-    question: 'Jak prawidłowo czyścić i myć moskitiery z kurzu i pyłków?',
+    // AKTUALIZACJA: Skrócona odpowiedź z ostrzeżeniem przed Karcherem i dodany URL
+    question: 'Jak dbać i czyścić moskitiery?',
     answer:
-      'Sposób zależy od modelu. Ramkowe po zdjęciu spłucz pod prysznicem letnią wodą. Tarasowe i kasetowe odkurz miękką szczotką lub przetrzyj wilgotną ściereczką bezpośrednio na oknie. Unikaj chemii i myjek ciśnieniowych.',
+      'Siatka z włókna szklanego jest bardzo wytrzymała, ale też wyjątkowo podatna na uszkodzenia mechaniczne. Użycie szorstkich szczotek lub myjki ciśnieniowej (np. typu Karcher) z łatwością trwale rozciągnie lub rozerwie drobne oczka! Przejdź do naszego artykułu, aby dowiedzieć się, jak bezpiecznie wykąpać moskitiery ramkowe pod prysznicem oraz jak prawidłowo odświeżyć delikatne modele kasetowe i tarasowe.',
+    article_url: '/wiedza/czyszczenie-poradnik',
   },
 ]);
 // ------------------------------------

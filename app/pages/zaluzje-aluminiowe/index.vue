@@ -33,9 +33,10 @@ const faqData = ref([
       'Wręcz przeciwnie. Metalowe lamele bardzo skutecznie odbijają promienie słoneczne, zanim te dotrą do wnętrza pokoju. Szczególnie polecane są żaluzje z powłoką odbijającą światło, które pomagają utrzymać niższą temperaturę w upalne dni. Po całkowitym zamknięciu żaluzji tworzy się bariera termiczna przy szybie.',
   },
   {
-    question: 'Jak czyścić żaluzje aluminiowe, żeby nie powyginać lameli?',
+    question: 'Jak dbać i czyścić żaluzje aluminiowe?',
     answer:
-      'Najbezpieczniej jest czyścić je na sucho miotełką do kurzu lub odkurzaczem z miękką końcówką przy najniższej mocy ssania. Jeśli żaluzje wymagają mycia na mokro, zalecamy zamknięcie lameli na płasko i przetarcie ich wilgotną ściereczką z mikrofibry. Należy unikać silnego dociskania, aby nie doprowadzić do trwałego odkształcenia cienkiego aluminium.',
+      'Aluminium jest w pełni wodoodporne, co ułatwia zmywanie kuchennego tłuszczu, ale lamele są bardzo cienkie. Zbyt mocne dociskanie szmatki lub użycie złej gąbki trwale pogniecie, porysuje i połamie konstrukcję żaluzji! Przejdź do naszego artykułu, aby dowiedzieć się, jak bezpiecznie myć je na oknie oraz jak prawidłowo wykąpać je pod prysznicem w przypadku ekstremalnych zabrudzeń.',
+    article_url: '/wiedza/czyszczenie-poradnik',
   },
   {
     question: 'Czym są żaluzje aluminiowe perforowane?',

@@ -33,9 +33,11 @@ const faqData = ref([
       'Tak! Oferujemy szeroki wybór tkanin zaciemniających w 100% (tzw. materiały blackout). Są one pokryte specjalną podgumowaną warstwą lub powłoką perłową/srebrną, która dodatkowo odbija promienie słoneczne, chroniąc pomieszczenie przed nagrzewaniem. To idealne rozwiązanie do sypialni i pokoi dziecięcych.',
   },
   {
-    question: 'Czy rolety materiałowe można prać lub prasować?',
+    // AKTUALIZACJA: Nowe pytanie, skrócona odpowiedź z "hakiem" marketingowym i linkiem
+    question: 'Jak dbać i czyścić rolety materiałowe?',
     answer:
-      'Nie, rolet materiałowych nie wolno prać w pralce ani prasować, ponieważ może to uszkodzić ich powłokę antystatyczną i zniekształcić tkaninę. Do regularnego czyszczenia wystarczy miotełka do kurzu lub sucha ściereczka. Drobne zabrudzenia można delikatnie przetrzeć lekko wilgotną gąbką z dodatkiem łagodnego detergentu.',
+      'Klasyczne rolety materiałowe są fabrycznie impregnowane, co nadaje im odpowiednią sztywność. Kategorycznie nie wolno ich prać w pralce ani namaczać w wannie. Silne przemoczenie zmyje warstwę ochronną, przez co tkanina bezpowrotnie straci swój fason, a jej brzegi zaczną się strzępić. Przejdź do naszego uniwersalnego artykułu, aby dowiedzieć się, jak bezpiecznie usuwać drobne plamy bez ryzyka zniszczenia osłony.',
+    article_url: '/wiedza/czyszczenie-poradnik',
   },
   {
     question: 'Co zrobić, żeby materiał nie odstawał, gdy uchylam okno?',
