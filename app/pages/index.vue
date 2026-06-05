@@ -11,6 +11,7 @@
     <LazyContact />
   </div>
 </template>
+
 <script setup lang="ts">
 import { ref, computed } from 'vue';
 import offers from '~~/public/offers-landing.json';
@@ -20,7 +21,7 @@ const chosenArticleIndices = [1, 0, 4];
 
 // Automatycznie mapujemy wybrane indeksy na pełne obiekty artykułów
 const featuredArticles = computed(() => {
-  return chosenArticleIndices.map((index) => articles[index]).filter(Boolean); // filter(Boolean) zabezpiecza Cię przed błędem, gdybyś wpisał indeks, który nie istnieje
+  return chosenArticleIndices.map((index) => articles[index]).filter(Boolean);
 });
 
 const offerBoxesJson = ref(offers.boxes);
@@ -35,7 +36,7 @@ const faqPorady = ref([
   {
     question: 'Czy oferujecie darmowy pomiar i wycenę w Poznaniu?',
     answer:
-      'Tak, dla klientów z Poznania i okolicznych miejscowości oferujemy całkowicie darmowy i niezobowiązujący pomiar u klienta. Nasz ekspert przyjeżdża z wzornikami, doradza najlepsze rozwiązania i na miejscu dokonuje wyceny.',
+      'Tak, dla klientów z Poznania i okolicznych miejscowości oferujemy całkowicie darmowy i niezobowiązujący pomiar u klienta. Nasz expert przyjeżdża z wzornikami, doradza najlepsze rozwiązania i na miejscu dokonuje wyceny.',
   },
   {
     question:
@@ -87,25 +88,7 @@ const faqTechniczne = ref([
   },
 ]);
 
-// --- GENEROWANIE DANYCH UPORZĄDKOWANYCH DLA GOOGLE (SCHEMA.ORG) ---
-const faqSchema = computed(() => {
-  // Łączymy obie tablice w jedną wspólną listę dla robota Google
-  const allFaqs = [...faqPorady.value, ...faqTechniczne.value];
-
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: allFaqs.map((faq) => ({
-      '@type': 'Question',
-      name: faq.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: faq.answer,
-      },
-    })),
-  };
-});
-
+// Klasyczne useHead – teraz czyste i bezpieczne dla SSR
 useHead({
   title: 'Rolety, plisy, żaluzje na wymiar w Poznaniu i okolicach',
   htmlAttrs: {
@@ -137,14 +120,24 @@ useHead({
     },
   ],
   canonical: 'https://dezalroletypoznan.pl',
-  // DODANY SKRYPT SCHEMA DLA FAQ
-  script: [
-    {
-      type: 'application/ld+json',
-      children: JSON.stringify(faqSchema.value),
-    },
-  ],
 });
+
+// Oficjalny, natywny sposób generowania FAQPage dostarczany przez @nuxtjs/seo
+// Unhead zintegruje to bezbłędnie ze strukturą strony bez rzucania błędów o potentialAction
+useSchemaOrg([
+  defineFaqPage({
+    mainEntity: [
+      ...faqPorady.value.map((faq) => ({
+        name: faq.question,
+        acceptedAnswer: faq.answer,
+      })),
+      ...faqTechniczne.value.map((faq) => ({
+        name: faq.question,
+        acceptedAnswer: faq.answer,
+      })),
+    ],
+  }),
+]);
 </script>
 
 <style scoped lang="scss">
