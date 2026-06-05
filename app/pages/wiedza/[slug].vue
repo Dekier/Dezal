@@ -44,22 +44,22 @@ useHead({
 });
 
 // 2. Schema.org - tylko dla Artykułu
-useSchemaOrg([
-  defineArticle({
-    headline: articleData.title,
-    description: articleData.meta_description,
-    image: `https://dezalroletypoznan.pl${articleData.img}`,
-    datePublished: articleData.date, // Upewnij się, że masz to w JSONie
-    author: {
-      name: 'Deżal Rolety Poznań',
-      url: 'https://dezalroletypoznan.pl',
-    },
-    publisher: {
-      name: 'Deżal Rolety Poznań',
-      logo: 'https://dezalroletypoznan.pl/images/logo-rect.png',
-    },
-  }),
-]);
+// useSchemaOrg([
+//   defineArticle({
+//     headline: articleData.title,
+//     description: articleData.meta_description,
+//     image: `https://dezalroletypoznan.pl${articleData.img}`,
+//     datePublished: articleData.date, // Upewnij się, że masz to w JSONie
+//     author: {
+//       name: 'Deżal Rolety Poznań',
+//       url: 'https://dezalroletypoznan.pl',
+//     },
+//     publisher: {
+//       name: 'Deżal Rolety Poznań',
+//       logo: 'https://dezalroletypoznan.pl/images/logo-rect.png',
+//     },
+//   }),
+// ]);
 </script>
 
 <style lang="scss">
