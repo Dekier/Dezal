@@ -72,7 +72,7 @@
     width: 100%;
     line-height: 125%;
     @include text(32px, left, $black-400, 700);
-    margin: 0 auto;
+    margin: 0 auto 16px;
     max-width: 720px;
     user-select: text !important;
 
@@ -94,7 +94,7 @@
 
   &__section-title {
     @include text(24px, left, $black-400, 500);
-    margin: 24px auto 0;
+    margin: 12px auto 0;
     max-width: 720px;
     user-select: text !important;
 
@@ -269,19 +269,19 @@
     display: flex;
     flex-direction: column;
     margin: 10px 0 50px;
+    width: 100%;
 
     @include for-tablet {
       position: sticky;
       top: 100px; // Dopasowane do górnego marginesu artykułu
-      max-width: 900px;
-      width: calc(100% - 32px);
-      padding: 0 16px;
+      max-width: 720px;
       flex-shrink: 0;
       // margin-top: 462px;
     }
 
     @include for-big-desktop-up {
       width: 360px;
+      padding: 0 16px;
     }
 
     @include for-phone-only {
@@ -302,14 +302,7 @@
       margin: 0;
       gap: 42px;
       display: flex;
-      flex-direction: row;
-      @include for-big-desktop-up {
-        flex-direction: column;
-      }
-
-      @include for-phone-only {
-        flex-direction: column;
-      }
+      flex-direction: column;
     }
 
     li {
@@ -347,7 +340,7 @@
     @include text(18px, left, $black-300, 600);
     display: block;
     line-height: 130%;
-    padding: 8px 70px 12px 8px;
+    padding: 12px 75px 12px 8px;
     position: relative;
   }
 

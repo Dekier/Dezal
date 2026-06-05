@@ -1,12 +1,13 @@
 @use '@/assets/stylesheets/main-variables' as *;
 @use '@/assets/stylesheets/mixins' as *;
+
 .Offer {
   &__main-container {
     display: flex;
-    // width: 100%;
     background: $color-white;
     margin: 50px 0;
     padding: 0 16px;
+
     @include for-desktop-up {
       margin: 100px 0;
     }
@@ -16,7 +17,8 @@
   }
 
   &__center-container {
-    width: 1440px;
+    max-width: 1440px; // POPRAWKA: max-width zamiast stałego width chroni przed overflowem
+    width: 100%; // Zajmuje całą dostępną przestrzeń
     margin: auto;
   }
 
@@ -24,6 +26,7 @@
     @include text(32px, left, $black-400, 700);
     line-height: 105%;
     margin: 0 0 32px;
+
     @include for-tablet {
       margin: 0 0 48px;
       @include text(56px, left, $black-400, 700);
@@ -42,21 +45,32 @@
   }
 
   &__boxes-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid; // ZMIANA: CSS Grid idealnie dzieli przestrzeń
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); // 3 równe kolumny wypełniające 100% szerokości
+    gap: 60px; // Stały odstęp między boksami
     padding: 0;
-    gap: 60px;
+
+    // Płynne responsywne dopasowanie siatki:
+    @media only screen and (max-width: 1200px) {
+      grid-template-columns: repeat(2, 1fr); // 2 równe kolumny dla tabletów
+      gap: 40px;
+    }
+
+    @media only screen and (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr); // 1 kolumna dla telefonów
+      gap: 30px;
+    }
   }
 
   &__box {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    width: 440px;
-    @include for-phone-only {
-      width: 100%;
-    }
+    width: 100%; // ZMIANA: Wypełnia całą szerokość przydzielonej mu kolumny w Gridzie
+    height: 100%; // Gwarantuje, że jeśli opisy są różnej długości, boksy i tak będą równe
   }
 
   &__box-title {
@@ -112,10 +126,11 @@
     flex-direction: row;
     position: relative;
     text-decoration: none;
+    margin-top: auto; // Gwarantuje, że przyciski zawsze będą idealnie wyrównane do dołu boksu
     @include text(16px, left, $black-400, 500);
     align-items: center;
+
     @include for-tablet-portrait-up {
-      margin: auto 0 0 0;
       @include text(20px, left, $black-400, 500);
     }
   }
@@ -146,23 +161,12 @@
     transform: translateY(-50%) translateX(7px);
   }
 
-  @media only screen and (max-width: 1200px) {
-    &__center-container {
-      width: 100%;
-    }
-
-    &__description {
-      margin-bottom: 30px;
-    }
-
-    &__box {
-      margin: auto;
-    }
-  }
-
+  // Uporządkowane pozostałe media queries
   @media only screen and (max-width: 540px) {
     &__description {
       width: 80%;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }
@@ -172,7 +176,6 @@
     right: 0;
     opacity: 1;
   }
-
   to {
     right: -8px;
     opacity: 0;

@@ -29,6 +29,19 @@
     },
     {
       "type": "section_title",
+      "content": "Złota zasada na start:"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "value": "Zabiegi pielęgnacyjne najlepiej zaplanować w jasny, słoneczny dzień. Promienie słońca przechodzące przez szyby idealnie uwidocznią wszelkie smugi, kurz oraz drobne plamy po owadach, które w półcieniu mogłyby pozostać niezauważone. Pamiętaj też o regularności – delikatne odkurzenie osłon raz na dwa tygodnie zapobiegnie wnikaniu brudu głęboko w strukturę tkaniny."
+        }
+      ]
+    },
+    {
+      "type": "section_title",
       "content": "1. Rolety Dzień-Noc"
     },
     {
@@ -113,7 +126,7 @@
             },
             {
               "type": "text",
-              "value": "Kurz usuwaj na sucho. Na drobne punktowe zabrudzenia lub ślady po owadach świetnie działa czysta, miękka gumka do mazania. Plamy usuwaj punktowo lekko wilgotną gąbką."
+              "value": "Kurz usuwaj na sucho. Na drobne punktowe zabrudzenia lub ślady po owadach świetnie działa czysta, miękka gumka do mazania. Plamy usuwaj punktowo lekko wilgotną gąbką. Jeśli używasz domowych sposobów (np. roztworu sody), zawsze przetestuj go w niewidocznym miejscu – soda z wodą utlenioną może trwale odbarwić (wybielić) kolorowy materiał!"
             }
           ],
           [
@@ -123,7 +136,7 @@
             },
             {
               "type": "text",
-              "value": "Nie wolno ich prać w pralce, namaczać w wannie ani prasować. Silne moczenie zmyje impregnat, materiał straci sztywność, a po bokach zaczną snuć się nitki."
+              "value": "Nie wolno ich prać w pralce, namaczać w wannie ani prasować. Silne moczenie zmyje fabryczną apreturę (specjalną warstwę usztywniającą). Bez niej materiał straci stabilność wymiarową, zacznie się falować, a po bokach zaczną snuć się nitki. Unikaj też mocnego szorowania."
             }
           ],
           [
@@ -133,7 +146,7 @@
             },
             {
               "type": "text",
-              "value": "Nie. Proces czyszczenia przeprowadzamy na oknie."
+              "value": "Absolutnie nie. Niedopuszczalne jest demontowanie tkaniny z tzw. rolki odbiorczej (metalowej rury). Ponowne, idealnie równe napięcie i nawinięcie materiału wymaga specjalistycznych narzędzi – bez nich roleta będzie krzywo się zwijać."
             }
           ],
           [
@@ -243,15 +256,7 @@
             },
             {
               "type": "text",
-              "value": "Na sucho miotełką do kurzu. Co ważne, "
-            },
-            {
-              "type": "bold",
-              "value": "wszystkie nasze materiały na plisy posiadają możliwość prania ręcznego"
-            },
-            {
-              "type": "text",
-              "value": " na mokro. Należy to robić ściśle według wskazań producenta (zgodnie z załączoną instrukcją lub metką)."
+              "value": "Na sucho miotełką do kurzu. Ważne: przed jakimkolwiek czyszczeniem na mokro wydmuchaj z zagłębień (lub ze środka komórek w plisach Duette) martwe owady, np. suszarką z zimnym nawiewem. Jeśli ściśniesz mokrą plisę z robakiem w środku, zgnieciesz go i powstanie trwała, tłusta plama nie do wywabienia. Wszystkie nasze materiały na plisy posiadają możliwość prania ręcznego. "
             }
           ],
           [
@@ -261,7 +266,7 @@
             },
             {
               "type": "text",
-              "value": "Nie prać w pralce, nie prasować, nie szorować ostrymi szczotkami."
+              "value": "Nie prać w pralce, nie prasować, nie szorować ostrymi szczotkami. Unikaj też nakładania silnych detergentów na sznurki prowadzące – chemia niszczy ich fabryczną powłokę poślizgową, co drastycznie skraca ich żywotność i prowadzi do pękania."
             }
           ],
           [
@@ -328,7 +333,7 @@
             },
             {
               "type": "text",
-              "value": "Najlepsza metoda to regularne odkurzanie miotełką z piór, ściereczką z mikrofibry lub specjalną szczotką do żaluzji (czyszczącą kilka lameli naraz). Od czasu do czasu można użyć środka do pielęgnacji drewna meblowego."
+              "value": "Najlepsza metoda to regularne odkurzanie miotełką z piór, ściereczką z mikrofibry lub specjalną szczotką do żaluzji. Ekspert Deżal radzi: pamiętaj o zamknięciu żaluzji i przetarciu jej z obu stron (najpierw obróć lamele do dołu, a potem o 140 stopni do góry). Na koniec warto użyć środka do pielęgnacji drewna meblowego – zawarta w nim warstwa antystatyczna zapobiegnie szybkiemu ponownemu osiadaniu kurzu. Materiałowe drabinki taśmowe lub sznurki odświeżaj punktowo dobrze wyciśniętą, pianową gąbką."
             }
           ],
           [
@@ -338,7 +343,7 @@
             },
             {
               "type": "text",
-              "value": "Zakaz używania wody! Mycie mokrą szmatką może spowodować matowienie lakieru, pęcznienie i wyginanie się drewna."
+              "value": "Zakaz używania wody! Mycie mokrą szmatką może spowodować matowienie lakieru, pęcznienie i wyginanie się drewna. Jeśli żaluzja wisi w kuchni, unikaj wycierania na sucho tłustego nalotu zmieszanego z kurzem – drobinki brudu zadziałają jak papier ścierny i porysują lakier. Tłuste ślady usuwaj dedykowanym, preparatem do drewna."
             }
           ],
           [
@@ -348,7 +353,7 @@
             },
             {
               "type": "text",
-              "value": "Nie ma takiej potrzeby, czyścimy je zamontowane na oknie."
+              "value": "Nie ma takiej potrzeby, wszystkie etapy czyszczenia bezpiecznie i wygodnie przeprowadzisz na wiszącej żaluzji."
             }
           ]
         ]
@@ -379,7 +384,7 @@
             },
             {
               "type": "text",
-              "value": "Czyszczenie na sucho ściereczką łapiącą kurz lub delikatnym odkurzaczem."
+              "value": "Czyszczenie na sucho ściereczką łapiącą kurz lub delikatnym odkurzaczem z miękką szczotką. Tutaj również stosujemy zasadę czyszczenia obustronnego poprzez pełną zmianę kąta nachylenia piór (góra/dół)."
             }
           ],
           [
@@ -389,7 +394,7 @@
             },
             {
               "type": "text",
-              "value": "Choć bambus lepiej znosi wilgotne powietrze (np. w łazience), to bezpośrednie mycie mokrą gąbką z detergentami zniszczy jego strukturę."
+              "value": "Choć bambus lepiej znosi wilgotne powietrze (np. w łazience), to bezpośrednie mycie mokrą gąbką z detergentami zniszczy jego naturalną strukturę i doprowadzi do wypaczenia lameli."
             }
           ],
           [
@@ -399,7 +404,7 @@
             },
             {
               "type": "text",
-              "value": "Nie ściągamy, czyścimy na sucho w pozycji pionowej (najlepiej przy zamkniętych lamelach)."
+              "value": "Nie ściągamy, czyścimy wyłącznie w pozycji pionowej."
             }
           ]
         ]
@@ -430,7 +435,7 @@
             },
             {
               "type": "text",
-              "value": "Na co dzień na sucho. W przypadku mocnych zabrudzeń (np. tłuszcz z gotowania) użyj wilgotnej ściereczki nasączonej wodą z płynem do naczyń. Przecieraj przy zamkniętych lamelach."
+              "value": "Na co dzień na sucho. W przypadku mocnych zabrudzeń (np. tłuszcz z gotowania) użyj wilgotnej ściereczki nasączonej wodą z płynem do naczyń. Przecieraj przy zamkniętych lamelach. Zachowaj ostrożność – krawędzie aluminiowych piór bywają bardzo ostre i mogą przeciąć cienką szmatkę lub skórę dłoni."
             }
           ],
           [
@@ -440,7 +445,7 @@
             },
             {
               "type": "text",
-              "value": "Uważaj z siłą! Aluminium jest cienkie – zbyt mocne naciskanie podczas mycia trwale pogniecie i połamie lamele. Nie używaj gąbek z ostrym druciakiem."
+              "value": "Uważaj z siłą! Aluminium jest cienkie – zbyt mocne naciskanie podczas mycia trwale pogniecie i połamie lamele, a takich odkształceń nie da się już wyprostować. Nie używaj gąbek z ostrym druciakiem ani proszków do szorowania, które zmatowią lakier."
             }
           ],
           [
@@ -450,7 +455,7 @@
             },
             {
               "type": "text",
-              "value": "Zazwyczaj czyścimy je na oknie. Jeśli jednak są ekstremalnie zabrudzone, można je zdjąć, wstawić do wanny i spłukać delikatnym strumieniem wody z prysznica, a następnie wysuszyć na płasko."
+              "value": "Zazwyczaj czyścimy je na oknie. Jeśli jednak są ekstremalnie zabrudzone i decydujesz się na kąpiel w wannie, uważaj na górną rynnę (kasetę). Skrywa ona metalowe mechanizmy i przekładnie – zalanie ich wodą doprowadzi do korozji i zatarcia systemu! Rynnę trzymaj nad wodą, a jeśli ulegnie zamoczeniu, natychmiast wysusz ją suszarką do włosów. Lamele susz rozłożone na płasko."
             }
           ],
           [

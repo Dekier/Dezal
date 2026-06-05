@@ -15,7 +15,7 @@
     width: calc(100% - 32px);
     display: flex;
     flex-direction: column;
-    margin: 160px auto;
+    margin: 160px auto 50px;
 
     @include for-phone-only {
       margin: 140px auto 50px;
