@@ -141,6 +141,10 @@ export default defineNuxtConfig({
     currentLocale: 'pl',
   },
 
+  schemaOrg: {
+    enabled: false,
+  },
+
   // gtag: {
   //   id: 'G-7TFFQYCBP3',
   //   enabled: process.env.NODE_ENV === 'production',
