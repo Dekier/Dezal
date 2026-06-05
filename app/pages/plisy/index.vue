@@ -72,7 +72,7 @@ const bottomImages = ref([
 
 // Dane do boxów "Zobacz również"
 const offerData = ref({
-  title: 'Zobacz również',
+  title: 'Również oferujemy',
   description: '',
   showBoxes: [
     'rolety-dzien-noc',

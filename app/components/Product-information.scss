@@ -123,15 +123,12 @@
   }
 
   &__bottom-title {
-    @include text(32px, left, $black-400, 500);
-    margin: 0 0 42px 0;
-
-    @include for-big-desktop-up {
-      @include text(48px, left, $black-400, 500);
-    }
-
-    @include for-phone-only {
-      @include text(26px, left, $black-400, 500);
+    @include text(32px, left, $black-400, 700);
+    line-height: 105%;
+    margin: 0 0 32px;
+    @include for-tablet {
+      margin: 0 0 48px;
+      @include text(56px, left, $black-400, 700);
     }
   }
 

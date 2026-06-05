@@ -3,10 +3,11 @@
     <div class="Offer__center-container">
       <h2 class="Offer__title">Nasza oferta osłon okiennych</h2>
       <div class="Offer__boxes-container">
-        <div
+        <nuxt-link
           v-for="(box, index) in offerBoxesJson"
           :key="index"
           class="Offer__box"
+          :to="`/${box.type}`"
         >
           <div v-if="index === 0" class="Offer__badge">
             <img
@@ -50,7 +51,7 @@
               />
             </div>
           </nuxt-link>
-        </div>
+        </nuxt-link>
       </div>
     </div>
   </div>

@@ -16,7 +16,7 @@ import offers from '~~/public/offers-landing.json';
 
 const offersJson = ref(offers.boxes);
 const offerData = ref({
-  title: 'Zobacz również',
+  title: 'Nasza oferta',
   description: '',
   showBoxes: [
     'rolety-dzien-noc',

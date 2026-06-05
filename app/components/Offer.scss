@@ -21,15 +21,12 @@
   }
 
   &__title {
-    @include text(32px, left, $black-400, 500);
-    margin: 0 0 32px 0;
-
-    @include for-big-desktop-up {
-      @include text(48px, left, $black-400, 500);
-    }
-
-    @include for-phone-only {
-      @include text(26px, left, $black-400, 500);
+    @include text(32px, left, $black-400, 700);
+    line-height: 105%;
+    margin: 0 0 32px;
+    @include for-tablet {
+      margin: 0 0 48px;
+      @include text(56px, left, $black-400, 700);
     }
   }
 
@@ -63,11 +60,13 @@
   }
 
   &__box-title {
-    text-transform: uppercase;
-    margin: 20px 0 10px;
-    cursor: default;
+    @include text(24px, left, $black-400, 600);
+    margin: 24px 0 12px 0;
+    line-height: 1.3;
 
-    @include text(26px, left, $black-999, 400);
+    @include for-phone-only {
+      @include text(20px, left, $black-400, 600);
+    }
   }
 
   &__box-image-container {
@@ -98,7 +97,7 @@
     margin: 0 0 16px;
     line-height: 1.5;
     cursor: default;
-    @include text(16px, left, $black-400, 400);
+    @include text(16px, left, $black-300, 400);
   }
 
   &__box:hover &__box-arrow {
@@ -116,8 +115,8 @@
     @include text(16px, left, $black-400, 500);
     align-items: center;
     @include for-tablet-portrait-up {
-      margin: 0;
-      @include text(18px, left, $black-400, 500);
+      margin: auto 0 0 0;
+      @include text(20px, left, $black-400, 500);
     }
   }
 
@@ -140,6 +139,10 @@
   }
 
   &__box-btn:hover &__btn-arrow-icon {
+    transform: translateY(-50%) translateX(7px);
+  }
+
+  &__box:hover &__btn-arrow-icon {
     transform: translateY(-50%) translateX(7px);
   }
 
