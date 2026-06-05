@@ -3,10 +3,11 @@
     <div class="Offer__center-container">
       <h2 class="Offer__title">Nasza oferta osłon okiennych</h2>
       <div class="Offer__boxes-container">
-        <div
+        <nuxt-link
           v-for="(box, index) in offerBoxesJson"
           :key="index"
           class="Offer__box"
+          :to="`/${box.type}`"
         >
           <div v-if="index === 0" class="Offer__badge">
             <img
@@ -18,7 +19,7 @@
             <p class="Offer__badge-text">najczęściej wybierane</p>
           </div>
 
-          <nuxt-link :to="`/${box.type}`" class="Offer__box-image-container">
+          <div class="Offer__box-image-container">
             <img
               :src="box.url"
               :alt="`${box.title} - Deżal`"
@@ -29,7 +30,7 @@
               height="450"
               :title="`Oferta: ${box.title}`"
             />
-          </nuxt-link>
+          </div>
 
           <h2 class="Offer__box-title">
             <img
@@ -39,10 +40,9 @@
               loading="lazy"
             />{{ box.title }}
           </h2>
-
           <p class="Offer__box-text">{{ box.description }}</p>
 
-          <nuxt-link :to="`/${box.type}`" class="Offer__box-btn">
+          <div class="Offer__box-btn">
             czytaj więcej
             <div class="Offer__btn-arrow-box">
               <img
@@ -51,8 +51,8 @@
                 class="Offer__btn-arrow-icon"
               />
             </div>
-          </nuxt-link>
-        </div>
+          </div>
+        </nuxt-link>
       </div>
     </div>
   </div>
