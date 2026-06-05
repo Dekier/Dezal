@@ -6,7 +6,8 @@
       :faq-title="faqTitle"
       :faq-data="faqData"
     />
-    <Offer :offer-data="offerData" :offer-boxes-json="offersJson" />
+    <LazyListOfArticles :articles="featuredArticles" />
+    <LazyOffer :offer-data="offerData" :offer-boxes-json="offersJson" />
   </div>
 </template>
 
@@ -15,9 +16,14 @@ import { ref, computed } from 'vue';
 import offerPage from '~~/public/offers.json';
 import offers from '~~/public/offers-landing.json';
 import { useHead } from '#imports';
+import articles from '~/assets/content/articles.json';
 
-import ProductInformation from '~/components/Product-information.vue';
-import Offer from '~/components/Offer.vue';
+const chosenArticleIndices = [1, 0, 4];
+
+// Automatycznie mapujemy wybrane indeksy na pełne obiekty artykułów
+const featuredArticles = computed(() => {
+  return chosenArticleIndices.map((index) => articles[index]).filter(Boolean); // filter(Boolean) zabezpiecza Cię przed błędem, gdybyś wpisał indeks, który nie istnieje
+});
 
 // --- DANE DO FAQ (Moskitiery) ---
 const faqTitle = ref('Najczęściej zadawane pytania (FAQ)');

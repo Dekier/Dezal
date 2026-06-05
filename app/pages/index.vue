@@ -7,13 +7,21 @@
     <LazyMainQuestions />
     <LazyQuestions title="Porady" :faqList="faqPorady" />
     <LazyQuestions title="Techniczne" :faqList="faqTechniczne" />
-
+    <LazyListOfArticles :articles="featuredArticles" />
     <LazyContact />
   </div>
 </template>
 <script setup lang="ts">
 import { ref, computed } from 'vue';
 import offers from '~~/public/offers-landing.json';
+import articles from '~/assets/content/articles.json';
+
+const chosenArticleIndices = [1, 0, 4];
+
+// Automatycznie mapujemy wybrane indeksy na pełne obiekty artykułów
+const featuredArticles = computed(() => {
+  return chosenArticleIndices.map((index) => articles[index]).filter(Boolean); // filter(Boolean) zabezpiecza Cię przed błędem, gdybyś wpisał indeks, który nie istnieje
+});
 
 const offerBoxesJson = ref(offers.boxes);
 
