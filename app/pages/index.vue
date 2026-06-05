@@ -124,20 +124,20 @@ useHead({
 
 // Oficjalny, natywny sposób generowania FAQPage dostarczany przez @nuxtjs/seo
 // Unhead zintegruje to bezbłędnie ze strukturą strony bez rzucania błędów o potentialAction
-useSchemaOrg([
-  defineFaqPage({
-    mainEntity: [
-      ...faqPorady.value.map((faq) => ({
-        name: faq.question,
-        acceptedAnswer: faq.answer,
-      })),
-      ...faqTechniczne.value.map((faq) => ({
-        name: faq.question,
-        acceptedAnswer: faq.answer,
-      })),
-    ],
-  }),
-]);
+// useSchemaOrg([
+//   defineFaqPage({
+//     mainEntity: [
+//       ...faqPorady.value.map((faq) => ({
+//         name: faq.question,
+//         acceptedAnswer: faq.answer,
+//       })),
+//       ...faqTechniczne.value.map((faq) => ({
+//         name: faq.question,
+//         acceptedAnswer: faq.answer,
+//       })),
+//     ],
+//   }),
+// ]);
 </script>
 
 <style scoped lang="scss">
