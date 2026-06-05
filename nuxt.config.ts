@@ -81,7 +81,7 @@ export default defineNuxtConfig({
 
   modules: [
     '@vite-pwa/nuxt',
-    // '@nuxtjs/seo',
+    '@nuxtjs/seo',
     // 'nuxt-gtag',
     '@nuxt/scripts',
     'nuxt-llms',
@@ -139,10 +139,6 @@ export default defineNuxtConfig({
     name: 'DEŻAL',
     defaultLocale: 'pl', // lub 'pl-PL' - moduł SEO preferuje standard 'pl'
     currentLocale: 'pl',
-  },
-
-  schemaOrg: {
-    enabled: false,
   },
 
   // gtag: {
