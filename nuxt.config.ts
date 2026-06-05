@@ -81,7 +81,7 @@ export default defineNuxtConfig({
 
   modules: [
     '@vite-pwa/nuxt',
-    '@nuxtjs/seo',
+    // '@nuxtjs/seo',
     // 'nuxt-gtag',
     '@nuxt/scripts',
     'nuxt-llms',
