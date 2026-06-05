@@ -251,7 +251,6 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, createApp } from 'vue';
 import CustomMapMarker from '~/components/Custom-map-marker.vue';
-import { setOptions, importLibrary } from '@googlemaps/js-api-loader';
 import emailjs from '@emailjs/browser';
 
 // Obsługa okienka informacyjnego
@@ -261,6 +260,8 @@ const isActiveInfoBox = ref(false);
 const mapContainer = ref<HTMLElement | null>(null);
 
 const initGoogleMap = async () => {
+  const { setOptions, importLibrary } =
+    await import('@googlemaps/js-api-loader');
   setOptions({
     key: 'AIzaSyCCzurmr3FtjmHaiBfPzDx3IAdgsTaOogY',
     version: 'weekly',

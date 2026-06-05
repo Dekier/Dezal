@@ -1,11 +1,16 @@
 <template>
-  <div class="Asset__main-container" ref="assetContainer">
+  <div
+    class="Asset__main-container"
+    ref="assetContainer"
+    :class="{ 'Asset__main-container--small': item.content.height === 'small' }"
+  >
     <div class="Asset__center-container">
       <img
         v-if="item.content.type === 'image'"
         :src="item.content.src"
         :alt="item.content.alt"
         class="Asset__image"
+        :class="{ 'Asset__image--small': item.content.height === 'small' }"
         loading="lazy"
       />
       <video
