@@ -139,20 +139,6 @@ useSchemaOrg([
     },
     openingHours: ['Mo 12:00-18:00', 'Tu-Fr 09:00-17:00'],
   }),
-
-  // 2. Definicja FAQ (FAQPage)
-  defineFaqPage({
-    mainEntity: [
-      ...faqPorady.value.map((faq) => ({
-        name: faq.question,
-        acceptedAnswer: faq.answer,
-      })),
-      ...faqTechniczne.value.map((faq) => ({
-        name: faq.question,
-        acceptedAnswer: faq.answer,
-      })),
-    ],
-  }),
 ]);
 </script>
 
