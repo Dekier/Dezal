@@ -5,10 +5,16 @@ FROM node:24 AS builder
 
 WORKDIR /app
 
+# 1. Włączamy pnpm wewnątrz obrazu Dockera
+RUN corepack enable && corepack prepare pnpm@latest --activate
+
 COPY . .
 
-RUN npm install
-RUN npm run build
+# 2. Instalujemy przez pnpm, wymuszając użycie Twojego pnpm-lock.yaml (--frozen-lockfile)
+RUN pnpm install --frozen-lockfile
+
+# 3. Budujemy przez pnpm
+RUN pnpm run build
 
 # ETAP 2: Uruchamianie (Runner) - tutaj wjeżdża superlekki obraz produkcyjny
 FROM node:24-alpine
