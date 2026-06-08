@@ -61,6 +61,7 @@ const faqData = ref([
 // Zdjęcia do dolnej galerii
 const bottomImages = ref([
   { id: 1, url: '/images/verticale/dezal-poznan-roleta-verticale-1.webp' },
+  { id: 2, url: '/images/verticale/dezal-poznan-roleta-verticale-2.webp' },
 ]);
 
 // Dane do komponentu Offer

@@ -92,7 +92,7 @@ const pageData = computed(() => {
         {
           id: 0,
           title: box.title,
-          url: '/images/rolety/dezal-poznan-roleta-materialowa-3.webp',
+          url: '/images/rolety/dezal-poznan-roleta-materialowa-20.webp',
           description: box.description,
         },
       ]

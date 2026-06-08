@@ -62,7 +62,8 @@ const faqData = ref([
 const bottomImages = ref([
   { id: 1, url: '/images/zaluzje/dezal-poznan-zaluzja-aluminiowa-1.webp' },
   { id: 2, url: '/images/zaluzje/dezal-poznan-zaluzja-aluminiowa-2.webp' },
-  { id: 3, url: '/images/zaluzje/dezal-poznan-zaluzja-aluminiowa-3.webp' },
+  { id: 3, url: '/images/zaluzje/dezal-poznan-zaluzja-aluminiowa-4.webp' },
+  { id: 3, url: '/images/zaluzje/dezal-poznan-zaluzja-aluminiowa-7.webp' },
 ]);
 
 // Dane do boksów "Zobacz również"
@@ -91,7 +92,7 @@ const pageData = computed(() => {
     {
       id: 0,
       title: boxes[7]?.title ?? '',
-      url: '/images/zaluzje/dezal-poznan-zaluzja-aluminiowa-1.webp',
+      url: '/images/zaluzje/dezal-poznan-zaluzja-aluminiowa-3.webp',
       description: boxes[7]?.description ?? '',
     },
   ];
@@ -123,7 +124,7 @@ useHead({
       property: 'og:image',
       // UWAGA: Pełny adres URL!
       content:
-        'https://dezalroletypoznan.pl/images/zaluzje/dezal-poznan-zaluzja-aluminiowa-1.webp',
+        'https://dezalroletypoznan.pl/images/zaluzje/dezal-poznan-zaluzja-aluminiowa-3.webp',
     },
     {
       property: 'og:image:alt',

@@ -63,6 +63,7 @@ const bottomImages = ref([
   { id: 1, url: '/images/zaluzje/dezal-poznan-zaluzja-drewniana-2.webp' },
   { id: 2, url: '/images/zaluzje/dezal-poznan-zaluzja-drewniana-1.webp' },
   { id: 3, url: '/images/zaluzje/dezal-poznan-zaluzja-drewniana-4.webp' },
+  { id: 3, url: '/images/zaluzje/dezal-poznan-zaluzja-drewniana-6.webp' },
 ]);
 
 // Dane do boksów "Zobacz również"

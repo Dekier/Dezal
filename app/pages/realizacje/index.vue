@@ -5,7 +5,7 @@
         <h1 class="Realization__title">Poznaj nasze realizacje</h1>
         <p class="Realization__description">
           Nasze realizacje to nie tylko piękne i estetyczne, ale także
-          funkcjonalne i trwałe rozwiązania. Dzięki naszej wiedzy i
+          funkjonalne i trwałe rozwiązania. Dzięki naszej wiedzy i
           doświadczeniu, jesteśmy w stanie doradzić w wyborze najlepszego
           rozwiązania dla Twojego mieszkania, domu czy firmy. Stawiamy na
           jakość, dlatego korzystamy tylko z najlepszych materiałów i urządzeń.
@@ -67,7 +67,8 @@ const filters = [
   { label: 'MATERIAŁOWE', value: 'rolety-materiałowe' },
   { label: 'RZYMSKIE', value: 'żaluzje-rzymskie' },
   { label: 'PLISY OKIENNE', value: 'PLISY' },
-  { label: 'ŻALUZJE', value: 'ZALUZJE' },
+  { label: 'ŻALUZJE DREWNIANE', value: 'zaluzje-drewniane' },
+  { label: 'ŻALUZJE ALUMINIOWE', value: 'zaluzje-aluminiowe' },
   { label: 'VERTICALE', value: 'VERTICALE' },
   { label: 'MOSKITIERY', value: 'MASKITIERY' },
 ];
@@ -127,399 +128,74 @@ const currentFilter = ref('ALL');
 const activeGallery = ref(false);
 const activeImageIndex = ref(null);
 
+// Funkcja pomocnicza do generowania linków (od max do min)
+const generateImages = (
+  urlTemplate: string,
+  category: string,
+  min: number,
+  max: number
+) => {
+  const result = [];
+  // Pętla iteruje w dół, aby zdjęcia wyświetlały się od najwyższego numeru
+  for (let i = max; i >= min; i--) {
+    result.push({
+      url: urlTemplate.replace('{n}', i.toString()),
+      category: category,
+    });
+  }
+  return result;
+};
+
+// Generowanie całej listy za pomocą funkcji pomocniczej
 const imagesData = ref([
-  {
-    url: '/images/rolety/dezal-poznan-roleta-dzien-noc-1.webp',
-    category: 'rolety-dzień-noc',
-  },
-
-  {
-    url: '/images/rolety/dezal-poznan-roleta-dzien-noc-2.webp',
-    category: 'rolety-dzień-noc',
-  },
-
-  {
-    url: '/images/rolety/dezal-poznan-roleta-dzien-noc-3.webp',
-    category: 'rolety-dzień-noc',
-  },
-
-  {
-    url: '/images/rolety/dezal-poznan-roleta-dzien-noc-4.webp',
-    category: 'rolety-dzień-noc',
-  },
-
-  {
-    url: '/images/rolety/dezal-poznan-roleta-dzien-noc-5.webp',
-    category: 'rolety-dzień-noc',
-  },
-
-  {
-    url: '/images/rolety/dezal-poznan-roleta-dzien-noc-6.webp',
-    category: 'rolety-dzień-noc',
-  },
-
-  {
-    url: '/images/rolety/dezal-poznan-roleta-dzien-noc-7.webp',
-    category: 'rolety-dzień-noc',
-  },
-
-  {
-    url: '/images/rolety/dezal-poznan-roleta-dzien-noc-8.webp',
-    category: 'rolety-dzień-noc',
-  },
-
-  {
-    url: '/images/rolety/dezal-poznan-roleta-dzien-noc-13.webp',
-    category: 'rolety-dzień-noc',
-  },
-
-  {
-    url: '/images/rolety/dezal-poznan-roleta-dzien-noc-12.webp',
-    category: 'rolety-dzień-noc',
-  },
-
-  {
-    url: '/images/rolety/dezal-poznan-roleta-dzien-noc-11.webp',
-    category: 'rolety-dzień-noc',
-  },
-
-  {
-    url: '/images/rolety/dezal-poznan-roleta-dzien-noc-9.webp',
-    category: 'rolety-dzień-noc',
-  },
-
-  {
-    url: '/images/rolety/dezal-poznan-roleta-dzien-noc-14.webp',
-    category: 'rolety-dzień-noc',
-  },
-
-  {
-    url: '/images/rolety/dezal-poznan-roleta-dzien-noc-15.webp',
-    category: 'rolety-dzień-noc',
-  },
-
-  {
-    url: '/images/rolety/dezal-poznan-roleta-dzien-noc-16.webp',
-    category: 'rolety-dzień-noc',
-  },
-
-  {
-    url: '/images/rolety/dezal-poznan-roleta-dzien-noc-17.webp',
-    category: 'rolety-dzień-noc',
-  },
-
-  {
-    url: '/images/plisy/dezal-poznan-plisa-1.webp',
-    category: 'PLISY',
-  },
-
-  {
-    url: '/images/plisy/dezal-poznan-plisa-2.webp',
-    category: 'PLISY',
-  },
-
-  {
-    url: '/images/plisy/dezal-poznan-plisa-18.webp',
-    category: 'PLISY',
-  },
-
-  {
-    url: '/images/plisy/dezal-poznan-plisa-17.webp',
-    category: 'PLISY',
-  },
-
-  {
-    url: '/images/plisy/dezal-poznan-plisa-16.webp',
-    category: 'PLISY',
-  },
-
-  {
-    url: '/images/plisy/dezal-poznan-plisa-3.webp',
-    category: 'PLISY',
-  },
-
-  {
-    url: '/images/plisy/dezal-poznan-plisa-4.webp',
-    category: 'PLISY',
-  },
-
-  {
-    url: '/images/plisy/dezal-poznan-plisa-5.webp',
-    category: 'PLISY',
-  },
-
-  {
-    url: '/images/plisy/dezal-poznan-plisa-6.webp',
-    category: 'PLISY',
-  },
-
-  {
-    url: '/images/plisy/dezal-poznan-plisa-7.webp',
-    category: 'PLISY',
-  },
-
-  {
-    url: '/images/plisy/dezal-poznan-plisa-8.webp',
-    category: 'PLISY',
-  },
-
-  {
-    url: '/images/plisy/dezal-poznan-plisa-9.webp',
-    category: 'PLISY',
-  },
-
-  {
-    url: '/images/plisy/dezal-poznan-plisa-10.webp',
-    category: 'PLISY',
-  },
-
-  {
-    url: '/images/plisy/dezal-poznan-plisa-12.webp',
-    category: 'PLISY',
-  },
-
-  {
-    url: '/images/plisy/dezal-poznan-plisa-14.webp',
-    category: 'PLISY',
-  },
-  {
-    url: '/images/plisy/dezal-poznan-plisa-15.webp',
-    category: 'PLISY',
-  },
-
-  {
-    url: '/images/plisy/dezal-poznan-plisa-17.webp',
-    category: 'PLISY',
-  },
-
-  {
-    url: '/images/plisy/dezal-poznan-plisa-19.webp',
-    category: 'PLISY',
-  },
-
-  {
-    url: '/images/plisy/dezal-poznan-plisa-20.webp',
-    category: 'PLISY',
-  },
-
-  {
-    url: '/images/plisy/dezal-poznan-plisa-21.webp',
-    category: 'PLISY',
-  },
-
-  {
-    url: '/images/plisy/dezal-poznan-plisa-22.webp',
-    category: 'PLISY',
-  },
-  {
-    url: '/images/plisy/dezal-poznan-plisa-23.webp',
-    category: 'PLISY',
-  },
-  {
-    url: '/images/plisy/dezal-poznan-plisa-24.webp',
-    category: 'PLISY',
-  },
-  {
-    url: '/images/plisy/dezal-poznan-plisa-25.webp',
-    category: 'PLISY',
-  },
-  {
-    url: '/images/plisy/dezal-poznan-plisa-26.webp',
-    category: 'PLISY',
-  },
-  {
-    url: '/images/plisy/dezal-poznan-plisa-27.webp',
-    category: 'PLISY',
-  },
-
-  {
-    url: '/images/rolety/dezal-poznan-roleta-materialowa-1.webp',
-    category: 'rolety-materiałowe',
-  },
-
-  {
-    url: '/images/rolety/dezal-poznan-roleta-materialowa-2.webp',
-    category: 'rolety-materiałowe',
-  },
-
-  {
-    url: '/images/rolety/dezal-poznan-roleta-materialowa-3.webp',
-    category: 'rolety-materiałowe',
-  },
-
-  {
-    url: '/images/rolety/dezal-poznan-roleta-materialowa-4.webp',
-    category: 'rolety-materiałowe',
-  },
-
-  {
-    url: '/images/rolety/dezal-poznan-roleta-materialowa-6.webp',
-    category: 'rolety-materiałowe',
-  },
-
-  {
-    url: '/images/rolety/dezal-poznan-roleta-materialowa-7.webp',
-    category: 'rolety-materiałowe',
-  },
-
-  {
-    url: '/images/rolety/dezal-poznan-roleta-materialowa-9.webp',
-    category: 'rolety-materiałowe',
-  },
-
-  {
-    url: '/images/rolety/dezal-poznan-roleta-materialowa-10.webp',
-    category: 'rolety-materiałowe',
-  },
-
-  {
-    url: '/images/rolety/dezal-poznan-roleta-materialowa-11.webp',
-    category: 'rolety-materiałowe',
-  },
-
-  {
-    url: '/images/rolety/dezal-poznan-roleta-materialowa-12.webp',
-    category: 'rolety-materiałowe',
-  },
-
-  {
-    url: '/images/rolety/dezal-poznan-roleta-materialowa-13.webp',
-    category: 'rolety-materiałowe',
-  },
-
-  {
-    url: '/images/rolety/dezal-poznan-roleta-materialowa-14.webp',
-    category: 'rolety-materiałowe',
-  },
-
-  {
-    url: '/images/rolety/dezal-poznan-roleta-materialowa-15.webp',
-    category: 'rolety-materiałowe',
-  },
-  {
-    url: '/images/rolety/dezal-poznan-roleta-materialowa-16.webp',
-    category: 'rolety-materiałowe',
-  },
-
-  {
-    url: '/images/rolety/dezal-poznan-roleta-rzymska-0.webp',
-    category: 'żaluzje-rzymskie',
-  },
-
-  {
-    url: '/images/rolety/dezal-poznan-roleta-rzymska-1.webp',
-    category: 'żaluzje-rzymskie',
-  },
-
-  {
-    url: '/images/rolety/dezal-poznan-roleta-rzymska-2.webp',
-    category: 'żaluzje-rzymskie',
-  },
-
-  {
-    url: '/images/rolety/dezal-poznan-roleta-rzymska-4.webp',
-    category: 'żaluzje-rzymskie',
-  },
-
-  {
-    url: '/images/rolety/dezal-poznan-roleta-rzymska-5.webp',
-    category: 'żaluzje-rzymskie',
-  },
-
-  {
-    url: '/images/rolety/dezal-poznan-roleta-rzymska-8.webp',
-    category: 'żaluzje-rzymskie',
-  },
-
-  {
-    url: '/images/rolety/dezal-poznan-roleta-rzymska-9.webp',
-    category: 'żaluzje-rzymskie',
-  },
-
-  {
-    url: '/images/rolety/dezal-poznan-roleta-rzymska-10.webp',
-    category: 'żaluzje-rzymskie',
-  },
-
-  {
-    url: '/images/rolety/dezal-poznan-roleta-rzymska-11.webp',
-    category: 'żaluzje-rzymskie',
-  },
-
-  {
-    url: '/images/rolety/dezal-poznan-roleta-rzymska-12.webp',
-    category: 'żaluzje-rzymskie',
-  },
-  {
-    url: '/images/rolety/dezal-poznan-roleta-rzymska-13.webp',
-    category: 'żaluzje-rzymskie',
-  },
-
-  {
-    url: '/images/zaluzje/dezal-poznan-zaluzja-drewniana-1.webp',
-    category: 'ZALUZJE',
-  },
-
-  {
-    url: '/images/zaluzje/dezal-poznan-zaluzja-drewniana-2.webp',
-    category: 'ZALUZJE',
-  },
-
-  {
-    url: '/images/zaluzje/dezal-poznan-zaluzja-drewniana-4.webp',
-    category: 'ZALUZJE',
-  },
-  {
-    url: '/images/zaluzje/dezal-poznan-zaluzja-drewniana-6.webp',
-    category: 'ZALUZJE',
-  },
-  {
-    url: '/images/zaluzje/dezal-poznan-zaluzja-drewniana-7.webp',
-    category: 'ZALUZJE',
-  },
-  {
-    url: '/images/zaluzje/dezal-poznan-zaluzja-drewniana-8.webp',
-    category: 'ZALUZJE',
-  },
-  {
-    url: '/images/zaluzje/dezal-poznan-zaluzja-drewniana-9.webp',
-    category: 'ZALUZJE',
-  },
-
-  {
-    url: '/images/zaluzje/dezal-poznan-zaluzja-aluminiowa-1.webp',
-    category: 'ZALUZJE',
-  },
-
-  {
-    url: '/images/zaluzje/dezal-poznan-zaluzja-aluminiowa-2.webp',
-    category: 'ZALUZJE',
-  },
-
-  {
-    url: '/images/zaluzje/dezal-poznan-zaluzja-aluminiowa-3.webp',
-    category: 'ZALUZJE',
-  },
-
-  {
-    url: '/images/verticale/dezal-poznan-roleta-verticale-1.webp',
-    category: 'VERTICALE',
-  },
-
-  {
-    url: '/images/moskitiery/dezal-poznan-moskitiera-2.webp',
-    category: 'MASKITIERY',
-  },
-
-  {
-    url: '/images/moskitiery/dezal-poznan-moskitiera-1.webp',
-    category: 'MASKITIERY',
-  },
-
-  {
-    url: '/images/moskitiery/dezal-poznan-moskitiera-3.webp',
-    category: 'MASKITIERY',
-  },
+  ...generateImages(
+    '/images/rolety/dezal-poznan-roleta-dzien-noc-{n}.webp',
+    'rolety-dzień-noc',
+    1,
+    22
+  ),
+  ...generateImages(
+    '/images/plisy/dezal-poznan-plisa-{n}.webp',
+    'PLISY',
+    1,
+    38
+  ),
+  ...generateImages(
+    '/images/rolety/dezal-poznan-roleta-materialowa-{n}.webp',
+    'rolety-materiałowe',
+    1,
+    20
+  ),
+  ...generateImages(
+    '/images/rolety/dezal-poznan-roleta-rzymska-{n}.webp',
+    'żaluzje-rzymskie',
+    0,
+    12
+  ),
+  ...generateImages(
+    '/images/zaluzje/dezal-poznan-zaluzja-drewniana-{n}.webp',
+    'zaluzje-drewniane',
+    1,
+    21
+  ),
+  ...generateImages(
+    '/images/zaluzje/dezal-poznan-zaluzja-aluminiowa-{n}.webp',
+    'zaluzje-aluminiowe',
+    1,
+    11
+  ),
+  ...generateImages(
+    '/images/verticale/dezal-poznan-roleta-verticale-{n}.webp',
+    'VERTICALE',
+    1,
+    2
+  ),
+  ...generateImages(
+    '/images/moskitiery/dezal-poznan-moskitiera-{n}.webp',
+    'MASKITIERY',
+    1,
+    3
+  ),
 ]);
 
 const filteredImages = computed(() =>
@@ -555,8 +231,8 @@ const beforeImage = () => {
 const imageAlt = (img) => {
   return `deżal poznań ${img.category}`;
 };
+
 useHead({
-  // Tytuł z "Nasze Realizacje". Razem z " | DEŻAL" wyniesie 55 znaków (idealnie).
   title: 'Nasze Realizacje: Rolety, Plisy, Żaluzje Poznań',
   htmlAttrs: {
     lang: 'pl',
@@ -564,7 +240,6 @@ useHead({
   meta: [
     {
       name: 'description',
-      // Skrócony do 152 znaków. Konkretny i zachęcający do akcji.
       content:
         'Zobacz galerię naszych realizacji w Poznaniu i okolicach. Montujemy rolety, plisy, żaluzje i moskitiery na wymiar. Zainspiruj się naszymi projektami!',
     },
@@ -579,7 +254,6 @@ useHead({
     },
     {
       property: 'og:image',
-      // UWAGA: Bezwzględny adres URL, żeby miniatura działała na Facebooku!
       content:
         'https://dezalroletypoznan.pl/images/rolety/dezal-poznan-roleta-dzien-noc-2.webp',
     },
@@ -588,7 +262,6 @@ useHead({
       content: 'Nasze realizacje - Rolety dzień noc w Poznaniu',
     },
   ],
-  // Canonical jest IDEALNY - zostawiamy!
   canonical: 'https://dezalroletypoznan.pl/realizacje',
 });
 </script>
