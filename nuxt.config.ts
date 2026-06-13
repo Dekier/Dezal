@@ -3,8 +3,32 @@ const siteUrl =
 export default defineNuxtConfig({
   ssr: true,
 
+  vite: {
+    optimizeDeps: {
+      include: [
+        '@emailjs/browser',
+        '@googlemaps/js-api-loader',
+        '@unhead/schema-org/vue',
+      ],
+    },
+  },
+
   future: {
     compatibilityVersion: 4,
+  },
+
+  devtools: {
+    enabled: true,
+  },
+
+  // 2. Temporary polyfill to fix the nuxt-schema-org build crash
+  imports: {
+    presets: [
+      {
+        from: 'vue',
+        imports: [{ name: 'isReadonly', as: 'isProductionMode' }],
+      },
+    ],
   },
 
   routeRules: {
@@ -17,9 +41,9 @@ export default defineNuxtConfig({
       headers: { 'cache-control': 'public, max-age=31536000, immutable' },
     },
     '/images/**': { headers: { 'cache-control': 'public, max-age=31536000' } },
-    '/*.png': { headers: { 'cache-control': 'public, max-age=31536000' } },
-    '/*.webp': { headers: { 'cache-control': 'public, max-age=31536000' } },
-    '/*.jpg': { headers: { 'cache-control': 'public, max-age=31536000' } },
+    '/**/*.png': { headers: { 'cache-control': 'public, max-age=31536000' } },
+    '/**/*.webp': { headers: { 'cache-control': 'public, max-age=31536000' } },
+    '/**/*.jpg': { headers: { 'cache-control': 'public, max-age=31536000' } },
     '/**/*.woff2': {
       headers: { 'cache-control': 'public, max-age=31536000, immutable' },
     },
@@ -120,7 +144,7 @@ export default defineNuxtConfig({
       {
         name: 'Inter',
         provider: 'google',
-        weights: ['400', '500', '600', '700'],
+        weights: ['200', '400', '500', '600', '700'],
         display: 'swap',
       },
     ],

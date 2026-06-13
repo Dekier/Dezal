@@ -74,6 +74,45 @@
         </picture>
       </div>
     </div>
+    <div class="Hero__bottom-container">
+      <NuxtLink to="/kontakt" class="Hero__box-yellow">
+        <p class="Hero__box-yellow-text">
+          Zamów u nas rolety <br />
+          i skorzystaj z...
+        </p>
+        <div class="Hero__box-btn">
+          zamawiam
+          <div class="Hero__btn-arrow-box">
+            <img
+              src="/icons/arrow.svg"
+              alt="icon arrow"
+              class="Hero__btn-arrow-icon"
+            />
+          </div>
+        </div>
+      </NuxtLink>
+      <div class="Hero__box-white Hero__box-white-1">
+        <span class="Hero__box-white-number">1</span>
+        <p class="Hero__box-white-text">
+          <span class="Hero__box-white-text-bold">Darmowego</span><br />pomiaru
+        </p>
+      </div>
+
+      <div class="Hero__box-white Hero__box-white-2">
+        <span class="Hero__box-white-number">2</span>
+        <p class="Hero__box-white-text">
+          <span class="Hero__box-white-text-bold">Darmowej</span><br />dostawy
+        </p>
+      </div>
+
+      <div class="Hero__box-white Hero__box-white-3">
+        <span class="Hero__box-white-number">3</span>
+        <p class="Hero__box-white-text">
+          <span class="Hero__box-white-text-bold">Profesjonalnego</span
+          ><br />montażu
+        </p>
+      </div>
+    </div>
   </header>
 </template>
 

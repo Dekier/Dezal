@@ -135,6 +135,7 @@
           to="/"
           class="Header__link"
           @click="pageActive = 'home'"
+          @mouseover="showDropDown = false"
         >
           strona główna
         </NuxtLink>
@@ -144,6 +145,7 @@
           class="Header__link"
           @click="pageActive = 'helper'"
           prefetch
+          @mouseover="showDropDown = false"
         >
           poradniki
         </NuxtLink>
@@ -200,6 +202,7 @@
           class="Header__link"
           @click="pageActive = 'real'"
           prefetch
+          @mouseover="showDropDown = false"
         >
           realizacje
         </NuxtLink>
@@ -209,6 +212,7 @@
           class="Header__link Header__link-contact"
           @click="pageActive = 'contact'"
           prefetch
+          @mouseover="showDropDown = false"
         >
           kontakt
         </NuxtLink>

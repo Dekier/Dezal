@@ -13,8 +13,8 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue';
-import offerPage from '~~/public/offers.json';
-import offers from '~~/public/offers-landing.json';
+import offerPage from '~/assets/content/offers.json';
+import offers from '~/assets/content/offers-landing.json';
 import articles from '~/assets/content/articles.json';
 
 const chosenArticleIndices = [1, 0, 4];
