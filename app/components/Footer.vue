@@ -19,6 +19,8 @@
         </p>
         <a
           href="https://www.facebook.com/rolety.dezal.poznan/"
+          target="_blank"
+          rel="noopener noreferrer"
           class="Footer__facebook-link"
         >
           Znajdź nas na:
@@ -171,40 +173,27 @@
       <div class="Footer__column">
         <div class="Footer__title">Kontakt</div>
         <a href="tel:+48603630299" class="Footer__link">
-          <img
-            src="/icons/phone.svg"
-            alt="icon phone"
-            class="Footer__link-icon"
-          />
+          <img src="/icons/phone.svg" alt="" class="Footer__link-icon" />
           +48 603 630 299
         </a>
         <a href="mailto:dezal.rolety@gmail.com" class="Footer__link">
-          <img
-            src="/icons/mail.svg"
-            alt="icon mail"
-            class="Footer__link-icon"
-          />
+          <img src="/icons/mail.svg" alt="" class="Footer__link-icon" />
           dezal.rolety@gmail.com
         </a>
         <a
-          href="https://maps.app.goo.gl/SWWD7iMgbDCGbCam9"
+          href="https://g.page/r/CaGl8Zq5auyqEBM"
+          target="_blank"
+          rel="noopener noreferrer"
           class="Footer__link Footer__link-long"
         >
-          <img src="/icons/map.svg" alt="icon map" class="Footer__link-icon" />
+          <img src="/icons/map.svg" alt="" class="Footer__link-icon" />
           Z.H.U. DEŻAL Dariusz Dekier<br />
           ul. Jaroczyńskiego 41,<br />
           60-692 Poznań
         </a>
 
-        <div
-          href="https://maps.app.goo.gl/SWWD7iMgbDCGbCam9"
-          class="Footer__link Footer__link-long Footer__link-no-click"
-        >
-          <img
-            src="/icons/bank.svg"
-            alt="icon bank"
-            class="Footer__link-icon"
-          />
+        <div class="Footer__link Footer__link-long Footer__link-no-click">
+          <img src="/icons/bank.svg" alt="" class="Footer__link-icon" />
           ING BANK ŚLĄSKI S.A.<br />
           83 1050 1520 1000 0090 6935 0826
         </div>
@@ -258,7 +247,7 @@
       </div>
     </div>
     <div class="Footer__down-container">
-      Copyright &copy; 2026 DEŻAL rolety wewnętrzne. plisy okienn, żaluzje
+      Copyright &copy; 2026 DEŻAL rolety wewnętrzne. plisy okienne, żaluzje
       drewniane, żaluzje aluminiowe, moskitiery Poznań | Wszelkie prawa
       zastrzeżone
     </div>
