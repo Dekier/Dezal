@@ -162,6 +162,7 @@ export default defineNuxtConfig({
     name: 'DEŻAL',
     defaultLocale: 'pl', // lub 'pl-PL' - moduł SEO preferuje standard 'pl'
     currentLocale: 'pl',
+    logo: '/images/logo-rect-2.webp',
   },
 
   // gtag: {
@@ -191,7 +192,7 @@ export default defineNuxtConfig({
     manifest: {
       name: 'Deżal Rolety',
       short_name: 'Deżal',
-      theme_color: '#ffe100',
+      theme_color: '#fdf8f2',
       lang: 'pl',
       icons: [
         {
@@ -202,8 +203,6 @@ export default defineNuxtConfig({
       ],
     },
   },
-
-  // serverMiddleware: [{ path: '/', handler: '~/middleware/redirect.js' }],
 
   compatibilityDate: '2026-05-18',
 });
