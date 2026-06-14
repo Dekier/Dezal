@@ -10,23 +10,6 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
 
-// Używamy modułu schema-org, który masz już zainstalowany w projekcie
-// useSchemaOrg([
-//   defineLocalBusiness({
-//     name: 'DEŻAL Rolety. Plisy. Żaluzje. Poznań',
-//     url: 'https://dezalroletypoznan.pl/',
-//     logo: 'https://dezalroletypoznan.pl/images/logo.png',
-//     telephone: '+48603630299',
-//     address: {
-//       streetAddress: 'ul. Jaroczyńskiego 41',
-//       addressLocality: 'Poznań',
-//       postalCode: '60-692',
-//       addressCountry: 'PL',
-//     },
-//     openingHours: ['Mo 12:00-18:00', 'Tu-Fr 09:00-17:00'],
-//   }),
-// ]);
-
 const visibleCookies = ref(true);
 
 onMounted(() => {

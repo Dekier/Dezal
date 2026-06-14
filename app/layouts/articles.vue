@@ -12,7 +12,7 @@
 import { ref, onMounted } from 'vue';
 
 const visibleCookies = ref(true);
-import offers from '~~/public/offers-landing.json';
+import offers from '~/assets/content/offers-landing.json';
 
 const offersJson = ref(offers.boxes);
 const offerData = ref({
