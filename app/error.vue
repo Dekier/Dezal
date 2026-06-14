@@ -10,5 +10,5 @@
 <script setup lang="ts"></script>
 
 <style scoped lang="scss">
-@use './404.scss' as *;
+@use './error.scss' as *;
 </style>

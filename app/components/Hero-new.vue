@@ -5,13 +5,15 @@
         <h1 class="Hero__label">
           <img
             src="/icons/dot-yellow-full.svg"
-            alt="icon dot"
+            aria-hidden="true"
+            alt=""
             class="Hero__dot"
           />
           Rolety, Żaluzje, Plisy Poznań | DEŻAL
           <img
             src="/icons/dot-yellow-full.svg"
-            alt="icon dot"
+            aria-hidden="true"
+            alt=""
             class="Hero__dot"
           />
         </h1>
@@ -74,7 +76,7 @@
         </picture>
       </div>
     </div>
-    <div class="Hero__bottom-container">
+    <!-- <div class="Hero__bottom-container">
       <NuxtLink to="/kontakt" class="Hero__box-yellow">
         <p class="Hero__box-yellow-text">
           Zamów u nas rolety <br />
@@ -112,7 +114,7 @@
           ><br />montażu
         </p>
       </div>
-    </div>
+    </div> -->
   </header>
 </template>
 

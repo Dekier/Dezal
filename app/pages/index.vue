@@ -121,25 +121,8 @@ useHead({
   ],
   canonical: 'https://dezalroletypoznan.pl',
 });
-
 // Oficjalny, natywny sposób generowania FAQPage dostarczany przez @nuxtjs/seo
 // Unhead zintegruje to bezbłędnie ze strukturą strony bez rzucania błędów o potentialAction
-useSchemaOrg([
-  // 1. Definicja Twojego fizycznego biznesu (LocalBusiness)
-  defineLocalBusiness({
-    name: 'DEŻAL Rolety. Plisy. Żaluzje. Poznań',
-    url: 'https://dezalroletypoznan.pl/',
-    logo: 'https://dezalroletypoznan.pl/images/logo-rect-2.webp',
-    telephone: '+48603630299',
-    address: {
-      streetAddress: 'ul. Jaroczyńskiego 41',
-      addressLocality: 'Poznań',
-      postalCode: '60-692',
-      addressCountry: 'PL',
-    },
-    openingHours: ['Mo 12:00-18:00', 'Tu-Fr 09:00-17:00'],
-  }),
-]);
 </script>
 
 <style scoped lang="scss">
