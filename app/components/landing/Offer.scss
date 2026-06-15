@@ -12,7 +12,7 @@
     margin: auto;
     padding: 100px 16px 100px;
     @include for-phone-only {
-      padding: 50px 16px 100px;
+      padding: 50px 16px 50px;
     }
   }
 

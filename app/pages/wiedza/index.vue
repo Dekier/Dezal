@@ -39,8 +39,6 @@
           </div>
         </nuxt-link>
       </div>
-
-      <ArticleFooter />
     </div>
   </div>
 </template>

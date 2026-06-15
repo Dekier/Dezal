@@ -16,13 +16,14 @@
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@googlemaps/js-api-loader": "^2.1.0",
+    "@nuxt/image": "^2.0.0",
     "@nuxt/scripts": "^1.2.1",
     "@nuxtjs/seo": "^5.2.5",
     "@vite-pwa/nuxt": "^1.1.1",
     "node-fetch-native": "^1.6.7",
     "nuxt": "4.4.8",
     "nuxt-llms": "^0.2.0",
-    "sharp": "^0.35.1"
+    "sharp": "^0.33.5"
   },
   "devDependencies": {
     "@nuxt/fonts": "^0.14.0",

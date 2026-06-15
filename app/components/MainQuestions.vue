@@ -43,19 +43,16 @@
           </div>
         </nuxt-link>
       </div>
-      <picture>
-        <source
-          srcset="/images/landing/questions.webp"
-          media="(min-width: 950px)"
-          type="image/webp"
-        />
-        <img
-          src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-          alt="Łazienka - nowoczesne systemy osłonowe Deżal"
-          class="MainQuestions__image"
-          loading="lazy"
-        />
-      </picture>
+      <NuxtImg
+        src="/images/landing/questions.webp"
+        alt="Łazienka - nowoczesne systemy osłonowe Deżal"
+        class="MainQuestions__image"
+        loading="lazy"
+        width="667"
+        height="377"
+        format="webp"
+        sizes="sm:100vw md:450px lg:670px"
+      />
     </div>
   </div>
 </template>

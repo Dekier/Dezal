@@ -13,11 +13,21 @@
           class="ListOfArticles__card"
         >
           <div class="ListOfArticles__image-wrapper">
-            <img
+            <!-- <img
               :src="article.url"
               :alt="article.title"
               class="ListOfArticles__image"
               loading="lazy"
+            /> -->
+            <NuxtImg
+              :src="article.url"
+              :alt="article.title"
+              class="ListOfArticles__image"
+              loading="lazy"
+              width="450"
+              height="220"
+              format="webp"
+              sizes="sm:100vw md:300px lg:450px"
             />
           </div>
           <div class="ListOfArticles__content">
@@ -47,8 +57,6 @@
             class="ListOfArticles__btn-arrow-icon"
           /></div
       ></nuxt-link>
-
-      <ArticleFooter />
     </div>
   </div>
 </template>

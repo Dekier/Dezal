@@ -17,7 +17,7 @@
     flex-direction: column;
 
     @include for-phone-only {
-      padding: 32px;
+      padding: 50px 32px;
     }
     @include for-big-desktop-up {
       flex-direction: row;

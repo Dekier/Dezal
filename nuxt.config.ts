@@ -18,7 +18,7 @@ export default defineNuxtConfig({
   },
 
   devtools: {
-    enabled: true,
+    enabled: false,
   },
 
   // 2. Temporary polyfill to fix the nuxt-schema-org build crash
@@ -29,6 +29,10 @@ export default defineNuxtConfig({
         imports: [{ name: 'isReadonly', as: 'isProductionMode' }],
       },
     ],
+  },
+
+  image: {
+    provider: 'ipx',
   },
 
   routeRules: {
@@ -109,6 +113,7 @@ export default defineNuxtConfig({
     '@nuxt/scripts',
     'nuxt-llms',
     '@nuxt/fonts',
+    '@nuxt/image',
   ],
 
   // DODAJ NOWĄ KONFIGURACJĘ SCRIPTS

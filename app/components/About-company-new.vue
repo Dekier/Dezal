@@ -4,13 +4,13 @@
       <img
         loading="lazy"
         src="/icons/subtract.svg"
-        alt="icon subtract"
+        alt=""
         class="AboutCompany__right-icon"
       />
       <img
         loading="lazy"
         src="/icons/subtract.svg"
-        alt="icon subtract"
+        alt=""
         class="AboutCompany__left-icon"
       />
       <div class="AboutCompany__left-container">
@@ -27,10 +27,15 @@
         </p>
       </div>
       <div class="AboutCompany__right-container">
-        <img
+        <NuxtImg
           src="/images/about3.webp"
           class="AboutCompany__image"
           alt="Żaluzje - nowoczesne systemy osłonowe Deżal"
+          loading="lazy"
+          width="440"
+          height="660"
+          format="webp"
+          sizes="sm:300px md:350px lg:440px"
         />
         <div class="AboutCompany__white-box">
           <h2 class="AboutCompany__big-text">

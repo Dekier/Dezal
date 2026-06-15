@@ -1,7 +1,6 @@
 <template>
   <div class="ArticlePage" ref="articlePageRef">
     <ArticleMain :data="articleData" />
-    <ArticleFooter />
   </div>
 </template>
 
