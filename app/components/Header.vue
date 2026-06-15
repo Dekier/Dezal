@@ -34,24 +34,22 @@
       </div>
 
       <transition name="fade">
-        <nav v-if="showMobileBtn" class="Header__links-container-mobile">
+        <nav v-show="showMobileBtn" class="Header__links-container-mobile">
           <NuxtLink
-            v-if="route.path !== '/'"
+            v-show="route.path !== '/'"
             to="/"
             class="Header__link-mobile"
             @click="
               closeMobileMenu();
               pageActive = 'home';
             "
-            prefetch
           >
             strona głowna
           </NuxtLink>
           <NuxtLink
-            v-if="route.path !== '/wiedza'"
+            v-show="route.path !== '/wiedza'"
             to="/wiedza"
             class="Header__link-mobile"
-            prefetch
             @click="
               closeMobileMenu();
               pageActive = 'helper';
@@ -70,7 +68,8 @@
               src="/icons/arrow-down.svg"
               class="Header__link-arrow"
               :class="{ 'Header__link-arrow--active': showMobileDropDown }"
-              alt="arrow icon"
+              alt=""
+              aria-hidden="true"
             />
           </button>
 
@@ -88,7 +87,6 @@
                   closeMobileMenu();
                   pageActive = 'offer';
                 "
-                prefetch
               >
                 <img
                   :src="
@@ -96,8 +94,9 @@
                       ? '/icons/dot-yellow.svg'
                       : '/icons/dot.svg'
                   "
-                  alt="icon dot"
+                  alt=""
                   class="Header__dot"
+                  aria-hidden="true"
                 />
                 {{ link.label }}
               </NuxtLink>
@@ -111,7 +110,6 @@
               closeMobileMenu();
               pageActive = 'real';
             "
-            prefetch
           >
             realizacje
           </NuxtLink>
@@ -122,7 +120,6 @@
               closeMobileMenu();
               pageActive = 'contact';
             "
-            prefetch
           >
             kontakt
           </NuxtLink>
@@ -131,7 +128,7 @@
 
       <div class="Header__links-container">
         <NuxtLink
-          v-if="route.path !== '/'"
+          v-show="route.path !== '/'"
           to="/"
           class="Header__link"
           @click="pageActive = 'home'"
@@ -140,11 +137,10 @@
           strona główna
         </NuxtLink>
         <NuxtLink
-          v-if="route.path !== '/wiedza'"
+          v-show="route.path !== '/wiedza'"
           to="/wiedza"
           class="Header__link"
           @click="pageActive = 'helper'"
-          prefetch
           @mouseover="showDropDown = false"
         >
           poradniki
@@ -160,12 +156,13 @@
             src="/icons/arrow-down.svg"
             class="Header__link-arrow"
             :class="{ 'Header__link-arrow--active': showDropDown }"
-            alt="arrow icon"
+            alt=""
+            aria-hidden="true"
           />
         </button>
 
         <div
-          v-if="showDropDown"
+          v-show="showDropDown"
           class="Header__dropdown"
           @mouseleave="
             showDropDown = false;
@@ -182,7 +179,6 @@
               showDropDown = false;
               pageActive = 'offer';
             "
-            prefetch
           >
             <img
               :src="
@@ -190,8 +186,9 @@
                   ? '/icons/dot-yellow.svg'
                   : '/icons/dot.svg'
               "
-              alt="icon dot"
+              alt=""
               class="Header__dot"
+              aria-hidden="true"
             />
             {{ link.label }}
           </NuxtLink>
@@ -201,7 +198,6 @@
           to="/realizacje"
           class="Header__link"
           @click="pageActive = 'real'"
-          prefetch
           @mouseover="showDropDown = false"
         >
           realizacje
@@ -211,7 +207,6 @@
           to="/kontakt"
           class="Header__link Header__link-contact"
           @click="pageActive = 'contact'"
-          prefetch
           @mouseover="showDropDown = false"
         >
           kontakt
