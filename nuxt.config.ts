@@ -34,7 +34,7 @@ export default defineNuxtConfig({
   routeRules: {
     '/__og-image__/**': { cache: false },
     // Twoje główne reguły renderowania
-    '/**': { swr: 3600 },
+    '/**': { prerender: true },
 
     // Zmuszenie przeglądarki do cachowania obrazków, css, js i czcionek przez rok
     '/_nuxt/**': {
