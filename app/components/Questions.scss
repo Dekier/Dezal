@@ -55,7 +55,7 @@
   }
 
   &__item:hover &__question {
-    font-weight: 600; // Hover na cały item
+    font-weight: 600;
     color: $black-400;
     @include for-phone-only {
       font-weight: 500;

@@ -12,6 +12,8 @@
               src="/icons/exit.svg"
               class="Contact__info-button-close-icon"
               alt="icon exit"
+              width="48px"
+              height="48px"
             />
           </button>
           <div class="Contact__info-title">Szanowni klienci</div>
@@ -40,6 +42,8 @@
               src="/icons/subtract.svg"
               alt="icon subtract"
               class="Contact__form-container-icon-left"
+              width="75px"
+              height="133px"
             />
             Skontaktuj się
           </h3>
@@ -53,12 +57,16 @@
               src="/icons/dot-yellow-border.svg"
               alt="icon dot yellow border"
               class="Contact__information-dot-yellow-border-1"
+              width="20px"
+              height="20px"
             />
             <img
               loading="lazy"
               src="/icons/dot-yellow-border.svg"
               alt="icon dot yellow border"
               class="Contact__information-dot-yellow-border-2"
+              width="20px"
+              height="20px"
             />
             <a href="tel:+48603630299" class="Contact__information-text">
               <img
@@ -66,6 +74,8 @@
                 src="/icons/phone.svg"
                 alt="icon phone"
                 class="Contact__information-icon"
+                width="24px"
+                height="24px"
               />+48 603 630 299
             </a>
             <a
@@ -77,6 +87,8 @@
                 src="/icons/mail.svg"
                 alt="icon mail"
                 class="Contact__information-icon"
+                width="24px"
+                height="24px"
               />dezal.rolety@gmail.com
             </a>
           </div>
@@ -90,6 +102,8 @@
                 src="/icons/map.svg"
                 alt="icon map"
                 class="Contact__information-icon"
+                width="24px"
+                height="24px"
               />
               ul. Jaroczyńskiego 41 <br />
               60-692 Poznań Piątkowo
@@ -102,6 +116,8 @@
                 src="/icons/alarm.svg"
                 alt="icon alarm"
                 class="Contact__information-icon"
+                width="24px"
+                height="24px"
               />
               pon. 09:00 - 18:00 <br />
               wt. 08:00 - 17:00 <br />
@@ -118,6 +134,8 @@
                 src="/icons/bank.svg"
                 alt="icon bank"
                 class="Contact__information-icon"
+                width="24px"
+                height="24px"
               />
               Z.H.U. DEŻAL Dariusz Dekier <br />
               ul. Jaroczyńskiego 41, 60-692 Poznań<br />
@@ -136,12 +154,12 @@
           class="Contact__image-middle"
           preload
         /> -->
-        <img
+        <!-- <img
           src="/images/landing/dzien-noc-1.webp"
           alt="Roleta dzień noc - nowoczesne systemy osłonowe Deżal"
           class="Contact__image-middle"
-        />
-        <!-- <NuxtImg
+        /> -->
+        <NuxtImg
           src="/images/landing/dzien-noc-1.webp"
           alt="Roleta dzień noc - nowoczesne systemy osłonowe Deżal"
           width="375"
@@ -149,8 +167,8 @@
           class="Contact__image-middle"
           loading="lazy"
           format="avif,webp"
-          sizes="sm:100vw md:50vw lg:375px"
-        /> -->
+          sizes="sm:0 md:50vw lg:375px"
+        />
 
         <div class="Contact__form-container">
           <img
@@ -158,6 +176,8 @@
             src="/icons/subtract.svg"
             alt="icon subtract"
             class="Contact__form-container-icon"
+            width="75px"
+            height="133px"
           />
           <div class="Contact__form-title">Zapytaj nas...</div>
 

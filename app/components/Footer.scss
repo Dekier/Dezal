@@ -134,12 +134,13 @@
     background-color: $grey-white;
     width: 230px;
     height: 140px;
+    align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     border-radius: 16px;
     box-shadow: 0px 0px 2px 0px #b9b9b9;
-    transition: box-shadow 0.3s ease-in-out;
+    transition: box-shadow 0.3s ease;
     &:hover {
       box-shadow: 0px 0px 5px 0px #b9b9b9;
     }

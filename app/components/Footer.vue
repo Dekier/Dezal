@@ -28,6 +28,8 @@
             src="/icons/facebook.svg"
             alt="facebook-icon"
             class="Footer__facebook-icon"
+            width="32px"
+            height="32px"
           />
         </a>
       </div>
@@ -216,7 +218,8 @@
             alt="Pracownia Krawiecka - polecany partner Deżal"
             class="Footer__recomended-logo"
             loading="lazy"
-            width="150"
+            width="202px"
+            height="123px"
             decoding="async"
           />
         </a>

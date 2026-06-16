@@ -120,15 +120,7 @@ export default defineNuxtConfig({
     'nuxt-llms',
     '@nuxt/fonts',
     '@nuxt/image',
-    '@nuxtjs/critters',
   ],
-
-  critters: {
-    config: {
-      preload: 'swap',
-      pruneSource: true,
-    },
-  },
 
   // DODAJ NOWĄ KONFIGURACJĘ SCRIPTS
   scripts: {
