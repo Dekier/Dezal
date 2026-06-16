@@ -44,6 +44,12 @@ export default defineNuxtConfig({
     '/_nuxt/**': {
       headers: { 'cache-control': 'public, max-age=31536000, immutable' },
     },
+    '/_ipx/**': {
+      headers: { 'cache-control': 'public, max-age=31536000, immutable' },
+    },
+    '/icons/**': {
+      headers: { 'cache-control': 'public, max-age=31536000, immutable' },
+    },
     '/images/**': { headers: { 'cache-control': 'public, max-age=31536000' } },
     '/**/*.png': { headers: { 'cache-control': 'public, max-age=31536000' } },
     '/**/*.webp': { headers: { 'cache-control': 'public, max-age=31536000' } },
@@ -136,11 +142,6 @@ export default defineNuxtConfig({
           : undefined, // Na localu skrypt w ogóle się nie załaduje
     },
   },
-
-  // critters: {
-  //   preload: 'swap',
-  //   pruneSource: true,
-  // },
 
   ogImage: {
     zeroRuntime: true,
