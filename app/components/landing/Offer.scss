@@ -58,6 +58,10 @@
     width: 24px;
     height: 24px;
     margin: auto 12px auto 0;
+    @include for-phone-only {
+      width: 18px;
+      height: 18px;
+    }
   }
 
   &__box-title {

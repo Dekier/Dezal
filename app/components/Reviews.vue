@@ -15,6 +15,8 @@
               src="/icons/arrow-right.svg"
               alt="icon arrow"
               class="Reviews__nav-btn-icon-left"
+              width="24px"
+              height="24px"
             />
           </button>
           <button
@@ -26,6 +28,8 @@
               src="/icons/arrow-right.svg"
               alt="icon arrow"
               class="Reviews__nav-btn-icon-right"
+              width="24px"
+              height="24px"
             />
           </button>
         </div>
@@ -78,7 +82,12 @@
               </p>
               <div class="ReviewCard__footer">
                 Opinia z
-                <img src="/icons/google.svg" alt="Google" />
+                <img
+                  src="/icons/google.svg"
+                  alt="Google"
+                  width="51px"
+                  height="16px"
+                />
               </div>
             </div>
           </div>
@@ -93,6 +102,8 @@
               src="/icons/arrow.svg"
               alt="icon arrow"
               class="Reviews__btn-arrow-icon"
+              width="48px"
+              height="14px"
             /></div
         ></a>
       </div>

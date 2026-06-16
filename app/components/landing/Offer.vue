@@ -42,6 +42,8 @@
               aria-hidden="true"
               class="Offer__box-title-dot"
               loading="lazy"
+              width="24px"
+              height="24px"
             />{{ box.title }}
           </h2>
           <p class="Offer__box-text">{{ box.description }}</p>
@@ -54,6 +56,8 @@
                 alt=""
                 aria-hidden="true"
                 class="Offer__btn-arrow-icon"
+                width="48ox"
+                height="14px"
               />
             </div>
           </div>

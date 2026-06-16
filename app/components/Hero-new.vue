@@ -8,6 +8,8 @@
             aria-hidden="true"
             alt=""
             class="Hero__dot"
+            width="14px"
+            height="16px"
           />
           Rolety, Żaluzje, Plisy Poznań | DEŻAL
           <img
@@ -15,6 +17,8 @@
             aria-hidden="true"
             alt=""
             class="Hero__dot"
+            width="14px"
+            height="16px"
           />
         </h1>
         <h2 class="Hero__title">Nadaj swojemu mieszkaniu nowy charakter</h2>
@@ -30,6 +34,8 @@
               src="/icons/arrow.svg"
               alt="icon arrow"
               class="Hero__btn-arrow-icon"
+              width="48px"
+              height="18px"
             />
           </div>
         </button>

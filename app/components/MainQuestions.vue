@@ -21,6 +21,8 @@
               src="/icons/arrow.svg"
               alt="icon arrow"
               class="MainQuestions__btn-arrow-icon"
+              width="48px"
+              height="14px"
             />
           </div>
         </nuxt-link>
@@ -33,12 +35,16 @@
             src="/icons/dot-yellow-full.svg"
             alt="icon dot"
             class="MainQuestions__link-dot"
+            width="24px"
+            height="24px"
           /><span>Co najlepiej zatrzymuje światło?</span>
           <div class="MainQuestions__btn-arrow-box">
             <img
               src="/icons/arrow.svg"
               alt="icon arrow"
               class="MainQuestions__btn-arrow-icon"
+              width="48px"
+              height="14px"
             />
           </div>
         </nuxt-link>

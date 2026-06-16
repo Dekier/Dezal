@@ -6,18 +6,24 @@
         src="/icons/subtract.svg"
         alt=""
         class="AboutCompany__right-icon"
+        width="79px"
+        height="142px"
       />
       <img
         loading="lazy"
         src="/icons/subtract.svg"
         alt=""
         class="AboutCompany__left-icon"
+        width="79px"
+        height="142px"
       />
       <div class="AboutCompany__left-container">
         <img
           src="/icons/logo.svg"
           class="AboutCompany__logo"
           alt="logo dezal"
+          width="342px"
+          height="102px"
         />
         <p class="AboutCompany__description">
           Jesteśmy małą rodzinną Polską firmą założoną w 1997 roku w Poznaniu.
