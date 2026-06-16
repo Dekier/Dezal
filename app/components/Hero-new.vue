@@ -35,45 +35,39 @@
         </button>
       </div>
       <div class="Hero__right-container">
-        <picture>
-          <source
-            srcset="/images/hero/1.webp"
-            media="(min-width: 600px)"
-            type="image/webp"
-          />
-          <img
-            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            alt="Nowoczesne rolety i żaluzje na wymiar do salonu - Deżal Poznań"
-            class="Hero__image-1"
-            fetchpriority="high"
-          />
-        </picture>
+        <NuxtImg
+          src="/images/hero/1.webp"
+          alt="Nowoczesne rolety i żaluzje na wymiar do salonu - Deżal Poznań"
+          class="Hero__image-1"
+          fetchpriority="high"
+          loading="eager"
+          width="500"
+          height="645"
+          format="webp"
+          sizes="sm:0vw md:500px lg:500px"
+        />
 
-        <picture>
-          <source
-            srcset="/images/hero/2.webp"
-            media="(min-width: 1024px)"
-            type="image/webp"
-          />
-          <img
-            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            alt="Eleganckie plisy okienne w domu jednorodzinnym - Deżal Poznań"
-            class="Hero__image-2"
-          />
-        </picture>
+        <NuxtImg
+          src="/images/hero/2.webp"
+          alt="Eleganckie plisy okienne w domu jednorodzinnym - Deżal Poznań"
+          class="Hero__image-2"
+          loading="lazy"
+          width="500"
+          height="645"
+          format="webp"
+          sizes="sm:0vw md:0vw lg:500px"
+        />
 
-        <picture>
-          <source
-            srcset="/images/hero/3.webp"
-            media="(min-width: 1024px)"
-            type="image/webp"
-          />
-          <img
-            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            alt="Funkcjonalne rolety dzień-noc i moskitiery - Deżal Poznań"
-            class="Hero__image-3"
-          />
-        </picture>
+        <NuxtImg
+          src="/images/hero/3.webp"
+          alt="Funkcjonalne rolety dzień-noc i moskitiery - Deżal Poznań"
+          class="Hero__image-3"
+          loading="lazy"
+          width="500"
+          height="645"
+          format="webp"
+          sizes="sm:0vw md:0vw lg:500px"
+        />
       </div>
     </div>
     <!-- <div class="Hero__bottom-container">

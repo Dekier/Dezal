@@ -25,6 +25,8 @@
     }
     @include for-phone-only {
       margin: 100px auto 50px;
+      flex-direction: column;
+      gap: 32px;
     }
   }
 
@@ -238,13 +240,6 @@
     max-width: 100%; // Zabezpieczenie, by kontener trzymał się w ryzach
 
     // DODANA REGUŁA - "ukrywa" tag picture dla Flexboxa
-    picture {
-      display: contents;
-    }
-
-    @include for-phone-only {
-      display: none;
-    }
 
     &:has(.Hero__image-2:hover),
     &:has(.Hero__image-3:hover) {
@@ -260,6 +255,9 @@
     border-radius: 8px;
     transition: flex 700ms ease;
     object-fit: cover;
+    @include for-phone-only {
+      max-height: 400px;
+    }
   }
 
   &__image-2,

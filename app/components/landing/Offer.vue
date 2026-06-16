@@ -25,7 +25,7 @@
               :src="box.url"
               :alt="`${box.title} - Deżal`"
               class="Offer__box-image"
-              :loading="index === 0 ? 'eager' : 'lazy'"
+              :loading="index <= 3 ? 'eager' : 'lazy'"
               :fetchpriority="index === 0 ? 'high' : 'auto'"
               width="600"
               height="450"
