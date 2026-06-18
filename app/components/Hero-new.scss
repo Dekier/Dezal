@@ -35,9 +35,16 @@
     display: flex;
     max-width: 1440px;
     margin: 0 auto 60px;
+    flex-direction: column;
     width: 100%;
     padding: 0 16px;
-    height: 220px;
+    height: auto; // ZMIANA: na mobile musi być auto, żeby pionowe kafelki się zmieściły
+
+    @include for-big-desktop-up {
+      flex-direction: row;
+      justify-content: space-between;
+      height: 220px; // Przywracamy 220px na dużym ekranie
+    }
   }
 
   &__box-yellow {
@@ -45,15 +52,31 @@
     flex-direction: column;
     border: 2px solid $yellow-500;
     border-radius: 8px;
-    padding: 53px 58px;
+    padding: 53px 48px 53px 58px;
     text-decoration: unset;
-    width: 300px;
+
+    // ZMIANA: Zabezpieczenie szerokości na mobile i margines od spodu
+    width: 100%;
+    // margin-bottom: 40px;
+
+    @include for-big-desktop-up {
+      max-width: 450px;
+      width: 450px;
+      margin-bottom: 0;
+    }
+
+    @include for-phone-only {
+      padding: 16px 16px 28px;
+    }
   }
   &__box-yellow-text {
     @include text(24px, left, $black-400, 400);
     line-height: 120%;
     letter-spacing: -2%;
     margin: 0;
+    @include for-phone-only {
+      @include text(20px, left, $black-400, 400);
+    }
   }
 
   &__box-btn {
@@ -103,21 +126,132 @@
   }
 
   &__box-white {
-    padding: 75px 42px 75px 27px;
+    position: relative;
+    padding: 45px 42px 45px 40px;
     display: flex;
     box-shadow: 0 4px 7px 0px rgba($color: #000000, $alpha: 0.1);
     background-color: $color-white;
     border-radius: 8px;
     align-items: center;
+
+    // ZMIANA: Szerokości dopasowane do responsywności
+    width: 100%;
+
+    @include for-phone-only {
+      padding: 18px 20px;
+    }
+
+    @include for-big-desktop-up {
+      width: auto;
+      min-width: 310px;
+      max-width: 450px;
+      padding: 75px 42px 75px 40px;
+    }
+
+    /* ŻÓŁTY TRÓJKĄT - MOBILE (Skierowany w dół) */
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -46px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-left: 46px solid transparent;
+      border-right: 46px solid transparent;
+      border-top: 46px solid $yellow-500; // Górna granica rysuje ostrze w dół
+      border-bottom: none;
+      z-index: 1;
+      @include for-phone-only {
+        bottom: -32px;
+        border-left: 32px solid transparent;
+        border-right: 32px solid transparent;
+        border-top: 32px solid $yellow-500;
+      }
+    }
+
+    /* BIAŁY TRÓJKĄT - MOBILE (Skierowany w dół) */
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -24px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-left: 24px solid transparent;
+      border-right: 24px solid transparent;
+      border-top: 24px solid $color-white;
+      border-bottom: none;
+      z-index: 2;
+      @include for-phone-only {
+        bottom: -16px;
+        border-left: 16px solid transparent;
+        border-right: 16px solid transparent;
+        border-top: 16px solid $color-white;
+      }
+    }
+
+    /* DESKTOP (Skierowane w prawo) */
+    @include for-big-desktop-up {
+      &::before {
+        bottom: auto; // Resetujemy pozycję bottom
+        left: auto; // Resetujemy pozycję left
+        top: 50%;
+        right: -46px;
+        transform: translateY(-50%);
+        border-top: 46px solid transparent;
+        border-bottom: 46px solid transparent;
+        border-left: 46px solid $yellow-500;
+        border-right: none;
+      }
+
+      &::after {
+        bottom: auto;
+        left: auto;
+        top: 50%;
+        right: -24px;
+        transform: translateY(-50%);
+        border-top: 24px solid transparent;
+        border-bottom: 24px solid transparent;
+        border-left: 24px solid $color-white;
+        border-right: none;
+      }
+    }
+
+    /* KONTROLA WARSTW */
     &-1 {
       position: relative;
-      right: 21px;
-      margin-right: 22px;
+      z-index: 3;
+
+      @include for-big-desktop-up {
+        right: 21px;
+        margin-right: 22px;
+      }
     }
 
     &-2 {
       position: relative;
-      right: 21px;
+      z-index: 2;
+
+      @include for-big-desktop-up {
+        right: 21px;
+      }
+    }
+
+    &-3 {
+      position: relative;
+      z-index: 1;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__number-dot {
+    position: absolute;
+    bottom: 18px;
+    right: -12px;
+    @include for-phone-only {
+      bottom: 12px;
     }
   }
 
@@ -125,16 +259,26 @@
     margin: 0;
     @include text(28px, left, $black-400, 500);
     text-transform: uppercase;
+    @include for-phone-only {
+      @include text(20px, left, $black-400, 500);
+    }
   }
 
   &__box-white-text-bold {
     @include text(28px, left, $black-400, 700);
     text-transform: uppercase;
+    @include for-phone-only {
+      @include text(20px, left, $black-400, 700);
+    }
   }
 
   &__box-white-number {
     @include text(82px, left, $black-400, 200);
     margin-right: 26px;
+    position: relative;
+    @include for-phone-only {
+      @include text(56px, left, $black-400, 200);
+    }
   }
 
   &__left-container {
@@ -275,6 +419,19 @@
 
     &:hover {
       flex: 3;
+    }
+  }
+
+  &__boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    top: -20px;
+    @include for-big-desktop-up {
+      top: unset;
+      flex-direction: row;
+      gap: 0; // Usuwamy przerwę na desktopie (elementy znów "wjeżdżają" pod siebie)
     }
   }
 }

@@ -76,14 +76,14 @@
         />
       </div>
     </div>
-    <!-- <div class="Hero__bottom-container">
+    <div class="Hero__bottom-container">
       <NuxtLink to="/kontakt" class="Hero__box-yellow">
         <p class="Hero__box-yellow-text">
-          Zamów u nas rolety <br />
-          i skorzystaj z...
+          Wybierz usługę z montażem <br />
+          i zyskaj w pakiecie:
         </p>
         <div class="Hero__box-btn">
-          zamawiam
+          umów spotkanie
           <div class="Hero__btn-arrow-box">
             <img
               src="/icons/arrow.svg"
@@ -93,28 +93,53 @@
           </div>
         </div>
       </NuxtLink>
-      <div class="Hero__box-white Hero__box-white-1">
-        <span class="Hero__box-white-number">1</span>
-        <p class="Hero__box-white-text">
-          <span class="Hero__box-white-text-bold">Darmowego</span><br />pomiaru
-        </p>
-      </div>
+      <div class="Hero__boxes">
+        <div class="Hero__box-white Hero__box-white-1">
+          <span class="Hero__box-white-number"
+            >1<img
+              src="/icons/dot-yellow-full.svg"
+              aria-hidden="true"
+              alt=""
+              class="Hero__number-dot"
+              width="13px"
+              height="12px"
+          /></span>
+          <p class="Hero__box-white-text">
+            <span class="Hero__box-white-text-bold">Darmowy</span><br />pomiar
+          </p>
+        </div>
 
-      <div class="Hero__box-white Hero__box-white-2">
-        <span class="Hero__box-white-number">2</span>
-        <p class="Hero__box-white-text">
-          <span class="Hero__box-white-text-bold">Darmowej</span><br />dostawy
-        </p>
-      </div>
+        <div class="Hero__box-white Hero__box-white-2">
+          <span class="Hero__box-white-number"
+            >2<img
+              src="/icons/dot-yellow-full.svg"
+              aria-hidden="true"
+              alt=""
+              class="Hero__number-dot"
+              width="13px"
+              height="12px"
+          /></span>
+          <p class="Hero__box-white-text">
+            <span class="Hero__box-white-text-bold">Darmową</span><br />dostawę
+          </p>
+        </div>
 
-      <div class="Hero__box-white Hero__box-white-3">
-        <span class="Hero__box-white-number">3</span>
-        <p class="Hero__box-white-text">
-          <span class="Hero__box-white-text-bold">Profesjonalnego</span
-          ><br />montażu
-        </p>
+        <div class="Hero__box-white Hero__box-white-3">
+          <span class="Hero__box-white-number"
+            >3<img
+              src="/icons/dot-yellow-full.svg"
+              aria-hidden="true"
+              alt=""
+              class="Hero__number-dot"
+              width="13px"
+              height="12px"
+          /></span>
+          <p class="Hero__box-white-text">
+            <span class="Hero__box-white-text-bold">Polską</span><br />produkcję
+          </p>
+        </div>
       </div>
-    </div> -->
+    </div>
   </header>
 </template>
 
