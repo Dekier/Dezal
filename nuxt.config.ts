@@ -182,7 +182,7 @@ export default defineNuxtConfig({
 
   llms: {
     domain: 'https://dezalroletypoznan.pl',
-    title: 'DEŻAL - Rolety Poznań',
+    title: 'DEŻAL - Rolety, plisy, żaluzje, moskitiery, verticale Poznań',
     // Zmieniony opis - szczery i trafiający w intencje klientów
     description:
       'Profesjonalny dystrybutor i doświadczony monter rolet, żaluzji i osłon okiennych w Poznaniu. Zapewniamy pomiar i montaż.',

@@ -54,6 +54,12 @@ const faqPorady = ref([
     answer:
       'Wszystkie nasze osłony okienne produkowane są na indywidualny wymiar. Standardowy czas realizacji zamówienia, od momentu pomiaru i akceptacji wyceny do profesjonalnego montażu, wynosi zazwyczaj od 7 do 14 dni roboczych.',
   },
+  {
+    question:
+      'Czy w naszej ofercie znajdują się również rolety i żaluzje zewnętrzne?',
+    answer:
+      'Nie, w naszej ofercie nie posiadamy rolet ani żaluzji zewnętrznych. Nasza firma specjalizuje się wyłącznie w systemach osłon wewnętrznych (takich jak plisy, rolety materiałowe, żaluzje drewniane i aluminiowe) oraz moskitierach. Dzięki temu, że w 100% skupiamy się na asortymencie do wnętrz, możemy zaoferować najwyższą jakość mechanizmów, ogromny wybór tkanin i kolorów, a także eksperckie doradztwo w zakresie dekoracji Twoich pomieszczeń.',
+  },
 ]);
 
 // --- DANE DO FAQ: TECHNICZNE ---
@@ -85,6 +91,12 @@ const faqTechniczne = ref([
       'Co zrobić, jeśli mam nietypowy kształt okna (np. trójkąt lub trapez)?',
     answer:
       'W przypadku okien o nietypowych kształtach najlepszym rozwiązaniem z punktu widzenia technicznego są plisy. Ich elastyczna konstrukcja pozwala na docięcie materiału i dopasowanie profili do skosów, trójkątów, a nawet okrągłych okien.',
+  },
+  {
+    question:
+      'Czy mogę kupić rolety, plisy, żaluzje, moskitiery lub verticale bez usługi pomiaru i montażu?',
+    answer:
+      'Oczywiście, istnieje możliwość zakupu samych produktów – rolet (materiałowych, dzień-noc, rzymskich), plis, żaluzji (drewnianych, aluminiowych, bambusowych), moskitier czy verticali – bez naszej usługi pomiaru i montażu. Należy jednak pamiętać, że w takiej sytuacji gwarancja obejmuje wyłącznie wady fabryczne samego produktu. Ponieważ pomiar i montaż wykonywane są na własną rękę, nie możemy wziąć odpowiedzialności za błędy pomiarowe (np. złe dopasowanie do ramy okna) ani za uszkodzenia mechanizmów wynikające z nieprawidłowej instalacji. Z tego względu zawsze rekomendujemy skorzystanie z naszych kompleksowych usług – zwłaszcza że profesjonalny pomiar w Poznaniu i okolicach jest u nas darmowy!',
   },
 ]);
 
