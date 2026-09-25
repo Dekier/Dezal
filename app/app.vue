@@ -39,7 +39,12 @@ useSchemaOrg([
       'https://www.facebook.com/profile.php?id=100070520647069',
       'https://g.page/r/CaGl8Zq5auyqEBM', // Twój link do opinii / wizytówki
     ],
-    openingHours: ['Mo 12:00-18:00', 'Tu-Fr 09:00-17:00'],
+    openingHours: [
+      'Mo 09:00-18:00',
+      'Tu 08:00-17:00',
+      'We 08:00-17:00',
+      'Th 09:00-18:00',
+    ],
   }),
 ]);
 </script>

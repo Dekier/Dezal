@@ -44,10 +44,10 @@
           sizes="sm:300px md:350px lg:440px"
         />
         <div class="AboutCompany__white-box">
-          <h2 class="AboutCompany__big-text">
+          <h3 class="AboutCompany__big-text">
             2 lata <br />
             gwarancji
-          </h2>
+          </h3>
           <div class="AboutCompany__small-text">przy naszym montażu</div>
         </div>
       </div>
