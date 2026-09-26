@@ -1,14 +1,39 @@
 <template>
-  <div class="Page__main-container">
-    <ProductInformation
-      :page-data="pageData"
-      :bottom-images="bottomImages"
-      :faq-title="faqTitle"
-      :faq-data="faqData"
+  <main class="Page__main-container">
+    <ProductHero
+      :title-lines="['Verticale']"
+      :description="product.description"
+      image-src="/images/verticale/dezal-poznan-roleta-verticale-1.webp"
+      image-alt="Verticale – realizacja DEŻAL"
+      primary-label="Umów bezpłatny pomiar"
+      primary-link="/kontakt"
+      secondary-label="Zobacz realizacje"
+      realizations-id="realizacje"
     />
+
+    <ProductRealizations
+      section-id="realizacje"
+      title="Przykładowe realizacje"
+      description="Zobacz verticale zamontowane w różnych wnętrzach."
+      image-alt-prefix="Verticale"
+      :images="bottomImages"
+    />
+
+    <ProductContact
+      :title-lines="['Dobierz verticale', 'do swojego wnętrza']"
+      description="Umów bezpłatny pomiar w Poznaniu i okolicach. Pomożemy dobrać verticale do Twoich okien."
+      link-label="Skontaktuj się z nami"
+      link-to="/kontakt"
+    />
+
+    <Questions :title="faqTitle" :faqList="faqData" />
     <LazyListOfArticles :articles="featuredArticles" />
-    <LazyOffer :offer-data="offerData" :offer-boxes-json="offersJson" />
-  </div>
+    <ProductRelated
+      :title="offerData.title"
+      :items="offers.boxes"
+      :show-types="offerData.showBoxes"
+    />
+  </main>
 </template>
 
 <script setup lang="ts">
@@ -79,24 +104,8 @@ const offerData = ref({
   ],
 });
 
-// Pobieranie danych z public/offers.json
-const offerPageJson = ref(offerPage.boxes);
-const offersJson = ref(offers.boxes);
+const product = offerPage.boxes[5];
 
-// Dane do komponentu ProductInformation
-const pageData = computed(() => {
-  const box = offerPageJson.value[5];
-  return box
-    ? [
-        {
-          id: 0,
-          title: box.title,
-          url: '/images/verticale/dezal-poznan-roleta-verticale-1.webp',
-          description: box.description,
-        },
-      ]
-    : [];
-});
 useHead({
   // Razem z " | DEŻAL" wyniesie 52 znaki – idealnie.
   title: 'Verticale (Żaluzje Pionowe) na wymiar Poznań',
@@ -136,10 +145,5 @@ useHead({
 </script>
 
 <style scoped lang="scss">
-.Page {
-  &__main-container {
-    display: flex;
-    flex-direction: column;
-  }
-}
+@use '@/assets/stylesheets/product-page' as *;
 </style>

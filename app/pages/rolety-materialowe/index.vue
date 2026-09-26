@@ -1,14 +1,39 @@
 <template>
-  <div class="Page__main-container">
-    <ProductInformation
-      :page-data="pageData"
-      :bottom-images="bottomImages"
-      :faq-title="faqTitle"
-      :faq-data="faqData"
+  <main class="Page__main-container">
+    <ProductHero
+      :title-lines="['Rolety', 'materiałowe']"
+      :description="product.description"
+      image-src="/images/rolety/dezal-poznan-roleta-materialowa-20.webp"
+      image-alt="Rolety materiałowe – realizacja DEŻAL"
+      primary-label="Umów bezpłatny pomiar"
+      primary-link="/kontakt"
+      secondary-label="Zobacz realizacje"
+      realizations-id="realizacje"
     />
+
+    <ProductRealizations
+      section-id="realizacje"
+      title="Przykładowe realizacje"
+      description="Zobacz rolety materiałowe zamontowane w różnych wnętrzach."
+      image-alt-prefix="Rolety materiałowe"
+      :images="bottomImages"
+    />
+
+    <ProductContact
+      :title-lines="['Dobierz rolety materiałowe', 'do swojego wnętrza']"
+      description="Umów bezpłatny pomiar w Poznaniu i okolicach. Pomożemy wybrać rolety materiałowe dopasowane do Twoich okien."
+      link-label="Skontaktuj się z nami"
+      link-to="/kontakt"
+    />
+
+    <Questions :title="faqTitle" :faqList="faqData" />
     <LazyListOfArticles :articles="featuredArticles" />
-    <LazyOffer :offer-data="offerData" :offer-boxes-json="offersJson" />
-  </div>
+    <ProductRelated
+      :title="offerData.title"
+      :items="offers.boxes"
+      :show-types="offerData.showBoxes"
+    />
+  </main>
 </template>
 
 <script setup lang="ts">
@@ -82,22 +107,7 @@ const offerData = ref({
   ],
 });
 
-const offerPageJson = ref(offerPage.boxes);
-const offersJson = ref(offers.boxes);
-
-const pageData = computed(() => {
-  const box = offerPageJson.value[1];
-  return box
-    ? [
-        {
-          id: 0,
-          title: box.title,
-          url: '/images/rolety/dezal-poznan-roleta-materialowa-20.webp',
-          description: box.description,
-        },
-      ]
-    : [];
-});
+const product = offerPage.boxes[1];
 
 useHead({
   // Tytuł ma 46 znaków. Z " | DEŻAL" wyniesie 54 znaki – idealna długość!
@@ -138,10 +148,5 @@ useHead({
 </script>
 
 <style scoped lang="scss">
-.Page {
-  &__main-container {
-    display: flex;
-    flex-direction: column;
-  }
-}
+@use '@/assets/stylesheets/product-page' as *;
 </style>

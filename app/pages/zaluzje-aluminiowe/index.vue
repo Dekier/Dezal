@@ -1,14 +1,39 @@
 <template>
-  <div class="Page__main-container">
-    <ProductInformation
-      :page-data="pageData"
-      :bottom-images="bottomImages"
-      :faq-title="faqTitle"
-      :faq-data="faqData"
+  <main class="Page__main-container">
+    <ProductHero
+      :title-lines="['Żaluzje', 'aluminiowe']"
+      :description="product.description"
+      image-src="/images/zaluzje/dezal-poznan-zaluzja-aluminiowa-3.webp"
+      image-alt="Żaluzje aluminiowe – realizacja DEŻAL"
+      primary-label="Umów bezpłatny pomiar"
+      primary-link="/kontakt"
+      secondary-label="Zobacz realizacje"
+      realizations-id="realizacje"
     />
+
+    <ProductRealizations
+      section-id="realizacje"
+      title="Przykładowe realizacje"
+      description="Zobacz żaluzje aluminiowe w gotowych realizacjach."
+      image-alt-prefix="Żaluzje aluminiowe"
+      :images="bottomImages"
+    />
+
+    <ProductContact
+      :title-lines="['Dobierz żaluzje aluminiowe', 'do swojego wnętrza']"
+      description="Umów bezpłatny pomiar w Poznaniu i okolicach. Pomożemy dobrać żaluzje aluminiowe do Twoich okien."
+      link-label="Skontaktuj się z nami"
+      link-to="/kontakt"
+    />
+
+    <Questions :title="faqTitle" :faqList="faqData" />
     <LazyListOfArticles :articles="featuredArticles" />
-    <LazyOffer :offer-data="offerData" :offer-boxes-json="offersJson" />
-  </div>
+    <ProductRelated
+      :title="offerData.title"
+      :items="offers.boxes"
+      :show-types="offerData.showBoxes"
+    />
+  </main>
 </template>
 
 <script setup lang="ts">
@@ -81,22 +106,7 @@ const offerData = ref({
   ],
 });
 
-const offerPageJson = ref(offerPage.boxes);
-const offersJson = ref(offers.boxes);
-
-const pageData = computed(() => {
-  const boxes = offerPageJson.value;
-  if (!boxes.length) return [];
-
-  return [
-    {
-      id: 0,
-      title: boxes[7]?.title ?? '',
-      url: '/images/zaluzje/dezal-poznan-zaluzja-aluminiowa-3.webp',
-      description: boxes[7]?.description ?? '',
-    },
-  ];
-});
+const product = offerPage.boxes[7];
 
 useHead({
   // Razem z " | DEŻAL" wyniesie 53 znaki – idealna długość, bezpieczna dla telefonów.
@@ -138,10 +148,5 @@ useHead({
 </script>
 
 <style scoped lang="scss">
-.Page {
-  &__main-container {
-    display: flex;
-    flex-direction: column;
-  }
-}
+@use '@/assets/stylesheets/product-page' as *;
 </style>

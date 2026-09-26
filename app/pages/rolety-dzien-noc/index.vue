@@ -1,18 +1,40 @@
 <template>
-  <div class="Page__main-container">
-    <ProductInformation
-      :page-data="pageData"
-      :bottom-images="bottomImages"
-      :faq-title="faqTitle"
-      :faq-data="faqData"
+  <main class="DayNight__main-container">
+    <ProductHero
+      :title-lines="['Rolety', 'dzień-noc']"
+      :description="pageDescription"
+      image-src="/images/rolety/dezal-poznan-roleta-dzien-noc-20.webp"
+      image-alt="Rolety dzień-noc na oknie balkonowym w realizacji DEŻAL"
+      primary-label="Umów bezpłatny pomiar"
+      primary-link="/kontakt"
+      secondary-label="Zobacz realizacje"
+      realizations-id="realizacje"
     />
+
+    <ProductRealizations
+      section-id="realizacje"
+      title="Przykładowe realizacje"
+      description="Zobacz rolety dzień-noc zamontowane w różnych wnętrzach."
+      image-alt-prefix="Rolety dzień-noc"
+      :images="bottomImages"
+    />
+
+    <ProductContact
+      :title-lines="['Dobierz rolety do', 'swojego wnętrza']"
+      description="Umów bezpłatny pomiar w Poznaniu i okolicach. Pomożemy wybrać tkaninę i sposób montażu dopasowany do Twoich okien."
+      link-label="Skontaktuj się z nami"
+      link-to="/kontakt"
+    />
+
+    <Questions :title="faqTitle" :faqList="faqData" />
     <LazyListOfArticles :articles="featuredArticles" />
-    <LazyOffer :offer-data="offerData" :offer-boxes-json="offersJson" />
-  </div>
+
+    <ProductRelated title="Zobacz również" :items="relatedOffers" />
+  </main>
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue';
+
 import offerPage from '~/assets/content/offers.json';
 import offers from '~/assets/content/offers-landing.json';
 import articles from '~/assets/content/articles.json';
@@ -58,43 +80,43 @@ const faqData = ref([
 ]);
 // -------------------------------------
 
-const offerData = ref({
-  title: 'Zobacz również',
-  description: '',
-  showBoxes: [
-    'rolety-materialowe',
-    'rolety-rzymskie',
-    'plisy',
-    'zaluzje-drewniane',
-    'zaluzje-aluminiowe',
-    'verticale',
-    'moskitiery',
-  ],
-});
+const relatedTypes = [
+  'rolety-materialowe',
+  'rolety-rzymskie',
+  'plisy',
+  'zaluzje-drewniane',
+  'zaluzje-aluminiowe',
+  'verticale',
+  'moskitiery',
+];
+const relatedOffers = offers.boxes.filter((box) =>
+  relatedTypes.includes(box.type)
+);
 
-const bottomImages = ref([
-  { id: 1, url: '/images/rolety/dezal-poznan-roleta-dzien-noc-1.webp' },
-  { id: 2, url: '/images/rolety/dezal-poznan-roleta-dzien-noc-7.webp' },
-  { id: 3, url: '/images/rolety/dezal-poznan-roleta-dzien-noc-3.webp' },
-  { id: 4, url: '/images/rolety/dezal-poznan-roleta-dzien-noc-4.webp' },
-]);
+const bottomImages = [
+  {
+    id: 1,
+    url: '/images/rolety/dezal-poznan-roleta-dzien-noc-1.webp',
+    alt: 'Roleta dzień-noc – realizacja 1',
+  },
+  {
+    id: 2,
+    url: '/images/rolety/dezal-poznan-roleta-dzien-noc-7.webp',
+    alt: 'Roleta dzień-noc – realizacja 2',
+  },
+  {
+    id: 3,
+    url: '/images/rolety/dezal-poznan-roleta-dzien-noc-3.webp',
+    alt: 'Roleta dzień-noc – realizacja 3',
+  },
+  {
+    id: 4,
+    url: '/images/rolety/dezal-poznan-roleta-dzien-noc-4.webp',
+    alt: 'Roleta dzień-noc – realizacja 4',
+  },
+];
 
-const offerPageJson = ref(offerPage.boxes);
-const offersJson = ref(offers.boxes);
-
-const pageData = computed(() => {
-  const box = offerPageJson.value[0];
-  return box
-    ? [
-        {
-          id: 0,
-          title: box.title,
-          url: '/images/rolety/dezal-poznan-roleta-dzien-noc-2.webp',
-          description: box.description,
-        },
-      ]
-    : [];
-});
+const pageDescription = offerPage.boxes[0].description;
 useHead({
   // Razem z " | DEŻAL" wyniesie 51 znaków – idealnie widoczne na każdym ekranie.
   title: 'Rolety Dzień Noc na wymiar Poznań i okolice',
@@ -133,10 +155,5 @@ useHead({
 </script>
 
 <style scoped lang="scss">
-.Page {
-  &__main-container {
-    display: flex;
-    flex-direction: column;
-  }
-}
+@use '@/pages/rolety-dzien-noc/index.scss' as *;
 </style>

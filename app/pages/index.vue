@@ -13,7 +13,6 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue';
 import offers from '~/assets/content/offers-landing.json';
 import articles from '~/assets/content/articles.json';
 

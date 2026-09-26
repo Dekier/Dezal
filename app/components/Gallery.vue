@@ -1,56 +1,92 @@
 <template>
-  <div class="Gallery__main-container">
-    <div @click="emit('exit')" class="Gallery__exit">
-      <svg width="64" xmlns="http://www.w3.org/2000/svg" height="64">
-        <path
-          fill="#fff"
-          d="M28.941 31.786L.613 60.114a2.014 2.014 0 1 0 2.848 2.849l28.541-28.541 28.541 28.541c.394.394.909.59 1.424.59a2.014 2.014 0 0 0 1.424-3.439L35.064 31.786 63.41 3.438A2.014 2.014 0 1 0 60.562.589L32.003 29.15 3.441.59A2.015 2.015 0 0 0 .593 3.439l28.348 28.347z"
-        />
-      </svg>
-    </div>
-
+  <div class="Gallery__main-container" @click.self="emit('exit')">
     <div
-      v-if="images.length > 1"
-      @click="emit('beforeImage')"
-      class="Gallery__back-btn"
+      ref="dialogRef"
+      class="Gallery__dialog"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Galeria zdjęć realizacji"
     >
-      <svg viewBox="0 0 511.949 511.949">
-        <path
-          fill="#fff"
-          d="M386.235 248.308L140.902 2.975c-4.267-4.053-10.987-3.947-15.04.213a10.763 10.763 0 0 0 0 14.827l237.76 237.76-237.76 237.867c-4.267 4.053-4.373 10.88-.213 15.04 4.053 4.267 10.88 4.373 15.04.213l.213-.213 245.333-245.333a10.624 10.624 0 0 0 0-15.041z"
-        />
-      </svg>
-    </div>
+      <div class="Gallery__top-bar">
+        <p class="Gallery__counter">
+          Zdjęcie
+          <strong class="Gallery__counter-current">{{ index + 1 }}</strong>
+          z {{ images.length }}
+        </p>
+        <button
+          ref="closeButtonRef"
+          type="button"
+          class="Gallery__close-button"
+          aria-label="Zamknij galerię"
+          @click="emit('exit')"
+        >
+          <span class="Gallery__close-label">Zamknij</span>
+          <img
+            src="/icons/exit.svg"
+            alt=""
+            aria-hidden="true"
+            class="Gallery__close-icon"
+          />
+        </button>
+      </div>
 
-    <div
-      v-if="images.length > 1"
-      @click="emit('nextImage')"
-      class="Gallery__next-btn"
-    >
-      <svg viewBox="0 0 511.949 511.949">
-        <path
-          fill="#fff"
-          d="M386.235 248.308L140.902 2.975c-4.267-4.053-10.987-3.947-15.04.213a10.763 10.763 0 0 0 0 14.827l237.76 237.76-237.76 237.867c-4.267 4.053-4.373 10.88-.213 15.04 4.053 4.267 10.88 4.373 15.04.213l.213-.213 245.333-245.333a10.624 10.624 0 0 0 0-15.041z"
-        />
-      </svg>
-    </div>
+      <div
+        class="Gallery__stage"
+        @touchstart.passive="handleTouchStart"
+        @touchend.passive="handleTouchEnd"
+      >
+        <button
+          v-if="images.length > 1"
+          type="button"
+          class="Gallery__nav-button Gallery__nav-button--previous"
+          aria-label="Poprzednie zdjęcie"
+          @click="emit('beforeImage')"
+        >
+          <img
+            src="/icons/arrow-right.svg"
+            alt=""
+            aria-hidden="true"
+            class="Gallery__nav-icon Gallery__nav-icon--previous"
+          />
+        </button>
 
-    <img
-      class="Gallery__image"
-      :src="images[index].url"
-      alt="Dezal rolety poznań"
-    />
-    <!-- <NuxtImg
-      class="Gallery__image"
-      :src="images[index].url"
-      alt="Dezal rolety poznań"
-    /> -->
+        <div class="Gallery__image-frame">
+          <img
+            v-if="currentImage"
+            :src="currentImage.url"
+            :alt="currentImage.alt || `Realizacja DEŻAL – zdjęcie ${index + 1}`"
+            class="Gallery__image"
+          />
+        </div>
+
+        <button
+          v-if="images.length > 1"
+          type="button"
+          class="Gallery__nav-button Gallery__nav-button--next"
+          aria-label="Następne zdjęcie"
+          @click="emit('nextImage')"
+        >
+          <img
+            src="/icons/arrow-right.svg"
+            alt=""
+            aria-hidden="true"
+            class="Gallery__nav-icon"
+          />
+        </button>
+      </div>
+
+      <p v-if="images.length > 1" class="Gallery__hint">
+        Użyj strzałek na klawiaturze lub przesuń zdjęcie palcem.
+      </p>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-defineProps<{
-  images: { url: string }[];
+import { computed, onMounted, onUnmounted, ref } from 'vue';
+
+const props = defineProps<{
+  images: { url: string; alt?: string }[];
   index: number;
 }>();
 
@@ -59,6 +95,80 @@ const emit = defineEmits<{
   (e: 'beforeImage'): void;
   (e: 'nextImage'): void;
 }>();
+
+const currentImage = computed(() => props.images[props.index] ?? null);
+const dialogRef = ref<HTMLElement | null>(null);
+const closeButtonRef = ref<HTMLButtonElement | null>(null);
+let touchStartX: number | null = null;
+let previousOverflow = '';
+let previousActiveElement: HTMLElement | null = null;
+
+const handleTouchStart = (event: TouchEvent) => {
+  touchStartX = event.changedTouches[0]?.clientX ?? null;
+};
+
+const handleTouchEnd = (event: TouchEvent) => {
+  if (touchStartX === null || props.images.length < 2) return;
+
+  const touchEndX = event.changedTouches[0]?.clientX;
+  if (touchEndX === undefined) return;
+
+  const distance = touchEndX - touchStartX;
+  touchStartX = null;
+
+  if (distance > 50) emit('beforeImage');
+  if (distance < -50) emit('nextImage');
+};
+
+const handleKeydown = (event: KeyboardEvent) => {
+  if (event.key === 'Escape') {
+    emit('exit');
+    return;
+  }
+
+  if (props.images.length > 1 && event.key === 'ArrowLeft') {
+    event.preventDefault();
+    emit('beforeImage');
+    return;
+  }
+
+  if (props.images.length > 1 && event.key === 'ArrowRight') {
+    event.preventDefault();
+    emit('nextImage');
+    return;
+  }
+
+  if (event.key !== 'Tab') return;
+
+  const buttons = dialogRef.value?.querySelectorAll<HTMLButtonElement>('button');
+  if (!buttons?.length) return;
+
+  const firstButton = buttons.item(0);
+  const lastButton = buttons.item(buttons.length - 1);
+  if (!firstButton || !lastButton) return;
+
+  if (event.shiftKey && document.activeElement === firstButton) {
+    event.preventDefault();
+    lastButton.focus();
+  } else if (!event.shiftKey && document.activeElement === lastButton) {
+    event.preventDefault();
+    firstButton.focus();
+  }
+};
+
+onMounted(() => {
+  previousOverflow = document.body.style.overflow;
+  previousActiveElement = document.activeElement as HTMLElement | null;
+  document.body.style.overflow = 'hidden';
+  window.addEventListener('keydown', handleKeydown);
+  closeButtonRef.value?.focus();
+});
+
+onUnmounted(() => {
+  document.body.style.overflow = previousOverflow;
+  window.removeEventListener('keydown', handleKeydown);
+  previousActiveElement?.focus();
+});
 </script>
 
 <style scoped lang="scss">

@@ -1,0 +1,124 @@
+@use '@/assets/stylesheets/main-variables' as *;
+@use '@/assets/stylesheets/mixins' as *;
+
+.ProductRealizations {
+  &__main-container {
+    max-width: $big-desktop;
+    width: 100%;
+    margin: 0 auto;
+    padding: 70px 16px 80px;
+    scroll-margin-top: 120px;
+
+    @include for-tablet {
+      padding: 110px 16px 120px;
+      scroll-margin-top: 10px;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 28px;
+
+    @include for-tablet {
+      margin-bottom: 42px;
+    }
+  }
+
+  &__title {
+    @include text(clamp(32px, 4vw, 56px), left, $black-400, 700);
+    line-height: 1.08;
+    margin: 0 0 20px;
+  }
+
+  &__description {
+    @include text(17px, left, $black-300, $weight-medium);
+    line-height: 1.4;
+    margin: 0;
+
+    @include for-tablet {
+      @include text(20px, left, $black-300, $weight-medium);
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+
+    @include for-tablet-portrait-up {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @include for-tablet {
+      gap: 20px;
+    }
+  }
+
+  &__grid--four {
+    @include for-tablet {
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+  }
+
+  &__item {
+    grid-column: span 1;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 240px;
+    padding: 0;
+    border: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: $grey-200;
+    cursor: pointer;
+    text-align: left;
+
+    &:hover .ProductRealizations__image {
+      transform: scale(1.025);
+    }
+
+    &:focus-visible {
+      outline: 3px solid $black-400;
+      outline-offset: 4px;
+    }
+
+    @include for-tablet {
+      height: 340px;
+    }
+
+    &:last-child:nth-child(odd) {
+      grid-column: 1 / -1;
+    }
+  }
+
+  &__grid--four {
+    .ProductRealizations__item {
+      @include for-tablet {
+        grid-column: span 5;
+
+        &:first-child,
+        &:last-child {
+          grid-column: span 7;
+        }
+      }
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 350ms ease;
+  }
+
+  &__action {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    padding: 10px 14px;
+    border-radius: 6px;
+    background-color: $color-white;
+    @include text(14px, left, $black-400, $weight-bold);
+  }
+}

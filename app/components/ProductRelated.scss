@@ -1,0 +1,111 @@
+@use '@/assets/stylesheets/main-variables' as *;
+@use '@/assets/stylesheets/mixins' as *;
+
+.ProductRelated {
+  &__main-container {
+    padding: 40px 16px 80px;
+
+    @include for-tablet {
+      padding: 50px 16px 100px;
+    }
+  }
+
+  &__inner {
+    max-width: 1408px;
+    margin: 0 auto;
+  }
+
+  &__section-title {
+    @include text(clamp(32px, 4vw, 56px), left, $black-400, 700);
+    line-height: 1.08;
+    margin: 0 0 20px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 44px 20px;
+    margin-top: 32px;
+
+    @include for-tablet-portrait-up {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @include for-tablet {
+      gap: 64px 40px;
+    }
+
+    @include for-desktop-up {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    @include text(16px, left, $black-400, $weight-medium);
+    text-decoration: none;
+
+    &:hover .ProductRelated__image {
+      transform: scale(1.025);
+    }
+
+    &:hover .ProductRelated__link-icon {
+      transform: translateX(5px);
+    }
+
+    &:focus-visible {
+      outline: 3px solid $black-400;
+      outline-offset: 4px;
+    }
+  }
+
+  &__image-wrap {
+    aspect-ratio: 1.5;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: $grey-200;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 350ms ease;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding-top: 24px;
+  }
+
+  &__title {
+    @include text(26px, left, $black-400, $weight-bold);
+    line-height: 1.2;
+    margin: 0 0 12px;
+  }
+
+  &__description {
+    @include text(16px, left, $black-300, $weight-medium);
+    line-height: 1.5;
+    margin: 0 0 20px;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 24px;
+    margin-top: auto;
+    @include text(16px, left, $black-400, 500);
+  }
+
+  &__link-icon {
+    width: 32px;
+    height: auto;
+    transition: transform 200ms ease;
+  }
+}
