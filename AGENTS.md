@@ -20,6 +20,7 @@
 - Nie pisz testów bez pozwolenia
 - Style zawsze mają być jako klasy i w osobnym pliku
 - Jeżeli czegoś nie wiesz lub nie jesteś pewnień to pytaj i nie zgaduj.
+- nie musisz robić importów fram 'vue'
 
 ## Gotowe, gdy
 

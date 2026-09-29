@@ -258,14 +258,14 @@
         </div>
       </div>
     </div>
-
+    <!--
     <div class="Contact__bottom-container">
       <div
         ref="mapContainer"
         id="map"
         style="width: 100%; height: 100%; min-height: 450px"
       ></div>
-    </div>
+    </div> -->
   </div>
 </template>
 <script setup lang="ts">
