@@ -112,20 +112,14 @@
 </template>
 
 <script setup lang="ts">
-// Pobieramy dane
-const { data: fetchedReviews } = await useFetch('/api/reviews');
+import reviewEntries from '~/assets/content/reviews.json';
 
-// Tworzymy reaktywną kopię opinii z dodatkowym polem isExpanded
-const reviews = ref([]);
-
-watchEffect(() => {
-  if (fetchedReviews.value) {
-    reviews.value = fetchedReviews.value.map((r: any) => ({
-      ...r,
-      isExpanded: false,
-    }));
-  }
-});
+const reviews = ref(
+  reviewEntries.map((review) => ({
+    ...review,
+    isExpanded: false,
+  }))
+);
 
 const currentIndex = ref(0);
 const visibleItems = ref(4);

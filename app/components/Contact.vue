@@ -258,87 +258,18 @@
         </div>
       </div>
     </div>
-    <!--
     <div class="Contact__bottom-container">
-      <div
-        ref="mapContainer"
-        id="map"
-        style="width: 100%; height: 100%; min-height: 450px"
-      ></div>
-    </div> -->
+      <ContactMap />
+    </div>
   </div>
 </template>
 <script setup lang="ts">
-import { ref, computed, onMounted, createApp } from 'vue';
-import CustomMapMarker from '~/components/Custom-map-marker.vue';
+import { ref, computed, onMounted } from 'vue';
 import emailjs from '@emailjs/browser';
+import ContactMap from './Contact-map.vue';
 
 // Obsługa okienka informacyjnego
 const isActiveInfoBox = ref(false);
-
-// Referencja do diva z mapą w sekcji template
-const mapContainer = ref<HTMLElement | null>(null);
-
-const initGoogleMap = async () => {
-  const { setOptions, importLibrary } =
-    await import('@googlemaps/js-api-loader');
-  setOptions({
-    key: 'AIzaSyCCzurmr3FtjmHaiBfPzDx3IAdgsTaOogY',
-    version: 'weekly',
-  } as any);
-
-  try {
-    const { Map, Polygon } = (await importLibrary('maps')) as any;
-    const { AdvancedMarkerElement } = (await importLibrary('marker')) as any;
-
-    const position = { lat: 52.45362985985779, lng: 16.905527873339654 };
-    const currentZoom = window.innerWidth < 600 ? 16 : 18;
-
-    // Upewniamy się, że element DOM istnieje przed wygenerowaniem mapy
-    if (!mapContainer.value) return;
-
-    const map = new Map(mapContainer.value, {
-      center: position,
-      zoom: currentZoom,
-      mapId: 'a93ae4d0d1b19b722f6d451b',
-      disableDefaultUI: true,
-      zoomControl: true,
-      fullscreenControl: false,
-      streetViewControl: false,
-      gestureHandling: 'cooperative',
-    });
-
-    const buildingCorners = [
-      { lat: 52.4536, lng: 16.9055 },
-      { lat: 52.45359, lng: 16.90565 },
-      { lat: 52.45348, lng: 16.90563 },
-      { lat: 52.45349, lng: 16.90548 },
-    ];
-
-    const buildingHighlight = new Polygon({
-      paths: buildingCorners,
-      strokeColor: '#ffe003',
-      strokeOpacity: 1.0,
-      strokeWeight: 3,
-      fillColor: '#ffe003',
-      fillOpacity: 0.4,
-    });
-
-    buildingHighlight.setMap(map);
-
-    const markerContainer = document.createElement('div');
-    createApp(CustomMapMarker).mount(markerContainer);
-    const centerOfBuilding = { lat: 52.45354, lng: 16.90556 };
-    new AdvancedMarkerElement({
-      map: map,
-      position: centerOfBuilding,
-      content: markerContainer,
-      title: 'DEŻAL Rolety Poznań',
-    });
-  } catch (error) {
-    console.error('Błąd ładowania mapy:', error);
-  }
-};
 
 const closeInfoBox = () => {
   isActiveInfoBox.value = false;
@@ -350,24 +281,6 @@ onMounted(() => {
   const isHidden = localStorage.getItem('dezal_info_box_hidden');
   if (!isHidden) {
     isActiveInfoBox.value = true;
-  }
-
-  // 2. OPTYMALIZACJA: Ładowanie mapy dopiero, gdy kontener pojawia się na ekranie
-  if (mapContainer.value) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          // Ładujemy ciężki skrypt Google Maps
-          initGoogleMap();
-          // Przestajemy obserwować
-          observer.disconnect();
-        }
-      },
-      // Zaczynamy ładować 200 pikseli przed wjechaniem elementu w obszar widoczny
-      { rootMargin: '200px' }
-    );
-
-    observer.observe(mapContainer.value);
   }
 });
 
