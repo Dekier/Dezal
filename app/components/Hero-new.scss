@@ -24,6 +24,9 @@
     @include for-tablet {
       margin: 156px auto 68px;
     }
+    @include for-desktop-up {
+      margin-top: clamp(104px, 8.125vw, 156px);
+    }
     @include for-phone-only {
       margin: 100px auto 50px;
       flex-direction: column;
@@ -301,6 +304,10 @@
       @include text(56px, left, $black-400, 700);
       margin: 0 0 36px;
     }
+    @include for-desktop-up {
+      font-size: clamp(44px, 2.92vw, 56px);
+      margin-bottom: clamp(28px, 1.875vw, 36px);
+    }
   }
 
   &__description {
@@ -310,6 +317,10 @@
     @include for-tablet {
       @include text(24px, left, $black-300, 400);
       margin: 0 0 36px;
+    }
+    @include for-desktop-up {
+      font-size: clamp(20px, 1.25vw, 24px);
+      margin-bottom: clamp(28px, 1.875vw, 36px);
     }
   }
 
@@ -322,6 +333,10 @@
     @include for-tablet {
       @include text(16px, left, $black-200, 400);
       margin: 0 0 24px;
+    }
+    @include for-desktop-up {
+      font-size: clamp(14px, 0.84vw, 16px);
+      margin-bottom: clamp(20px, 1.25vw, 24px);
     }
 
     @include for-phone-only {
@@ -384,6 +399,11 @@
     height: 645px;
     max-width: 100%; // Zabezpieczenie, by kontener trzymał się w ryzach
 
+    @include for-desktop-up {
+      min-width: 0;
+      height: clamp(516px, 33.59375vw, 645px);
+    }
+
     // DODANA REGUŁA - "ukrywa" tag picture dla Flexboxa
 
     &:has(.Hero__image-2:hover),
@@ -391,6 +411,15 @@
       .Hero__image-1 {
         flex: 1;
       }
+    }
+  }
+
+  &__image-1,
+  &__image-2,
+  &__image-3 {
+    @include for-desktop-up {
+      height: 100%;
+      min-height: 0;
     }
   }
 
