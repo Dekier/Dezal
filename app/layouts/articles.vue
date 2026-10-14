@@ -1,7 +1,7 @@
 <template>
   <Header />
   <NuxtPage />
-  <Cookies v-if="visibleCookies" @hideCookies="hideCookies" />
+  <FloatingNotices />
   <Offer :offer-data="offerData" :offer-boxes-json="offersJson" />
 
   <Contact />
@@ -9,9 +9,9 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { ref } from 'vue';
+import FloatingNotices from '~/components/FloatingNotices.vue';
 
-const visibleCookies = ref(true);
 import offers from '~/assets/content/offers-landing.json';
 
 const offersJson = ref(offers.boxes);
@@ -29,17 +29,6 @@ const offerData = ref({
     'moskitiery',
   ],
 });
-
-onMounted(() => {
-  if (localStorage.cookies) {
-    visibleCookies.value = false;
-  }
-});
-
-const hideCookies = () => {
-  visibleCookies.value = false;
-  localStorage.cookies = 'false';
-};
 </script>
 
 <style lang="scss" scoped>

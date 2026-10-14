@@ -1,0 +1,84 @@
+@use '@/assets/stylesheets/mixins' as *;
+
+.FloatingNotices {
+  &__main-container {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 90;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    pointer-events: none;
+
+    .OpeningStatus__main-container {
+      position: relative;
+      right: auto;
+      bottom: auto;
+      max-width: 100%;
+      pointer-events: auto;
+
+      @include for-phone-only {
+        width: min(358px, 100%);
+      }
+
+      &--collapsed {
+        @include for-phone-only {
+          width: auto;
+        }
+      }
+    }
+  }
+
+  &__hours {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 0 24px 24px;
+
+    @include for-phone-only {
+      padding: 0 16px max(16px, env(safe-area-inset-bottom));
+    }
+  }
+
+  &__cookies {
+    display: grid;
+    grid-template-rows: 1fr;
+    align-self: stretch;
+    transition: grid-template-rows 400ms ease;
+    pointer-events: auto;
+
+    &--hidden {
+      grid-template-rows: 0fr;
+      pointer-events: none;
+    }
+  }
+
+  &__cookies-inner {
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  &__main-container &__cookies .Cookies__main-container {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: 100%;
+    transform: translateY(0);
+    transition:
+      transform 400ms ease,
+      opacity 400ms ease;
+  }
+
+  &__main-container &__cookies--hidden .Cookies__main-container {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  &__main-container--reduced-motion &__cookies,
+  &__main-container--reduced-motion &__cookies .Cookies__main-container {
+    transition: none;
+  }
+}

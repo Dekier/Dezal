@@ -129,7 +129,13 @@ export default defineNuxtConfig({
         process.env.NODE_ENV === 'production'
           ? {
               id: 'G-7TFFQYCBP3',
-              trigger: 'onNuxtReady',
+              trigger: 'manual',
+              defaultConsent: {
+                analytics_storage: 'denied',
+                ad_storage: 'denied',
+                ad_user_data: 'denied',
+                ad_personalization: 'denied',
+              },
             }
           : undefined, // Na localu skrypt w ogóle się nie załaduje
     },

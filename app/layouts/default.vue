@@ -2,27 +2,13 @@
   <div class="layout">
     <Header />
     <NuxtPage />
-    <LazyCookies v-if="visibleCookies" @hideCookies="hideCookies" />
+    <FloatingNotices />
     <LazyFooter />
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
-
-const visibleCookies = ref(true);
-
-onMounted(() => {
-  // Sprawdzamy czy użytkownik ma dostęp do localStorage (bezpieczniejsze dla SSR)
-  if (typeof localStorage !== 'undefined' && localStorage.cookies) {
-    visibleCookies.value = false;
-  }
-});
-
-const hideCookies = () => {
-  visibleCookies.value = false;
-  localStorage.cookies = 'false';
-};
+import FloatingNotices from '~/components/FloatingNotices.vue';
 </script>
 
 <style lang="scss">
