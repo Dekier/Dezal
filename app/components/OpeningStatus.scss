@@ -39,6 +39,26 @@
     }
   }
 
+  &__stack {
+    .OpeningStatus__main-container--collapsed & {
+      @include for-phone-only {
+        display: none;
+      }
+    }
+  }
+
+  &__announcement {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px 14px;
+    border-bottom: 2px solid $yellow-500;
+    border-radius: 8px 8px 0 0;
+    background: $yellow-100;
+    color: $color-title;
+    text-decoration: none;
+  }
+
   &__link {
     display: flex;
     flex: 1;

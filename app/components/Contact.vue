@@ -119,11 +119,31 @@
                 width="24px"
                 height="24px"
               />
-              pon. 09:00 - 18:00 <br />
-              wt. 08:00 - 17:00 <br />
-              śr. 08:00 - 17:00 <br />
-              czw. 09:00 - 18:00 <br />
-              pt. Zamknięte (realizacje u klientów)
+              <span v-if="businessHours" class="Contact__hours">
+                <span
+                  v-for="index in weekdayOrder"
+                  :key="index"
+                  class="Contact__hours-row"
+                  >{{ weekdayNames[index] }}:
+                  {{
+                    hoursLabel(businessHours.schedule.week[index] ?? null)
+                  }}</span
+                >
+                <span
+                  v-for="period in businessHours.schedule.leave"
+                  :key="period.id"
+                  class="Contact__hours-row"
+                  >Wolne: {{ dateLabel(period.from) }} –
+                  {{ dateLabel(period.to) }}</span
+                >
+                <span class="Contact__hours-row"
+                  >{{ businessHours.status.title }}.
+                  {{ businessHours.status.hours }}</span
+                >
+              </span>
+              <span v-else
+                >Nie udało się wczytać godzin. Zadzwoń do biura.</span
+              >
             </span>
 
             <span
@@ -267,6 +287,13 @@
 import { ref, computed, onMounted } from 'vue';
 import emailjs from '@emailjs/browser';
 import ContactMap from './Contact-map.vue';
+import {
+  weekdayNames,
+  weekdayOrder,
+  hoursLabel,
+  dateLabel,
+} from '../../shared/business-hours';
+const { data: businessHours } = await useBusinessHours();
 
 // Obsługa okienka informacyjnego
 const isActiveInfoBox = ref(false);

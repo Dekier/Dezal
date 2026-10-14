@@ -37,6 +37,9 @@ export default defineNuxtConfig({
 
   routeRules: {
     '/__og-image__/**': { cache: false },
+    '/api/**': { prerender: false, cache: false },
+    '/': { prerender: false },
+    '/kontakt': { prerender: false },
     // Twoje główne reguły renderowania
     '/**': { prerender: true },
 
@@ -145,7 +148,10 @@ export default defineNuxtConfig({
     zeroRuntime: true,
   },
 
+  schemaOrg: { reactive: true },
+
   runtimeConfig: {
+    hoursApiUrl: 'https://pracownia-krawiecka.pl/api/hours',
     public: {
       siteUrl,
     },

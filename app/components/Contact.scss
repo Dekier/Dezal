@@ -411,3 +411,6 @@
     transform: rotate(180deg);
   }
 }
+
+.Contact__hours { display: flex; flex-direction: column; gap: 4px; }
+.Contact__hours-row { display: block; }
