@@ -21,6 +21,10 @@
       width: min(358px, calc(100% - 32px));
     }
 
+    &--leave {
+      background: $yellow-500;
+    }
+
     &--collapsed {
       @include for-phone-only {
         width: auto;
@@ -209,5 +213,12 @@
   &__leave-from {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+
+.OpeningStatus__main-container--leave .OpeningStatus__details {
+  .OpeningStatus__title,
+  .OpeningStatus__hours {
+    color: $color-title;
   }
 }

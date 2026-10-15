@@ -148,6 +148,9 @@ export default defineNuxtConfig({
     zeroRuntime: true,
   },
 
+  // Pliki llms.txt generuje już moduł nuxt-llms.
+  aiReady: false,
+
   schemaOrg: { reactive: true },
 
   runtimeConfig: {
@@ -166,9 +169,7 @@ export default defineNuxtConfig({
         display: 'swap',
       },
     ],
-    experimental: {
-      processCSSVariables: true,
-    },
+    processCSSVariables: true,
     // Wymusza pobieranie czcionki od razu
     defaults: {
       preload: true,

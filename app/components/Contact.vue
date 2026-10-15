@@ -132,14 +132,34 @@
                 <span
                   v-for="period in businessHours.schedule.leave"
                   :key="period.id"
-                  class="Contact__hours-row"
-                  >Wolne: {{ dateLabel(period.from) }} –
-                  {{ dateLabel(period.to) }}</span
+                  class="Contact__leave-notice"
+                  role="note"
                 >
-                <span class="Contact__hours-row"
-                  >{{ businessHours.status.title }}.
-                  {{ businessHours.status.hours }}</span
-                >
+                  <span class="Contact__leave-text"
+                    >Uprzejmie informujemy, że w dniach
+                    <strong
+                      >{{ dateLabel(period.from) }} –
+                      {{ dateLabel(period.to) }}</strong
+                    >
+                    biuro
+                    {{
+                      period.from > businessHours.today
+                        ? 'będzie nieczynne'
+                        : 'jest nieczynne'
+                    }}.</span
+                  >
+                  <span
+                    v-if="
+                      period.from <= businessHours.today &&
+                      period.to >= businessHours.today
+                    "
+                    class="Contact__leave-text"
+                    >{{ businessHours.status.hours }}.</span
+                  >
+                  <span class="Contact__leave-text"
+                    >Dziękujemy za wyrozumiałość.</span
+                  >
+                </span>
               </span>
               <span v-else
                 >Nie udało się wczytać godzin. Zadzwoń do biura.</span
