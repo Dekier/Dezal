@@ -7,7 +7,9 @@
     right: 24px;
     bottom: 24px;
     z-index: 9;
-    width: 330px;
+    width: max-content;
+    min-width: min(330px, calc(100% - 48px));
+    max-width: calc(100% - 48px);
     box-sizing: border-box;
     font-family: $font-main;
     border: 2px solid $yellow-500;
@@ -18,7 +20,8 @@
     @include for-phone-only {
       right: 16px;
       bottom: max(16px, env(safe-area-inset-bottom));
-      width: min(358px, calc(100% - 32px));
+      min-width: min(330px, calc(100% - 32px));
+      max-width: calc(100% - 32px);
     }
 
     &--leave {
@@ -28,6 +31,7 @@
     &--collapsed {
       @include for-phone-only {
         width: auto;
+        min-width: 0;
       }
     }
   }
