@@ -1,4 +1,4 @@
-import type { PublicHours } from '../../shared/business-hours';
+import type { PublicHours } from '#shared/business-hours';
 export default defineEventHandler(async (event) => {
   setHeader(event, 'Cache-Control', 'no-store');
   try {

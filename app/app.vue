@@ -4,7 +4,7 @@
   </NuxtLayout>
 </template>
 <script setup>
-import { schemaHours, schemaLeave } from '../shared/business-hours';
+import { schemaHours, schemaLeave } from '#shared/business-hours';
 const { data: businessHours } = await useBusinessHours();
 useHead({
   link: [

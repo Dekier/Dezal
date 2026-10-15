@@ -306,7 +306,7 @@ import {
   weekdayOrder,
   hoursLabel,
   dateLabel,
-} from '../../shared/business-hours';
+} from '#shared/business-hours';
 const { data: businessHours } = await useBusinessHours();
 
 // Obsługa okienka informacyjnego
