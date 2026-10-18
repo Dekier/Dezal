@@ -1,7 +1,7 @@
-# ETAP 1: Budowanie (Builder) - zostawiamy standardowe node:24
+# ETAP 1: Budowanie (Builder) - Debian Bookworm z glibc
 # Zwykły obraz ma wbudowane narzędzia (np. Python, g++), które często
 # są pod maską potrzebne do prawidłowego zbudowania niektórych paczek NPM.
-FROM node:24 AS builder
+FROM node:24-bookworm AS builder
 
 WORKDIR /app
 
@@ -16,8 +16,9 @@ RUN pnpm install --frozen-lockfile
 # 3. Budujemy przez pnpm
 RUN pnpm run build
 
-# ETAP 2: Uruchamianie (Runner) - tutaj wjeżdża superlekki obraz produkcyjny
-FROM node:24-alpine
+# ETAP 2: Uruchamianie (Runner) - ta sama glibc co podczas budowania.
+# Natywne moduły sharp skopiowane z buildera wymagają zgodnego systemu.
+FROM node:24-bookworm-slim
 
 WORKDIR /app
 
