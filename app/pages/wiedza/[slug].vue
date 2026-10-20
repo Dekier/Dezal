@@ -5,6 +5,8 @@
 </template>
 
 <script lang="ts" setup>
+import type { ArticleData } from '#shared/types/article';
+
 definePageMeta({
   layout: 'articles',
 });
@@ -12,7 +14,10 @@ definePageMeta({
 const route = useRoute();
 const slug = (route.params.slug as string).replace('.json', '');
 
-const articles = import.meta.glob('~/assets/content/articles/*.json');
+const articles = import.meta.glob<ArticleData>(
+  '~/assets/content/articles/*.json',
+  { import: 'default' }
+);
 const articleKey = Object.keys(articles).find((key) =>
   key.endsWith(`${slug}.json`)
 );
@@ -25,40 +30,67 @@ if (!articleKey) {
   });
 }
 
-const articleData = (await articles[articleKey]()) as any;
+const articleData = await articles[articleKey]();
+const siteUrl = useRuntimeConfig().public.siteUrl;
+const canonicalUrl = new URL(`/wiedza/${slug}`, siteUrl).href;
+const imageUrl = new URL(
+  articleData.img || '/images/logo-rect-2.webp',
+  siteUrl
+).href;
 
-// 1. Meta tagi dla SEO
 useHead({
-  title: `${articleData.title} `,
-  meta: [
-    { name: 'description', content: articleData.meta_description },
-    { property: 'og:title', content: `${articleData.title} | Deżal` },
-    { property: 'og:description', content: articleData.meta_description },
-    {
-      property: 'og:image',
-      content: `https://dezalroletypoznan.pl${articleData.img || '/images/logo2.webp'}`,
-    },
-    { name: 'twitter:card', content: 'summary_large_image' },
-  ],
+  link: [{ rel: 'canonical', href: canonicalUrl }],
 });
 
-// 2. Schema.org - tylko dla Artykułu
-// useSchemaOrg([
-//   defineArticle({
-//     headline: articleData.title,
-//     description: articleData.meta_description,
-//     image: `https://dezalroletypoznan.pl${articleData.img}`,
-//     datePublished: articleData.date, // Upewnij się, że masz to w JSONie
-//     author: {
-//       name: 'Deżal Rolety Poznań',
-//       url: 'https://dezalroletypoznan.pl',
-//     },
-//     publisher: {
-//       name: 'Deżal Rolety Poznań',
-//       logo: 'https://dezalroletypoznan.pl/images/logo-rect.png',
-//     },
-//   }),
-// ]);
+useSeoMeta({
+  title: articleData.title,
+  description: articleData.meta_description,
+  ogTitle: `${articleData.title} | DEŻAL`,
+  ogDescription: articleData.meta_description,
+  ogType: 'article',
+  ogUrl: canonicalUrl,
+  ogLocale: 'pl_PL',
+  ogImage: imageUrl,
+  ogImageAlt: articleData.img_alt || articleData.title,
+  ogImageWidth: articleData.img_width,
+  ogImageHeight: articleData.img_height,
+  articlePublishedTime: articleData.datePublished,
+  articleModifiedTime: articleData.dateModified,
+});
+
+if (articleData.datePublished) {
+  useSchemaOrg([
+    defineArticle({
+      '@type': 'Article',
+      headline: articleData.title,
+      description: articleData.meta_description,
+      url: canonicalUrl,
+      image: {
+        '@type': 'ImageObject',
+        url: imageUrl,
+        width: articleData.img_width,
+        height: articleData.img_height,
+        caption: articleData.img_alt || articleData.title,
+      },
+      datePublished: articleData.datePublished,
+      dateModified: articleData.dateModified,
+      author: {
+        '@type': 'Organization',
+        name: articleData.actor,
+        url: siteUrl,
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'DEŻAL',
+        url: siteUrl,
+        logo: new URL('/images/logo-rect-2.webp', siteUrl).href,
+      },
+      inLanguage: 'pl-PL',
+      keywords: articleData.tags,
+      isAccessibleForFree: true,
+    }),
+  ]);
+}
 </script>
 
 <style lang="scss">

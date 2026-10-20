@@ -1,11 +1,13 @@
 <template>
-  <Header />
-  <NuxtPage />
-  <FloatingNotices />
-  <Offer :offer-data="offerData" :offer-boxes-json="offersJson" />
+  <div class="layout">
+    <Header />
+    <NuxtPage />
+    <FloatingNotices />
+    <Offer :offer-data="offerData" :offer-boxes-json="offersJson" />
 
-  <Contact />
-  <Footer />
+    <Contact />
+    <Footer />
+  </div>
 </template>
 
 <script setup lang="ts">

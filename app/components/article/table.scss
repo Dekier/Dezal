@@ -4,15 +4,13 @@
 .Table {
   &__main-container {
     display: flex;
+    width: 100%;
+    min-width: 0;
     margin: 24px 0;
-    padding-bottom: 12px;
-    overflow-x: auto;
-    @include for-tablet-landscape-up {
-      padding-bottom: 0;
-    }
   }
   &__center-container {
-    width: 920px;
+    width: 100%;
+    min-width: 0;
     border-radius: 16px;
     border: 1px solid $black-400;
     display: flex;
@@ -23,10 +21,7 @@
   &__rows {
     display: flex;
     flex-direction: row;
-    width: 920px;
-    @include for-phone-only {
-      width: 720px;
-    }
+    width: 100%;
 
     &:not(:last-child) {
       border-bottom: 1px solid $black-400;
@@ -34,7 +29,10 @@
   }
 
   &__item {
+    min-width: 0;
+    flex-shrink: 0;
     padding: 16px;
+    overflow-wrap: anywhere;
 
     &:not(:last-child) {
       border-right: 1px solid $black-400;
@@ -53,15 +51,15 @@
         display: flex;
       }
       a {
-        @include text(14px, left, $yellow-600, 500);
+        @include text(14px, left, $black-400, 500);
         line-height: 150%;
         display: flex;
       }
     }
 
     a {
-      @include text(14px, left, $yellow-600, 500);
-      color: $yellow-600;
+      @include text(14px, left, $black-400, 500);
+      color: $black-400;
       text-decoration: unset;
       &:hover {
         text-decoration: underline;
@@ -69,7 +67,7 @@
     }
 
     @include for-phone-only {
-      padding: 12px;
+      padding: 8px;
       span {
         @include text(12px, left, $black-400, 400);
       }
@@ -79,7 +77,7 @@
           @include text(12px, left, $black-400, 500);
         }
         a {
-          @include text(12px, left, $yellow-600, 500);
+          @include text(12px, left, $black-400, 500);
         }
       }
     }

@@ -42,7 +42,7 @@ import offerPage from '~/assets/content/offers.json';
 import offers from '~/assets/content/offers-landing.json';
 import articles from '~/assets/content/articles.json';
 
-const chosenArticleIndices = [1, 0, 4];
+const chosenArticleIndices = [5, 0, 4];
 
 // Automatycznie mapujemy wybrane indeksy na pełne obiekty artykułów
 const featuredArticles = computed(() => {

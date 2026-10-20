@@ -30,13 +30,13 @@
   }
 
   &__item-link {
-    @include text(18px, left, $yellow-600, 500);
+    @include text(18px, left, $black-400, 500);
     text-decoration: unset;
     &:hover {
       text-decoration: underline;
     }
     @include for-phone-only {
-      @include text(16px, left, $yellow-600, 500);
+      @include text(16px, left, $black-400, 500);
     }
   }
 

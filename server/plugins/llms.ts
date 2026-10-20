@@ -1,5 +1,5 @@
-import fs from 'node:fs';
-import path from 'node:path';
+import articles from '../../app/assets/content/articles.json';
+import type { ArticleData } from '#shared/types/article';
 
 export default defineNitroPlugin((nitroApp) => {
   // ---------------------------------------------------------
@@ -23,90 +23,35 @@ Jesteśmy małą, rodzinną firmą założoną w 1997 roku w Poznaniu. Specjaliz
       `.trim()
     );
 
-    // Czytamy pliki z dysku do listy linków
-    const articlesDir = path.resolve(
-      process.cwd(),
-      'app/assets/content/articles'
-    );
-
-    if (fs.existsSync(articlesDir)) {
-      const files = fs.readdirSync(articlesDir);
-      const jsonFiles = files.filter((f) => f.endsWith('.json'));
-
-      const articlesSection = {
-        title: 'Baza wiedzy i poradniki',
-        description: 'Zbiór naszych poradników i artykułów na temat rolet.',
-        links: [] as { title: string; url: string }[],
-      };
-
-      for (const file of jsonFiles) {
-        const slug = file.replace('.json', '');
-        articlesSection.links.push({
-          title: `Artykuł: ${slug.replace(/-/g, ' ')}`,
-          url: `/wiedza/${slug}`,
-        });
-      }
-
-      options.sections = options.sections || [];
-      options.sections.push(articlesSection);
-    }
+    const siteUrl = useRuntimeConfig(event).public.siteUrl;
+    options.sections = options.sections || [];
+    options.sections.push({
+      title: 'Baza wiedzy i poradniki',
+      description: 'Poradniki dotyczące wyboru i pielęgnacji osłon okiennych.',
+      links: articles.map((article) => ({
+        title: article.title,
+        href: new URL(`/wiedza/${article.slug}`, siteUrl).href,
+        description: article.description,
+      })),
+    });
   });
 
   // ---------------------------------------------------------
-  // 2. PLIK: /llms-full.txt (Teraz PANCERNE WERSJA Z DYSKU)
+  // 2. PLIK: /llms-full.txt (treści z zasobów dołączanych do serwera)
   // ---------------------------------------------------------
-  const generateFullContent = (event, options, contents) => {
-    const articlesDir = path.resolve(
-      process.cwd(),
-      'app/assets/content/articles'
-    );
+  nitroApp.hooks.hook('llms:generate:full', async (event, _options, contents) => {
+    const storage = useStorage('assets:articles');
+    const siteUrl = useRuntimeConfig(event).public.siteUrl;
 
-    // Bezpiecznik: Jeśli ścieżka z jakiegoś powodu nie istnieje
-    if (!fs.existsSync(articlesDir)) {
-      contents.push(
-        `⚠️ BŁĄD KRYTYCZNY: Nie znaleziono folderu na dysku pod adresem:\n${articlesDir}`
-      );
-      return;
-    }
-
-    const files = fs.readdirSync(articlesDir);
-    const jsonFiles = files.filter((f) => f.endsWith('.json'));
-
-    if (jsonFiles.length === 0) {
-      contents.push(
-        '⚠️ W folderze app/assets/content/articles nie znaleziono żadnych plików .json.'
-      );
-      return;
-    }
-
-    for (const file of jsonFiles) {
-      const filePath = path.join(articlesDir, file);
-      // Czytamy surowy tekst prosto z pliku JSON na dysku
-      const rawData = fs.readFileSync(filePath, 'utf-8');
-
-      try {
-        const articleObject = JSON.parse(rawData);
-        const slug = file.replace('.json', '');
-
-        const markdownSection = `
-## Pełny artykuł: ${slug.replace(/-/g, ' ')}
-Oryginalne dane z pliku ${file}:
-
-\`\`\`json
-${JSON.stringify(articleObject, null, 2)}
-\`\`\`
-        `.trim();
-
-        contents.push(markdownSection);
-      } catch (error) {
-        contents.push(
-          `⚠️ Błąd parsowania pliku ${file}: Plik nie ma poprawnej struktury JSON.`
-        );
+    for (const entry of articles) {
+      const article = await storage.getItem<ArticleData>(`${entry.slug}.json`);
+      if (!article) {
+        throw new Error(`Nie znaleziono treści artykułu: ${entry.slug}`);
       }
-    }
-  };
 
-  // Podpinamy pancerną funkcję
-  nitroApp.hooks.hook('llms:generate:llms-full', generateFullContent);
-  nitroApp.hooks.hook('llms:generate:full', generateFullContent);
+      contents.push(
+        `## ${article.title}\n\nŹródło: ${new URL(`/wiedza/${entry.slug}`, siteUrl).href}\n\n\`\`\`json\n${JSON.stringify(article, null, 2)}\n\`\`\``
+      );
+    }
+  });
 });

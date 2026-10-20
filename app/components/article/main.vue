@@ -3,13 +3,21 @@
     <img
       v-if="data.img"
       :src="data.img"
-      alt=""
+      :alt="data.img_alt || data.title"
+      :width="data.img_width"
+      :height="data.img_height"
       class="ArticleMain__image-header"
       fetchpriority="high"
     />
     <div class="ArticleMain__column">
       <div class="ArticleMain__center-container">
         <h1 class="ArticleMain__title">{{ data.title }}</h1>
+        <div v-if="data.datePublished" class="ArticleMain__actor-container">
+          <span class="ArticleMain__actor-name">{{ data.actor }}</span>
+          <p class="ArticleMain__actor-date">
+            <time :datetime="data.datePublished">{{ data.date }}</time>
+          </p>
+        </div>
         <div class="ArticleMain__content">
           <div v-for="(item, index) in data.content" :key="index">
             <h2

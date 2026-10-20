@@ -1,3 +1,5 @@
+import articles from './app/assets/content/articles.json';
+
 const siteUrl =
   process.env.NUXT_PUBLIC_SITE_URL || 'https://dezalroletypoznan.pl';
 export default defineNuxtConfig({
@@ -89,9 +91,7 @@ export default defineNuxtConfig({
         // '/',
         '/llms.txt',
         '/llms-full.txt',
-        '/wiedza/czyszczenie-poradnik',
-        '/wiedza/co-najlepiej-zatrzymuje-swiatlo',
-        '/wiedza/co-na-okno-w-lazience',
+        ...articles.map((article) => `/wiedza/${article.slug}`),
       ],
     },
     compressPublicAssets: { gzip: true, brotli: true },
@@ -152,6 +152,12 @@ export default defineNuxtConfig({
   aiReady: false,
 
   schemaOrg: { reactive: true },
+
+  sitemap: {
+    urls: articles.map((article) => ({
+      loc: `/wiedza/${article.slug}`,
+    })),
+  },
 
   runtimeConfig: {
     hoursApiUrl: 'https://pracownia-krawiecka.pl/api/hours',
