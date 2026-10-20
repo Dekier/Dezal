@@ -4,16 +4,10 @@
       <h2 class="Offer__title">Nasza oferta osłon okiennych</h2>
       <div class="Offer__boxes-container">
         <nuxt-link
-          v-for="box in orderedBoxes"
+          v-for="box in offerBoxesJson"
           :key="box.type"
           class="Offer__box"
-          :class="[
-            `Offer__box--${box.type}`,
-            { 'Offer__box--active': activeBox === box.type },
-          ]"
           :to="`/${box.type}`"
-          @mouseenter="activeBox = box.type"
-          @focus="activeBox = box.type"
         >
           <div v-if="box.type === 'plisy'" class="Offer__badge">
             <img
@@ -33,37 +27,12 @@
               class="Offer__box-image"
               loading="lazy"
               width="600"
-              :height="getImageHeight(box.type)"
+              height="450"
               format="webp"
-              sizes="100vw sm:50vw md:50vw lg:600px"
+              sizes="sm:50vw md:300px lg:600px"
               :title="`Oferta: ${box.title}`"
             />
           </div>
-
-          <div
-            v-if="box.type === 'rolety-rzymskie'"
-            class="Offer__decoration-stars"
-            aria-hidden="true"
-          >
-            <img
-              src="/icons/dot-yellow-border.svg"
-              alt=""
-              class="Offer__decoration-star"
-            />
-            <img
-              src="/icons/dot-yellow-border.svg"
-              alt=""
-              class="Offer__decoration-star"
-            />
-          </div>
-          <img
-            v-if="box.type === 'verticale'"
-            src="/icons/subtract.svg"
-            alt=""
-            aria-hidden="true"
-            class="Offer__decoration-arrow"
-            loading="lazy"
-          />
 
           <h3 class="Offer__box-title">
             <img
@@ -105,28 +74,9 @@ interface OfferBox {
   type: string;
 }
 
-const props = defineProps<{
+defineProps<{
   offerBoxesJson: OfferBox[];
 }>();
-
-const activeBox = ref('rolety-dzien-noc');
-
-const orderedBoxes = computed(() => {
-  const middle = Math.ceil(props.offerBoxesJson.length / 2);
-  const leftColumn = props.offerBoxesJson.slice(0, middle);
-  const rightColumn = props.offerBoxesJson.slice(middle);
-
-  return leftColumn.flatMap((box, index) =>
-    rightColumn[index] ? [box, rightColumn[index]] : [box]
-  );
-});
-
-const getImageHeight = (type: string) => {
-  if (type === 'rolety-rzymskie') return 750;
-  if (type === 'verticale') return 450;
-  if (['plisy', 'rolety-dzien-noc'].includes(type)) return 600;
-  return 338;
-};
 </script>
 
 <style lang="scss" scoped>
