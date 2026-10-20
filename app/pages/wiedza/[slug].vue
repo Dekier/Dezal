@@ -37,6 +37,17 @@ const imageUrl = new URL(
   articleData.img || '/images/logo-rect-2.webp',
   siteUrl
 ).href;
+const image = useImage();
+const socialImageUrl = new URL(
+  image(articleData.img || '/images/logo-rect-2.webp', {
+    format: 'jpeg',
+    width: 1200,
+    height: 630,
+    fit: 'cover',
+    quality: 85,
+  }),
+  siteUrl
+).href;
 
 useHead({
   link: [{ rel: 'canonical', href: canonicalUrl }],
@@ -50,10 +61,17 @@ useSeoMeta({
   ogType: 'article',
   ogUrl: canonicalUrl,
   ogLocale: 'pl_PL',
-  ogImage: imageUrl,
+  ogImage: socialImageUrl,
+  ogImageSecureUrl: socialImageUrl,
+  ogImageType: 'image/jpeg',
   ogImageAlt: articleData.img_alt || articleData.title,
-  ogImageWidth: articleData.img_width,
-  ogImageHeight: articleData.img_height,
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+  twitterCard: 'summary_large_image',
+  twitterTitle: `${articleData.title} | DEŻAL`,
+  twitterDescription: articleData.meta_description,
+  twitterImage: socialImageUrl,
+  twitterImageAlt: articleData.img_alt || articleData.title,
   articlePublishedTime: articleData.datePublished,
   articleModifiedTime: articleData.dateModified,
 });
