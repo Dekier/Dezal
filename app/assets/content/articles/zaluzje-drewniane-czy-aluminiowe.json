@@ -71,7 +71,7 @@
               "bold": true
             },
             {
-              "text": "Najlepiej do suchych pomieszczeń; drewno wymaga ochrony przed parą i zachlapaniem.",
+              "text": "Najlepiej do suchych pomieszczeń drewno wymaga ochrony przed parą i zachlapaniem.",
               "bold": false
             },
             {
@@ -85,7 +85,7 @@
               "bold": true
             },
             {
-              "text": "Naturalna faktura lub malowane lamele; wyraźny element wystroju.",
+              "text": "Naturalna faktura lub malowane lamele wyraźny element wystroju.",
               "bold": false
             },
             {
@@ -103,7 +103,7 @@
               "bold": false
             },
             {
-              "text": "Zwykle lżejsza osłona i mniejszy pakiet; zależy od systemu.",
+              "text": "Zwykle lżejsza osłona i mniejszy pakiet zależy od systemu.",
               "bold": false
             }
           ],
@@ -113,11 +113,11 @@
               "bold": true
             },
             {
-              "text": "Regularne odkurzanie na sucho; bez moczenia drewna.",
+              "text": "Regularne odkurzanie na sucho bez moczenia drewna.",
               "bold": false
             },
             {
-              "text": "Możliwość przecierania lameli wilgotną ściereczką; uwaga na zagięcia.",
+              "text": "Możliwość przecierania lameli wilgotną ściereczką uwaga na zagięcia.",
               "bold": false
             }
           ],
@@ -356,7 +356,7 @@
       "content": [
         {
           "type": "text",
-          "value": "Wieczorem sprawdź ustawienie lameli przy zapalonym świetle. Prywatność zależy od ich domknięcia i kąta patrzenia z zewnątrz; nie wystarczy kierować się tym, ile widać przez okno za dnia."
+          "value": "Wieczorem sprawdź ustawienie lameli przy zapalonym świetle. Prywatność zależy od ich domknięcia i kąta patrzenia z zewnątrz nie wystarczy kierować się tym, ile widać przez okno za dnia."
         }
       ]
     },
@@ -458,7 +458,7 @@
             },
             {
               "type": "text",
-              "value": "Montaż bez wiercenia jest możliwy w wybranych systemach i wymiarach. Duża, ciężka żaluzja wymaga odpowiednio dobranych uchwytów oraz podłoża; sam rodzaj materiału nie rozstrzyga, jak ją zamontować."
+              "value": "Montaż bez wiercenia jest możliwy w wybranych systemach i wymiarach. Duża, ciężka żaluzja wymaga odpowiednio dobranych uchwytów oraz podłoża sam rodzaj materiału nie rozstrzyga, jak ją zamontować."
             }
           ]
         ]
