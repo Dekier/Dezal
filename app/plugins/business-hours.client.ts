@@ -9,7 +9,12 @@ export default defineNuxtPlugin((nuxtApp) => {
     timer = setTimeout(tick, 60000 - (Date.now() % 60000));
   };
   nuxtApp.hook('app:mounted', () => {
-    refresh();
+    if (
+      nuxtApp.payload.prerenderedAt ||
+      !nuxtApp.payload.data['business-hours']
+    ) {
+      refresh();
+    }
     timer = setTimeout(tick, 60000 - (Date.now() % 60000));
     window.addEventListener('focus', refresh);
     document.addEventListener('visibilitychange', refresh);

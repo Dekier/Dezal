@@ -2,13 +2,17 @@
   <div class="Page__main-container">
     <HeroNew />
     <LandingOffer :offer-boxes-json="offerBoxesJson" />
-    <LazyAboutCompanyNew />
-    <LazyReviews />
-    <LazyMainQuestions />
-    <LazyQuestions title="Porady" :faqList="faqPorady" />
-    <LazyQuestions title="Techniczne" :faqList="faqTechniczne" />
-    <LazyListOfArticles :articles="featuredArticles" />
-    <LazyContact />
+    <LazyAboutCompanyNew hydrate-on-visible />
+    <LazyReviews hydrate-on-visible />
+    <LazyMainQuestions hydrate-on-visible />
+    <LazyQuestions hydrate-on-visible title="Porady" :faqList="faqPorady" />
+    <LazyQuestions
+      hydrate-on-visible
+      title="Techniczne"
+      :faqList="faqTechniczne"
+    />
+    <LazyListOfArticles hydrate-on-visible :articles="featuredArticles" />
+    <LazyContact hydrate-on-visible />
   </div>
 </template>
 
