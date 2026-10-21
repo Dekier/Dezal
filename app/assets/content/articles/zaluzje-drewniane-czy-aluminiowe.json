@@ -25,7 +25,7 @@
       "content": [
         {
           "type": "text",
-          "value": "Żaluzje drewniane i aluminiowe pozwalają regulować ilość światła przez zmianę kąta lameli. Przy wyborze warto jednak uwzględnić to, co będzie działo się przy oknie na co dzień. Osłona nad kuchennym zlewem musi znosić inne warunki niż żaluzja w salonie, a przy drzwiach balkonowych ważna będzie wygoda otwierania i przechodzenia."
+          "value": "Żaluzje drewniane i aluminiowe działają tak samo: obracając lamele, regulujesz ilość światła i zasłaniasz się przed wzrokiem sąsiadów bez podnoszenia całej osłony. Różnią się za to wyglądem, ciężarem, ceną i tym, jak znoszą wilgoć. Żaluzja nad kuchennym zlewem pracuje w zupełnie innych warunkach niż ta w salonie, a przy drzwiach balkonowych liczy się przede wszystkim wygoda przechodzenia."
         }
       ]
     },
@@ -34,7 +34,7 @@
       "content": [
         {
           "type": "text",
-          "value": "Materiał i kolor dopasuj do wyglądu wnętrza oraz sposobu użytkowania żaluzji. Uwzględnij też cyrkulację powietrza przy oknie, możliwość wietrzenia, sposób pielęgnacji i miejsce potrzebne do montażu. Sprawdź, czy złożone lamele nie zablokują skrzydła i czy będziesz często podnosić całą osłonę. Określ też, czy zależy Ci przede wszystkim na prywatności i regulacji światła, czy na zaciemnieniu sypialni."
+          "value": "Który materiał lepiej sprawdzi się przy Twoim oknie i co wybrać do salonu, kuchni, łazienki czy sypialni?"
         }
       ]
     },
@@ -67,43 +67,43 @@
           ],
           [
             {
-              "text": "Wilgoć przy oknie",
-              "bold": true
-            },
-            {
-              "text": "Mogą być także w kuchni i łazience przy dobrej wentylacji lub częstym wietrzeniu. Po zachlapaniu wymagają osuszenia.",
-              "bold": false
-            },
-            {
-              "text": "Także wymagają wentylacji lub częstego wietrzenia i osuszania po zachlapaniu. Nie należy pozostawiać ich w kontakcie z wodą.",
-              "bold": false
-            }
-          ],
-          [
-            {
               "text": "Wygląd",
               "bold": true
             },
             {
-              "text": "Naturalna faktura lub malowane lamele wyraźny element wystroju.",
+              "text": "Naturalne usłojenie albo malowane lamele. Żaluzja staje się wyraźnym elementem wystroju.",
               "bold": false
             },
             {
-              "text": "Gładkie powierzchnie, matowe kolory i wykończenia drewnopodobne.",
+              "text": "Gładkie lamele w wielu kolorach, także matowych i drewnopodobnych.",
               "bold": false
             }
           ],
           [
             {
-              "text": "Ciężar i miejsce po podniesieniu",
+              "text": "Wilgoć",
               "bold": true
             },
             {
-              "text": "Zwykle większa masa i wyższy pakiet złożonych lameli.",
+              "text": "Pod wpływem wilgoci drewno może pęcznieć i się wypaczać. Nie polecamy go do łazienki ani tuż przy zlewie.",
               "bold": false
             },
             {
-              "text": "Zwykle lżejsza osłona i mniejszy pakiet zależy od systemu.",
+              "text": "Lamele nie rdzewieją i nie chłoną wilgoci, dlatego dobrze sprawdzają się w łazience i kuchni.",
+              "bold": false
+            }
+          ],
+          [
+            {
+              "text": "Ciężar i miejsce po podciągnięciu",
+              "bold": true
+            },
+            {
+              "text": "Cięższa osłona, złożone lamele zajmują więcej miejsca nad oknem.",
+              "bold": false
+            },
+            {
+              "text": "Lżejsza osłona, pakiet lameli zwykle niższy (zależy od systemu).",
               "bold": false
             }
           ],
@@ -113,39 +113,25 @@
               "bold": true
             },
             {
-              "text": "Regularne odkurzanie na sucho bez moczenia drewna.",
+              "text": "Odkurzanie na sucho, bez moczenia drewna.",
               "bold": false
             },
             {
-              "text": "Możliwość przecierania lameli wilgotną ściereczką uwaga na zagięcia.",
-              "bold": false
-            }
-          ],
-          [
-            {
-              "text": "Budżet",
-              "bold": true
-            },
-            {
-              "text": "Najczęściej wyższy koszt przy porównywalnym wymiarze i wyposażeniu.",
-              "bold": false
-            },
-            {
-              "text": "Najczęściej tańsze przy porównywalnym wymiarze i wyposażeniu.",
+              "text": "Przecieranie wilgotną ściereczką, bez mocnego dociskania lameli.",
               "bold": false
             }
           ],
           [
             {
-              "text": "Zaciemnienie",
+              "text": "Koszt",
               "bold": true
             },
             {
-              "text": "Regulują światło, ale standardowa żaluzja pozostawia prześwity.",
+              "text": "Zwykle wyższy przy tym samym wymiarze i wyposażeniu.",
               "bold": false
             },
             {
-              "text": "Regulują światło, ale standardowa żaluzja pozostawia prześwity.",
+              "text": "Zwykle niższy przy tym samym wymiarze i wyposażeniu.",
               "bold": false
             }
           ]
@@ -161,7 +147,7 @@
       "content": [
         {
           "type": "text",
-          "value": "Drewno sprawdza się tam, gdzie żaluzja ma być widocznym elementem aranżacji. Naturalne usłojenie pasuje do fornirowanych mebli, drewnianej podłogi i tkanin w spokojnych kolorach. Możesz też wybrać malowane lamele, jeśli chcesz dopasować osłonę do białych lub ciemnych ram. Dostępne rozwiązania zobaczysz w naszej ofercie "
+          "value": "Drewno wybierz, gdy żaluzja ma być widocznym elementem aranżacji. Naturalne usłojenie dobrze wygląda przy drewnianej podłodze, fornirowanych meblach i tkaninach w spokojnych kolorach. Jeśli wolisz dopasować osłonę do białych lub ciemnych ram okien, postaw na lamele malowane. Kolory i wykończenia zobaczysz w naszej ofercie "
         },
         {
           "type": "link",
@@ -186,7 +172,7 @@
             },
             {
               "type": "text",
-              "value": "Naturalna faktura i możliwość dopasowania koloru do wyposażenia. Obracając lamele, kierujesz światło bez podnoszenia całej osłony."
+              "value": "Naturalna faktura i ciepły wygląd. Kolor lameli dopasujesz do mebli i podłogi."
             }
           ],
           [
@@ -196,7 +182,7 @@
             },
             {
               "type": "text",
-              "value": "Drewno wymaga delikatnej pielęgnacji i ochrony przed długotrwałym kontaktem z wodą. Przy dużym oknie trzeba uwzględnić ciężar żaluzji oraz wysokość pakietu po jej podciągnięciu."
+              "value": "Drewno nie lubi wody i wymaga delikatnej pielęgnacji. Przy dużym oknie trzeba też liczyć się z większym ciężarem żaluzji i wyższym pakietem lameli po jej podciągnięciu."
             }
           ],
           [
@@ -206,7 +192,17 @@
             },
             {
               "type": "text",
-              "value": "W DEŻAL oferujemy lamele 25 i 50 mm. Węższe warto rozważyć przy montażu na skrzydle, a szersze przy większych przeszkleniach. Ostateczny dobór zależy od miejsca na mechanizm i warunków mocowania."
+              "value": "W DEŻAL oferujemy lamele 25 i 50 mm. Węższe polecamy przy montażu na skrzydle okna, szersze przy dużych przeszkleniach. Ostatecznie o wyborze decyduje miejsce na mechanizm i sposób mocowania."
+            }
+          ],
+          [
+            {
+              "type": "bold",
+              "value": "Do jakiego stylu pasują? "
+            },
+            {
+              "type": "text",
+              "value": "Do wnętrz klasycznych i wszystkich aranżacji, w których jest już drewno: podłoga, stół, regały."
             }
           ]
         ]
@@ -230,16 +226,16 @@
       "content": [
         {
           "type": "text",
-          "value": "Aluminium warto rozważyć, jeśli do wnętrza pasują gładkie lamele i zależy Ci na lżejszej osłonie. Żaluzja aluminiowa zwykle waży mniej niż drewniana o podobnym wymiarze. "
+          "value": "Aluminium polecamy, jeśli lubisz gładkie lamele i zależy Ci na lżejszej, tańszej osłonie. Żaluzja aluminiowa może być prawie niewidoczna, w kolorze ramy okna, albo stanowić mocny akcent kolorystyczny. Wykończenie drewnopodobne pozwala nawiązać do mebli, choć z bliska gładka powierzchnia zawsze będzie wyglądać inaczej niż prawdziwe drewno. Dostępne modele znajdziesz w ofercie "
         },
         {
           "type": "link",
-          "value": "Żaluzje aluminiowe",
+          "value": "żaluzji aluminiowych",
           "url": "/zaluzje-aluminiowe"
         },
         {
           "type": "text",
-          "value": " mogą być dyskretne, w kolorze ramy, albo stanowić mocniejszy akcent. Wykończenie drewnopodobne pozwala nawiązać kolorem do mebli bez stosowania naturalnego drewna."
+          "value": "."
         }
       ]
     },
@@ -255,7 +251,7 @@
             },
             {
               "type": "text",
-              "value": "Możliwość delikatnego przecierania lameli wilgotną ściereczką, zgodnie z instrukcją producenta. Wąskie modele dobrze sprawdzają się przy niewielkiej ilości miejsca na skrzydle."
+              "value": "Lamele nie pęcznieją i nie chłoną wilgoci, więc dobrze znoszą warunki w łazience i kuchni. Łatwo je przetrzeć wilgotną ściereczką. Wąskie modele zmieszczą się na skrzydle, gdy przy oknie jest mało miejsca."
             }
           ],
           [
@@ -265,17 +261,27 @@
             },
             {
               "type": "text",
-              "value": "Cienką lamelę łatwo trwale zagiąć przy mocnym dociskaniu podczas mycia. Gładka powierzchnia, także drewnopodobna, będzie wyglądała inaczej niż naturalne drewno."
+              "value": "Cienką lamelę łatwo trwale zagiąć, jeśli przy myciu mocno ją dociśniesz. Niektórym osobom aluminium wydaje się zbyt chłodne lub „biurowe”."
             }
           ],
           [
             {
               "type": "bold",
-              "value": "Uwaga przy czyszczeniu: "
+              "value": "Uwaga na: "
             },
             {
               "type": "text",
-              "value": "Aluminiowe lamele nie rdzewieją, ale metalowe elementy mechanizmu wewnątrz kasety mogą korodować. Nie mocz całej żaluzji i nie dopuszczaj do zalewania mechanizmu. W instrukcji wybranego modelu sprawdź zasady czyszczenia."
+              "value": "Same lamele nie rdzewieją, ale metalowe elementy mechanizmu w kasecie mogą korodować. Nie mocz więc całej żaluzji i uważaj, żeby woda nie dostała się do mechanizmu."
+            }
+          ],
+          [
+            {
+              "type": "bold",
+              "value": "Do jakiego stylu pasują? "
+            },
+            {
+              "type": "text",
+              "value": "Do wnętrz nowoczesnych i minimalistycznych. Czarne, matowe lamele dobrze wyglądają w aranżacjach loftowych."
             }
           ]
         ]
@@ -303,7 +309,7 @@
       "content": [
         {
           "type": "text",
-          "value": "Jeśli chcesz wyeksponować osłonę obok drewnianego stołu lub podłogi, wybierz drewno. Próbkę porównaj z meblami przy dziennym świetle: podobny kolor na ekranie może mieć inny odcień w Twoim wnętrzu. Aluminium sprawdzi się, gdy wolisz gładkie, lżej wyglądające lamele albo chcesz ograniczyć koszt."
+          "value": "Tu zwykle decyduje wygląd. Jeśli w salonie masz drewnianą podłogę lub stół, żaluzja drewniana ładnie je uzupełni. Próbkę porównaj z meblami przy dziennym świetle, bo kolor na ekranie często różni się od tego, co zobaczysz we wnętrzu. Aluminium wybierz, gdy wolisz lżej wyglądające lamele albo chcesz ograniczyć koszt."
         }
       ]
     },
@@ -312,29 +318,25 @@
       "content": [
         {
           "type": "text",
-          "value": "Przy dużym przeszkleniu sprawdź wygodę podnoszenia całej osłony. Jeżeli codziennie otwierasz drzwi na taras, ważniejsze od szerokości lameli może być to, czy żaluzja jest podzielona na osobne części i czy wymaga podciągania przed każdym wyjściem."
+          "value": "Przy drzwiach tarasowych zastanów się, jak często przez nie wychodzisz. Jeśli codziennie, ważniejsze od szerokości lameli będzie to, czy żaluzję można podzielić na osobne części i czy przed każdym wyjściem trzeba podciągać całą osłonę."
         }
       ]
     },
     {
       "type": "subsection_title",
-      "content": "Kuchnia, również otwarta na salon"
+      "content": "Kuchnia"
     },
     {
       "type": "paragraph",
       "content": [
         {
           "type": "text",
-          "value": "W kuchni możesz zastosować zarówno żaluzje drewniane, jak i aluminiowe. Wybór dopasuj do wystroju, odległości okna od zlewu i kuchenki oraz sposobu czyszczenia osłony. Drewno może pasować do mebli i podłogi, a aluminium do gładkich frontów lub metalowych dodatków."
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "content": [
+          "value": "Przy zlewie i kuchence polecamy aluminium. Zniesie zachlapania i opary, a zabrudzenia zetrzesz z lameli wilgotną ściereczką. Drewno sprawdzi się w kuchni otwartej na salon, przy oknie oddalonym od strefy roboczej, gdzie może nawiązywać do mebli i podłogi. Niezależnie od materiału wietrz kuchnię po gotowaniu i wycieraj zachlapane lamele do sucha. Więcej o osłonach do tego pomieszczenia przeczytasz w poradniku "
+        },
         {
-          "type": "text",
-          "value": "Przy obu materiałach zadbaj o dobrą wentylację lub częste wietrzenie, szczególnie po gotowaniu. Jeśli żaluzja znajduje się blisko zlewu, po zachlapaniu wytrzyj ją do sucha miękką ściereczką. To, jak długo zachowa dobry stan, zależy także od codziennej pielęgnacji i cyrkulacji powietrza przy oknie."
+          "type": "link",
+          "value": "Jakie osłony okienne wybrać do kuchni?",
+          "url": "/wiedza/oslony-okienne-kuchnia-poradnik"
         }
       ]
     },
@@ -347,7 +349,12 @@
       "content": [
         {
           "type": "text",
-          "value": "Żaluzje drewniane również mogą być stosowane w łazience, jeśli zadbasz o dobrą wentylację lub częste wietrzenie i nie będziesz pozostawiać ich mokrych. Materiał wybierz pod kątem wyglądu pomieszczenia, miejsca montażu i możliwości regularnej pielęgnacji. Przy drewnie i aluminium po kąpieli zadbaj o odprowadzenie pary, a wodę z zachlapań lub skraplania wytrzyj z lameli miękką ściereczką. Żadnych z tych żaluzji nie należy narażać na długotrwały kontakt z wodą."
+          "value": "Do łazienki wybierz żaluzje aluminiowe. Para i skoki temperatur szkodzą drewnu: lamele zaczynają pęcznieć i się wypaczać, dlatego naturalnego drewna w łazience odradzamy. Jeśli zależy Ci na ciepłym wyglądzie, rozważ żaluzje bambusowe lub z PVC imitującego drewno. Opisaliśmy je w poradniku "
+        },
+        {
+          "type": "link",
+          "value": "Co na okno w łazience?",
+          "url": "/wiedza/co-na-okno-w-lazience"
         }
       ]
     },
@@ -356,7 +363,7 @@
       "content": [
         {
           "type": "text",
-          "value": "Wieczorem sprawdź ustawienie lameli przy zapalonym świetle. Prywatność zależy od ich domknięcia i kąta patrzenia z zewnątrz nie wystarczy kierować się tym, ile widać przez okno za dnia."
+          "value": "Aluminium też potrzebuje odrobiny troski. Po kąpieli przewietrz łazienkę, a krople wody wytrzyj z lameli miękką ściereczką. Prywatność sprawdź wieczorem przy zapalonym świetle, bo to, ile widać z zewnątrz, zależy od domknięcia lameli i kąta patrzenia. Za dnia łatwo ją przecenić."
         }
       ]
     },
@@ -369,15 +376,15 @@
       "content": [
         {
           "type": "text",
-          "value": "Drewno i aluminium sprawdzą się, jeśli potrzebujesz regulacji światła oraz osłonięcia się od sąsiadów. "
+          "value": "Obie żaluzje pozwolą regulować światło i zasłonić się przed sąsiadami, ale "
         },
         {
           "type": "bold",
-          "value": "Żadnej standardowej żaluzji nie wybieraj z założeniem, że zapewni całkowitą ciemność."
+          "value": "żadna standardowa żaluzja nie da całkowitej ciemności"
         },
         {
           "type": "text",
-          "value": " Światło może przechodzić między lamelami, przy krawędziach osłony i przez otwory na sznurki."
+          "value": ". Światło przechodzi między lamelami, przy krawędziach osłony i przez otwory na sznurki."
         }
       ]
     },
@@ -386,16 +393,16 @@
       "content": [
         {
           "type": "text",
-          "value": "Jeśli budzą Cię pierwsze promienie słońca lub śpisz w dzień, rozważ osłonę z tkaniną zaciemniającą i odpowiednio dobranym montażem. Różnice opisaliśmy w poradniku o tym, "
+          "value": "Jeśli budzą Cię pierwsze promienie słońca albo śpisz w dzień, potrzebujesz osłony z tkaniną zaciemniającą i odpowiednio dobranym montażem. Porównaliśmy takie rozwiązania w poradniku "
         },
         {
           "type": "link",
-          "value": "co najlepiej zatrzymuje światło",
+          "value": "Co najlepiej zatrzymuje światło?",
           "url": "/wiedza/co-najlepiej-zatrzymuje-swiatlo"
         },
         {
           "type": "text",
-          "value": ". Żaluzjami możesz wtedy regulować światło w ciągu dnia."
+          "value": " Żaluzja może wtedy służyć do regulacji światła w ciągu dnia."
         }
       ]
     },
@@ -408,13 +415,13 @@
       "content": [
         {
           "type": "text",
-          "value": "Oba materiały pozwalają zmieniać kąt padania światła na biurko. Wybierz aluminium, jeśli zależy Ci na lekkiej osłonie i łatwym czyszczeniu kilku okien. Drewno pasuje do gabinetu, w którym chcesz nawiązać do regałów lub biurka. Przed wyborem sprawdź ustawienie monitora: obrót lameli powinien ograniczać odbicia na ekranie bez zaciemniania całego pokoju."
+          "value": "Obie pozwalają zmieniać kąt padania światła na biurko. Aluminium jest lżejsze i szybciej się je czyści, co ma znaczenie przy kilku oknach. Drewno pasuje do gabinetu z drewnianymi regałami lub biurkiem. Przed wyborem sprawdź, gdzie stoi monitor: lamele ustawione pod odpowiednim kątem powinny ograniczyć odbicia na ekranie bez zaciemniania całego pokoju."
         }
       ]
     },
     {
       "type": "section_title",
-      "content": "Co sprawdzić przy oknie przed zamówieniem?"
+      "content": "Na co zwrócić uwagę przed zakupem?"
     },
     {
       "type": "list",
@@ -424,11 +431,11 @@
           [
             {
               "type": "bold",
-              "value": "Miejsce nad otwieranym skrzydłem: "
+              "value": "Miejsce nad oknem: "
             },
             {
               "type": "text",
-              "value": "Podciągnięta żaluzja tworzy pakiet złożonych lameli. Przy montażu nad wnęką musi zmieścić się na tyle wysoko, żeby nie blokował otwierania okna. Wysokość złożonego pakietu zależy od systemu i wymiaru żaluzji."
+              "value": "Podciągnięta żaluzja tworzy pakiet złożonych lameli. Przy montażu nad wnęką musi się zmieścić na tyle wysoko, żeby nie blokował otwierania skrzydła. Wysokość pakietu zależy od systemu i wymiaru żaluzji, a przy drewnie jest zwykle większa."
             }
           ],
           [
@@ -438,7 +445,7 @@
             },
             {
               "type": "text",
-              "value": "Mechanizm oraz obracające się lamele potrzebują wolnej przestrzeni. Sprawdź odległość od klamki, nawiewnika i bocznej ściany wnęki."
+              "value": "Mechanizm i obracające się lamele potrzebują wolnej przestrzeni. Sprawdź odległość od klamki, nawiewnika i bocznej ściany wnęki."
             }
           ],
           [
@@ -448,7 +455,7 @@
             },
             {
               "type": "text",
-              "value": "Przy montażu na skrzydle zapytaj o prowadzenie boczne, które ogranicza odstawanie osłony podczas uchylania."
+              "value": "Przy montażu na skrzydle zapytaj o prowadzenie boczne. Dzięki niemu żaluzja nie odstaje, gdy uchylasz okno."
             }
           ],
           [
@@ -458,7 +465,7 @@
             },
             {
               "type": "text",
-              "value": "Montaż bez wiercenia jest możliwy w wybranych systemach i wymiarach. Duża, ciężka żaluzja wymaga odpowiednio dobranych uchwytów oraz podłoża sam rodzaj materiału nie rozstrzyga, jak ją zamontować."
+              "value": "Montaż bez wiercenia jest możliwy w wybranych systemach i wymiarach. Duża, ciężka żaluzja potrzebuje odpowiednio dobranych uchwytów i mocnego podłoża, więc o sposobie montażu decyduje okno, a nie sam materiał lameli."
             }
           ]
         ]
@@ -466,14 +473,14 @@
     },
     {
       "type": "section_title",
-      "content": "Które żaluzje będą łatwiejsze w pielęgnacji?"
+      "content": "Które żaluzje łatwiej utrzymać w czystości?"
     },
     {
       "type": "paragraph",
       "content": [
         {
           "type": "text",
-          "value": "Przy obu materiałach trzeba regularnie usuwać kurz. Drewno odkurzaj miękką, suchą ściereczką lub szczotką. Aluminiowe lamele można delikatnie przetrzeć wilgotną ściereczką, zgodnie z instrukcją producenta. Jeżeli wybierzesz wąskie lamele, na tej samej wysokości okna będzie ich więcej do wyczyszczenia. Szczegółowe wskazówki znajdziesz w naszym "
+          "value": "Obie trzeba regularnie odkurzać. Drewno czyść miękką, suchą ściereczką lub szczotką, bez wody. Aluminiowe lamele możesz przetrzeć wilgotną ściereczką, uważając, żeby ich nie zgiąć. Przy wąskich lamelach pamiętaj, że na tej samej wysokości okna jest ich więcej do wyczyszczenia. Szczegółowe wskazówki znajdziesz w naszym "
         },
         {
           "type": "link",
@@ -495,23 +502,23 @@
       "content": [
         {
           "type": "text",
-          "value": "Wybierz "
+          "value": "Jeśli osłona ma być ozdobą wnętrza i pasować do drewnianych mebli czy podłogi, wybierz "
         },
         {
           "type": "bold",
-          "value": "drewno, jeśli pasuje do wystroju"
+          "value": "żaluzje drewniane"
         },
         {
           "type": "text",
-          "value": " i chcesz wyeksponować naturalny materiał. Sprawdź też, czy masz miejsce na jego montaż. Postaw na "
+          "value": ". Sprawdzą się w salonie, sypialni i gabinecie, o ile nad oknem jest miejsce na pakiet lameli. Jeśli zależy Ci na lżejszej osłonie i niższej cenie albo okno jest w łazience lub przy kuchennym zlewie, postaw na "
         },
         {
           "type": "bold",
-          "value": "aluminium, jeśli wolisz gładkie lamele, lżejszą osłonę lub mniejszy koszt"
+          "value": "żaluzje aluminiowe"
         },
         {
           "type": "text",
-          "value": ". Oba materiały możesz rozważyć także w kuchni i łazience. O trwałości żaluzji decydują również warunki przy oknie i sposób dbania o osłonę: wentylacja lub częste wietrzenie, cyrkulacja powietrza i osuszanie po kontakcie z wodą. Do sypialni wymagającej mocnego zaciemnienia dobierz osobno rozwiązanie zatrzymujące światło."
+          "value": ". Do sypialni, która ma być naprawdę ciemna, dobierz osobno osłonę zaciemniającą."
         }
       ]
     },
@@ -520,7 +527,7 @@
       "content": [
         {
           "type": "text",
-          "value": "W DEŻAL pomożemy Ci porównać próbki i sprawdzić możliwości montażu przy Twoich oknach. Umów bezpłatny pomiar w Poznaniu i okolicach, żeby dobrać osłonę do warunków w Twoim mieszkaniu."
+          "value": "Nie wiesz, który materiał wybrać? W DEŻAL pomożemy Ci porównać próbki i sprawdzimy, co da się zamontować przy Twoich oknach. Umów bezpłatny pomiar w Poznaniu i okolicach."
         }
       ]
     },
