@@ -25,7 +25,7 @@
       "content": [
         {
           "type": "text",
-          "value": "Żaluzje drewniane i aluminiowe działają tak samo: obracając lamele, regulujesz ilość światła i zasłaniasz się przed wzrokiem sąsiadów bez podnoszenia całej osłony. Różnią się za to wyglądem, ciężarem, ceną i tym, jak znoszą wilgoć. Żaluzja nad kuchennym zlewem pracuje w zupełnie innych warunkach niż ta w salonie, a przy drzwiach balkonowych liczy się przede wszystkim wygoda przechodzenia."
+          "value": "Żaluzje drewniane i aluminiowe działają tak samo: obracając lamele, regulujesz ilość światła i zasłaniasz się przed wzrokiem sąsiadów bez podnoszenia całej osłony. Różnią się za to wyglądem, ciężarem i ceną. Żaluzja nad kuchennym zlewem pracuje w zupełnie innych warunkach niż ta w salonie, a przy drzwiach balkonowych liczy się przede wszystkim wygoda przechodzenia."
         }
       ]
     },
@@ -76,20 +76,6 @@
             },
             {
               "text": "Gładkie lamele w wielu kolorach, także matowych i drewnopodobnych.",
-              "bold": false
-            }
-          ],
-          [
-            {
-              "text": "Wilgoć",
-              "bold": true
-            },
-            {
-              "text": "Pod wpływem wilgoci drewno może pęcznieć i się wypaczać. Nie polecamy go do łazienki ani tuż przy zlewie.",
-              "bold": false
-            },
-            {
-              "text": "Lamele nie rdzewieją i nie chłoną wilgoci, dlatego dobrze sprawdzają się w łazience i kuchni.",
               "bold": false
             }
           ],
@@ -271,7 +257,7 @@
             },
             {
               "type": "text",
-              "value": "Same lamele nie rdzewieją, ale metalowe elementy mechanizmu w kasecie mogą korodować. Nie mocz więc całej żaluzji i uważaj, żeby woda nie dostała się do mechanizmu."
+              "value": "Same lamele nie rdzewieją, ale metalowe elementy mechanizmu w kasecie mogą korodować. Dlatego żaluzja nie powinna długo pracować w dużej wilgoci: wietrz pomieszczenie, nie mocz całej żaluzji i uważaj, żeby woda nie dostała się do mechanizmu."
             }
           ],
           [
