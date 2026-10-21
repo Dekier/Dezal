@@ -14,13 +14,13 @@
 
 Żaluzje drewniane i aluminiowe pozwalają regulować ilość światła przez zmianę kąta lameli. Przy wyborze warto jednak uwzględnić to, co będzie działo się przy oknie na co dzień. Osłona nad kuchennym zlewem musi znosić inne warunki niż żaluzja w salonie, a przy drzwiach balkonowych ważna będzie wygoda otwierania i przechodzenia.
 
-Zanim zdecydujesz się na materiał i kolor, zwróć uwagę na wilgoć, sposób czyszczenia oraz miejsce potrzebne do montażu. Sprawdź, czy złożone lamele nie zablokują skrzydła i czy będziesz często podnosić całą osłonę. Określ też, czy zależy Ci przede wszystkim na prywatności i regulacji światła, czy na zaciemnieniu sypialni.
+Materiał i kolor dopasuj do wyglądu wnętrza oraz sposobu użytkowania żaluzji. Uwzględnij też cyrkulację powietrza przy oknie, możliwość wietrzenia, sposób pielęgnacji i miejsce potrzebne do montażu. Sprawdź, czy złożone lamele nie zablokują skrzydła i czy będziesz często podnosić całą osłonę. Określ też, czy zależy Ci przede wszystkim na prywatności i regulacji światła, czy na zaciemnieniu sypialni.
 
 ## Żaluzje drewniane i aluminiowe – porównanie
 
 | Co porównujesz? | Żaluzje drewniane | Żaluzje aluminiowe |
 | --- | --- | --- |
-| Wilgoć przy oknie | Najlepiej do suchych pomieszczeń; drewno wymaga ochrony przed parą i zachlapaniem. | Lepszy wybór przy wilgoci i częstym przecieraniu lameli. |
+| Wilgoć przy oknie | Mogą być także w kuchni i łazience przy dobrej wentylacji lub częstym wietrzeniu. Po zachlapaniu wymagają osuszenia. | Także wymagają wentylacji lub częstego wietrzenia i osuszania po zachlapaniu. Nie należy pozostawiać ich w kontakcie z wodą. |
 | Wygląd | Naturalna faktura lub malowane lamele; wyraźny element wystroju. | Gładkie powierzchnie, matowe kolory i wykończenia drewnopodobne. |
 | Ciężar i miejsce po podniesieniu | Zwykle większa masa i wyższy pakiet złożonych lameli. | Zwykle lżejsza osłona i mniejszy pakiet; zależy od systemu. |
 | Czyszczenie | Regularne odkurzanie na sucho; bez moczenia drewna. | Możliwość przecierania lameli wilgotną ściereczką; uwaga na zagięcia. |
@@ -32,18 +32,18 @@ Zanim zdecydujesz się na materiał i kolor, zwróć uwagę na wilgoć, sposób 
 Drewno sprawdza się tam, gdzie żaluzja ma być widocznym elementem aranżacji. Naturalne usłojenie pasuje do fornirowanych mebli, drewnianej podłogi i tkanin w spokojnych kolorach. Możesz też wybrać malowane lamele, jeśli chcesz dopasować osłonę do białych lub ciemnych ram. Dostępne rozwiązania zobaczysz w naszej ofercie [żaluzji drewnianych](https://dezalroletypoznan.pl/zaluzje-drewniane).
 
 - **Zalety: **Naturalna faktura i możliwość dopasowania koloru do wyposażenia. Obracając lamele, kierujesz światło bez podnoszenia całej osłony.
-- **Wady: **Drewno wymaga ochrony przed wilgocią i delikatnej pielęgnacji. Przy dużym oknie trzeba uwzględnić ciężar żaluzji oraz wysokość pakietu po jej podciągnięciu.
+- **Wady: **Drewno wymaga delikatnej pielęgnacji i ochrony przed długotrwałym kontaktem z wodą. Przy dużym oknie trzeba uwzględnić ciężar żaluzji oraz wysokość pakietu po jej podciągnięciu.
 - **Szerokość lameli: **W DEŻAL oferujemy lamele 25 i 50 mm. Węższe warto rozważyć przy montażu na skrzydle, a szersze przy większych przeszkleniach. Ostateczny dobór zależy od miejsca na mechanizm i warunków mocowania.
 
 ![Drewniane żaluzje w ciepłym odcieniu na drzwiach balkonowych i sąsiednim oknie – realizacja DEŻAL](C:/Users/water/Desktop/projects/Dezal/public/images/zaluzje/dezal-poznan-zaluzja-drewniana-14.webp)
 
 ## 2. Żaluzje aluminiowe
 
-Aluminium warto wybrać przy oknie narażonym na parę wodną lub zabrudzenia. Gładkie lamele łatwiej przetrzeć, a sama osłona zwykle waży mniej niż drewniana o podobnym wymiarze. [Żaluzje aluminiowe](https://dezalroletypoznan.pl/zaluzje-aluminiowe) mogą być dyskretne, w kolorze ramy, albo stanowić mocniejszy akcent. Wykończenie drewnopodobne pozwala nawiązać kolorem do mebli bez stosowania naturalnego drewna.
+Aluminium warto rozważyć, jeśli do wnętrza pasują gładkie lamele i zależy Ci na lżejszej osłonie. Żaluzja aluminiowa zwykle waży mniej niż drewniana o podobnym wymiarze. [Żaluzje aluminiowe](https://dezalroletypoznan.pl/zaluzje-aluminiowe) mogą być dyskretne, w kolorze ramy, albo stanowić mocniejszy akcent. Wykończenie drewnopodobne pozwala nawiązać kolorem do mebli bez stosowania naturalnego drewna.
 
-- **Zalety: **Odporność lameli na wilgoć i możliwość czyszczenia ich wilgotną ściereczką. Wąskie modele dobrze sprawdzają się przy niewielkiej ilości miejsca na skrzydle.
+- **Zalety: **Możliwość delikatnego przecierania lameli wilgotną ściereczką, zgodnie z instrukcją producenta. Wąskie modele dobrze sprawdzają się przy niewielkiej ilości miejsca na skrzydle.
 - **Wady: **Cienką lamelę łatwo trwale zagiąć przy mocnym dociskaniu podczas mycia. Gładka powierzchnia, także drewnopodobna, będzie wyglądała inaczej niż naturalne drewno.
-- **Uwaga przy czyszczeniu: **Odporność aluminiowych lameli na wilgoć nie oznacza, że można moczyć całą żaluzję. W instrukcji wybranego modelu sprawdź, jak czyścić lamele i mechanizm.
+- **Uwaga przy czyszczeniu: **Aluminiowe lamele nie rdzewieją, ale metalowe elementy mechanizmu wewnątrz kasety mogą korodować. Nie mocz całej żaluzji i nie dopuszczaj do zalewania mechanizmu. W instrukcji wybranego modelu sprawdź zasady czyszczenia.
 
 ![Srebrne żaluzje aluminiowe na oknie i drzwiach balkonowych – realizacja DEŻAL](C:/Users/water/Desktop/projects/Dezal/public/images/zaluzje/dezal-poznan-zaluzja-aluminiowa-4.webp)
 
@@ -57,13 +57,13 @@ Przy dużym przeszkleniu sprawdź wygodę podnoszenia całej osłony. Jeżeli co
 
 ### Kuchnia, również otwarta na salon
 
-Przy oknie nad zlewem lub w miejscu, gdzie osiada tłusty nalot, wybierz aluminium. Aluminiowe lamele łatwiej przetrzesz wilgotną ściereczką. W kuchni otwartej na salon drewniane żaluzje można rozważyć w suchej części jadalnianej, z dala od zachlapań i pary.
+W kuchni możesz zastosować zarówno żaluzje drewniane, jak i aluminiowe. Wybór dopasuj do wystroju, odległości okna od zlewu i kuchenki oraz sposobu czyszczenia osłony. Drewno może pasować do mebli i podłogi, a aluminium do gładkich frontów lub metalowych dodatków.
 
-Możesz też połączyć drewno w salonie z aluminium przy kuchennym oknie. Zbliżony odcień osłon pomoże zachować spójny wygląd, a materiał dopasujesz do warunków przy każdej szybie.
+Przy obu materiałach zadbaj o dobrą wentylację lub częste wietrzenie, szczególnie po gotowaniu. Jeśli żaluzja znajduje się blisko zlewu, po zachlapaniu wytrzyj ją do sucha miękką ściereczką. To, jak długo zachowa dobry stan, zależy także od codziennej pielęgnacji i cyrkulacji powietrza przy oknie.
 
 ### Łazienka
 
-Jeśli po kąpieli zbiera się para, a na szybie skrapla się woda, polecamy aluminium. Naturalne drewno może z czasem zmieniać kształt pod wpływem wilgoci, nawet jeśli początkowo wygląda dobrze. Gdy zależy Ci na brązowym odcieniu, zapytaj o aluminiowe lamele z wykończeniem drewnopodobnym.
+Żaluzje drewniane również mogą być stosowane w łazience, jeśli zadbasz o dobrą wentylację lub częste wietrzenie i nie będziesz pozostawiać ich mokrych. Materiał wybierz pod kątem wyglądu pomieszczenia, miejsca montażu i możliwości regularnej pielęgnacji. Przy drewnie i aluminium po kąpieli zadbaj o odprowadzenie pary, a wodę z zachlapań lub skraplania wytrzyj z lameli miękką ściereczką. Żadnych z tych żaluzji nie należy narażać na długotrwały kontakt z wodą.
 
 Wieczorem sprawdź ustawienie lameli przy zapalonym świetle. Prywatność zależy od ich domknięcia i kąta patrzenia z zewnątrz; nie wystarczy kierować się tym, ile widać przez okno za dnia.
 
@@ -90,7 +90,7 @@ Przy obu materiałach trzeba regularnie usuwać kurz. Drewno odkurzaj miękką, 
 
 ## Podsumowanie
 
-Wybierz **drewno do suchego pomieszczenia**, w którym chcesz wyeksponować naturalny materiał i masz miejsce na jego montaż. Postaw na **aluminium przy wilgoci, częstych zabrudzeniach lub mniejszym budżecie**. Do sypialni wymagającej mocnego zaciemnienia dobierz osobno rozwiązanie zatrzymujące światło.
+Wybierz **drewno, jeśli pasuje do wystroju** i chcesz wyeksponować naturalny materiał. Sprawdź też, czy masz miejsce na jego montaż. Postaw na **aluminium, jeśli wolisz gładkie lamele, lżejszą osłonę lub mniejszy koszt**. Oba materiały możesz rozważyć także w kuchni i łazience. O trwałości żaluzji decydują również warunki przy oknie i sposób dbania o osłonę: wentylacja lub częste wietrzenie, cyrkulacja powietrza i osuszanie po kontakcie z wodą. Do sypialni wymagającej mocnego zaciemnienia dobierz osobno rozwiązanie zatrzymujące światło.
 
 W DEŻAL pomożemy Ci porównać próbki i sprawdzić możliwości montażu przy Twoich oknach. Umów bezpłatny pomiar w Poznaniu i okolicach, żeby dobrać osłonę do warunków w Twoim mieszkaniu.
 
@@ -112,7 +112,7 @@ Analiza: 20 października 2026. Wnioski dotyczą treści, nie pozycji ani ruchu.
 - **[Topblind](https://roletki24.pl/porownanie-zaluzji-drewnianych-z-aluminiowymi/):** czytelna tabela, odnośniki do pielęgnacji i zachęta do obejrzenia próbek. Porównanie poświęca dużo miejsca stylom wnętrz, a mniej wygodzie podnoszenia i otwierania skrzydeł. W DEŻAL połączono wybór estetyczny z kontrolą klamki, nawiewnika, ciężaru i pakietu lameli.
 - **[Od Rolet](https://od-rolet.pl/poradnik/zaluzje-drewniane-czy-aluminiowe):** wartościowy podział na pomieszczenia i rozróżnienie regulacji światła od zaciemnienia. Tekst zwraca uwagę na masę i wysokość pakietu. Nie przenoszono stwierdzeń o najczęstszych reklamacjach ani przewadze jednego materiału w precyzji regulacji bez danych. Dostępny był tekst z wyszukiwarki; bezpośrednie pobranie strony podczas tej analizy nie powiodło się.
 
-**Własne rozwinięcia dla DEŻAL:** sucha część jadalniana w kuchni otwartej na salon; połączenie różnych materiałów w mieszkaniu; dobór do częstotliwości korzystania z drzwi balkonowych; rozróżnienie odporności lameli i mechanizmu na moczenie; porównywanie wycen o takim samym zakresie. Rekomendacje dla pomieszczeń są wnioskami redakcyjnymi z cech materiałów i ograniczeń montażu.
+**Własne rozwinięcia dla DEŻAL:** dobór drewna i aluminium do wyglądu wnętrza oraz sposobu użytkowania, także w kuchni i łazience; wentylacja, wietrzenie i osuszanie po zachlapaniu; dobór do częstotliwości korzystania z drzwi balkonowych; rozróżnienie aluminiowych lameli i podatnych na korozję metalowych elementów mechanizmu; porównywanie wycen o takim samym zakresie. Po uwagach właściciela z 21 października 2026 usunięto rekomendowanie aluminium ze względu na wilgoć. Wybór zależy od aranżacji, zastosowania, cyrkulacji powietrza i pielęgnacji.
 
 **Weryfikacja faktów:** oferta DEŻAL i FAQ obu produktów potwierdzają warianty drewna 25/50 mm, konsultację oraz bezpłatny pomiar w Poznaniu i okolicach. Materiały ANWIS potwierdzają różne sposoby montażu i zależność doboru od systemu. Zalecenia Hunter Douglas potwierdzają ochronę naturalnego drewna przed parą i wysoką wilgotnością. [Poradnik producenta o zaciemnieniu](https://www.hunterdouglas.com/stories/buyers-guides/blackout-blinds-room-darkening-shades) wyjaśnia prześwity standardowych żaluzji. Źródła producentów nie oznaczają deklaracji, że DEŻAL sprzedaje wszystkie opisane w nich systemy.
 
