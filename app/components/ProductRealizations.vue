@@ -23,7 +23,7 @@
           width="1300"
           height="975"
           format="webp"
-          quality="90"
+          quality="99"
           sizes="sm:100vw md:50vw lg:60vw xl:800px"
           loading="lazy"
         />

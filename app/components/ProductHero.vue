@@ -45,6 +45,7 @@
           width="1300"
           height="975"
           format="webp"
+          quality="99"
           sizes="sm:100vw md:50vw lg:700px"
           loading="eager"
           fetchpriority="high"
