@@ -3,11 +3,11 @@ import Cookies from '~/components/Cookies.vue';
 import OpeningStatus from '~/components/OpeningStatus.vue';
 
 const route = useRoute();
-const visibleCookies = useState('dezal-cookies-visible', () => true);
+const visibleCookies = useState('dezal-cookies-visible', () => false);
 const prefersReducedMotion = ref(false);
 let motionPreference: MediaQueryList;
 
-const chooseCookies = (accepted: boolean) => {
+const applyConsent = (accepted: boolean) => {
   const googleAnalytics = useNuxtApp().$scripts?.googleAnalytics;
   googleAnalytics?.proxy.gtag('consent', 'update', {
     analytics_storage: accepted ? 'granted' : 'denied',
@@ -17,6 +17,11 @@ const chooseCookies = (accepted: boolean) => {
       console.warn('Nie udało się uruchomić statystyk.', error);
     });
   }
+};
+
+const chooseCookies = (accepted: boolean) => {
+  applyConsent(accepted);
+  localStorage.setItem('dezal_cookies', accepted ? 'accepted' : 'rejected');
   visibleCookies.value = false;
 };
 const updateMotionPreference = () => {
@@ -24,6 +29,9 @@ const updateMotionPreference = () => {
 };
 
 onMounted(() => {
+  const savedCookies = localStorage.getItem('dezal_cookies');
+  if (savedCookies) applyConsent(savedCookies === 'accepted');
+  else visibleCookies.value = true;
   motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
   updateMotionPreference();
   motionPreference.addEventListener('change', updateMotionPreference);

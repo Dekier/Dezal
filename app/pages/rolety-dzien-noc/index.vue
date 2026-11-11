@@ -3,7 +3,7 @@
     <ProductHero
       :title-lines="['Rolety', 'dzień-noc']"
       :description="pageDescription"
-      image-src="/images/rolety/dezal-poznan-roleta-dzien-noc-20.webp"
+      image-src="/images/offer/dezal-poznan-roleta-dzien-noc-2.webp"
       image-alt="Rolety dzień-noc na oknie balkonowym w realizacji DEŻAL"
       primary-label="Umów bezpłatny pomiar"
       primary-link="/kontakt"

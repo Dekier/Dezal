@@ -213,7 +213,7 @@ export default defineNuxtConfig({
   },
 
   pwa: {
-    registerType: 'autoUpdate',
+    registerType: 'prompt',
     manifest: {
       name: 'Deżal Rolety',
       short_name: 'Deżal',

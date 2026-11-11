@@ -3,7 +3,7 @@
     <ProductHero
       :title-lines="['Rolety', 'rzymskie']"
       :description="product.description"
-      image-src="/images/offer/dezal-poznan-roleta-rzymska-0.jpg"
+      image-src="/images/rolety/dezal-poznan-roleta-rzymska-12.webp"
       image-alt="Rolety rzymskie – realizacja DEŻAL"
       primary-label="Umów bezpłatny pomiar"
       primary-link="/kontakt"

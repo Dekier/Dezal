@@ -8,19 +8,29 @@
 
 ## Zasady zmian
 
+- Rób tylko to, o co poproszono. Bez "przy okazji" refaktorów, przenoszenia plików i zmiany formatowania w plikach, których zadanie nie dotyczy.
+- Nie dodawaj funkcji, opcji ani abstrakcji "na zapas". Trzy podobne linie są lepsze niż przedwczesna abstrakcja.
+- Gdy zadanie jest niejasne albo wymaga decyzji, zapytaj, zanim zaczniesz pisać.
 - Zawsze używaj assets\stylesheets\mixins.scss do rwd
 - zawsze używaj tylko tych zmiennych a jak chcesz dodać to mnie zapytaj: assets\stylesheets\main-variables.scss
 - mixiny wrzucamy do klasy a nie do mixina klase
 - nie używaj i innych media niż to co jest w mixins
-- Używaj istniejących klas BEM (`List__...`, `Thesis__...`).
+- Używaj klas BEM np (`List__...`, `Thesis__...`).
 - Interfejs i teksty pozostawiaj po polsku.
 - Nie dodawaj zależności bez zapytania.
 - Zmieniaj tylko pliki niezbędne do zadania.
-- Po zmianie sprawdzaj diff. Nie uruchamiaj builda ani testów automatycznie — użytkownik sam sprawdza działanie. Uruchom je tylko na wyraźną prośbę użytkownika.
-- Nie pisz testów bez pozwolenia
 - Style zawsze mają być jako klasy i w osobnym pliku
 - Jeżeli czegoś nie wiesz lub nie jesteś pewnień to pytaj i nie zgaduj.
-- nie musisz robić importów fram 'vue'
+- nie musisz robić importów from 'vue'
+
+# Zależności
+
+- Nie instaluj pakietów bez zgody. Przy prośbie o pakiet napisz, po co jest i czy nie da się tego zrobić tym, co już mamy.
+- Pakiet dodajemy dopiero, gdy bieżące zadanie go wymaga
+
+## Komentarze
+
+- Komentarz mówi, DLACZEGO, nigdy CO. Bez komentarzy opisujących oczywisty kod i bez nagłówków sekcji.
 
 ## Gotowe, gdy
 

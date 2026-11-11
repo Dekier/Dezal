@@ -158,13 +158,13 @@ const imagesData = ref([
     '/images/plisy/dezal-poznan-plisa-{n}.webp',
     'PLISY',
     1,
-    38
+    39
   ),
   ...generateImages(
     '/images/rolety/dezal-poznan-roleta-materialowa-{n}.webp',
     'rolety-materiałowe',
     1,
-    20
+    22
   ),
   ...generateImages(
     '/images/rolety/dezal-poznan-roleta-rzymska-{n}.webp',
@@ -176,7 +176,7 @@ const imagesData = ref([
     '/images/zaluzje/dezal-poznan-zaluzja-drewniana-{n}.webp',
     'zaluzje-drewniane',
     1,
-    21
+    25
   ),
   ...generateImages(
     '/images/zaluzje/dezal-poznan-zaluzja-aluminiowa-{n}.webp',
