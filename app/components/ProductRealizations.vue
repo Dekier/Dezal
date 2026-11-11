@@ -16,15 +16,12 @@
         :aria-label="`Otwórz zdjęcie realizacji ${index + 1}`"
         @click="showGallery(index)"
       >
-        <NuxtImg
+        <img
           :src="imageData.url"
           :alt="imageData.alt || `${imageAltPrefix} – realizacja ${index + 1}`"
           class="ProductRealizations__image"
           width="1300"
           height="975"
-          format="webp"
-          quality="99"
-          sizes="sm:100vw md:50vw lg:60vw xl:800px"
           loading="lazy"
         />
         <span class="ProductRealizations__action">Zobacz zdjęcie</span>

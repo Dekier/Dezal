@@ -12,9 +12,9 @@
     max-width: calc(100% - 48px);
     box-sizing: border-box;
     font-family: $font-main;
-    border: 2px solid $yellow-500;
+    border: 2px solid $yellow-300;
     border-radius: 8px;
-    background: $yellow-cos;
+    background: $yellow-200;
     color: $color-title;
 
     @include for-phone-only {
@@ -135,7 +135,7 @@
     width: 28px;
     height: 28px;
     padding: 2px;
-    border: 2px solid $yellow-500;
+    // border: 2px solid $yellow-500;
     border-radius: 6px;
     @include for-phone-only {
       display: none;

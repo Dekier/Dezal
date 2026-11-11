@@ -38,15 +38,12 @@
         </div>
       </div>
       <div class="ProductHero__image-wrap">
-        <NuxtImg
+        <img
           :src="imageSrc"
           :alt="imageAlt"
           class="ProductHero__image"
           width="1300"
           height="975"
-          format="webp"
-          quality="99"
-          sizes="sm:100vw md:50vw lg:700px"
           loading="eager"
           fetchpriority="high"
         />
